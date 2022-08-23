@@ -329,7 +329,7 @@ blockquote {
 }
 
 a {
-  color : #7A54D8;
+  color : #448aff;
   text-decoration : none;
 }
 a:focus {
@@ -2565,7 +2565,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
 
 .btn-link {
   font-weight : normal;
-  color : #7A54D8;
+  color : #448aff;
   border-radius : 0;
 }
 .btn-link, .btn-link:active, .btn-link.active, .btn-link:disabled {
@@ -4181,7 +4181,7 @@ tbody.collapse.in {
   float : right;
   padding : 0.5rem 0.75rem;
   margin-right : -1px;
-  color : #7A54D8;
+  color : #448aff;
   text-decoration : none;
   background-color : #FFFFFF;
   border : 1px solid #DDDDDD;

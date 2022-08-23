@@ -1,14 +1,11 @@
 
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>{{ config('app.name', 'Laravel') }}</title>
-
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
     <link rel="stylesheet" type="text/css" href="{{ url('dash/app-assets/css/bootstrap.css') }}">
@@ -47,16 +44,14 @@
         }
     </style>
 </head>
-
 <body>
     <div class="app-content content container-fluid">
         <div class="content-wrapper">
-            <div class="content-header row">
-            </div>
+            <div class="content-header row"></div>
             <div class="content-body">
                 <section class="flexbox-container">
                     <div class="col-md-4 offset-md-4 col-xs-10 offset-xs-1 box-shadow-2 p-0">
-                        <div class="card border-grey border-lighten-3 px-2 py-2 m-0">
+                        <div class="card border-grey border-lighten-3 m-0">
                             <div class="card-header no-border">
                                 {{-- <div class="card-title text-xs-center">
 					<img src="../../app-assets/images/logo/robust-logo-dark.png" alt="branding logo">

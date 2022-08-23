@@ -16,23 +16,60 @@
                           data-i18n="nav.support_documentation.main" class="menu-title">Dashboard</span></a>
               </li>
               <li class=" nav-item"><a href="#"><i class="icon-ios-albums-outline"></i><span
+                          data-i18n="nav.cards.main" class="menu-title">Academics</span></a>
+                  <ul class="menu-content">
+                    <li><a href="{{ url('dashboard/add-student') }}" data-i18n="nav.cards.card_actions" class="menu-item">Academic years</a>
+                      </li>
+                      <li><a href="#" data-i18n="nav.cards.card_bootstrap" class="menu-item">Classes</a>
+                      </li>
+                      <li><a href="#" data-i18n="nav.cards.card_actions" class="menu-item">Sections</a>
+                      </li>
+
+
+                  </ul>
+              </li>
+              <li class=" nav-item"><a href="#"><i class="icon-ios-albums-outline"></i><span
                           data-i18n="nav.cards.main" class="menu-title">Student Information</span></a>
                   <ul class="menu-content">
-                      <li><a href="card-bootstrap.html" data-i18n="nav.cards.card_bootstrap" class="menu-item">Bootstrap
-                              Cards</a>
+                      <li><a href="{{ url('dashboard/add-student') }}" data-i18n="nav.cards.card_actions" class="menu-item">Admit Student</a>
                       </li>
-                      <li><a href="card-actions.html" data-i18n="nav.cards.card_actions" class="menu-item">Card
-                              Action</a>
+                        <li><a href="#" data-i18n="nav.cards.card_actions" class="menu-item">Student List</a>
                       </li>
                   </ul>
               </li>
-              <li class=" nav-item"><a href="#"><i class="icon-whatshot"></i><span
-                          data-i18n="nav.advance_cards.main" class="menu-title">Advance Cards</span></a>
+              <li class="nav-item">
+                  <a href="#"><i class="icon-android-funnel"></i><span data-i18n="nav.menu_levels.main"
+                          class="menu-title">Menu levels</span></a>
                   <ul class="menu-content">
-                      <li><a href="card-statistics.html" data-i18n="nav.cards.card_statistics"
-                              class="menu-item">Statistics</a>
+                      <li>
+                          <a href="#" data-i18n="nav.menu_levels.second_level" class="menu-item">Second level</a>
                       </li>
-                      <li><a href="card-charts.html" data-i18n="nav.cards.card_charts" class="menu-item">Charts</a>
+                      <li>
+                          <a href="#" data-i18n="nav.menu_levels.second_level_child.main" class="menu-item">Second
+                              level child</a>
+                          <ul class="menu-content">
+                              <li>
+                                  <a href="#" data-i18n="nav.menu_levels.second_level_child.third_level"
+                                      class="menu-item">Third level</a>
+                              </li>
+                              <li>
+                                  <a href="#"
+                                      data-i18n="nav.menu_levels.second_level_child.third_level_child.main"
+                                      class="menu-item">Third level child</a>
+                                  <ul class="menu-content">
+                                      <li>
+                                          <a href="#"
+                                              data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level1"
+                                              class="menu-item">Fourth level</a>
+                                      </li>
+                                      <li>
+                                          <a href="#"
+                                              data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2"
+                                              class="menu-item">Fourth level</a>
+                                      </li>
+                                  </ul>
+                              </li>
+                          </ul>
                       </li>
                   </ul>
               </li>
@@ -40,14 +77,9 @@
                       data-toggle="tooltip" data-placement="right" data-original-title="Support"
                       class="icon-ellipsis icon-ellipsis"></i>
               </li>
-              <li class=" nav-item"><a
-                      href="https://github.com/pixinvent/robust-free-bootstrap-admin-template/issues"><i
-                          class="icon-support"></i><span data-i18n="nav.support_raise_support.main"
-                          class="menu-title">Raise Support</span></a>
-              </li>
-              <li class=" nav-item"><a href="https://pixinvent.com/free-bootstrap-template/robust-lite/documentation"><i
-                          class="icon-document-text"></i><span data-i18n="nav.support_documentation.main"
-                          class="menu-title">Documentation</span></a>
+
+              <li class=" nav-item"><a href="#"><i class="icon-document-text"></i><span
+                          data-i18n="nav.support_documentation.main" class="menu-title">Documentation</span></a>
               </li>
           </ul>
       </div>

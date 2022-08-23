@@ -8,9 +8,11 @@
                     <li class="nav-item">
                         <a class="navbar-brand nav-link" :href="route('dashboard')"
                             :active="request() - > routeIs('dashboard')">
-                            <img alt="branding logo" src="{{ asset('dash/app-assets/images/logo/robust-logo-light.png') }}"
+                            <img alt="branding logo"
+                                src="{{ asset('dash/app-assets/images/logo/robust-logo-light.png') }}"
                                 data-expand="{{ asset('dash/app-assets/images/logo/robust-logo-light.png') }}"
-                                data-collapse="{{ asset('dash/app-assets/images/logo/robust-logo-small.png') }}" class="brand-logo">
+                                data-collapse="{{ asset('dash/app-assets/images/logo/robust-logo-small.png') }}"
+                                class="brand-logo">
 
                         </a>
                     </li>
@@ -24,12 +26,16 @@
                     <ul class="nav navbar-nav">
                         <li class="nav-item hidden-sm-down"><a class="nav-link nav-menu-main menu-toggle hidden-xs"><i
                                     class="icon-menu5"> </i></a></li>
+
                         <li class="nav-item hidden-sm-down"><a href="#" class="nav-link nav-link-expand"><i
                                     class="ficon icon-expand2"></i></a></li>
-                        {{-- <li class="nav-item hidden-sm-down"><a
-                                href="https://pixinvent.com/bootstrap-admin-template/robust/" target="_blank"
-                                class="btn btn-success upgrade-to-pro">Upgrade to PRO $24</a></li> --}}
+                        {{-- <li class="nav-item hidden-sm-down">
+
+                                <input type="text" placeholder="Search" class="menu-search form-control round" />
+
+                        </li> --}}
                     </ul>
+
                     <ul class="nav navbar-nav float-xs-right">
 
 
