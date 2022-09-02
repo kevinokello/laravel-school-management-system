@@ -37,15 +37,14 @@ class StockController extends Controller
             // 'created_at' => Carbon::now(),
         ]);
 
-        $notification = array(
-            'message' => 'Product Inserted Successfully',
-            'alert-type' => 'success'
-        );
-
-        return redirect()->route('product.all')->with($notification);
+        // $notification = array(
+        //     'message' => 'Product Inserted Successfully',
+        //     'alert-type' => 'success'
+        // );
+        session()->flash('success', 'stock added succesfully');
+        return redirect('inventory/stock/all');
+        // return redirect()->route('inventory/stock/all')->with($notification);
     } // End Method
-
-
 
     public function Edit($id)
     {

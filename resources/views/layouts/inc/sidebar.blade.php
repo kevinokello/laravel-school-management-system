@@ -48,17 +48,17 @@
               </li>
 
               <li
-                  class="nav-item {{ Request::is('inventory/units') || Request::is('inventory/categories') || Request::is('inventory/stock/add') || Request::is('inventory/supplier/all') || Request::is('inventory/supplier/add') ? 'open' : '' }}">
+                  class="nav-item {{ Request::is('inventory/units') || Request::is('inventory/categories') || Request::is('inventory/stock/add') || Request::is('inventory/supplier/all') || Request::is('inventory/supplier/add') || Request::is('inventory/stock/all') || Request::is('inventory/stock/add') ? 'open' : '' }}">
                   <a href="{{ url('student/add-student') }}"><i class="icon-ios-albums-outline"></i><span
                           data-i18n="nav.menu_levels.main" class="menu-title">Inventory</span></a>
                   <ul class="menu-content">
                       <li>
                           <a href="{{ url('inventory/units') }}" data-i18n="nav.menu_levels.second_level"
-                              class="menu-item {{ Request::is('inventory/units') ? 'active' : '' }}">Manage Units</a>
+                              class="menu-item {{ Request::is('inventory/units') ? 'active' : '' }}">Units</a>
                       </li>
                       <li>
                           <a href="{{ url('inventory/categories') }}" data-i18n="nav.menu_levels.second_level"
-                              class="menu-item {{ Request::is('inventory/categories') ? 'active' : '' }}">Manage
+                              class="menu-item {{ Request::is('inventory/categories') ? 'active' : '' }}">
                               Categories</a>
                       </li>
 
@@ -79,7 +79,7 @@
 
                           </ul>
                       </li>
-                      <li class="nav-item  {{ Request::is('inventory/stock/add') ? 'open' : '' }}">
+                      <li class="nav-item  {{ Request::is('inventory/stock/add') || Request::is('inventory/stock/all')  ? 'open' : '' }}">
                           <a href="#" data-i18n="nav.menu_levels.second_level_child.main" class="menu-item">Manage
                               stock</a>
                           <ul class="menu-content">
@@ -104,22 +104,26 @@
                               </li>
                           </ul>
                       </li>
-                      <li>
-                          <a href="#" data-i18n="nav.menu_levels.second_level_child.main"
-                              class="menu-item">Purchases</a>
+                     <li class="nav-item  {{ Request::is('inventory/purchase/purchase_all') || Request::is('inventory/purchase/add')  ? 'open' : '' }}">
+                          <a href="#" data-i18n="nav.menu_levels.second_level_child.main" class="menu-item">Manage
+                              purchases</a>
                           <ul class="menu-content">
                               <li>
-                                  <a href="#" data-i18n="nav.menu_levels.second_level_child.third_level"
-                                      class="menu-item">All</a>
+                                  <a href="{{ url('inventory/purchase/add') }}"
+                                      data-i18n="nav.menu_levels.second_level_child.third_level"
+                                      class="menu-item {{ Request::is('inventory/purchase/add') ? 'active' : '' }}">Add
+                                      </a>
                               </li>
                               <li>
-                                  <a href="#" data-i18n="nav.menu_levels.second_level_child.third_level"
-                                      class="menu-item">Approval</a>
+                                  <a href="{{ url('inventory/purchase/pending') }}"
+                                      data-i18n="nav.menu_levels.second_level_child.third_level" class="menu-item {{ Request::is('inventory/purchase/all') ? 'active' : '' }}">Approval
+                                      </a>
                               </li>
                               <li>
                                   <a href="#" data-i18n="nav.menu_levels.second_level_child.third_level"
                                       class="menu-item">Daily report</a>
                               </li>
+
                           </ul>
                       </li>
                       <li>

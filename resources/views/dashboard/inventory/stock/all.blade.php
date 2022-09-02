@@ -4,46 +4,6 @@
         <div class="content-wrapper">
             <div class="content-body">
                 <div class="col-xl-13 col-lg-12">
-                    <div class="text-center">
-                        <button type="button" style="background-color: #448aff;color: #fff; height:50px; width:190px; "
-                            class="btn btn-outline-success block btn-lg" data-toggle="modal" data-target="#small">
-                            New Product
-                        </button>
-                    </div>
-                    <br>
-                    <!-- Modal -->
-                    <div class="modal fade text-xs-left" id="small" tabindex="-1" role="dialog"
-                        aria-labelledby="myModalLabel19" aria-hidden="true">
-                        <div class="modal-dialog modal-sm" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                    <h4 class="modal-title" id="myModalLabel19">Product name</h4>
-                                </div>
-                                <div class="modal-body">
-
-                                    <form class="form" action="{{ url('inventory/stock') }}" method="POST">
-                                        @csrf
-                                        <div class="form-body">
-                                            <div class="form-group">
-                                                <input type="text" id="name" class="form-control"
-                                                    placeholder="product Name" name="name" required>
-                                            </div>
-                                        </div>
-
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn grey btn-outline-secondary"
-                                        data-dismiss="modal">Close</button>
-                                    <button type="submit" class="btn btn-primary">
-                                        Add</button>
-                                </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="card">
 
@@ -57,8 +17,11 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>product name</th>
-                                            <th>Status</th>
+                                            <th>name</th>
+                                            <th>Supplier id</th>
+                                            <th>Unit id</th>
+                                            <th>Category id</th>
+                                            <th>Quantity</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -67,7 +30,11 @@
                                             <tr>
                                                 <td>{{ $item->id }}</td>
                                                 <td>{{ $item->name }}</td>
-                                                <td>{{ $item->status == '1' ? 'Hidden' : 'Active' }}</td>
+                                                <td>{{ $item->supplier_id }}</td>
+                                                <td>{{ $item->unit_id }}</td>
+                                                <td>{{ $item->category_id }}</td>
+                                                <td>{{ $item->quantity }}</td>
+
                                                 <td>
                                                     {{-- <a
                                                         class="btn btn-info btn-sm" data-toggle="modal" data-target="#small2">Edit</a> --}}

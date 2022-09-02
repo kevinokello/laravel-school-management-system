@@ -77,9 +77,21 @@ Route::prefix('/inventory')->middleware(['auth', 'isAdmin'])->namespace('App\Htt
     Route::get('/stock/edit/{id}', 'StockController@Edit');
     Route::post('/stock/update', 'StockController@Update');
     Route::get('/stock/delete/{id}', 'StockController@Delete');
-
-
     // Route::get('/supplier/all', 'SupplierController@index');
     // Route::get('/supplier/add-supplier', 'SupplierController@create');
+    Route::get('/purchase/all', 'PurchaseController@PurchaseAll');
+    Route::get('/purchase/add', 'PurchaseController@PurchaseAdd');
+    Route::post('/purchase/store', 'PurchaseController@PurchaseStore');
+    Route::get('/purchase/delete/{id}', 'PurchaseController@PurchaseDelete');
+    Route::get('/purchase/pending', 'PurchaseController@PurchasePending');
+    Route::get('/purchase/approve/{id}', 'PurchaseController@PurchaseApprove');
 
+    Route::get('/daily/purchase/report', 'PurchaseController@DailyPurchaseReport');
+    Route::get('/daily/purchase/pdf', 'PurchaseController@DailyPurchasePdf');
+});
+
+Route::controller(Admin\DefaultController::class)->group(function () {
+    Route::get('/get-category', 'GetCategory')->name('get-category');
+    Route::get('/get-product', 'GetProduct')->name('get-product');
+    Route::get('/check-product', 'GetStock')->name('check-product-stock');
 });
