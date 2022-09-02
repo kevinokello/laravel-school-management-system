@@ -3,66 +3,71 @@
     <div class="app-content content container-fluid">
         <div class="content-wrapper">
             <div class="content-body">
-                <div class="col-xl-13 col-lg-12">
-                    <form method="post" action="{{ url('inventory/stock/store') }}" id="myForm" class="form">
+                <!-- Basic form layout section start -->
+                <section id="basic-form-layouts">
+                    <div class="row match-height">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body collapse in">
+                                    <div class="card-block">
+
+                                         <form method="post" action="{{ url('inventory/supplier/store') }}" id="myForm" class="form">
                         @csrf
-                        <div class="form-body">
-                            <div class="form-group">
-                                <label for="companyName">Product Name</label>
-                                <input type="text" id="companyName" class="form-control" placeholder="Product Name"
-                                    name="company">
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="example-text-input" class="col-sm-2 col-form-label">Supplier Name
-                                        </label>
-                                        <div class="form-group col-sm-10">
-                                            <input name="name" class="form-control" type="text">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="example-text-input" class="col-sm-2 col-form-label">Supplier Mobile
-                                        </label>
-                                        <div class="form-group col-sm-10">
-                                            <input name="mobile_no" class="form-control" type="text">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="example-text-input" class="col-sm-2 col-form-label">Supplier Address
-                                        </label>
-                                        <div class="form-group col-sm-10">
-                                            <input name="address" class="form-control" type="text">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label for="example-text-input" class="col-sm-2 col-form-label">Supplier Email
-                                            </label>
-                                            <div class="form-group col-sm-10">
-                                                <input name="email" class="form-control" type="email">
+                                            <div class="form-body">
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="projectinput1">Supplier Name</label>
+                                                            <input type="text" id="projectinput1" class="form-control"
+                                                                placeholder="First Name" name="name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="projectinput2">Supplier Mobile</label>
+                                                            <input type="text" id="projectinput2" class="form-control"
+                                                                placeholder="Last Name" name="mobile_no">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="projectinput4">Supplier Email</label>
+                                                            <input type="email" id="projectinput4" class="form-control"
+                                                                placeholder="Address" name="email">
+                                                        </div>
+                                                    </div>
+                                                                                                        <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="projectinput4">Supplier Address</label>
+                                                            <input type="text" id="projectinput4" class="form-control"
+                                                                placeholder="Address" name="address">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-actions">
-                                <div style="text-align: center;" class="wrapper">
-                                    <button
+
+                                           <button
                                         style="  border-color: #448aff;
             background-color: #448aff;
             color: #fff; height:50px; width:170px; "
                                         type="submit" class="btn btn-primary">
-                                        Add stock
+                                        Add supplier
                                     </button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
-                    </form>
-                </div>
+                        </div>
+
+                    </div>
+
+                </section>
+                <!-- // Basic form layout section end -->
             </div>
         </div>
     </div>

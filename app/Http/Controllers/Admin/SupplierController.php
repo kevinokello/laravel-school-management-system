@@ -6,6 +6,7 @@ use App\Models\Supplier;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\Admin\SupplierFormRequest;
 
 class SupplierController extends Controller
 {
@@ -15,13 +16,13 @@ class SupplierController extends Controller
         $suppliers = Supplier::latest()->get();
         return view('dashboard.inventory.supplier.all', compact('suppliers'));
     }
-    
+
     public function SupplierAdd()
     {
         return view('dashboard.inventory.supplier.add');
     } // End Method
 
-    public function SupplierStore(Request $request)
+    public function SupplierStore(SupplierFormRequest $request)
     {
         Supplier::insert([
             'name' => $request->name,
@@ -31,17 +32,19 @@ class SupplierController extends Controller
             'created_by' => Auth::user()->id,
             // 'created_at' => Carbon::now(),
         ]);
-        $notification = array(
-            'message' => 'Supplier Inserted Successfully',
-            'alert-type' => 'success'
-        );
-        return redirect()->route('supplier.all')->with($notification);
+        session()->flash('success', 'supplier added succesfully');
+        return redirect('inventory/supplier/all');
+        // $notification = array(
+        //     'message' => 'Supplier Inserted Successfully',
+        //     'alert-type' => 'success'
+        // );
+        // return redirect()->route('inventory/supplier/all')->with($notification);
     } // End Method
 
     public function SupplierEdit($id)
     {
         $supplier = Supplier::findOrFail($id);
-        return view('backend.supplier.supplier_edit', compact('supplier'));
+        return view('dashboard.inventory.supplier.edit', compact('supplier'));
     } // End Method
     public function SupplierUpdate(Request $request)
     {
