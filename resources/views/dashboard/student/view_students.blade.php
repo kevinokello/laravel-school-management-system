@@ -28,6 +28,9 @@
                                             <th>Academic Id</th>
                                             <th>Class</th>
                                             <th>Session</th>
+                                            <th>Admission Number</th>
+                                            <th>Phone</th>
+                                            <th>Email Address</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -38,8 +41,12 @@
                                                 <td>{{ $sitem->academic_id }}</td>
                                                 <td>{{ $sitem->cohort_id }}</td>
                                                 <td>{{ $sitem->session_id }}</td>
+                                                <td>{{ $sitem->admission_no }}</td>
+                                                <td>{{ $sitem->mobile }}</td>
+                                                <td>{{ $sitem->email }}</td>
                                                 <td>
-                                                    <a href="{{ url('student/edit-student-details/' . $sitem->id) }}"><i class="fa-solid fa-pen-to-square"></i></a>
+                                                    <a href="{{ url('student/edit-student-details/' . $sitem->id) }}"><i
+                                                            class="fa-solid fa-pen-to-square"></i></a>
                                                     <a href="{{ url('student/delete-student/' . $sitem->id) }}"
                                                         class="btn btn-danger btn-sm">Delete</a>
                                                 </td>

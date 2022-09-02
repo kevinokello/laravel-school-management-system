@@ -22,7 +22,7 @@ class SessionController extends Controller
         $data = $request->validated();
         $session = new Session;
         $session->session_name = $data['session_name'];
-        $session->cohort_id = $data['cohort_id'];
+        // $session->cohort_id = $data['cohort_id'];
         $session->created_by = Auth::user()->id;
         $session->save();
         session()->flash('success', 'Academic session created succesfully');

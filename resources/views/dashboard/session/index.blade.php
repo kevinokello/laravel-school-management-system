@@ -26,7 +26,7 @@
 
                                     <form class="form" action="{{ url('academic/sessions') }}" method="POST">
                                         @csrf
-                                        <div class="form-group">
+                                        {{-- <div class="form-group">
                                             <label for="projectinput5">Cohort</label>
                                             <select required name="cohort_id" class="form-control">
                                                 <option value="">-- Select Class --</option>
@@ -35,7 +35,7 @@
                                                         {{ $cohortitem->cohort_name }}</option>
                                                 @endforeach
                                             </select>
-                                        </div>
+                                        </div> --}}
 
                                         <div class="form-body">
                                             <div class="form-group">
@@ -68,7 +68,7 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                                      <th>Class Id</th>
+                                                      {{-- <th>Class Id</th> --}}
                                             <th>Session Name</th>
                                             <th>Action</th>
                                         </tr>
@@ -77,7 +77,7 @@
                                         @foreach ($session as $item)
                                             <tr>
                                                 <td>{{ $item->id }}</td>
-                                                    <td>{{ $item->cohort->id }}</td>
+                                                    {{-- <td>{{ $item->cohort->id }}</td> --}}
                                                 <td>{{ $item->session_name }}</td>
                                                 <td>
                                                     {{-- <a

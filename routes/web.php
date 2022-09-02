@@ -13,6 +13,20 @@ require __DIR__ . '/auth.php';
 Route::prefix('/dashboard')->middleware(['auth', 'isAdmin'])->namespace('App\Http\Controllers\Admin')->group(function () {
     Route::get('/', 'DashboardController@index');
 });
+
+Route::prefix('/profile')->middleware(['auth', 'isAdmin'])->namespace('App\Http\Controllers\Admin')->group(function () {
+    Route::get('edit', 'ProfileController@ProfileEdit');
+});
+
+// Route::prefix('/profile')->middleware(['auth', 'isAdmin'])->namespace('App\Http\Controllers\Admin')->group(
+//     function () {
+//     Route::get('view', ProfileController@ProfileView');
+//     Route::get('edit', ProfileController@ProfileEdit');
+//     Route::post('store', ProfileController@ProfileStore');
+//     Route::get('password/view', ProfileController@PasswordView');
+//     Route::post('password/update', ProfileController@PasswordUpdate');
+// });
+
 Route::prefix('/student')->middleware(['auth', 'isAdmin'])->namespace('App\Http\Controllers\Admin')->group(function () {
     Route::get('add-student', 'StudentController@create');
     Route::post('add-student', 'StudentController@store');

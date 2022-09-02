@@ -43,11 +43,8 @@
                                     class="avatar avatar-online"><img
                                         src="{{ asset('dash/app-assets/images/portrait/small/avatar-s-1.png') }}"
                                         alt="avatar"><i></i></span><span class="user-name">John Doe</span></a>
-                            <div class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item"><i
-                                        class="icon-head"></i> Edit Profile</a><a href="#"
-                                    class="dropdown-item"><i class="icon-mail6"></i> My Inbox</a><a href="#"
-                                    class="dropdown-item"><i class="icon-clipboard2"></i> Task</a><a href="#"
-                                    class="dropdown-item"><i class="icon-calendar5"></i> Calender</a>
+                            <div class="dropdown-menu dropdown-menu-right"><a href="{{ url('profile/edit') }}" class="dropdown-item"><i
+                                        class="icon-head"></i> Edit Profile</a>
                                 <div class="dropdown-divider"></div>
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
