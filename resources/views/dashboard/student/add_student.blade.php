@@ -25,6 +25,7 @@
                             <div class="card">
                                 <div class="card-header">
                                     <h4 class="card-title" id="basic-layout-form">Admit student</h4>
+
                                     <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
                                     <div class="heading-elements">
                                         <ul class="list-inline mb-0">
@@ -36,62 +37,64 @@
                                 </div>
                                 <div class="card-body collapse in">
                                     <div class="card-block">
-
-                                        <form class="form">
+                                        <form action="{{ url('student/add-student') }}" class="form" method="POST" enctype="multipart/form-data">
+                                            @csrf
                                             <div class="form-body">
                                                 <h4 class="form-section"><i class="icon-head"></i> Personal info</h4>
-
                                                 <div class="row">
                                                     <div class="col-md-4">
                                                         <div class="form-group">
-                                                            <label for="projectinput5">Academic year</label>
-                                                            <select id="projectinput5" name="interested"
-                                                                class="form-control">
-                                                                <option value="none" selected="" disabled="">
-                                                                Select Academic year</option>
-                                                                <option value="design">2022</option>
-                                                                <option value="development">2021</option>
+                                                            <label>Academic year</label>
+                                                            <select required name="academic_id" class="form-control">
+                                                                <option value="">-- Select Academic year --</option>
+                                                                @foreach ($academic as $acaitem)
+                                                                    <option value="{{ $acaitem->id }} ">
+                                                                        {{ $acaitem->academic_year }}</option>
+                                                                @endforeach
                                                             </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label for="projectinput5">Class/Course</label>
-                                                            <select id="projectinput5" name="interested"
-                                                                class="form-control">
-                                                                <option value="none" selected="" disabled="">
-                                                                   Select Class/Course</option>
-                                                                <option value="design">class 1</option>
-                                                                <option value="development">class2</option>
 
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label for="projectinput5">Cohort</label>
+                                                            <select required name="cohort_id" class="form-control">
+                                                                <option value="">-- Select Class --</option>
+                                                                @foreach ($cohort as $cohortitem)
+                                                                    <option value="{{ $cohortitem->id }} ">
+                                                                        {{ $cohortitem->cohort_name }}</option>
+                                                                @endforeach
                                                             </select>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div class="form-group">
-                                                            <label for="projectinput6">Section</label>
-                                                            <select id="projectinput6" name="budget" class="form-control">
-                                                                <option value="0" selected="" disabled="">Select Section
-                                                                </option>
-                                                                <option value="less than 5000$">1</option>
-                                                                <option value="5000$ - 10000$">2</option>
+                                                            <label for="projectinput6">Session</label>
+                                                            <select required name="session_id" class="form-control">
+                                                                <option value="">-- Select Session--</option>
+                                                                @foreach ($session as $sessionitem)
+                                                                    <option value="{{ $sessionitem->id }} ">
+                                                                        {{ $sessionitem->session_name }}</option>
+                                                                @endforeach
                                                             </select>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="row">
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="projectinput1">First Name</label>
                                                             <input type="text" id="projectinput1" class="form-control"
-                                                                placeholder="First Name" name="fname">
+                                                                placeholder="First Name" name="first_name">
                                                         </div>
                                                     </div>
+
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="projectinput1">Middle Name</label>
                                                             <input type="text" id="projectinput1" class="form-control"
-                                                                placeholder="MIddle Name" name="fname">
+                                                                placeholder="MIddle Name" name="middle_name">
                                                         </div>
                                                     </div>
 
@@ -99,32 +102,34 @@
                                                         <div class="form-group">
                                                             <label for="projectinput2">Last Name</label>
                                                             <input type="text" id="projectinput2" class="form-control"
-                                                                placeholder="Last Name" name="lname">
+                                                                placeholder="Last Name" name="last_name">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-md-4">
                                                         <div class="form-group">
-                                                            <label for="projectinput5">Religion</label>
-                                                            <select id="projectinput5" name="interested"
+                                                            <label >Religion</label>
+                                                            <select id="religion_id" name="religion_id"
                                                                 class="form-control">
                                                                 <option value="none" selected="" disabled="">
                                                                     Select religion</option>
-                                                                <option value="design">Christian</option>
-                                                                <option value="development">Muslim</option>
+                                                                <option value="christian">Christian</option>
+                                                                <option value="muslim">Muslim</option>
+                                                                   <option value="hindu">Hindu</option>
+                                                                      <option value="other">Other</option>
                                                             </select>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div class="form-group">
-                                                            <label for="projectinput5">Gender</label>
-                                                            <select id="projectinput5" name="interested"
+                                                            <label for="gender">Gender</label>
+                                                            <select id="gender_id" name="gender_id"
                                                                 class="form-control">
                                                                 <option value="none" selected="" disabled="">
                                                                     Select gender</option>
-                                                                <option value="design">Male</option>
-                                                                <option value="development">FEmale</option>
+                                                                <option value="male">Male</option>
+                                                                <option value="female">FEmale</option>
 
                                                             </select>
                                                         </div>
@@ -134,7 +139,7 @@
                                                         <div class="form-group">
                                                             <label for="projectinput1">Residential Details/location</label>
                                                             <input type="text" id="projectinput1" class="form-control"
-                                                                placeholder="First Name" name="fname">
+                                                                placeholder="Residential Details/location" name="location_id">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -143,7 +148,7 @@
                                                         <div class="form-group">
                                                             <label for="projectinput1">Email Address</label>
                                                             <input type="text" id="projectinput1" class="form-control"
-                                                                placeholder="First Name" name="fname">
+                                                                placeholder="Email" name="email">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4">
@@ -151,7 +156,7 @@
                                                             <label for="timesheetinput3">Date of birth</label>
                                                             <div class="position-relative has-icon-left">
                                                                 <input type="date" id="timesheetinput3"
-                                                                    class="form-control" name="date">
+                                                                    class="form-control" name="date_of_birth">
                                                                 <div class="form-control-position">
                                                                     <i class="icon-calendar5"></i>
                                                                 </div>
@@ -163,7 +168,7 @@
                                                         <div class="form-group">
                                                             <label for="projectinput2">Phone Number</label>
                                                             <input type="text" id="projectinput2" class="form-control"
-                                                                placeholder="Last Name" name="lname">
+                                                                placeholder="Phone" name="mobile">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -173,7 +178,7 @@
                                                             <label for="timesheetinput3">Admission Date</label>
                                                             <div class="position-relative has-icon-left">
                                                                 <input type="date" id="timesheetinput3"
-                                                                    class="form-control" name="date">
+                                                                    class="form-control" name="admission_date">
                                                                 <div class="form-control-position">
                                                                     <i class="icon-calendar5"></i>
                                                                 </div>
@@ -184,7 +189,7 @@
                                                         <div class="form-group">
                                                             <label>Passport photo</label>
                                                             <label id="projectinput7" class="file center-block">
-                                                                <input type="file" id="file">
+                                                                <input type="file" name="student_photo" id="file">
                                                                 <span class="file-custom"></span>
                                                             </label>
                                                         </div>
@@ -193,11 +198,11 @@
                                                         <div class="form-group">
                                                             <label for="projectinput1">Admission Number</label>
                                                             <input type="text" id="projectinput1" class="form-control"
-                                                                placeholder="First Name" name="fname">
+                                                                placeholder="Admission Number" name="admission_no">
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <h4 class="form-section"><i class="icon-head"></i> Parents & guardian
+                                               <h4 class="form-section"><i class="icon-head"></i> Parents & guardian
                                                     info
                                                 </h4>
                                                 <div class="row">
@@ -205,14 +210,14 @@
                                                         <div class="form-group">
                                                             <label for="projectinput1">1.Name</label>
                                                             <input type="text" id="projectinput1" class="form-control"
-                                                                placeholder="First Name" name="fname">
+                                                                placeholder="Name" name="parent_info1[]">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div class="form-group">
-                                                            <label for="projectinput1">Occupation</label>
+                                                            <label for="projectinput1">Relationship</label>
                                                             <input type="text" id="projectinput1" class="form-control"
-                                                                placeholder="First Name" name="fname">
+                                                                placeholder="Occupation" name="parent_info1[]">
                                                         </div>
                                                     </div>
 
@@ -220,25 +225,25 @@
                                                         <div class="form-group">
                                                             <label for="projectinput2">Phone Number</label>
                                                             <input type="text" id="projectinput2" class="form-control"
-                                                                placeholder="Last Name" name="lname">
+                                                                placeholder="Phone Number" name="parent_info1[]">
                                                         </div>
                                                     </div>
                                                 </div>
-
+  {{--
 
                                                 <div class="row">
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="projectinput1">2.Name</label>
                                                             <input type="text" id="projectinput1" class="form-control"
-                                                                placeholder="First Name" name="fname">
+                                                                placeholder="Name" name="parent_info2">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div class="form-group">
-                                                            <label for="projectinput1">Occupation</label>
+                                                            <label for="projectinput1">Relationship</label>
                                                             <input type="text" id="projectinput1" class="form-control"
-                                                                placeholder="First Name" name="fname">
+                                                                placeholder="Occupation" name="parent_info2">
                                                         </div>
                                                     </div>
 
@@ -246,29 +251,29 @@
                                                         <div class="form-group">
                                                             <label for="projectinput2">Phone Number</label>
                                                             <input type="text" id="projectinput2" class="form-control"
-                                                                placeholder="Last Name" name="lname">
+                                                                placeholder="Phone" name="parent_info2">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <h4 class="form-section"><i class="icon-clipboard4"></i> Requirements and
                                                     documentation
-                                                </h4>
+                                                </h4> --}}
 
-                                                <div class="row">
+                                                {{-- <div class="row">
                                                     <div class="col-md-4">
                                                         <div class="form-group">
-                                                            <label>Select File</label>
+                                                            <label>Document1</label>
                                                             <label id="projectinput7" class="file center-block">
-                                                                <input type="file" id="file">
+                                                                <input name="document_file_1" type="file" id="file">
                                                                 <span class="file-custom"></span>
                                                             </label>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div class="form-group">
-                                                            <label>Select File</label>
+                                                            <label>Document2</label>
                                                             <label id="projectinput7" class="file center-block">
-                                                                <input type="file" id="file">
+                                                                <input name="document_file_2" type="file" id="file">
                                                                 <span class="file-custom"></span>
                                                             </label>
                                                         </div>
@@ -276,32 +281,32 @@
 
                                                     <div class="col-md-4">
                                                         <div class="form-group">
-                                                            <label>Select File</label>
+                                                            <label>Document3</label>
                                                             <label id="projectinput7" class="file center-block">
-                                                                <input type="file" id="file">
+                                                                <input name="document_file_3" type="file" id="file">
                                                                 <span class="file-custom"></span>
                                                             </label>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> --}}
                                                 <div class="row">
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="projectinput8">Previous School info</label>
-                                                            <textarea id="projectinput8" rows="5" class="form-control" name="comment" placeholder="About Project"></textarea>
+                                                            <textarea id="projectinput8" rows="5" class="form-control" name="previous_school_details" placeholder="School info"></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="projectinput8">additional
                                                                 information</label>
-                                                            <textarea id="projectinput8" rows="5" class="form-control" name="comment" placeholder="About Project"></textarea>
+                                                            <textarea id="projectinput8" rows="5" class="form-control" name="aditional_notes" placeholder="Additional info"></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="projectinput8">Medical Condition</label>
-                                                            <textarea id="projectinput8" rows="5" class="form-control" name="comment" placeholder="About Project"></textarea>
+                                                            <textarea id="projectinput8" rows="5" class="form-control" name="medical_condition" placeholder="Medical condition"></textarea>
                                                         </div>
                                                     </div>
 

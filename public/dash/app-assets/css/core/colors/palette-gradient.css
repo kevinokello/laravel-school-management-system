@@ -19,12 +19,12 @@
   background-image: linear-gradient(45deg, #704ACF, #AC92EC); }
 
 .bg-gradient-x2-primary {
-  background-image: linear-gradient(to right, #AC92EC, #967ADC 50%, #BCAAE9);
+  background-image: linear-gradient(to right, #AC92EC, #448aff 50%, #BCAAE9);
   background-repeat: no-repeat;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFAC92EC', endColorstr='#FFBCAAE9', GradientType=1); }
 
 .bg-gradient-y2-primary {
-  background-image: linear-gradient(#AC92EC, #967ADC 50%, #BCAAE9);
+  background-image: linear-gradient(#AC92EC, #448aff 50%, #BCAAE9);
   background-repeat: no-repeat;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFAC92EC', endColorstr='#FFBCAAE9', GradientType=0); }
 

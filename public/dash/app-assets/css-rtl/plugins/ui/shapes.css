@@ -4,7 +4,7 @@ Square Shape
 .square-shape {
   width : 100px;
   height : 100px;
-  background : #967ADC;
+  background : #448aff;
 }
 
 /*
@@ -13,7 +13,7 @@ Rectangle Shape
 .rectangle-shape {
   width : 200px;
   height : 100px;
-  background : #967ADC;
+  background : #448aff;
 }
 
 /*
@@ -22,7 +22,7 @@ Circle Shape
 .circle-shape {
   width : 100px;
   height : 100px;
-  background : #967ADC;
+  background : #448aff;
   border-radius : 50px;
 }
 
@@ -32,7 +32,7 @@ Oval Shape
 .oval-shape {
   width : 200px;
   height : 100px;
-  background : #967ADC;
+  background : #448aff;
   border-radius : 100px / 50px;
 }
 
@@ -44,7 +44,7 @@ Triangle Up
   height : 100px;
   border-right : 50px solid transparent;
   border-left : 50px solid transparent;
-  border-bottom : 100px solid #967ADC;
+  border-bottom : 100px solid #448aff;
 }
 
 /*
@@ -55,7 +55,7 @@ Triangle Down
   height : 0;
   border-right : 50px solid transparent;
   border-left : 50px solid transparent;
-  border-top : 100px solid #967ADC;
+  border-top : 100px solid #448aff;
 }
 
 /*
@@ -65,7 +65,7 @@ Triangle Left
   width : 0;
   height : 0;
   border-top : 50px solid transparent;
-  border-left : 100px solid #967ADC;
+  border-left : 100px solid #448aff;
   border-bottom : 50px solid transparent;
 }
 
@@ -76,7 +76,7 @@ Triangle Right
   width : 0;
   height : 0;
   border-top : 50px solid transparent;
-  border-right : 100px solid #967ADC;
+  border-right : 100px solid #448aff;
   border-bottom : 50px solid transparent;
 }
 
@@ -86,7 +86,7 @@ Triangle Top Left
 .triangle-topleft-shape {
   width : 0;
   height : 0;
-  border-top : 100px solid #967ADC;
+  border-top : 100px solid #448aff;
   border-left : 100px solid transparent;
 }
 
@@ -96,7 +96,7 @@ Triangle Top Right
 .triangle-topright-shape {
   width : 0;
   height : 0;
-  border-top : 100px solid #967ADC;
+  border-top : 100px solid #448aff;
   border-right : 100px solid transparent;
 }
 
@@ -106,7 +106,7 @@ Triangle Bottom Left
 .triangle-bottomleft-shape {
   width : 0;
   height : 0;
-  border-bottom : 100px solid #967ADC;
+  border-bottom : 100px solid #448aff;
   border-left : 100px solid transparent;
 }
 
@@ -116,7 +116,7 @@ Triangle Bottom Right
 .triangle-bottomright-shape {
   width : 0;
   height : 0;
-  border-bottom : 100px solid #967ADC;
+  border-bottom : 100px solid #448aff;
   border-right : 100px solid transparent;
 }
 
@@ -127,11 +127,11 @@ Star Shape
   margin : 50px 0;
   position : relative;
   display : block;
-  color : #967ADC;
+  color : #448aff;
   width : 0;
   height : 0;
   border-left : 100px solid transparent;
-  border-bottom : 70px solid #967ADC;
+  border-bottom : 70px solid #448aff;
   border-right : 100px solid transparent;
   -webkit-transform : rotate(-35deg);
      -moz-transform : rotate(-35deg);
@@ -140,7 +140,7 @@ Star Shape
           transform : rotate(-35deg);
 }
 .star-shape:before {
-  border-bottom : 80px solid #967ADC;
+  border-bottom : 80px solid #448aff;
   border-right : 30px solid transparent;
   border-left : 30px solid transparent;
   position : absolute;
@@ -159,13 +159,13 @@ Star Shape
 .star-shape:after {
   position : absolute;
   display : block;
-  color : #967ADC;
+  color : #448aff;
   top : 3px;
   right : -105px;
   width : 0;
   height : 0;
   border-left : 100px solid transparent;
-  border-bottom : 70px solid #967ADC;
+  border-bottom : 70px solid #448aff;
   border-right : 100px solid transparent;
   -webkit-transform : rotate(70deg);
      -moz-transform : rotate(70deg);
@@ -183,7 +183,7 @@ Pentagon
   width : 54px;
   border-width : 50px 18px 0;
   border-style : solid;
-  border-color : #967ADC transparent;
+  border-color : #448aff transparent;
 }
 .pentagon-shape:before {
   content : '';
@@ -194,7 +194,7 @@ Pentagon
   right : -18px;
   border-width : 0 45px 35px;
   border-style : solid;
-  border-color : transparent transparent #967ADC;
+  border-color : transparent transparent #448aff;
 }
 
 /*
@@ -203,7 +203,7 @@ Hexagon
 .hexagon-shape {
   width : 100px;
   height : 55px;
-  background : #967ADC;
+  background : #448aff;
   position : relative;
 }
 .hexagon-shape:before {
@@ -215,7 +215,7 @@ Hexagon
   height : 0;
   border-right : 50px solid transparent;
   border-left : 50px solid transparent;
-  border-bottom : 25px solid #967ADC;
+  border-bottom : 25px solid #448aff;
 }
 .hexagon-shape:after {
   content : '';
@@ -226,7 +226,7 @@ Hexagon
   height : 0;
   border-right : 50px solid transparent;
   border-left : 50px solid transparent;
-  border-top : 25px solid #967ADC;
+  border-top : 25px solid #448aff;
 }
 
 /*
@@ -235,7 +235,7 @@ Octagon
 .octagon-shape {
   width : 100px;
   height : 100px;
-  background : #967ADC;
+  background : #448aff;
   position : relative;
 }
 .octagon-shape:before {
@@ -243,7 +243,7 @@ Octagon
   position : absolute;
   top : 0;
   right : 0;
-  border-bottom : 29px solid #967ADC;
+  border-bottom : 29px solid #448aff;
   border-right : 29px solid #EEEEEE;
   border-left : 29px solid #EEEEEE;
   width : 42px;
@@ -254,7 +254,7 @@ Octagon
   position : absolute;
   bottom : 0;
   right : 0;
-  border-top : 29px solid #967ADC;
+  border-top : 29px solid #448aff;
   border-right : 29px solid #EEEEEE;
   border-left : 29px solid #EEEEEE;
   width : 42px;
@@ -276,7 +276,7 @@ Heart Shape
   top : 0;
   width : 50px;
   height : 80px;
-  background : #967ADC;
+  background : #448aff;
   border-radius : 50px 50px 0 0;
   -webkit-transform : rotate(45deg);
      -moz-transform : rotate(45deg);
@@ -296,7 +296,7 @@ Heart Shape
   top : 0;
   width : 50px;
   height : 80px;
-  background : #967ADC;
+  background : #448aff;
   border-radius : 50px 50px 0 0;
   -webkit-transform : rotate(45deg);
      -moz-transform : rotate(45deg);
@@ -326,7 +326,7 @@ Diamond
 */
 .cut-diamond-shape {
   border-style : solid;
-  border-color : transparent transparent #967ADC transparent;
+  border-color : transparent transparent #448aff transparent;
   border-width : 0 25px 25px 25px;
   height : 0;
   width : 50px;
@@ -341,7 +341,7 @@ Diamond
   width : 0;
   height : 0;
   border-style : solid;
-  border-color : #967ADC transparent transparent transparent;
+  border-color : #448aff transparent transparent transparent;
   border-width : 70px 50px 0 50px;
 }
 
@@ -352,7 +352,7 @@ Diamond Square
   width : 0;
   height : 0;
   border : 50px solid transparent;
-  border-bottom-color : #967ADC;
+  border-bottom-color : #448aff;
   position : relative;
   top : -50px;
 }
@@ -364,7 +364,7 @@ Diamond Square
   width : 0;
   height : 0;
   border : 50px solid transparent;
-  border-top-color : #967ADC;
+  border-top-color : #448aff;
 }
 
 /*
@@ -374,7 +374,7 @@ Egg Shape
   display : block;
   width : 126px;
   height : 180px;
-  background-color : #967ADC;
+  background-color : #448aff;
   border-radius : 50%  50%  50%  50%  / 60%   60%   40%  40%;
 }
 

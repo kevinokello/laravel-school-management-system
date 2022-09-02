@@ -66,6 +66,9 @@
                             </div>
                             <div class="card-body collapse in">
                                 <div class="card-block">
+                                        @if(session('message'))
+<h4 class="alert alert-warning">{{ session('message') }}</h4>
+    @endif
                                     <x-auth-session-status class="mb-4" :status="session('status')" />
                                     <!-- Validation Errors -->
                                     <x-auth-validation-errors class="mb-4" :errors="$errors" />

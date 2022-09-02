@@ -140,8 +140,8 @@ body.vertical-layout.vertical-menu.menu-collapsed .main-menu .main-menu-content 
   color : #FFFFFF;
   text-transform : uppercase;
   text-align : right;
-  background-color : #967ADC;
-  border-color : #967ADC;
+  background-color : #448aff;
+  border-color : #448aff;
   padding : 11px 20px;
 }
 body.vertical-layout.vertical-menu.menu-collapsed .main-menu .main-menu-content > ul.menu-content {
@@ -216,8 +216,8 @@ body.vertical-layout.vertical-menu.menu-collapsed .main-menu .navigation > li > 
   color : #FFFFFF;
   text-transform : uppercase;
   text-align : right;
-  background-color : #967ADC;
-  border-color : #967ADC;
+  background-color : #448aff;
+  border-color : #448aff;
   padding : 11px 20px;
 }
 body.vertical-layout.vertical-menu.menu-collapsed .main-menu .navigation > li > a > i {

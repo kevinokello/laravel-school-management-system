@@ -35,21 +35,21 @@
 }
 
 .bg-gradient-x2-primary {
-  background-image : -webkit-gradient(linear, right top, left top, from(#AC92EC), color-stop(50%, #967ADC), color-stop(50%, #BCAAE9));
-  background-image : -webkit-linear-gradient(right, #AC92EC, #967ADC 50%, #BCAAE9);
-  background-image :    -moz-linear-gradient(right, #AC92EC, #967ADC 50%, #BCAAE9);
-  background-image :      -o-linear-gradient(right, #AC92EC, #967ADC 50%, #BCAAE9);
-  background-image :         linear-gradient(to left, #AC92EC, #967ADC 50%, #BCAAE9);
+  background-image : -webkit-gradient(linear, right top, left top, from(#AC92EC), color-stop(50%, #448aff), color-stop(50%, #BCAAE9));
+  background-image : -webkit-linear-gradient(right, #AC92EC, #448aff 50%, #BCAAE9);
+  background-image :    -moz-linear-gradient(right, #AC92EC, #448aff 50%, #BCAAE9);
+  background-image :      -o-linear-gradient(right, #AC92EC, #448aff 50%, #BCAAE9);
+  background-image :         linear-gradient(to left, #AC92EC, #448aff 50%, #BCAAE9);
   background-repeat : no-repeat;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFAC92EC', endColorstr='#FFBCAAE9', GradientType=1);
 }
 
 .bg-gradient-y2-primary {
-  background-image : -webkit-gradient(linear, left top, left bottom, from(#AC92EC), color-stop(50%, #967ADC), color-stop(50%, #BCAAE9));
-  background-image : -webkit-linear-gradient(#AC92EC, #967ADC 50%, #BCAAE9);
-  background-image :    -moz-linear-gradient(#AC92EC, #967ADC 50%, #BCAAE9);
-  background-image :      -o-linear-gradient(#AC92EC, #967ADC 50%, #BCAAE9);
-  background-image :         linear-gradient(#AC92EC, #967ADC 50%, #BCAAE9);
+  background-image : -webkit-gradient(linear, left top, left bottom, from(#AC92EC), color-stop(50%, #448aff), color-stop(50%, #BCAAE9));
+  background-image : -webkit-linear-gradient(#AC92EC, #448aff 50%, #BCAAE9);
+  background-image :    -moz-linear-gradient(#AC92EC, #448aff 50%, #BCAAE9);
+  background-image :      -o-linear-gradient(#AC92EC, #448aff 50%, #BCAAE9);
+  background-image :         linear-gradient(#AC92EC, #448aff 50%, #BCAAE9);
   background-repeat : no-repeat;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFAC92EC', endColorstr='#FFBCAAE9', GradientType=0);
 }

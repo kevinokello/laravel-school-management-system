@@ -6,15 +6,13 @@
                             class="nav-link nav-menu-main menu-toggle hidden-xs"><i
                                 class="icon-menu5 font-large-1"></i></a></li>
                     <li class="nav-item">
-                        <a class="navbar-brand nav-link" :href="route('dashboard')"
-                            :active="request() - > routeIs('dashboard')">
+                        {{-- <a class="navbar-brand nav-link" href="{{ url('dashboard') }}">
                             <img alt="branding logo"
                                 src="{{ asset('dash/app-assets/images/logo/robust-logo-light.png') }}"
                                 data-expand="{{ asset('dash/app-assets/images/logo/robust-logo-light.png') }}"
                                 data-collapse="{{ asset('dash/app-assets/images/logo/robust-logo-small.png') }}"
                                 class="brand-logo">
-
-                        </a>
+                        </a> --}}
                     </li>
                     <li class="nav-item hidden-md-up float-xs-right"><a data-toggle="collapse"
                             data-target="#navbar-mobile" class="nav-link open-navbar-container"><i

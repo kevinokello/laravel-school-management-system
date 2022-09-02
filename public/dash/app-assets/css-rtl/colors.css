@@ -583,18 +583,18 @@ input:focus ~ .bg-primary {
 }
 
 .primary {
-  color : #967ADC !important;
+  color : #448aff !important;
 }
 
 .bg-primary {
-  background-color : #967ADC !important;
+  background-color : #448aff !important;
 }
 .bg-primary .card-header, .bg-primary .card-footer {
   background-color : transparent;
 }
 
 .alert-primary {
-  border-color : #967ADC !important;
+  border-color : #448aff !important;
   background-color : #C3B3EB !important;
   color : #3D2281 !important;
 }
@@ -603,16 +603,16 @@ input:focus ~ .bg-primary {
 }
 
 .border-primary {
-  border-color : #967ADC;
+  border-color : #448aff;
 }
 
 .bg-primary.tag-glow, .border-primary.tag-glow {
-  -webkit-box-shadow : 0 0 10px #967ADC;
-          box-shadow : 0 0 10px #967ADC;
+  -webkit-box-shadow : 0 0 10px #448aff;
+          box-shadow : 0 0 10px #448aff;
 }
 
 .overlay-primary {
-  background : #967ADC;
+  background : #448aff;
   /* The Fallback */
   background : rgba(150, 122, 220, 0.8);
 }
@@ -620,7 +620,7 @@ input:focus ~ .bg-primary {
 .card-outline-primary {
   border-width : 1px;
   border-style : solid;
-  border-color : #967ADC;
+  border-color : #448aff;
   background-color : transparent;
 }
 .card-outline-primary .card-header, .card-outline-primary .card-footer {
@@ -628,8 +628,8 @@ input:focus ~ .bg-primary {
 }
 
 .btn-primary {
-  border-color : #967ADC;
-  background-color : #967ADC;
+  border-color : #448aff;
+  background-color : #448aff;
   color : #FFFFFF;
 }
 .btn-primary:hover {
@@ -639,56 +639,56 @@ input:focus ~ .bg-primary {
 }
 
 .btn-outline-primary {
-  border-color : #967ADC;
+  border-color : #448aff;
   background-color : transparent;
-  color : #967ADC;
+  color : #448aff;
 }
 .btn-outline-primary:hover {
-  background-color : #967ADC;
+  background-color : #448aff;
   color : #FFFFFF !important;
 }
 
 .progress-primary[value]::-webkit-progress-value {
-  background-color : #967ADC;
+  background-color : #448aff;
 }
 
 .progress-primary[value]::-moz-progress-bar {
-  background-color : #967ADC;
+  background-color : #448aff;
 }
 
 .progress-primary[value]::-ms-fill {
-  background-color : #967ADC;
+  background-color : #448aff;
 }
 
 @media screen and (min-width: 0\0) {
   .progress-primary .progress-bar {
-    background-color : #967ADC;
+    background-color : #448aff;
   }
 }
 
 input:focus ~ .bg-primary {
-  -webkit-box-shadow : 0 0 0 0.075rem #FFFFFF, 0 0 0 0.21rem #967ADC !important;
-          box-shadow : 0 0 0 0.075rem #FFFFFF, 0 0 0 0.21rem #967ADC !important;
+  -webkit-box-shadow : 0 0 0 0.075rem #FFFFFF, 0 0 0 0.21rem #448aff !important;
+          box-shadow : 0 0 0 0.075rem #FFFFFF, 0 0 0 0.21rem #448aff !important;
 }
 
 .border-primary {
-  border : 1px solid #967ADC !important;
+  border : 1px solid #448aff !important;
 }
 
 .border-top-primary {
-  border-top : 1px solid #967ADC;
+  border-top : 1px solid #448aff;
 }
 
 .border-bottom-primary {
-  border-bottom : 1px solid #967ADC;
+  border-bottom : 1px solid #448aff;
 }
 
 .border-left-primary {
-  border-right : 1px solid #967ADC;
+  border-right : 1px solid #448aff;
 }
 
 .border-right-primary {
-  border-left : 1px solid #967ADC;
+  border-left : 1px solid #448aff;
 }
 
 .primary.darken-1 {

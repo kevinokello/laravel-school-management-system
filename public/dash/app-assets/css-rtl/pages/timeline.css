@@ -199,11 +199,11 @@ Horizontal Timeline
   pointer-events : none;
 }
 .cd-horizontal-timeline .events a.selected::after {
-  background-color : #967ADC;
-  border-color : #967ADC;
+  background-color : #448aff;
+  border-color : #448aff;
 }
 .cd-horizontal-timeline .events a.older-event::after {
-  border-color : #967ADC;
+  border-color : #448aff;
 }
 .cd-horizontal-timeline .filling-line {
   position : absolute;
@@ -212,7 +212,7 @@ Horizontal Timeline
   top : 0;
   height : 100%;
   width : 100%;
-  background-color : #967ADC;
+  background-color : #448aff;
   -webkit-transform : scaleX(0);
      -moz-transform : scaleX(0);
       -ms-transform : scaleX(0);
@@ -314,12 +314,12 @@ Horizontal Timeline
 }
 
 .no-touch .cd-horizontal-timeline .events a:hover::after {
-  background-color : #967ADC;
-  border-color : #967ADC;
+  background-color : #448aff;
+  border-color : #448aff;
 }
 
 .no-touch .cd-timeline-navigation a:hover {
-  border-color : #967ADC;
+  border-color : #448aff;
 }
 
 .no-touch .cd-timeline-navigation a.inactive:hover {
