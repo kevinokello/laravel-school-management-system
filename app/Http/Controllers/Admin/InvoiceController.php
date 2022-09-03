@@ -2,84 +2,234 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\Stock;
+use App\Models\Invoice;
+use App\Models\Payment;
 use Illuminate\Http\Request;
+use App\Models\InvoiceDetail;
+use App\Models\PaymentDetail;
+use App\Models\StockCategory;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class InvoiceController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function InvoiceAll()
     {
-        //
-    }
+        $allData = Invoice::orderBy('date', 'desc')->orderBy('id', 'desc')->where('status', '1')->get();
+        return view('dashboard.inventory.invoice.all', compact('allData'));
+    } // End Method
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function invoiceAdd()
     {
-        //
-    }
+        $category = StockCategory::all();
+        $stock = Stock::all();
+        $invoice_data = Invoice::orderBy('id', 'desc')->first();
+        if ($invoice_data == null) {
+            $firstReg = '0';
+            $invoice_no = $firstReg + 1;
+        } else {
+            $invoice_data = Invoice::orderBy('id', 'desc')->first()->invoice_no;
+            $invoice_no = $invoice_data + 1;
+        }
+        $date = date('Y-m-d');
+        return view('dashboard.inventory.invoice.add', compact('invoice_no', 'category', 'date', 'stock'));
+    } // End Method
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function InvoiceStore(Request $request)
     {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
+        if ($request->category_id == null) {
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+            $notification = array(
+                'message' => 'Sorry You do not select any item',
+                'alert-type' => 'error'
+            );
+            return redirect()->back()->with($notification);
+        } else {
+            if ($request->paid_amount > $request->estimated_amount) {
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+                $notification = array(
+                    'message' => 'Sorry Paid Amount is Maximum the total price',
+                    'alert-type' => 'error'
+                );
+                return redirect()->back()->with($notification);
+            } else {
+
+                $invoice = new Invoice();
+                $invoice->invoice_no = $request->invoice_no;
+                $invoice->date = date('Y-m-d', strtotime($request->date));
+                $invoice->description = $request->description;
+                $invoice->status = '0';
+                $invoice->created_by = Auth::user()->id;
+
+                DB::transaction(function () use ($request, $invoice) {
+                    if ($invoice->save()) {
+                        $count_category = count($request->category_id);
+                        for ($i = 0; $i < $count_category; $i++) {
+
+                            $invoice_details = new InvoiceDetail();
+                            $invoice_details->date = date('Y-m-d', strtotime($request->date));
+                            $invoice_details->invoice_id = $invoice->id;
+                            $invoice_details->category_id = $request->category_id[$i];
+                            $invoice_details->product_id = $request->product_id[$i];
+                            $invoice_details->selling_qty = $request->selling_qty[$i];
+                            $invoice_details->unit_price = $request->unit_price[$i];
+                            $invoice_details->selling_price = $request->selling_price[$i];
+                            $invoice_details->status = '0';
+                            $invoice_details->save();
+                        }
+
+
+                        $payment = new Payment();
+                        $payment_details = new PaymentDetail();
+                        $payment->invoice_id = $invoice->id;
+                        $payment->paid_status = $request->paid_status;
+                        $payment->discount_amount = $request->discount_amount;
+                        $payment->total_amount = $request->estimated_amount;
+
+                        if ($request->paid_status == 'full_paid') {
+                            $payment->paid_amount = $request->estimated_amount;
+                            $payment->due_amount = '0';
+                            $payment_details->current_paid_amount = $request->estimated_amount;
+                        } elseif ($request->paid_status == 'full_due') {
+                            $payment->paid_amount = '0';
+                            $payment->due_amount = $request->estimated_amount;
+                            $payment_details->current_paid_amount = '0';
+                        } elseif ($request->paid_status == 'partial_paid') {
+                            $payment->paid_amount = $request->paid_amount;
+                            $payment->due_amount = $request->estimated_amount - $request->paid_amount;
+                            $payment_details->current_paid_amount = $request->paid_amount;
+                        }
+                        $payment->save();
+
+                        $payment_details->invoice_id = $invoice->id;
+                        $payment_details->date = date('Y-m-d', strtotime($request->date));
+                        $payment_details->save();
+                    }
+                });
+            } // end else
+        }
+        $notification = array(
+            'message' => 'Invoice Data Inserted Successfully',
+            'alert-type' => 'success'
+        );
+        return redirect('inventory/invoice/all')->with($notification);
+    } // End Method
+
+
+    public function PendingList()
     {
-        //
-    }
+        $allData = Invoice::orderBy('date', 'desc')->orderBy('id', 'desc')->where('status', '0')->get();
+        return view('dashboard.inventory.invoice.pending', compact('allData'));
+    } // End Method
+
+
+
+    public function InvoiceDelete($id)
+    {
+
+        $invoice = Invoice::findOrFail($id);
+        $invoice->delete();
+        InvoiceDetail::where('invoice_id', $invoice->id)->delete();
+        Payment::where('invoice_id', $invoice->id)->delete();
+        PaymentDetail::where('invoice_id', $invoice->id)->delete();
+
+        $notification = array(
+            'message' => 'Invoice Deleted Successfully',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
+    } // End Method
+
+
+
+    public function InvoiceApprove($id)
+    {
+
+        $invoice = Invoice::with('invoice_details')->findOrFail($id);
+        return view('dashboard.inventory.invoice.approve', compact('invoice'));
+    } // End Method
+
+
+    public function ApprovalStore(Request $request, $id)
+    {
+
+        foreach ($request->selling_qty as $key => $val) {
+            $invoice_details = InvoiceDetail::where('id', $key)->first();
+            $product = Stock::where('id', $invoice_details->product_id)->first();
+            if ($product->quantity < $request->selling_qty[$key]) {
+
+                $notification = array(
+                    'message' => 'Sorry you approve Maximum Value',
+                    'alert-type' => 'error'
+                );
+                return redirect()->back()->with($notification);
+            }
+        } // End foreach
+
+        $invoice = Invoice::findOrFail($id);
+        $invoice->updated_by = Auth::user()->id;
+        $invoice->status = '1';
+
+        DB::transaction(function () use ($request, $invoice, $id) {
+            foreach ($request->selling_qty as $key => $val) {
+                $invoice_details = InvoiceDetail::where('id', $key)->first();
+
+                $invoice_details->status = '1';
+                $invoice_details->save();
+
+                $product = Stock::where('id', $invoice_details->product_id)->first();
+                $product->quantity = ((float)$product->quantity) - ((float)$request->selling_qty[$key]);
+                $product->save();
+            } // end foreach
+
+            $invoice->save();
+        });
+
+        $notification = array(
+            'message' => 'Invoice Approve Successfully',
+            'alert-type' => 'success'
+        );
+        return redirect('inventory/invoice/all')->with($notification);
+    } // End Method
+
+
+    public function PrintInvoiceList()
+    {
+
+        $allData = Invoice::orderBy('date', 'desc')->orderBy('id', 'desc')->where('status', '1')->get();
+        return view('dashboard.inventory.invoice.print_invoice_list', compact('allData'));
+    } // End Method
+
+
+    public function PrintInvoice($id)
+    {
+        $invoice = Invoice::with('invoice_details')->findOrFail($id);
+        return view('backend.pdf.invoice_pdf', compact('invoice'));
+    } // End Method
+
+
+    public function DailyInvoiceReport()
+    {
+        return view('dashboard.inventory.invoice.daily_invoice_report');
+    } // End Method
+
+
+    public function DailyInvoicePdf(Request $request)
+    {
+
+        $sdate = date('Y-m-d', strtotime($request->start_date));
+        $edate = date('Y-m-d', strtotime($request->end_date));
+        $allData = Invoice::whereBetween('date', [$sdate, $edate])->where('status', '1')->get();
+
+
+        $start_date = date('Y-m-d', strtotime($request->start_date));
+        $end_date = date('Y-m-d', strtotime($request->end_date));
+        return view('backend.pdf.daily_invoice_report_pdf', compact('allData', 'start_date', 'end_date'));
+    } // End Method
+
+
 }

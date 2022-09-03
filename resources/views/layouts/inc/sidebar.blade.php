@@ -48,7 +48,7 @@
               </li>
 
               <li
-                  class="nav-item {{ Request::is('inventory/units') || Request::is('inventory/categories') || Request::is('inventory/stock/add') || Request::is('inventory/supplier/all') || Request::is('inventory/supplier/add') || Request::is('inventory/stock/all') || Request::is('inventory/stock/add') ? 'open' : '' }}">
+                  class="nav-item {{ Request::is('inventory/units') || Request::is('inventory/categories') || Request::is('inventory/stock/add') || Request::is('inventory/supplier/all') || Request::is('inventory/supplier/add') || Request::is('inventory/stock/all') || Request::is('inventory/stock/add') || Request::is('inventory/purchase/add') || Request::is('inventory/purchase/all') || Request::is('inventory/purchase/pending') ? 'open' : '' }}">
                   <a href="{{ url('student/add-student') }}"><i class="icon-ios-albums-outline"></i><span
                           data-i18n="nav.menu_levels.main" class="menu-title">Inventory</span></a>
                   <ul class="menu-content">
@@ -62,24 +62,28 @@
                               Categories</a>
                       </li>
 
-                      <li class="nav-item  {{ Request::is('inventory/supplier/add') || Request::is('inventory/supplier/all')  ? 'open' : '' }}">
+                      <li
+                          class="nav-item  {{ Request::is('inventory/supplier/add') || Request::is('inventory/supplier/all') ? 'open' : '' }}">
                           <a href="#" data-i18n="nav.menu_levels.second_level_child.main" class="nav-item">Manage
                               suppliers</a>
                           <ul class="menu-content">
                               <li>
                                   <a href="{{ url('inventory/supplier/add') }}"
-                                      data-i18n="nav.menu_levels.second_level_child.third_level" class="menu-item {{ Request::is('inventory/supplier/add') ? 'active' : '' }}">Add
+                                      data-i18n="nav.menu_levels.second_level_child.third_level"
+                                      class="menu-item {{ Request::is('inventory/supplier/add') ? 'active' : '' }}">Add
                                       supplier</a>
                               </li>
                               <li>
                                   <a href="{{ url('inventory/supplier/all') }}"
-                                      data-i18n="nav.menu_levels.second_level_child.third_level" class="menu-item {{ Request::is('inventory/supplier/all') ? 'active' : '' }}">View
+                                      data-i18n="nav.menu_levels.second_level_child.third_level"
+                                      class="menu-item {{ Request::is('inventory/supplier/all') ? 'active' : '' }}">View
                                       Suppliers</a>
                               </li>
 
                           </ul>
                       </li>
-                      <li class="nav-item  {{ Request::is('inventory/stock/add') || Request::is('inventory/stock/all')  ? 'open' : '' }}">
+                      <li
+                          class="nav-item  {{ Request::is('inventory/stock/add') || Request::is('inventory/stock/all') ? 'open' : '' }}">
                           <a href="#" data-i18n="nav.menu_levels.second_level_child.main" class="menu-item">Manage
                               stock</a>
                           <ul class="menu-content">
@@ -91,7 +95,8 @@
                               </li>
                               <li>
                                   <a href="{{ url('inventory/stock/all') }}"
-                                      data-i18n="nav.menu_levels.second_level_child.third_level" class="menu-item {{ Request::is('inventory/stock/all') ? 'active' : '' }}">All
+                                      data-i18n="nav.menu_levels.second_level_child.third_level"
+                                      class="menu-item {{ Request::is('inventory/stock/all') ? 'active' : '' }}">All
                                       Stock</a>
                               </li>
                               <li>
@@ -104,7 +109,8 @@
                               </li>
                           </ul>
                       </li>
-                     <li class="nav-item  {{ Request::is('inventory/purchase/purchase_all') || Request::is('inventory/purchase/add')  ? 'open' : '' }}">
+                      <li
+                          class="nav-item  {{ Request::is('inventory/purchase/all') || Request::is('inventory/purchase/add') || Request::is('inventory/purchase/pending') ? 'open' : '' }}">
                           <a href="#" data-i18n="nav.menu_levels.second_level_child.main" class="menu-item">Manage
                               purchases</a>
                           <ul class="menu-content">
@@ -112,17 +118,26 @@
                                   <a href="{{ url('inventory/purchase/add') }}"
                                       data-i18n="nav.menu_levels.second_level_child.third_level"
                                       class="menu-item {{ Request::is('inventory/purchase/add') ? 'active' : '' }}">Add
-                                      </a>
+                                  </a>
                               </li>
                               <li>
                                   <a href="{{ url('inventory/purchase/pending') }}"
-                                      data-i18n="nav.menu_levels.second_level_child.third_level" class="menu-item {{ Request::is('inventory/purchase/all') ? 'active' : '' }}">Approval
-                                      </a>
+                                      data-i18n="nav.menu_levels.second_level_child.third_level"
+                                      class="menu-item {{ Request::is('inventory/purchase/pending') ? 'active' : '' }}">Waiting
+                                      Approval
+                                  </a>
                               </li>
                               <li>
+                                  <a href="{{ url('inventory/purchase/all') }}"
+                                      data-i18n="nav.menu_levels.second_level_child.third_level"
+                                      class="menu-item {{ Request::is('inventory/purchase/all') ? 'active' : '' }}">All
+                                      purchase
+                                  </a>
+                              </li>
+                              {{-- <li>
                                   <a href="#" data-i18n="nav.menu_levels.second_level_child.third_level"
                                       class="menu-item">Daily report</a>
-                              </li>
+                              </li> --}}
 
                           </ul>
                       </li>
@@ -131,15 +146,15 @@
                               invoice</a>
                           <ul class="menu-content">
                               <li>
-                                  <a href="#" data-i18n="nav.menu_levels.second_level_child.third_level"
-                                      class="menu-item">All</a>
+                                  <a href="{{ url('inventory/invoice/add') }}" data-i18n="nav.menu_levels.second_level_child.third_level"
+                                      class="menu-item">Add</a>
                               </li>
                               <li>
-                                  <a href="#" data-i18n="nav.menu_levels.second_level_child.third_level"
+                                  <a href="{{ url('inventory/invoice/pending') }}" data-i18n="nav.menu_levels.second_level_child.third_level"
                                       class="menu-item">Approval</a>
                               </li>
                               <li>
-                                  <a href="#" data-i18n="nav.menu_levels.second_level_child.third_level"
+                                  <a href="{{ url('inventory/invoice/all') }}" data-i18n="nav.menu_levels.second_level_child.third_level"
                                       class="menu-item">Invoice List</a>
                               </li>
                               <li>
@@ -147,6 +162,31 @@
                                       class="menu-item">Daily report</a>
                               </li>
                           </ul>
+                      </li>
+
+
+                  </ul>
+              </li>
+                  <li
+                  class="nav-item">
+                  <a href=""><i class="icon-ios-albums-outline"></i><span
+                          data-i18n="nav.menu_levels.main" class="menu-title">Manage Accounts</span></a>
+                  <ul class="menu-content">
+                      <li>
+                          <a href="#" data-i18n="nav.menu_levels.second_level_child.third_level"
+                              class="menu-item">All</a>
+                      </li>
+
+                  </ul>
+              </li>
+                     <li
+                  class="nav-item">
+                  <a href=""><i class="icon-ios-albums-outline"></i><span
+                          data-i18n="nav.menu_levels.main" class="menu-title">Manage Employees</span></a>
+                  <ul class="menu-content">
+                      <li>
+                          <a href="#" data-i18n="nav.menu_levels.second_level_child.third_level"
+                              class="menu-item">All</a>
                       </li>
 
                   </ul>

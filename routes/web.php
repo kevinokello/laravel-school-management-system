@@ -88,6 +88,21 @@ Route::prefix('/inventory')->middleware(['auth', 'isAdmin'])->namespace('App\Htt
 
     Route::get('/daily/purchase/report', 'PurchaseController@DailyPurchaseReport');
     Route::get('/daily/purchase/pdf', 'PurchaseController@DailyPurchasePdf');
+
+    
+    Route::get('/invoice/all', 'InvoiceController@InvoiceAll');
+    Route::get('/invoice/add', 'InvoiceController@invoiceAdd');
+    Route::post('/invoice/store', 'InvoiceController@InvoiceStore');
+    Route::get('/invoice/pending/list', 'InvoiceController@PendingList');
+    Route::get('/invoice/delete/{id}', 'InvoiceController@InvoiceDelete');
+    Route::get('/invoice/approve/{id}', 'InvoiceController@InvoiceApprove');
+    Route::post('/approval/store/{id}', 'InvoiceController@ApprovalStore');
+    Route::get('/print/invoice/list', 'InvoiceController@PrintInvoiceList');
+    Route::get('/print/invoice/{id}', 'InvoiceController@PrintInvoice');
+    Route::get('/daily/invoice/report', 'InvoiceController@DailyInvoiceReport');
+    Route::get('/daily/invoice/pdf', 'InvoiceController@DailyInvoicePdf');
+
+
 });
 
 Route::controller(Admin\DefaultController::class)->group(function () {

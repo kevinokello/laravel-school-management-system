@@ -11,8 +11,9 @@
                                 <div class="card-body collapse in">
                                     <div class="card-block">
 
-                                         <form method="post" action="{{ url('inventory/supplier/store') }}" id="myForm" class="form">
-                        @csrf
+                                        <form method="post" action="{{ url('inventory/supplier/store') }}" id="myForm"
+                                            class="form">
+                                            @csrf
                                             <div class="form-body">
 
                                                 <div class="row">
@@ -37,7 +38,7 @@
                                                                 placeholder="Address" name="email">
                                                         </div>
                                                     </div>
-                                                                                                        <div class="col-md-6">
+                                                    <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectinput4">Supplier Address</label>
                                                             <input type="text" id="projectinput4" class="form-control"
@@ -51,13 +52,13 @@
 
                                             </div>
 
-                                           <button
-                                        style="  border-color: #448aff;
+                                            <button
+                                                style="  border-color: #448aff;
             background-color: #448aff;
             color: #fff; height:50px; width:170px; "
-                                        type="submit" class="btn btn-primary">
-                                        Add supplier
-                                    </button>
+                                                type="submit" class="btn btn-primary">
+                                                Add supplier
+                                            </button>
                                         </form>
                                     </div>
                                 </div>

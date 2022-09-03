@@ -32,7 +32,6 @@ class PurchaseController extends Controller
 
     public function PurchaseStore(Request $request)
     {
-
         if ($request->category_id == null) {
 
             $notification = array(
@@ -66,7 +65,8 @@ class PurchaseController extends Controller
             'message' => 'Data Save Successfully',
             'alert-type' => 'success'
         );
-        return redirect()->route('inventory/purchase/all')->with($notification);
+
+        return redirect('inventory/purchase/all')->with($notification);
     } // End Method
 
 
@@ -109,7 +109,8 @@ class PurchaseController extends Controller
                 'message' => 'Status Approved Successfully',
                 'alert-type' => 'success'
             );
-            return redirect()->route('purchase.all')->with($notification);
+            return redirect('inventory/purchase/all')->with($notification);
+            // return redirect()->route('purchase.all')->with($notification);
         }
     } // End Method
 
