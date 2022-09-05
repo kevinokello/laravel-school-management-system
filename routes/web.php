@@ -14,18 +14,20 @@ Route::prefix('/dashboard')->middleware(['auth', 'isAdmin'])->namespace('App\Htt
     Route::get('/', 'DashboardController@index');
 });
 
-Route::prefix('/profile')->middleware(['auth', 'isAdmin'])->namespace('App\Http\Controllers\Admin')->group(function () {
-    Route::get('edit', 'ProfileController@ProfileEdit');
-});
-
-// Route::prefix('/profile')->middleware(['auth', 'isAdmin'])->namespace('App\Http\Controllers\Admin')->group(
-//     function () {
-//     Route::get('view', ProfileController@ProfileView');
-//     Route::get('edit', ProfileController@ProfileEdit');
-//     Route::post('store', ProfileController@ProfileStore');
-//     Route::get('password/view', ProfileController@PasswordView');
-//     Route::post('password/update', ProfileController@PasswordUpdate');
+// Route::prefix('/profile')->middleware(['auth', 'isAdmin'])->namespace('App\Http\Controllers\Admin')->group(function () {
+//     Route::get('edit', 'ProfileController@ProfileEdit');
+//     Route::post('/store', 'ProfileController@ProfileStore');
+//     Route::get('/password/view', 'ProfileController@PasswordView');
+//     Route::post('/password/update', 'ProfileController@PasswordUpdate');
 // });
+
+Route::prefix('/profile')->middleware(['auth', 'isAdmin'])->namespace('App\Http\Controllers\Admin')->group(function () {
+    Route::get('view', 'ProfileController@ProfileView');
+    Route::get('edit', 'ProfileController@ProfileEdit');
+    Route::post('store', 'ProfileController@ProfileStore');
+    Route::get('password', 'ProfileController@PasswordView');
+    Route::post('password/update', 'ProfileController@PasswordUpdate');
+});
 
 Route::prefix('/student')->middleware(['auth', 'isAdmin'])->namespace('App\Http\Controllers\Admin')->group(function () {
     Route::get('add-student', 'StudentController@create');
@@ -49,6 +51,22 @@ Route::prefix('/academic')->middleware(['auth', 'isAdmin'])->namespace('App\Http
     Route::get('sessions', 'SessionController@index');
     Route::post('sessions', 'SessionController@store');
     Route::get('sessions/{session_id}', 'SessionController@destroy');
+
+
+    Route::get('fee/category/view', 'FeeCategoryController@ViewFeeCat');
+    Route::get('fee/category/add', 'FeeCategoryController@FeeCatAdd');
+    Route::post('fee/category/store', 'FeeCategoryController@FeeCatStore');
+    Route::get('fee/category/edit/{id}', 'FeeCategoryController@FeeCatEdit');
+    Route::post('fee/category/update/{id}', 'FeeCategoryController@FeeCategoryUpdate');
+    Route::get('fee/category/delete/{id}', 'FeeCategoryController@FeeCategoryDelete');
+
+    Route::get('fee/amount/view', 'FeeAmountController@ViewFeeAmount');
+    Route::get('fee/amount/add', 'FeeAmountController@AddFeeAmount');
+    Route::post('fee/amount/store', 'FeeAmountController@StoreFeeAmount');
+    Route::get('fee/amount/edit/{fee_category_id}', 'FeeAmountController@EditFeeAmount');
+    Route::post('fee/amount/update/{fee_category_id}', 'FeeAmountController@UpdateFeeAmount');
+    Route::get('fee/amount/details/{fee_category_id}', 'FeeAmountController@DetailsFeeAmount');
+
 });
 Route::prefix('/inventory')->middleware(['auth', 'isAdmin'])->namespace('App\Http\Controllers\Admin')->group(function () {
 
@@ -101,12 +119,27 @@ Route::prefix('/inventory')->middleware(['auth', 'isAdmin'])->namespace('App\Htt
     Route::get('/print/invoice/{id}', 'InvoiceController@PrintInvoice');
     Route::get('/daily/invoice/report', 'InvoiceController@DailyInvoiceReport');
     Route::get('/daily/invoice/pdf', 'InvoiceController@DailyInvoicePdf');
-
-
 });
 
 Route::controller(Admin\DefaultController::class)->group(function () {
     Route::get('/get-category', 'GetCategory')->name('get-category');
     Route::get('/get-product', 'GetProduct')->name('get-product');
     Route::get('/check-product', 'GetStock')->name('check-product-stock');
+});
+
+Route::prefix('/accounts')->middleware(['auth', 'isAdmin'])->namespace('App\Http\Controllers\Admin')->group(function () {
+
+    Route::get('fee/category/view', 'FeeCategoryController@ViewFeeCat');
+    Route::get('fee/category/add', 'FeeCategoryController@FeeCatAdd');
+    Route::post('fee/category/store', 'FeeCategoryController@FeeCatStore');
+    Route::get('fee/category/edit/{id}', 'FeeCategoryController@FeeCatEdit');
+    Route::post('fee/category/update/{id}', 'FeeCategoryController@FeeCategoryUpdate');
+    Route::get('fee/category/delete/{id}', 'FeeCategoryController@FeeCategoryDelete');
+
+    Route::get('fee/amount/view', 'FeeAmountController@ViewFeeAmount');
+    Route::get('fee/amount/add', 'FeeAmountController@AddFeeAmount');
+    Route::post('fee/amount/store', 'FeeAmountController@StoreFeeAmount');
+    Route::get('fee/amount/edit/{fee_category_id}', 'FeeAmountController@EditFeeAmount');
+    Route::post('fee/amount/update/{fee_category_id}', 'FeeAmountController@UpdateFeeAmount');
+    Route::get('fee/amount/details/{fee_category_id}', 'FeeAmountController@DetailsFeeAmount');
 });

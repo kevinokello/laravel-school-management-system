@@ -16,7 +16,6 @@ class ProfileController extends Controller
         $user = User::find($id);
         return view('dashboard.user.view_profile', compact('user'));
     }
-
     public function ProfileEdit()
     {
         $id = Auth::user()->id;
@@ -47,15 +46,11 @@ class ProfileController extends Controller
             'message' => 'User Profile Updated Successfully',
             'alert-type' => 'success'
         );
-
-        return redirect()->route('profile.view')->with($notification);
+        return redirect('profile/view')->with($notification);
     } // End Method
-
-
-
     public function PasswordView()
     {
-        return view('backend.user.edit_password');
+        return view('dashboard.user.edit_password');
     }
 
     public function PasswordUpdate(Request $request)

@@ -17,7 +17,7 @@
               <li
                   class="nav-item {{ Request::is('academic/academic-years') || Request::is('academic/classes') || Request::is('academic/sessions') ? 'open' : '' }}">
                   <a href="#"><i class="icon-ios-albums-outline"></i><span data-i18n="nav.cards.main"
-                          class="menu-title">Academics</span></a>
+                          class="menu-title">Academic setup</span></a>
                   <ul class="menu-content">
                       <li><a href="{{ url('academic/academic-years') }}"
                               class="menu-item {{ Request::is('academic/academic-years') ? 'active' : '' }}">Academic
@@ -28,6 +28,14 @@
                       </li>
                       <li><a href="{{ url('academic/sessions') }}"
                               class="menu-item {{ Request::is('academic/sessions') ? 'active' : '' }}">Sections</a>
+                      </li>
+                      <li>
+                          <a href="{{ url('academic/fee/category/view') }}" data-i18n="nav.menu_levels.second_level_child.third_level"
+                              class="menu-item">Fee Category</a>
+                      </li>
+                      <li>
+                          <a href="{{ url('academic/fee/amount/view') }}" data-i18n="nav.menu_levels.second_level_child.third_level"
+                              class="menu-item">Fee Amount</a>
                       </li>
                   </ul>
               </li>
@@ -61,7 +69,6 @@
                               class="menu-item {{ Request::is('inventory/categories') ? 'active' : '' }}">
                               Categories</a>
                       </li>
-
                       <li
                           class="nav-item  {{ Request::is('inventory/supplier/add') || Request::is('inventory/supplier/all') ? 'open' : '' }}">
                           <a href="#" data-i18n="nav.menu_levels.second_level_child.main" class="nav-item">Manage
@@ -138,25 +145,29 @@
                                   <a href="#" data-i18n="nav.menu_levels.second_level_child.third_level"
                                       class="menu-item">Daily report</a>
                               </li> --}}
-
                           </ul>
                       </li>
-                       <li
+                      <li
                           class="nav-item  {{ Request::is('inventory/invoice/add') || Request::is('inventory/invoice/pending') || Request::is('inventory/invoice/all') ? 'open' : '' }}">
-                          <a href="#" data-i18n="nav.menu_levels.second_level_child.main" class="menu-item">Manage
+                          <a href="#" data-i18n="nav.menu_levels.second_level_child.main"
+                              class="menu-item">Manage
                               invoice</a>
                           <ul class="menu-content">
                               <li>
-                                  <a href="{{ url('inventory/invoice/add') }}" data-i18n="nav.menu_levels.second_level_child.third_level"
+                                  <a href="{{ url('inventory/invoice/add') }}"
+                                      data-i18n="nav.menu_levels.second_level_child.third_level"
                                       class="menu-item {{ Request::is('inventory/invoice/add') ? 'active' : '' }}">Add</a>
                               </li>
                               <li>
-                                  <a href="{{ url('inventory/invoice/pending') }}" data-i18n="nav.menu_levels.second_level_child.third_level"
+                                  <a href="{{ url('inventory/invoice/pending') }}"
+                                      data-i18n="nav.menu_levels.second_level_child.third_level"
                                       class="menu-item {{ Request::is('inventory/invoice/pending') ? 'active' : '' }}">Approval</a>
                               </li>
                               <li>
-                                  <a href="{{ url('inventory/invoice/all') }}" data-i18n="nav.menu_levels.second_level_child.third_level"
-                                      class="menu-item {{ Request::is('inventory/invoice/all') ? 'active' : '' }}">Invoice List</a>
+                                  <a href="{{ url('inventory/invoice/all') }}"
+                                      data-i18n="nav.menu_levels.second_level_child.third_level"
+                                      class="menu-item {{ Request::is('inventory/invoice/all') ? 'active' : '' }}">Invoice
+                                      List</a>
                               </li>
                               <li>
                                   <a href="#" data-i18n="nav.menu_levels.second_level_child.third_level"
@@ -164,67 +175,23 @@
                               </li>
                           </ul>
                       </li>
-
-
                   </ul>
               </li>
-                  {{-- <li
-                  class="nav-item">
-                  <a href=""><i class="icon-ios-albums-outline"></i><span
-                          data-i18n="nav.menu_levels.main" class="menu-title">Accounting</span></a>
+              <li class="nav-item">
+                  <a href=""><i class="icon-ios-albums-outline"></i><span data-i18n="nav.menu_levels.main"
+                          class="menu-title">Accounting</span></a>
                   <ul class="menu-content">
                       <li>
                           <a href="#" data-i18n="nav.menu_levels.second_level_child.third_level"
-                              class="menu-item">All</a>
+                              class="menu-item">Add Fee</a>
                       </li>
-
-                  </ul>
-              </li>
-                     <li
-                  class="nav-item">
-                  <a href=""><i class="icon-ios-albums-outline"></i><span
-                          data-i18n="nav.menu_levels.main" class="menu-title">Manage Employees</span></a>
-                  <ul class="menu-content">
                       <li>
                           <a href="#" data-i18n="nav.menu_levels.second_level_child.third_level"
-                              class="menu-item">All</a>
+                              class="menu-item">View Fees</a>
                       </li>
 
                   </ul>
-              </li> --}}
-              {{-- <li
-                  class="nav-item {{ Request::is('student/add-student') || Request::is('student/view-students') ? 'open' : '' }}">
-                  <a href="#"><i class="icon-ios-albums-outline"></i><span data-i18n="nav.cards.main"
-                          class="menu-title">Accounts</span></a>
-                  <ul class="menu-content">
-                      <li><a href="{{ url('student/add-student') }}"
-                              class="menu-item {{ Request::is('student/add-student') ? 'active' : '' }}">Admit
-                              Fee Category</a>
-                      </li>
-                      <li><a href="{{ url('student/view-students') }}"
-                              class="menu-item {{ Request::is('student/view-students') ? 'active' : '' }}">Fee
-                              Category Amount</a>
-                      </li>
-                  </ul>
               </li>
-              <li
-                  class="nav-item {{ Request::is('student/add-student') || Request::is('student/view-students') ? 'open' : '' }}">
-                  <a href="#"><i class="icon-ios-albums-outline"></i><span data-i18n="nav.cards.main"
-                          class="menu-title">HR Management</span></a>
-                  <ul class="menu-content">
-                      <li><a href="{{ url('student/add-student') }}"
-                              class="menu-item {{ Request::is('student/add-student') ? 'active' : '' }}">Admit
-                              Fee Category</a>
-                      </li>
-                      <li><a href="{{ url('student/view-students') }}"
-                              class="menu-item {{ Request::is('student/view-students') ? 'active' : '' }}">Fee
-                              Category Amount</a>
-                      </li>
-                  </ul>
-              </li> --}}
-              {{-- <li class=" nav-item"><a href="#"><i class="icon-document-text"></i><span
-                          data-i18n="nav.support_documentation.main" class="menu-title">Documentation</span></a>
-              </li> --}}
           </ul>
       </div>
 

@@ -1,6 +1,6 @@
 @extends('layouts.dash')
-
 @section('content')
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <div class="app-content content container-fluid">
         <div class="content-wrapper">
             <div class="content-body">
@@ -12,72 +12,162 @@
                                 <div class="card-header">
                                     <h4 class="form-section"><i class="icon-head"></i> Personal Info</h4>
                                     <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
-
                                 </div>
                                 <div class="card-body collapse in">
                                     <div class="card-block">
 
-                                        <form class="form">
-                                            <div class="form-body">
+                                        <form method="post" action="{{ url('profile/store') }}"
+                                            enctype="multipart/form-data">
+                                            @csrf
+                                                <div class="col-12">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
 
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="projectinput1">First Name</label>
-                                                            <input type="text" value="{{ $editData->name }}"
-                                                                id="projectinput1" class="form-control"
-                                                                placeholder="First Name" name="fname">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="projectinput2">Last Name</label>
-                                                            <input type="text" id="projectinput2"
-                                                                value="{{ $editData->email }}" class="form-control"
-                                                                placeholder="Last Name" name="lname">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label>Select File</label>
-                                                            <label id="projectinput7" class="file center-block">
-                                                                <input type="file" id="file">
-                                                                <span class="file-custom"></span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="projectinput4">Phone Number</label>
-                                                            <input type="text" id="projectinput4" class="form-control"
-                                                                placeholder="Phone" name="phone">
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                            <div class="form-group">
+                                                                <h5>User Name <span class="text-danger">*</span></h5>
+                                                                <div class="controls">
+                                                                    <input type="text" name="name"
+                                                                        class="form-control" value="{{ $editData->name }}"
+                                                                        required="">
+                                                                </div>
 
-                                            </div>
+                                                            </div>
 
-                                            <div class="form-actions">
-                                                <button type="button" class="btn btn-warning mr-1">
-                                                    <i class="icon-cross2"></i> Cancel
-                                                </button>
-                                                <button type="submit" class="btn btn-primary">
-                                                    <i class="icon-check2"></i> Save
-                                                </button>
-                                            </div>
+                                                        </div> <!-- End Col Md-6 -->
+
+                                                        <div class="col-md-6">
+
+                                                            <div class="form-group">
+                                                                <h5>User Email <span class="text-danger">*</span></h5>
+                                                                <div class="controls">
+                                                                    <input type="email" name="email"
+                                                                        class="form-control" value="{{ $editData->email }}"
+                                                                        required="">
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div><!-- End Col Md-6 -->
+
+
+                                                    </div> <!-- End Row -->
+
+
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+
+                                                            <div class="form-group">
+                                                                <h5>User Mobile <span class="text-danger">*</span></h5>
+                                                                <div class="controls">
+                                                                    <input type="text" name="mobile"
+                                                                        class="form-control" value="{{ $editData->mobile }}"
+                                                                        required="">
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div> <!-- End Col Md-6 -->
+
+                                                        <div class="col-md-6">
+
+                                                            <div class="form-group">
+                                                                <h5>User Address <span class="text-danger">*</span></h5>
+                                                                <div class="controls">
+                                                                    <input type="text" name="address"
+                                                                        class="form-control"
+                                                                        value="{{ $editData->address }}" required="">
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div><!-- End Col Md-6 -->
+
+
+                                                    </div> <!-- End Row -->
+
+
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+
+                                                            <div class="form-group">
+                                                                <h5>User Gender <span class="text-danger">*</span></h5>
+                                                                <div class="controls">
+                                                                    <select name="gender" id="gender" required=""
+                                                                        class="form-control">
+                                                                        <option value="" selected=""
+                                                                            disabled="">Select
+                                                                            Gender</option>
+                                                                        <option value="Male"
+                                                                            {{ $editData->gender == 'Male' ? 'selected' : '' }}>
+                                                                            Male</option>
+                                                                        <option value="Female"
+                                                                            {{ $editData->gender == 'Female' ? 'selected' : '' }}>
+                                                                            Female</option>
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- End Col Md-6 -->
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <h5>Profile Image <span class="text-danger">*</span></h5>
+                                                                <div class="controls">
+                                                                    <input type="file" name="image"
+                                                                        class="form-control" id="image">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <div class="controls">
+                                                                    <img id="showImage"
+                                                                        src="{{ !empty($user->image) ? url('upload/user_images/' . $user->image) : url('upload/no_image.jpg') }}"
+                                                                        style="width: 100px; width: 100px; border: 1px solid #000000;">
+
+                                                                </div>
+                                                            </div>
+
+
+                                                        </div><!-- End Col Md-6 -->
+
+
+                                                    </div> <!-- End Row -->
+
+
+
+
+
+
+
+                                                    <div class="text-xs-right">
+                                                        <input type="submit" class="btn btn-rounded btn-info mb-5"
+                                                            value="Update">
+                                                    </div>
                                         </form>
+
                                     </div>
+                                    <!-- /.col -->
                                 </div>
+                                <!-- /.row -->
                             </div>
+                            <!-- /.box-body -->
                         </div>
-
-                    </div>
-
                 </section>
-                <!-- // Basic form layout section end -->
             </div>
         </div>
     </div>
+    </div>
+    </div>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#image').change(function(e) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#showImage').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(e.target.files['0']);
+            });
+        });
+    </script>
 @endsection

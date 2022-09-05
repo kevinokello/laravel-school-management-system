@@ -1,120 +1,179 @@
 @extends('layouts.dash')
-
 @section('content')
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <div class="app-content content container-fluid">
         <div class="content-wrapper">
-   <div class="content-body"><!-- Basic form layout section start -->
-<section id="basic-form-layouts">
-	<div class="row match-height">
-		<div class="col-md-12">
-			<div class="card">
-				<div class="card-header">
-								<h4 class="form-section"><i class="icon-head"></i> Personal Info</h4>
-					<a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
+            <div class="content-body">
+                <!-- Basic form layout section start -->
+                <section id="basic-form-layouts">
+                    <div class="row match-height">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="form-section"><i class="icon-head"></i> Personal Info</h4>
+                                    <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
+                                </div>
+                                <div class="card-body collapse in">
+                                    <div class="card-block">
 
-				</div>
-				<div class="card-body collapse in">
-					<div class="card-block">
+                                        <form method="post" action="{{ url('profile/store') }}"
+                                            enctype="multipart/form-data">
+                                            @csrf
+                                                <div class="col-12">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
 
-						<form class="form">
-							<div class="form-body">
+                                                            <div class="form-group">
+                                                                <h5>User Name <span class="text-danger">*</span></h5>
+                                                                <div class="controls">
+                                                                    <input type="text" name="name"
+                                                                        class="form-control" value="{{ $user->name }}"
+                                                                        required="">
+                                                                </div>
 
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="projectinput1">First Name</label>
-											<input type="text" id="projectinput1" class="form-control" placeholder="First Name" name="fname">
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="projectinput2">Last Name</label>
-											<input type="text" id="projectinput2" class="form-control" placeholder="Last Name" name="lname">
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="projectinput3">E-mail</label>
-											<input type="text" id="projectinput3" class="form-control" placeholder="E-mail" name="email">
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="projectinput4">Contact Number</label>
-											<input type="text" id="projectinput4" class="form-control" placeholder="Phone" name="phone">
-										</div>
-									</div>
-								</div>
+                                                            </div>
 
-								<h4 class="form-section"><i class="icon-clipboard4"></i> Requirements</h4>
+                                                        </div> <!-- End Col Md-6 -->
 
-								<div class="form-group">
-									<label for="companyName">Company</label>
-									<input type="text" id="companyName" class="form-control" placeholder="Company Name" name="company">
-								</div>
+                                                        <div class="col-md-6">
 
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="projectinput5">Interested in</label>
-											<select id="projectinput5" name="interested" class="form-control">
-												<option value="none" selected="" disabled="">Interested in</option>
-												<option value="design">design</option>
-												<option value="development">development</option>
-												<option value="illustration">illustration</option>
-												<option value="branding">branding</option>
-												<option value="video">video</option>
-											</select>
-										</div>
-									</div>
+                                                            <div class="form-group">
+                                                                <h5>User Email <span class="text-danger">*</span></h5>
+                                                                <div class="controls">
+                                                                    <input type="email" name="email"
+                                                                        class="form-control" value="{{ $user->email }}"
+                                                                        required="">
+                                                                </div>
 
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="projectinput6">Budget</label>
-											<select id="projectinput6" name="budget" class="form-control">
-												<option value="0" selected="" disabled="">Budget</option>
-												<option value="less than 5000$">less than 5000$</option>
-												<option value="5000$ - 10000$">5000$ - 10000$</option>
-												<option value="10000$ - 20000$">10000$ - 20000$</option>
-												<option value="more than 20000$">more than 20000$</option>
-											</select>
-										</div>
-									</div>
-								</div>
+                                                            </div>
 
-								<div class="form-group">
-									<label>Select File</label>
-									<label id="projectinput7" class="file center-block">
-										<input type="file" id="file">
-										<span class="file-custom"></span>
-									</label>
-								</div>
+                                                        </div><!-- End Col Md-6 -->
 
-								<div class="form-group">
-									<label for="projectinput8">About Project</label>
-									<textarea id="projectinput8" rows="5" class="form-control" name="comment" placeholder="About Project"></textarea>
-								</div>
-							</div>
 
-							<div class="form-actions">
-								<button type="button" class="btn btn-warning mr-1">
-									<i class="icon-cross2"></i> Cancel
-								</button>
-								<button type="submit" class="btn btn-primary">
-									<i class="icon-check2"></i> Save
-								</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
+                                                    </div> <!-- End Row -->
 
-	</div>
 
-</section>
-<!-- // Basic form layout section end -->
-        </div></div></div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+
+                                                            <div class="form-group">
+                                                                <h5>User Mobile <span class="text-danger">*</span></h5>
+                                                                <div class="controls">
+                                                                    <input type="text" name="mobile"
+                                                                        class="form-control" value="{{ $user->mobile }}"
+                                                                        required="">
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div> <!-- End Col Md-6 -->
+
+                                                        <div class="col-md-6">
+
+                                                            <div class="form-group">
+                                                                <h5>User Address <span class="text-danger">*</span></h5>
+                                                                <div class="controls">
+                                                                    <input type="text" name="address"
+                                                                        class="form-control"
+                                                                        value="{{ $user->address }}" required="">
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div><!-- End Col Md-6 -->
+
+
+                                                    </div> <!-- End Row -->
+
+
+
+
+
+
+
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+
+                                                            <div class="form-group">
+                                                                <h5>User Gender <span class="text-danger">*</span></h5>
+                                                                <div class="controls">
+                                                                    <select name="gender" id="gender" required=""
+                                                                        class="form-control">
+                                                                        <option value="" selected=""
+                                                                            disabled="">Select
+                                                                            Gender</option>
+                                                                        <option value="Male"
+                                                                            {{ $user->gender == 'Male' ? 'selected' : '' }}>
+                                                                            Male</option>
+                                                                        <option value="Female"
+                                                                            {{ $user->gender == 'Female' ? 'selected' : '' }}>
+                                                                            Female</option>
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- End Col Md-6 -->
+
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <h5>Profile Image <span class="text-danger">*</span></h5>
+                                                                <div class="controls">
+                                                                    <input type="file" name="image"
+                                                                        class="form-control" id="image">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <div class="controls">
+                                                                    <img id="showImage"
+                                                                        src="{{ !empty($user->image) ? url('upload/user_images/' . $user->image) : url('upload/no_image.jpg') }}"
+                                                                        style="width: 100px; width: 100px; border: 1px solid #000000;">
+
+                                                                </div>
+                                                            </div>
+
+
+                                                        </div><!-- End Col Md-6 -->
+
+
+                                                    </div> <!-- End Row -->
+
+
+
+
+
+
+
+                                                    <div class="text-xs-right">
+                                                        <input type="submit" class="btn btn-rounded btn-info mb-5"
+                                                            value="Update">
+                                                    </div>
+                                        </form>
+
+                                    </div>
+                                    <!-- /.col -->
+                                </div>
+                                <!-- /.row -->
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#image').change(function(e) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#showImage').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(e.target.files['0']);
+            });
+        });
+    </script>
 @endsection
