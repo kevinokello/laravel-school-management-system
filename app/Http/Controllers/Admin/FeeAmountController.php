@@ -76,7 +76,7 @@ class FeeAmountController extends Controller
             for ($i = 0; $i < $countClass; $i++) {
                 $fee_amount = new FeeCategoryAmount();
                 $fee_amount->fee_category_id = $request->fee_category_id;
-                $fee_amount->class_id = $request->class_id[$i];
+                $fee_amount->cohort_id = $request->cohort_id[$i];
                 $fee_amount->amount = $request->amount[$i];
                 $fee_amount->save();
             } // End For Loop
@@ -93,7 +93,7 @@ class FeeAmountController extends Controller
 
     public function DetailsFeeAmount($fee_category_id)
     {
-        $data['detailsData'] = FeeCategoryAmount::where('fee_category_id', $fee_category_id)->orderBy('class_id', 'asc')->get();
+        $data['detailsData'] = FeeCategoryAmount::where('fee_category_id', $fee_category_id)->orderBy('cohort_id', 'asc')->get();
 
         return view('dashboard.fee.amount.details', $data);
     }

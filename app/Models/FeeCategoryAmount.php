@@ -15,7 +15,7 @@ class FeeCategoryAmount extends Model
 
     public function student_class()
     {
-        return $this->belongsTo(StudentClass::class, 'cohort_id', 'id');
+        return $this->belongsTo(Cohort::class, 'cohort_id', 'id');
     }
 
 }
