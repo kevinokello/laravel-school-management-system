@@ -15,7 +15,7 @@
                           class="menu-title">Dashboard</span></a>
               </li>
               <li
-                  class="nav-item {{ Request::is('academic/academic-years') || Request::is('academic/classes') || Request::is('academic/sessions') ? 'open' : '' }}">
+                  class="nav-item {{ Request::is('academic/academic-years') || Request::is('academic/classes') || Request::is('academic/sessions') || Request::is('academic/fee/category/view') || Request::is('academic/fee/amount/view') || Request::is('academic/fee/amount/edit') || Request::is('academic/fee/amount/add') || Request::is('academic/fee/category/add') || Request::is('academic/fee/category/edit') ? 'open' : '' }}">
                   <a href="#"><i class="icon-ios-albums-outline"></i><span data-i18n="nav.cards.main"
                           class="menu-title">Academic setup</span></a>
                   <ul class="menu-content">
@@ -31,11 +31,11 @@
                       </li>
                       <li>
                           <a href="{{ url('academic/fee/category/view') }}" data-i18n="nav.menu_levels.second_level_child.third_level"
-                              class="menu-item">Fee Category</a>
+                              class="menu-item {{ Request::is('academic/fee/category/view') ? 'active' : '' }}">Fee Category</a>
                       </li>
                       <li>
                           <a href="{{ url('academic/fee/amount/view') }}" data-i18n="nav.menu_levels.second_level_child.third_level"
-                              class="menu-item">Fee Amount</a>
+                              class="menu-item {{ Request::is('academic/fee/amount/view') ? 'active' : '' }}">Fee Amount</a>
                       </li>
                   </ul>
               </li>
