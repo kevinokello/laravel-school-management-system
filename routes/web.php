@@ -122,24 +122,26 @@ Route::prefix('/inventory')->middleware(['auth', 'isAdmin'])->namespace('App\Htt
 });
 
 Route::controller(Admin\DefaultController::class)->group(function () {
-    Route::get('/get-category', 'GetCategory')->name('get-category');
-    Route::get('/get-product', 'GetProduct')->name('get-product');
-    Route::get('/check-product', 'GetStock')->name('check-product-stock');
+    Route::get('/get-category', 'GetCategory');
+    Route::get('/get-product', 'GetProduct');
+    Route::get('/check-product', 'GetStock');
 });
 
 Route::prefix('/accounts')->middleware(['auth', 'isAdmin'])->namespace('App\Http\Controllers\Admin')->group(function () {
 
-    Route::get('fee/category/view', 'FeeCategoryController@ViewFeeCat');
-    Route::get('fee/category/add', 'FeeCategoryController@FeeCatAdd');
-    Route::post('fee/category/store', 'FeeCategoryController@FeeCatStore');
-    Route::get('fee/category/edit/{id}', 'FeeCategoryController@FeeCatEdit');
-    Route::post('fee/category/update/{id}', 'FeeCategoryController@FeeCategoryUpdate');
-    Route::get('fee/category/delete/{id}', 'FeeCategoryController@FeeCategoryDelete');
+    Route::get('student/fee/view', 'StudentFeeController@StudentFeeView');
+    Route::get('student/fee/add', 'StudentFeeController@StudentFeeAdd');
+    Route::get('student/fee/getstudent', 'StudentFeeController@StudentFeeGetStudent');
+    Route::post('student/fee/store', 'StudentFeeController@StudentFeeStore');
 
-    Route::get('fee/amount/view', 'FeeAmountController@ViewFeeAmount');
-    Route::get('fee/amount/add', 'FeeAmountController@AddFeeAmount');
-    Route::post('fee/amount/store', 'FeeAmountController@StoreFeeAmount');
-    Route::get('fee/amount/edit/{fee_category_id}', 'FeeAmountController@EditFeeAmount');
-    Route::post('fee/amount/update/{fee_category_id}', 'FeeAmountController@UpdateFeeAmount');
-    Route::get('fee/amount/details/{fee_category_id}', 'FeeAmountController@DetailsFeeAmount');
+    Route::get('account/salary/view', 'AccountSalaryController@AccountSalaryView');
+    Route::get('account/salary/add', 'AccountSalaryController@AccountSalaryAdd');
+    Route::get('account/salary/getemployee', 'AccountSalaryController@AccountSalaryGetEmployee');
+    Route::post('account/salary/store', 'AccountSalaryController@AccountSalaryStore');
+
+    Route::get('other/cost/view', 'OtherCostController@OtherCostView');
+    Route::get('other/cost/add', 'OtherCostController@OtherCostAdd');
+    Route::post('other/cost/store', 'OtherCostController@OtherCostStore');
+    Route::get('other/cost/edit/{id}', 'OtherCostController@OtherCostEdit');
+    Route::post('other/cost/update/{id}', 'OtherCostController@OtherCostUpdate');
 });

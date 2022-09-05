@@ -1,19 +1,22 @@
+
 @extends('layouts.dash')
 @section('content')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <div class="content-wrapper">
-        <div class="container-full">
-            <!-- Content Header (Page header) -->
-            <section class="content">
-                <!-- Basic Forms -->
-                <div class="box">
-                    <div class="box-header with-border">
-                        <h4 class="box-title">Edit Fee Amount</h4>
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body">
-                        <div class="row">
-                            <div class="col">
+    <div class="app-content content container-fluid">
+        <div class="content-wrapper">
+            <div class="content-body">
+                <!-- Basic form layout section start -->
+                <section id="basic-form-layouts">
+                    <div class="row match-height">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title" id="basic-layout-form">Edit Fee Category Name </h4>
+                                    <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
+                                </div>
+                                <div class="card-body collapse in">
+                                    <div class="card-block">
+
                                 <form method="post" action="{{ url('academic/fee/update', $editData[0]->fee_category_id) }}">
                                     @csrf
                                     <div class="row">
@@ -88,16 +91,17 @@
                                             </div>
                                 </form>
 
+                            </form>
+                                    </div>
+                                </div>
                             </div>
-                            <!-- /.col -->
                         </div>
-                        <!-- /.row -->
-                    </div>
-                    <!-- /.box-body -->
-                </div>
-                <!-- /.box -->
 
-            </section>
+                    </div>
+
+                </section>
+                <!-- // Basic form layout section end -->
+            </div>
         </div>
     </div>
 

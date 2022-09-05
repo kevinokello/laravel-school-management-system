@@ -14,6 +14,7 @@
                                 </div>
                                 <div class="card-body collapse in">
                                     <div class="card-block">
+
                                         <form method="post"
                                             action="{{ url('academic/fee/category/update', $editData->id) }}">
                                             @csrf
@@ -31,10 +32,10 @@
 
                                                     <div class="text-xs-center">
                                                         <input
-            style="  border-color: #448aff;
+                                                            style="  border-color: #448aff;
             background-color: #448aff;
             color: #fff; height:50px; width:170px;"
-                             type="submit" class="btn btn-rounded btn-info" value="Update">
+                                                            type="submit" class="btn btn-rounded btn-info" value="Update">
                                                     </div>
                                         </form>
                                     </div>
