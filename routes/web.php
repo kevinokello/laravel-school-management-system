@@ -89,11 +89,11 @@ Route::prefix('/inventory')->middleware(['auth', 'isAdmin'])->namespace('App\Htt
     Route::get('/daily/purchase/report', 'PurchaseController@DailyPurchaseReport');
     Route::get('/daily/purchase/pdf', 'PurchaseController@DailyPurchasePdf');
 
-    
+
     Route::get('/invoice/all', 'InvoiceController@InvoiceAll');
     Route::get('/invoice/add', 'InvoiceController@invoiceAdd');
     Route::post('/invoice/store', 'InvoiceController@InvoiceStore');
-    Route::get('/invoice/pending/list', 'InvoiceController@PendingList');
+    Route::get('/invoice/pending', 'InvoiceController@PendingList');
     Route::get('/invoice/delete/{id}', 'InvoiceController@InvoiceDelete');
     Route::get('/invoice/approve/{id}', 'InvoiceController@InvoiceApprove');
     Route::post('/approval/store/{id}', 'InvoiceController@ApprovalStore');

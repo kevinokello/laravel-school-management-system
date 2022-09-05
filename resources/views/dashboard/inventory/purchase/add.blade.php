@@ -125,11 +125,11 @@
                                             </table><br>
 
                                               <button
-                                                        style="  border-color: #448aff;
-            background-color: #448aff;
+                                                        style="  border-color: #38642b;
+            background-color: #38642b;
             color: #fff; height:50px; width:170px; "
                                                         type="submit" class="btn btn-primary">
-                                                        Add student
+                                              Make purchase
                                                     </button>
 
                                         </form>

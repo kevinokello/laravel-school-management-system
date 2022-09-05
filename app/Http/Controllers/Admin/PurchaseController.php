@@ -66,7 +66,7 @@ class PurchaseController extends Controller
             'alert-type' => 'success'
         );
 
-        return redirect('inventory/purchase/all')->with($notification);
+        return redirect('inventory/purchase/pending')->with($notification);
     } // End Method
 
 

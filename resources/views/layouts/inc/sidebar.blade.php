@@ -48,7 +48,7 @@
               </li>
 
               <li
-                  class="nav-item {{ Request::is('inventory/units') || Request::is('inventory/categories') || Request::is('inventory/stock/add') || Request::is('inventory/supplier/all') || Request::is('inventory/supplier/add') || Request::is('inventory/stock/all') || Request::is('inventory/stock/add') || Request::is('inventory/purchase/add') || Request::is('inventory/purchase/all') || Request::is('inventory/purchase/pending') ? 'open' : '' }}">
+                  class="nav-item {{ Request::is('inventory/units') || Request::is('inventory/categories') || Request::is('inventory/stock/add') || Request::is('inventory/supplier/all') || Request::is('inventory/supplier/add') || Request::is('inventory/stock/all') || Request::is('inventory/stock/add') || Request::is('inventory/purchase/add') || Request::is('inventory/purchase/all') || Request::is('inventory/purchase/pending') || Request::is('inventory/invoice/add') || Request::is('inventory/invoice/pending') || Request::is('inventory/invoice/all') ? 'open' : '' }}">
                   <a href="{{ url('student/add-student') }}"><i class="icon-ios-albums-outline"></i><span
                           data-i18n="nav.menu_levels.main" class="menu-title">Inventory</span></a>
                   <ul class="menu-content">
@@ -141,21 +141,22 @@
 
                           </ul>
                       </li>
-                      <li>
+                       <li
+                          class="nav-item  {{ Request::is('inventory/invoice/add') || Request::is('inventory/invoice/pending') || Request::is('inventory/invoice/all') ? 'open' : '' }}">
                           <a href="#" data-i18n="nav.menu_levels.second_level_child.main" class="menu-item">Manage
                               invoice</a>
                           <ul class="menu-content">
                               <li>
                                   <a href="{{ url('inventory/invoice/add') }}" data-i18n="nav.menu_levels.second_level_child.third_level"
-                                      class="menu-item">Add</a>
+                                      class="menu-item {{ Request::is('inventory/invoice/add') ? 'active' : '' }}">Add</a>
                               </li>
                               <li>
                                   <a href="{{ url('inventory/invoice/pending') }}" data-i18n="nav.menu_levels.second_level_child.third_level"
-                                      class="menu-item">Approval</a>
+                                      class="menu-item {{ Request::is('inventory/invoice/pending') ? 'active' : '' }}">Approval</a>
                               </li>
                               <li>
                                   <a href="{{ url('inventory/invoice/all') }}" data-i18n="nav.menu_levels.second_level_child.third_level"
-                                      class="menu-item">Invoice List</a>
+                                      class="menu-item {{ Request::is('inventory/invoice/all') ? 'active' : '' }}">Invoice List</a>
                               </li>
                               <li>
                                   <a href="#" data-i18n="nav.menu_levels.second_level_child.third_level"
@@ -167,10 +168,10 @@
 
                   </ul>
               </li>
-                  <li
+                  {{-- <li
                   class="nav-item">
                   <a href=""><i class="icon-ios-albums-outline"></i><span
-                          data-i18n="nav.menu_levels.main" class="menu-title">Manage Accounts</span></a>
+                          data-i18n="nav.menu_levels.main" class="menu-title">Accounting</span></a>
                   <ul class="menu-content">
                       <li>
                           <a href="#" data-i18n="nav.menu_levels.second_level_child.third_level"
@@ -190,7 +191,7 @@
                       </li>
 
                   </ul>
-              </li>
+              </li> --}}
               {{-- <li
                   class="nav-item {{ Request::is('student/add-student') || Request::is('student/view-students') ? 'open' : '' }}">
                   <a href="#"><i class="icon-ios-albums-outline"></i><span data-i18n="nav.cards.main"

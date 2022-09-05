@@ -32,11 +32,7 @@
                                             <th>Qty</th>
                                             <th>Product Name</th>
                                             <th>Status</th>
-                                            <th>Action</th>
-
                                     </thead>
-
-
                                     <tbody>
 
                                         @foreach ($allData as $key => $item)
@@ -69,10 +65,8 @@
                                                                 class="fas fa-check-circle"></i> </a>
                                                     @endif
                                                 </td>
-
                                             </tr>
                                         @endforeach
-
                                     </tbody>
                                 </table>
                             </div>
