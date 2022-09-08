@@ -14,11 +14,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', 'App\Http\Controllers\Admin\DashboardController@index')->name('dashboard');
 });
 
-Route::prefix('/profile')->middleware(['auth', 'role:admin'])->namespace('App\Http\Controllers\Admin')->group(function () {
+Route::prefix('/profile')->middleware(['auth', 'role:admin|teacher|student'])->namespace('App\Http\Controllers\Admin')->group(function () {
     Route::get('view', 'ProfileController@ProfileView');
     Route::get('edit', 'ProfileController@ProfileEdit');
     Route::post('store', 'ProfileController@ProfileStore');
-
     Route::get('password', 'ProfileController@PasswordView');
     Route::post('password/update', 'ProfileController@PasswordUpdate');
 });

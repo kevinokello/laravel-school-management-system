@@ -13,7 +13,7 @@
                     <div class="media">
                       <div class="media-body text-xs-left">
                         <h3 class="pink">278</h3>
-                        <span>New Projects</span>
+                        <span>New admin Projects</span>
                       </div>
                       <div class="media-right media-middle">
                         <i
