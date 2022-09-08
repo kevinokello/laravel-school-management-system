@@ -40,7 +40,6 @@
             background-color: #448aff;
             color: #448aff;
         }
-
         .button {
             border-color: #448aff;
             background-color: #448aff;
@@ -52,17 +51,17 @@
         }
 
         .main-menu.menu-dark .navigation>li ul .active {
-            background: #525868;
+            background: #4e6785;
             525868
         }
 
         .main-menu.menu-dark .navigation>li.active>a {
-            background-color: #525868;
+            background-color: #4e6785;
         }
 
         .main-menu.menu-dark .navigation>li.open>a {
             color: #c3c3c3;
-            background: #343841;
+            background: #2f5d91;
         }
     </style>
     <!-- Scripts -->
