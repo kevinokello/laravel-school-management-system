@@ -14,18 +14,11 @@ Route::prefix('/dashboard')->middleware(['auth', 'isAdmin'])->namespace('App\Htt
     Route::get('/', 'DashboardController@index');
 });
 
-// Route::prefix('/profile')->middleware(['auth', 'isAdmin'])->namespace('App\Http\Controllers\Admin')->group(function () {
-//     Route::get('edit', 'ProfileController@ProfileEdit');
-//     Route::post('/store', 'ProfileController@ProfileStore');
-//     Route::get('/password/view', 'ProfileController@PasswordView');
-//     Route::post('/password/update', 'ProfileController@PasswordUpdate');
-// });
-
 Route::prefix('/profile')->middleware(['auth', 'isAdmin'])->namespace('App\Http\Controllers\Admin')->group(function () {
     Route::get('view', 'ProfileController@ProfileView');
     Route::get('edit', 'ProfileController@ProfileEdit');
     Route::post('store', 'ProfileController@ProfileStore');
-    
+
     Route::get('password', 'ProfileController@PasswordView');
     Route::post('password/update', 'ProfileController@PasswordUpdate');
 });
