@@ -30,12 +30,16 @@
                               class="menu-item {{ Request::is('academic/sessions') ? 'active' : '' }}">Sections</a>
                       </li>
                       <li>
-                          <a href="{{ url('academic/fee/category/view') }}" data-i18n="nav.menu_levels.second_level_child.third_level"
-                              class="menu-item {{ Request::is('academic/fee/category/view') || Request::is('academic/fee/category/add') || Request::is('academic/fee/category/edit') ? 'active' : '' }}">Fee Category</a>
+                          <a href="{{ url('academic/fee/category/view') }}"
+                              data-i18n="nav.menu_levels.second_level_child.third_level"
+                              class="menu-item {{ Request::is('academic/fee/category/view') || Request::is('academic/fee/category/add') || Request::is('academic/fee/category/edit') ? 'active' : '' }}">Fee
+                              Category</a>
                       </li>
                       <li>
-                          <a href="{{ url('academic/fee/amount/view') }}" data-i18n="nav.menu_levels.second_level_child.third_level"
-                              class="menu-item {{ Request::is('academic/fee/amount/view') || Request::is('academic/fee/amount/add') || Request::is('academic/fee/amount/edit') ? 'active' : '' }}">Fee Amount</a>
+                          <a href="{{ url('academic/fee/amount/view') }}"
+                              data-i18n="nav.menu_levels.second_level_child.third_level"
+                              class="menu-item {{ Request::is('academic/fee/amount/view') || Request::is('academic/fee/amount/add') || Request::is('academic/fee/amount/edit') ? 'active' : '' }}">Fee
+                              Amount</a>
                       </li>
                   </ul>
               </li>
@@ -178,7 +182,7 @@
 
                   </ul>
               </li>
- <li
+              <li
                   class="nav-item {{ Request::is('inventory/units') || Request::is('inventory/categories') || Request::is('inventory/stock/add') || Request::is('inventory/supplier/all') || Request::is('inventory/supplier/add') || Request::is('inventory/stock/all') || Request::is('inventory/stock/add') || Request::is('inventory/purchase/add') || Request::is('inventory/purchase/all') || Request::is('inventory/purchase/pending') || Request::is('inventory/invoice/add') || Request::is('inventory/invoice/pending') || Request::is('inventory/invoice/all') ? 'open' : '' }}">
                   <a href="{{ url('student/add-student') }}"><i class="icon-ios-albums-outline"></i><span
                           data-i18n="nav.menu_levels.main" class="menu-title">Manage Accounts</span></a>
@@ -189,21 +193,50 @@
                               class="menu-item">Student Fees</a>
                           <ul class="menu-content">
                               <li>
-                                  <a href="{{ url('inventory/invoice/add') }}"
+                                  <a href="{{ url('accounts/student/fee/add') }}"
                                       data-i18n="nav.menu_levels.second_level_child.third_level"
                                       class="menu-item {{ Request::is('inventory/invoice/add') ? 'active' : '' }}">Add</a>
                               </li>
                               <li>
-                                  <a href="{{ url('inventory/invoice/pending') }}"
+                                  <a href="{{ url('accounts/student/fee/view') }}"
                                       data-i18n="nav.menu_levels.second_level_child.third_level"
                                       class="menu-item {{ Request::is('inventory/invoice/pending') ? 'active' : '' }}">View</a>
                               </li>
                               <li>
-                                  <a href="{{ url('inventory/invoice/all') }}"
+                                  <a href="{{ url('#') }}"
                                       data-i18n="nav.menu_levels.second_level_child.third_level"
-                                      class="menu-item {{ Request::is('inventory/invoice/all') ? 'active' : '' }}">Individual Student</a>
+                                      class="menu-item {{ Request::is('inventory/invoice/all') ? 'active' : '' }}">Individual
+                                      Student</a>
                               </li>
                           </ul>
+                      </li>
+
+                  </ul>
+              </li>
+              <li
+                  class="nav-item {{ Request::is('academic/academic-years') || Request::is('academic/classes') || Request::is('academic/sessions') || Request::is('academic/fee/category/view') || Request::is('academic/fee/amount/view') || Request::is('academic/fee/amount/add') || Request::is('academic/fee/category/add') ? 'open' : '' }}">
+                  <a href="#"><i class="icon-ios-albums-outline"></i><span data-i18n="nav.cards.main"
+                          class="menu-title">Announcement</span></a>
+                  <ul class="menu-content">
+                      <li><a href="{{ url('#') }}"
+                              class="menu-item {{ Request::is('academic/academic-years') ? 'active' : '' }}">Message</a>
+                      </li>
+                      <li><a href="{{ url('#') }}"
+                              class="menu-item {{ Request::is('academic/classes') ? 'active' : '' }}">Callendat</a>
+                      </li>
+
+                  </ul>
+              </li>
+              <li
+                  class="nav-item {{ Request::is('academic/academic-years') || Request::is('academic/classes') || Request::is('academic/sessions') || Request::is('academic/fee/category/view') || Request::is('academic/fee/amount/view') || Request::is('academic/fee/amount/add') || Request::is('academic/fee/category/add') ? 'open' : '' }}">
+                  <a href="#"><i class="icon-ios-albums-outline"></i><span data-i18n="nav.cards.main"
+                          class="menu-title">Staff Management</span></a>
+                  <ul class="menu-content">
+                      <li><a href="{{ url('#') }}"
+                              class="menu-item {{ Request::is('academic/academic-years') ? 'active' : '' }}">Add</a>
+                      </li>
+                      <li><a href="{{ url('#') }}"
+                              class="menu-item {{ Request::is('academic/classes') ? 'active' : '' }}">View</a>
                       </li>
 
                   </ul>

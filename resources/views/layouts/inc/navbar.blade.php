@@ -16,17 +16,9 @@
                     <ul class="nav navbar-nav">
                         <li class="nav-item hidden-sm-down"><a class="nav-link nav-menu-main menu-toggle hidden-xs"><i
                                     class="icon-menu5"> </i></a></li>
-                        {{-- <li class="nav-item hidden-sm-down">
-
-                                <input type="text" placeholder="Search" class="menu-search form-control round" />
-
-                        </li> --}}
                     </ul>
 
                     <ul class="nav navbar-nav float-xs-right">
-
-
-
                         <li class="dropdown dropdown-user nav-item"><a href="#" data-toggle="dropdown"
                                 class="dropdown-toggle nav-link dropdown-user-link"><span
                                     class="avatar avatar-online"><img
@@ -35,8 +27,8 @@
                             <div class="dropdown-menu dropdown-menu-right"><a href="{{ url('profile/view') }}"
                                     class="dropdown-item"><i class="icon-head"></i> Edit Profile</a>
 
-                                    <a href="{{ url('profile/password') }}"
-                                    class="dropdown-item"><i class="icon-head"></i>Change Password</a>
+                                <a href="{{ url('profile/password') }}" class="dropdown-item"><i
+                                        class="icon-head"></i>Change Password</a>
                                 <div class="dropdown-divider"></div>
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf

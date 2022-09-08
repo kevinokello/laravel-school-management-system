@@ -48,7 +48,6 @@ class StockController extends Controller
 
     public function Edit($id)
     {
-
         $supplier = Supplier::all();
         $category = StockCategory::all();
         $unit = Unit::all();

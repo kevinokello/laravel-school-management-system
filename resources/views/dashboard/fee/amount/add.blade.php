@@ -20,7 +20,6 @@
                                             @csrf
                                             <div class="row">
                                                 <div class="col-12">
-                                                    <div class="add_item">
                                                         <div class="form-group">
                                                             <h5>Fee Category<span class="text-danger">*</span></h5>
                                                             <div class="controls">
@@ -36,9 +35,7 @@
                                                             </div>
                                                         </div> <!-- // end form group -->
                                                         <div class="row">
-
                                                             <div class="col-md-5">
-
                                                                 <div class="form-group">
                                                                     <h5>Student Class <span class="text-danger">*</span>
                                                                     </h5>
@@ -46,7 +43,7 @@
                                                                         <select name="cohort_id[]" required=""
                                                                             class="form-control">
                                                                             <option value="" selected=""
-                                                                                disabled="">Select Fee Category</option>
+                                                                                disabled="">Select Student Class</option>
                                                                             @foreach ($classes as $class)
                                                                                 <option value="{{ $class->id }}">
                                                                                     {{ $class->name }}</option>
@@ -80,8 +77,11 @@
                                                     </div> <!-- // End add_item -->
 
                                                     <div class="text-xs-right">
-                                                        <input type="submit" class="btn btn-rounded btn-info mb-5"
-                                                            value="Submit">
+                                                          <button type="submit" style="float: left;">
+                                                            <a
+                                                                class="btn btn-rounded btn-success mb-5"
+                                                                value="Submit">Submit</a>
+                                                        </button>
                                                     </div>
                                         </form>
                                     </div>

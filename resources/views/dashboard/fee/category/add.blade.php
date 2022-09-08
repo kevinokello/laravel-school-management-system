@@ -9,7 +9,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title" id="basic-layout-form">Edit Fee Category Name </h4>
+                                    <h4 class="card-title" id="basic-layout-form">Add Fee Category Name </h4>
                                     <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
                                 </div>
                                 <div class="card-body collapse in">
@@ -20,7 +20,6 @@
                                             <div class="row">
                                                 <div class="col-12">
                                                     <div class="form-group">
-                                                        <h5>Fee Category Name <span class="text-danger">*</span></h5>
                                                         <div class="controls">
                                                             <input type="text" name="name" class="form-control">
                                                             @error('name')
@@ -29,8 +28,11 @@
                                                         </div>
                                                     </div>
                                                     <div class="text-xs-right">
-                                                        <input type="submit" class="btn btn-rounded btn-info mb-5"
-                                                            value="Submit">
+                                                        <button type="submit" style="float: left;">
+                                                            <a
+                                                                class="btn btn-rounded btn-success mb-5"
+                                                                value="Submit">Submit</a>
+                                                        </button>
                                                     </div>
                                         </form>
                                     </div>

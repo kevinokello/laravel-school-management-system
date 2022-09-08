@@ -55,20 +55,24 @@ class ProfileController extends Controller
 
     public function PasswordUpdate(Request $request)
     {
+        if (!(Hash::check($request->get('oldpassword'), Auth::user()->password))) {
+            // The passwords matches
+            return redirect()->back()->with("error", "Your current password is incorrect.");
+        }
+        if (strcmp($request->get('oldpassword'), $request->get('password')) == 0) {
+            // Current password and new password same
+            return redirect()->back()->with("error", "New Password cannot be same as your current password.");
+        }
         $validatedData = $request->validate([
             'oldpassword' => 'required',
-            'password' => 'required|confirmed',
+            'password' => 'required|string|min:8|confirmed',
         ]);
 
-        $hashedPassword = Auth::user()->password;
-        if (Hash::check($request->oldpassword, $hashedPassword)) {
-            $user = User::find(Auth::id());
-            $user->password = Hash::make($request->password);
-            $user->save();
-            Auth::logout();
-            return redirect()->route('login');
-        } else {
-            return redirect()->back();
-        }
-    } // End Metod
+        //Change Password
+        $user = User::find(Auth::id());
+        $user->password = Hash::make($request->password);
+        $user->save();
+
+        return redirect()->back()->with("success", "Password successfully changed!");
+    }
 }

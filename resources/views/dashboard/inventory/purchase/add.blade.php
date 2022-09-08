@@ -83,65 +83,64 @@
 
 
 
-                                        </div> <!-- // end row  -->
+                                    </div> <!-- // end row  -->
 
-                                    </div> <!-- End card-body -->
-                                    <!--  ---------------------------------- -->
+                                </div> <!-- End card-body -->
+                                <!--  ---------------------------------- -->
 
-                                    <div class="card-body">
-                                        <form method="post" action="{{ url('inventory/purchase/store') }}">
+                                <div class="card-body">
+                                    <form method="post" action="{{ url('inventory/purchase/store') }}">
 
-                                            @csrf
-                                            <table class="table-sm table-bordered" width="100%"
-                                                style="border-color: #ddd;">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Category</th>
-                                                        <th>Product Name </th>
-                                                        <th>PSC/KG</th>
-                                                        <th>Unit Price </th>
-                                                        <th>Description</th>
-                                                        <th>Total Price</th>
-                                                        <th>Action</th>
+                                        @csrf
+                                        <table class="table-sm table-bordered" width="100%" style="border-color: #ddd;">
+                                            <thead>
+                                                <tr>
+                                                    <th>Category</th>
+                                                    <th>Product Name </th>
+                                                    <th>PSC/KG</th>
+                                                    <th>Unit Price </th>
+                                                    <th>Description</th>
+                                                    <th>Total Price</th>
+                                                    <th>Action</th>
 
-                                                    </tr>
-                                                </thead>
+                                                </tr>
+                                            </thead>
 
-                                                <tbody id="addRow" class="addRow">
+                                            <tbody id="addRow" class="addRow">
 
-                                                </tbody>
+                                            </tbody>
 
-                                                <tbody>
-                                                    <tr>
-                                                        <td colspan="5"></td>
-                                                        <td>
-                                                            <input type="text" name="estimated_amount" value="0"
-                                                                id="estimated_amount" class="form-control estimated_amount"
-                                                                readonly style="background-color: #ddd;">
-                                                        </td>
-                                                        <td></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table><br>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="5"></td>
+                                                    <td>
+                                                        <input type="text" name="estimated_amount" value="0"
+                                                            id="estimated_amount" class="form-control estimated_amount"
+                                                            readonly style="background-color: #ddd;">
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table><br>
 
-                                              <button
-                                                        style="  border-color: #38642b;
+                                        <button
+                                            style="  border-color: #38642b;
             background-color: #38642b;
             color: #fff; height:50px; width:170px; "
-                                                        type="submit" class="btn btn-primary">
-                                              Make purchase
-                                                    </button>
+                                            type="submit" class="btn btn-primary">
+                                            Make purchase
+                                        </button>
 
-                                        </form>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
-                <!-- // Basic form layout section end -->
             </div>
+            </section>
+            <!-- // Basic form layout section end -->
         </div>
+    </div>
     </div>
 
 
@@ -286,7 +285,7 @@
             $(document).on('change', '#supplier_id', function() {
                 var supplier_id = $(this).val();
                 $.ajax({
-                    url: "{{ route('get-category') }}",
+                    url: "{{ url('get-category') }}",
                     type: "GET",
                     data: {
                         supplier_id: supplier_id
@@ -310,7 +309,7 @@
             $(document).on('change', '#category_id', function() {
                 var category_id = $(this).val();
                 $.ajax({
-                    url: "{{ route('get-product') }}",
+                    url: "{{ url('get-product') }}",
                     type: "GET",
                     data: {
                         category_id: category_id

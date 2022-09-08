@@ -51,9 +51,14 @@
 
                                                     </div>
 
-                                                    <div class="text-xs-right">
-                                                        <input type="submit" class="btn btn-rounded btn-info mb-5"
-                                                            value="Submit">
+                                                    <div class="text-xs-center">
+                                                        <button
+                                                            style="  border-color: #448aff;
+            background-color: #448aff;
+            color: #fff; height:50px; width:170px; "
+                                                            type="submit" class="btn btn-primary">
+                                                            Change password
+                                                        </button>
                                                     </div>
                                         </form>
                                     </div>

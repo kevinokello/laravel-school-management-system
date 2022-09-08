@@ -25,6 +25,7 @@ Route::prefix('/profile')->middleware(['auth', 'isAdmin'])->namespace('App\Http\
     Route::get('view', 'ProfileController@ProfileView');
     Route::get('edit', 'ProfileController@ProfileEdit');
     Route::post('store', 'ProfileController@ProfileStore');
+    
     Route::get('password', 'ProfileController@PasswordView');
     Route::post('password/update', 'ProfileController@PasswordUpdate');
 });

@@ -32,9 +32,9 @@
 
                                                     <div class="text-xs-center">
                                                         <input
-                                                            style="  border-color: #448aff;
-            background-color: #448aff;
-            color: #fff; height:50px; width:170px;"
+                                                            style="  border-color: rgb(87, 102, 77);
+            background-color: rgb(87, 102, 77);
+            color: #fff; height:40px; width:130px;"
                                                             type="submit" class="btn btn-rounded btn-info" value="Update">
                                                     </div>
                                         </form>
