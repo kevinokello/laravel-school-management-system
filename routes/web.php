@@ -10,11 +10,11 @@ Route::get('/', function () {
 
 require __DIR__ . '/auth.php';
 
-Route::prefix('/dashboard')->middleware(['auth', 'isAdmin'])->namespace('App\Http\Controllers\Admin')->group(function () {
-    Route::get('/', 'DashboardController@index');
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/dashboard', 'App\Http\Controllers\Admin\DashboardController@index')->name('dashboard');
 });
 
-Route::prefix('/profile')->middleware(['auth', 'isAdmin'])->namespace('App\Http\Controllers\Admin')->group(function () {
+Route::prefix('/profile')->middleware(['auth', 'role:admin'])->namespace('App\Http\Controllers\Admin')->group(function () {
     Route::get('view', 'ProfileController@ProfileView');
     Route::get('edit', 'ProfileController@ProfileEdit');
     Route::post('store', 'ProfileController@ProfileStore');
@@ -23,7 +23,7 @@ Route::prefix('/profile')->middleware(['auth', 'isAdmin'])->namespace('App\Http\
     Route::post('password/update', 'ProfileController@PasswordUpdate');
 });
 
-Route::prefix('/student')->middleware(['auth', 'isAdmin'])->namespace('App\Http\Controllers\Admin')->group(function () {
+Route::prefix('/student')->middleware(['auth', 'role:admin'])->namespace('App\Http\Controllers\Admin')->group(function () {
     Route::get('add-student', 'StudentController@create');
     Route::post('add-student', 'StudentController@store');
     Route::get('edit-student-details/{student_id}', 'StudentController@edit');
@@ -33,7 +33,7 @@ Route::prefix('/student')->middleware(['auth', 'isAdmin'])->namespace('App\Http\
     Route::get('view-students', 'StudentController@view');
     Route::get('academic-years', 'StudentController@create');
 });
-Route::prefix('/academic')->middleware(['auth', 'isAdmin'])->namespace('App\Http\Controllers\Admin')->group(function () {
+Route::prefix('/academic')->middleware(['auth', 'role:admin'])->namespace('App\Http\Controllers\Admin')->group(function () {
     Route::get('academic-years', 'AcademicController@index');
     Route::post('academic-years', 'AcademicController@store');
     Route::get('academic-years/{academic_id}', 'AcademicController@destroy');
@@ -62,7 +62,7 @@ Route::prefix('/academic')->middleware(['auth', 'isAdmin'])->namespace('App\Http
     Route::get('fee/amount/details/{fee_category_id}', 'FeeAmountController@DetailsFeeAmount');
 
 });
-Route::prefix('/inventory')->middleware(['auth', 'isAdmin'])->namespace('App\Http\Controllers\Admin')->group(function () {
+Route::prefix('/inventory')->middleware(['auth', 'role:admin'])->namespace('App\Http\Controllers\Admin')->group(function () {
 
     Route::get('stock-category', 'StockCategoryController@index');
     Route::post('stock-category', 'StockCategoryController@store');
@@ -121,7 +121,7 @@ Route::controller(Admin\DefaultController::class)->group(function () {
     Route::get('/check-product', 'GetStock');
 });
 
-Route::prefix('/accounts')->middleware(['auth', 'isAdmin'])->namespace('App\Http\Controllers\Admin')->group(function () {
+Route::prefix('/accounts')->middleware(['auth', 'role:admin'])->namespace('App\Http\Controllers\Admin')->group(function () {
 
     Route::get('student/fee/view', 'StudentFeeController@StudentFeeView');
     Route::get('student/fee/add', 'StudentFeeController@StudentFeeAdd');

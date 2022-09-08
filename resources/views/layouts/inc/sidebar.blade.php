@@ -6,7 +6,8 @@
   <div data-scroll-to-active="true" class="main-menu menu-fixed menu-dark menu-accordion menu-shadow">
 
       <div class="main-menu-content">
-          <ul id="main-menu-navigation" data-menu="menu-navigation" class="navigation navigation-main">
+        @if(Auth::user()->hasRole('admin'))
+     <ul id="main-menu-navigation" data-menu="menu-navigation" class="navigation navigation-main">
               <li class=" navigation-header"><span data-i18n="nav.category.support">Menu</span><i data-toggle="tooltip"
                       data-placement="right" data-original-title="Support" class="icon-ellipsis icon-ellipsis"></i>
               </li>
@@ -242,6 +243,8 @@
                   </ul>
               </li>
           </ul>
+        @endif
+
       </div>
 
   </div>

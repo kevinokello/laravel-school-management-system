@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,6 +44,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="app-content content container-fluid">
         <div class="content-wrapper">
@@ -57,7 +58,8 @@
 					<img src="../../app-assets/images/logo/robust-logo-dark.png" alt="branding logo">
 				</div> --}}
                                 <h6 class="card-subtitle line-on-side text-muted text-xs-center font-small-3 pt-2">
-                                    <span>Create Account</span></h6>
+                                    <span>Create Account</span>
+                                </h6>
                             </div>
                             <div class="card-body collapse in">
                                 <div class="card-block">
@@ -104,6 +106,14 @@
                                                 <i class="icon-key3"></i>
                                             </div>
                                         </fieldset>
+                                        <div class="mt-4">
+                                            <x-label for="role_id" value="{{ __('Register as:') }}" />
+                                            <select name="role_id"
+                                                class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+                                                <option value="student">Student</option>
+                                                <option value="teacher">Teacher</option>
+                                            </select>
+                                        </div>
                                         <button type="submit" class="btn btn-primary btn-lg btn-block"><i
                                                 class="icon-unlock2"></i> Register</button>
                                     </form>
