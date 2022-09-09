@@ -26,7 +26,7 @@ class StudentController extends Controller
     public function view()
     {
         $students = Student::all();
-        return view('dashboard.student.view_students',compact('students'));
+        return view('dashboard.student.view_students', compact('students'));
     }
 
     public function store(StudentFormRequest $request)
@@ -106,13 +106,6 @@ class StudentController extends Controller
         $student->update();
         session()->flash('success', 'student details updated succesfully');
         return redirect('student/view-students');
-        // Pictorials::create([
-        //     'headline' => $request->headline,
-        //     'images' => $images_arr,
-        //     'caption' => implode(',', $captions),
-        //     'credits' => $request->credits,
-        //     'paragraph' => $request->paragraph
-        // ]);
     }
     public function destroy($student_id)
     {
@@ -126,10 +119,22 @@ class StudentController extends Controller
             return redirect()->back();
         }
     }
-    public function GetSession($cohort_id)
+    public function getCohorts(Request $request)
     {
-        $sub = DB::table('sessions')->where('cohort_id', $cohort_id)->get();
-        return response()->json($sub);
+        $cohorts = Cohort::where('academic_id', $request->academic_id)
+            ->get();
+        if (count($cohorts) > 0) {
+            return response()->json($cohorts);
+        }
+    }
+
+    public function getSessions(Request $request)
+    {
+        $sessions = Session::where('cohort_id', $request->cohort_id)
+            ->get();
+        if (count($sessions) > 0) {
+            return response()->json($sessions);
+        }
     }
 
 

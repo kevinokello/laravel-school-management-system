@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SessionController;
-
+use App\Http\Controllers\Admin\StudentController;
 Route::get('/', function () {
     return view('welcome');
 });
@@ -15,6 +15,8 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 Route::get('get-cohorts', [SessionController::class, 'getCohorts'])->name('getCohorts');
+Route::get('get-cohorts', [StudentController::class, 'getCohorts'])->name('getCohorts');
+Route::get('get-sessions', [StudentController::class, 'getSessions'])->name('getSessions');
 // Route::get('admin/get/session/{cohort_id}', 'App\Http\Controllers\Admin\StudentController@GetSession');
 
 Route::prefix('/profile')->middleware(['auth', 'role:admin|teacher|student'])->namespace('App\Http\Controllers\Admin')->group(function () {

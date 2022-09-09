@@ -1,7 +1,7 @@
 @extends('layouts.dash')
 @section('content')
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
     <div class="app-content content container-fluid">
         <div class="content-wrapper">
             <div class="content-header row">
@@ -48,7 +48,8 @@
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label>Academic year</label>
-                                                            <select required name="academic_id" class="form-control">
+                                                            <select required name="academic_id" id="year"
+                                                                class="form-control">
                                                                 <option value="">-- Select Academic year --</option>
                                                                 @foreach ($academic as $acaitem)
                                                                     <option value="{{ $acaitem->id }} ">
@@ -61,19 +62,17 @@
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="projectinput5">Cohort</label>
-                                                            <select required name="cohort_id" class="form-control">
+                                                            <select required name="cohort_id" id="cohort"
+                                                                class="form-control">
                                                                 <option value="">-- Select Class --</option>
-                                                                @foreach ($cohort as $cohortitem)
-                                                                    <option value="{{ $cohortitem->id }} ">
-                                                                        {{ $cohortitem->cohort_name }}</option>
-                                                                @endforeach
                                                             </select>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="projectinput6">Session</label>
-                                                            <select required name="session_id" class="form-control">
+                                                            <select required name="session_id" id="session"
+                                                                class="form-control">
                                                                 <option disabled="" selected="">--Select Session--
                                                                 </option>
                                                             </select>
@@ -340,22 +339,36 @@
     </div>
     <script type="text/javascript">
         $(document).ready(function() {
-            $('select[name="cohort_id"]').on('change', function() {
-                var cohort_id = $(this).val();
-                if (cohort_id) {
-                    $.ajax({
-                        url: "{{ url('admin/get/session') }}/" + cohort_id,
-                        type: "GET",
-                        dataType: "json",
-                        success: function(data) {
-                            $("#session_id").empty();
-                            $.each(data, function(key, value) {
-                                $("#session_id").append('<option value="' + value
-                                    .id + '">' + value.session_name + '</option>');
-                            });
-                        },
-                    });
-                }
+            $('#year').on('change', function() {
+                var yearId = this.value;
+                $('#cohort').html('');
+                $.ajax({
+                    url: '{{ route('getCohorts') }}?academic_id=' + yearId,
+                    type: 'get',
+                    success: function(res) {
+                        $('#cohort').html('<option value="">Select class</option>');
+                        $.each(res, function(key, value) {
+                            $('#cohort').append('<option value="' + value
+                                .id + '">' + value.cohort_name + '</option>');
+                        });
+                        $('#session').html('<option value="">Select session</option>');
+                    }
+                });
+            });
+            $('#cohort').on('change', function() {
+                var cohortId = this.value;
+                $('#session').html('');
+                $.ajax({
+                    url: '{{ route('getSessions') }}?cohort_id=' + cohortId,
+                    type: 'get',
+                    success: function(res) {
+                        $('#session').html('<option value="">Select session</option>');
+                        $.each(res, function(key, value) {
+                            $('#session').append('<option value="' + value
+                                .id + '">' + value.session_name + '</option>');
+                        });
+                    }
+                });
             });
         });
     </script>
