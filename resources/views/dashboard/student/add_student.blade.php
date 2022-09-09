@@ -1,5 +1,7 @@
 @extends('layouts.dash')
 @section('content')
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <div class="app-content content container-fluid">
         <div class="content-wrapper">
             <div class="content-header row">
@@ -37,7 +39,8 @@
                                 </div>
                                 <div class="card-body collapse in">
                                     <div class="card-block">
-                                        <form action="{{ url('student/add-student') }}" class="form" method="POST" enctype="multipart/form-data">
+                                        <form action="{{ url('student/add-student') }}" class="form" method="POST"
+                                            enctype="multipart/form-data">
                                             @csrf
                                             <div class="form-body">
                                                 <h4 class="form-section"><i class="icon-head"></i> Personal info</h4>
@@ -71,11 +74,8 @@
                                                         <div class="form-group">
                                                             <label for="projectinput6">Session</label>
                                                             <select required name="session_id" class="form-control">
-                                                                <option value="">-- Select Session--</option>
-                                                                @foreach ($session as $sessionitem)
-                                                                    <option value="{{ $sessionitem->id }} ">
-                                                                        {{ $sessionitem->session_name }}</option>
-                                                                @endforeach
+                                                                <option disabled="" selected="">--Select Session--
+                                                                </option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -109,23 +109,22 @@
                                                 <div class="row">
                                                     <div class="col-md-4">
                                                         <div class="form-group">
-                                                            <label >Religion</label>
+                                                            <label>Religion</label>
                                                             <select id="religion_id" name="religion_id"
                                                                 class="form-control">
                                                                 <option value="none" selected="" disabled="">
                                                                     Select religion</option>
                                                                 <option value="christian">Christian</option>
                                                                 <option value="muslim">Muslim</option>
-                                                                   <option value="hindu">Hindu</option>
-                                                                      <option value="other">Other</option>
+                                                                <option value="hindu">Hindu</option>
+                                                                <option value="other">Other</option>
                                                             </select>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="gender">Gender</label>
-                                                            <select id="gender_id" name="gender_id"
-                                                                class="form-control">
+                                                            <select id="gender_id" name="gender_id" class="form-control">
                                                                 <option value="none" selected="" disabled="">
                                                                     Select gender</option>
                                                                 <option value="male">Male</option>
@@ -139,7 +138,8 @@
                                                         <div class="form-group">
                                                             <label for="projectinput1">Residential Details/location</label>
                                                             <input type="text" id="projectinput1" class="form-control"
-                                                                placeholder="Residential Details/location" name="location_id">
+                                                                placeholder="Residential Details/location"
+                                                                name="location_id">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -189,7 +189,8 @@
                                                         <div class="form-group">
                                                             <label>Passport photo</label>
                                                             <label id="projectinput7" class="file center-block">
-                                                                <input type="file" name="student_photo" id="file">
+                                                                <input type="file" name="student_photo"
+                                                                    id="file">
                                                                 <span class="file-custom"></span>
                                                             </label>
                                                         </div>
@@ -202,7 +203,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                               <h4 class="form-section"><i class="icon-head"></i> Parents & guardian
+                                                <h4 class="form-section"><i class="icon-head"></i> Parents & guardian
                                                     info
                                                 </h4>
                                                 <div class="row">
@@ -229,9 +230,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-  {{--
-
-                                                <div class="row">
+                                                {{-- <div class="row">
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="projectinput1">2.Name</label>
@@ -293,20 +292,23 @@
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="projectinput8">Previous School info</label>
-                                                            <textarea id="projectinput8" rows="5" class="form-control" name="previous_school_details" placeholder="School info"></textarea>
+                                                            <textarea id="projectinput8" rows="5" class="form-control" name="previous_school_details"
+                                                                placeholder="School info"></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="projectinput8">additional
                                                                 information</label>
-                                                            <textarea id="projectinput8" rows="5" class="form-control" name="aditional_notes" placeholder="Additional info"></textarea>
+                                                            <textarea id="projectinput8" rows="5" class="form-control" name="aditional_notes"
+                                                                placeholder="Additional info"></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="projectinput8">Medical Condition</label>
-                                                            <textarea id="projectinput8" rows="5" class="form-control" name="medical_condition" placeholder="Medical condition"></textarea>
+                                                            <textarea id="projectinput8" rows="5" class="form-control" name="medical_condition"
+                                                                placeholder="Medical condition"></textarea>
                                                         </div>
                                                     </div>
 
@@ -336,4 +338,25 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('select[name="cohort_id"]').on('change', function() {
+                var cohort_id = $(this).val();
+                if (cohort_id) {
+                    $.ajax({
+                        url: "{{ url('admin/get/session') }}/" + cohort_id,
+                        type: "GET",
+                        dataType: "json",
+                        success: function(data) {
+                            $("#session_id").empty();
+                            $.each(data, function(key, value) {
+                                $("#session_id").append('<option value="' + value
+                                    .id + '">' + value.session_name + '</option>');
+                            });
+                        },
+                    });
+                }
+            });
+        });
+    </script>
 @endsection

@@ -29,9 +29,12 @@ class SessionFormRequest extends FormRequest
                 'string',
                 'max:200'
             ],
-            // 'cohort_id' => [
-            //     'required'
-            // ],
+            'cohort_id' => [
+                'required'
+            ],
+            'academic_id' => [
+                'required'
+            ],
         ];
         return $rules;
     }

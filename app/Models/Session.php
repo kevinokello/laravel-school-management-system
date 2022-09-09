@@ -11,9 +11,14 @@ class Session extends Model
     protected $fillable = [
         'session_name',
         'cohort_id',
+        'academic_id'
     ];
     public function cohort()
     {
         return $this->belongsTo(Cohort::class, 'cohort_id', 'id');
+    }
+    public function academic()
+    {
+        return $this->belongsTo(Academic::class, 'academic_id', 'id');
     }
 }

@@ -1,5 +1,7 @@
 @extends('layouts.dash')
 @section('content')
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
     <div class="app-content content container-fluid">
         <div class="content-wrapper">
             <div class="content-body">
@@ -26,19 +28,28 @@
 
                                     <form class="form" action="{{ url('academic/sessions') }}" method="POST">
                                         @csrf
-                                        {{-- <div class="form-group">
-                                            <label for="projectinput5">Cohort</label>
-                                            <select required name="cohort_id" class="form-control">
-                                                <option value="">-- Select Class --</option>
-                                                @foreach ($cohort as $cohortitem)
-                                                    <option value="{{ $cohortitem->id }} ">
-                                                        {{ $cohortitem->cohort_name }}</option>
+                                        <div class="form-group">
+                                            <label for="projectinput5">Academic year</label>
+                                            <select required name="academic_id" id="academic" class="form-control">
+                                                <option value="">-- Select year --</option>
+                                                @foreach ($academic as $academicitem)
+                                                    <option value="{{ $academicitem->id }} ">
+                                                        {{ $academicitem->academic_year }}</option>
                                                 @endforeach
                                             </select>
-                                        </div> --}}
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="projectinput5">Class Name</label>
+                                            <select required name="cohort_id" id="cohort" class="form-control">
+                                                <option value="">-- Select Class --</option>
+
+                                            </select>
+                                        </div>
 
                                         <div class="form-body">
                                             <div class="form-group">
+                                                <label for="projectinput5">Session Name</label>
                                                 <input type="text" id="session_name" class="form-control"
                                                     placeholder="Session Name" name="session_name" required>
                                             </div>
@@ -68,7 +79,7 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                                      {{-- <th>Class Id</th> --}}
+                                            {{-- <th>Class Id</th> --}}
                                             <th>Session Name</th>
                                             <th>Action</th>
                                         </tr>
@@ -77,7 +88,7 @@
                                         @foreach ($session as $item)
                                             <tr>
                                                 <td>{{ $item->id }}</td>
-                                                    {{-- <td>{{ $item->cohort->id }}</td> --}}
+                                                {{-- <td>{{ $item->cohort->id }}</td> --}}
                                                 <td>{{ $item->session_name }}</td>
                                                 <td>
                                                     {{-- <a
@@ -96,4 +107,23 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#academic').on('change', function() {
+                var academicId = this.value;
+                $('#cohort').html('');
+                $.ajax({
+                    url: '{{ route('getCohorts') }}?academic_id=' + academicId,
+                    type: 'get',
+                    success: function(res) {
+                        $('#cohort').html('<option value="">Select class</option>');
+                        $.each(res, function(key, value) {
+                            $('#cohort').append('<option value="' + value
+                                .id + '">' + value.cohort_name + '</option>');
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 @endsection

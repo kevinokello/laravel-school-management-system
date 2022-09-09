@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('session_name');
             $table->string('cohort_id');
-            // $table->foreignId('cohort_id')->constrained('cohorts')->onDelete('set null');
+            $table->string('academic_id');
             $table->tinyInteger('status')->default('0');
             $table->integer('created_by');
             $table->timestamps();

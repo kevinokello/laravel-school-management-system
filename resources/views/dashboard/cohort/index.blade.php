@@ -26,6 +26,16 @@
 
                                     <form class="form" action="{{ url('academic/classes') }}" method="POST">
                                         @csrf
+                                         <div class="form-group">
+                                            <label for="projectinput5">Academic year</label>
+                                            <select required name="academic_id" class="form-control">
+                                                <option value="">-- Select year --</option>
+                                                @foreach ($academic as $acaitem)
+                                                    <option value="{{ $acaitem->id }} ">
+                                                        {{ $acaitem->academic_year }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
                                         <div class="form-body">
                                             <div class="form-group">
                                                 <input type="text" id="cohort_name" class="form-control"

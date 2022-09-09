@@ -16,11 +16,8 @@ return new class extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('academic_id')->nullable()->unsigned();
-            // $table->foreign('academic_id')->references('id')->on('academics')->onDelete('cascade');
             $table->integer('cohort_id')->nullable()->unsigned();
-            // $table->foreign('cohort_id')->references('id')->on('cohorts')->onDelete('cascade');
             $table->integer('session_id')->nullable()->unsigned();
-            // $table->foreign('session_id')->references('id')->on('sessions')->onDelete('cascade');
             $table->string('first_name', 200)->nullable();
             $table->string('middle_name', 200)->nullable();
             $table->string('last_name', 200)->nullable();

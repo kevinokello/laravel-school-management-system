@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('cohorts', function (Blueprint $table) {
             $table->id();
             $table->string('cohort_name');
+            $table->string('academic_id');
             $table->tinyInteger('status')->default('0');
             $table->integer('created_by');
             $table->timestamps();

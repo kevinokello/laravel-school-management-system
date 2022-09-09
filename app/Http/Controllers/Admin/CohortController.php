@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Cohort;
+use App\Models\Academic;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -12,14 +13,16 @@ class CohortController extends Controller
 {
     public function index()
     {
+        $academic = Academic::where('status', '0')->get();
         $cohort = Cohort::all();
-        return view('dashboard.cohort.index', compact('cohort'));
+        return view('dashboard.cohort.index', compact(['academic', 'cohort']));
     }
     public function store(CohortFormRequest $request)
     {
         $data = $request->validated();
         $cohort = new Cohort;
         $cohort->cohort_name = $data['cohort_name'];
+        $cohort->academic_id = $data['academic_id'];
         $cohort->created_by = Auth::user()->id;
         $cohort->save();
         session()->flash('success', 'Academic class created succesfully');

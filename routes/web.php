@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Admin\SessionController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -13,6 +13,9 @@ require __DIR__ . '/auth.php';
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', 'App\Http\Controllers\Admin\DashboardController@index')->name('dashboard');
 });
+
+Route::get('get-cohorts', [SessionController::class, 'getCohorts'])->name('getCohorts');
+// Route::get('admin/get/session/{cohort_id}', 'App\Http\Controllers\Admin\StudentController@GetSession');
 
 Route::prefix('/profile')->middleware(['auth', 'role:admin|teacher|student'])->namespace('App\Http\Controllers\Admin')->group(function () {
     Route::get('view', 'ProfileController@ProfileView');
@@ -44,6 +47,10 @@ Route::prefix('/academic')->middleware(['auth', 'role:admin'])->namespace('App\H
     Route::get('sessions', 'SessionController@index');
     Route::post('sessions', 'SessionController@store');
     Route::get('sessions/{session_id}', 'SessionController@destroy');
+
+
+
+
 
 
     Route::get('fee/category/view', 'FeeCategoryController@ViewFeeCat');

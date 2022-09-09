@@ -13,9 +13,17 @@ class Academic extends Model
         'academic_year',
     ];
 
-    // public function students()
-    // {
-    //     return $this->hasMany(Student::class, 'academic_id', 'id');
-    // }
+    public function students()
+    {
+        return $this->hasMany(Student::class, 'academic_id', 'id');
+    }
+    public function cohorts()
+    {
+        return $this->hasMany(Cohort::class, 'academic_id', 'id');
+    }
+    public function sessions()
+    {
+        return $this->hasMany(Session::class, 'academic_id', 'id');
+    }
 
 }

@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('academics', function (Blueprint $table) {
             $table->id();
             $table->string('academic_year');
-            $table->string('school_id')->default('0');
             $table->tinyInteger('status')->default('0');
             $table->integer('created_by');
             $table->timestamps();

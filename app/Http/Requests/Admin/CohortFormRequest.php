@@ -29,6 +29,10 @@ class CohortFormRequest extends FormRequest
                 'string',
                 'max:200'
             ],
+            'academic_id' => [
+                'required',
+                'string'
+            ],
         ];
         return $rules;
     }

@@ -7,6 +7,7 @@ use App\Models\Session;
 use App\Models\Student;
 use App\Models\Academic;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
@@ -125,5 +126,11 @@ class StudentController extends Controller
             return redirect()->back();
         }
     }
+    public function GetSession($cohort_id)
+    {
+        $sub = DB::table('sessions')->where('cohort_id', $cohort_id)->get();
+        return response()->json($sub);
+    }
+
 
 }
