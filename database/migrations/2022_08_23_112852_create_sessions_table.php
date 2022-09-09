@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('sessions', function (Blueprint $table) {
             $table->id();
             $table->string('session_name');
-            $table->string('school_id')->default('0');
+            $table->string('cohort_id');
             // $table->foreignId('cohort_id')->constrained('cohorts')->onDelete('set null');
             $table->tinyInteger('status')->default('0');
             $table->integer('created_by');

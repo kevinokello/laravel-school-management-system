@@ -248,11 +248,29 @@
           @endif
           {{-- teacher --}}
           @if (Auth::user()->hasRole('teacher'))
+              <ul id="main-menu-navigation" data-menu="menu-navigation" class="navigation navigation-main">
+                  <li class=" navigation-header"><span data-i18n="nav.category.support">Menu</span><i
+                          data-toggle="tooltip" data-placement="right" data-original-title="Support"
+                          class="icon-ellipsis icon-ellipsis"></i>
+                  </li>
+                  <li class="nav-item {{ Request::is('dashboard') ? 'active' : '' }}"><a
+                          href="{{ url('dashboard') }}"><i class="icon-home3"></i><span
+                              data-i18n="nav.support_documentation.main" class="menu-title">TDashboard</span></a>
+                  </li>
+              </ul>
           @endif
-
           {{-- student --}}
           @if (Auth::user()->hasRole('student'))
-
+              <ul id="main-menu-navigation" data-menu="menu-navigation" class="navigation navigation-main">
+                  <li class=" navigation-header"><span data-i18n="nav.category.support">Menu</span><i
+                          data-toggle="tooltip" data-placement="right" data-original-title="Support"
+                          class="icon-ellipsis icon-ellipsis"></i>
+                  </li>
+                  <li class="nav-item {{ Request::is('dashboard') ? 'active' : '' }}"><a
+                          href="{{ url('dashboard') }}"><i class="icon-home3"></i><span
+                              data-i18n="nav.support_documentation.main" class="menu-title">SDashboard</span></a>
+                  </li>
+              </ul>
           @endif
       </div>
 

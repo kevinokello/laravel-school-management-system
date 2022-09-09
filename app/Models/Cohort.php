@@ -11,4 +11,9 @@ class Cohort extends Model
     protected $fillable = [
         'cohort_name',
     ];
+    public function sessions()
+    {
+        return $this->hasMany(Session::class, 'session_id', 'id');
+    }
+
 }
