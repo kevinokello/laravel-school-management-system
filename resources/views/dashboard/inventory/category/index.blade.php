@@ -26,6 +26,16 @@
 
                                     <form class="form" action="{{ url('inventory/categories') }}" method="POST">
                                         @csrf
+                                        <div class="form-group">
+                                            <label for="projectinput5">Department/unit</label>
+                                            <select required name="unit_id" class="form-control">
+                                                <option value="">-- Select department --</option>
+                                                @foreach ($department as $depitem)
+                                                    <option value="{{ $depitem->id }} ">
+                                                        {{ $depitem->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
                                         <div class="form-body">
                                             <div class="form-group">
                                                 <input type="text" id="name" class="form-control"

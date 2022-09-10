@@ -7,11 +7,7 @@
                     <form method="post" action="{{ url('inventory/stock/store') }}" id="myForm" class="form">
                         @csrf
                         <div class="form-body">
-                            <div class="form-group">
-                                <label for="companyName">Product Name</label>
-                                <input type="text" id="companyName" class="form-control" placeholder="Product Name"
-                                    name="company">
-                            </div>
+
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
@@ -44,6 +40,15 @@
                                                 <option value="{{ $cat->id }}">{{ $cat->name }}</option>
                                             @endforeach
                                         </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="companyName">Product Name</label>
+                                        <input type="text" id="companyName" class="form-control"
+                                            placeholder="Product Name" name="company">
                                     </div>
                                 </div>
                             </div>

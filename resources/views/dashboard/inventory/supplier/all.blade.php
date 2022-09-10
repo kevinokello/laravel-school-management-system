@@ -34,7 +34,7 @@
                                                 <td>
                                                           <a href="{{ url('inventory/supplier/edit/' . $item->id) }}"><i
                                                             class="fa-solid fa-pen-to-square"></i></a>
-                                                    <a href="{{ url('inventory/units/' . $item->id) }}"
+                                                    <a href="{{ url('inventory/supplier/delete/' . $item->id) }}"
                                                         class="btn btn-danger btn-sm">Delete</a>
                                                 </td>
                                             </tr>

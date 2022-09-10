@@ -34,7 +34,7 @@ class StudentController extends Controller
         $data = $request->validated();
         $student = new Student;
         $student->academic_id = $data['academic_id'];
-        // $student->cohort_id = $data['cohort_id'];
+        $student->cohort_id = $data['cohort_id'];
         $student->session_id = $data['session_id'];
         $student->first_name = $data['first_name'];
         $student->middle_name = $data['middle_name'];

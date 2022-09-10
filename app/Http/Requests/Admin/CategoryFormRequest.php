@@ -29,6 +29,11 @@ class CategoryFormRequest extends FormRequest
                 'string',
                 'max:200'
             ],
+            'unit_id' => [
+                'required',
+                'string',
+                'max:200'
+            ],
         ];
         return $rules;
     }

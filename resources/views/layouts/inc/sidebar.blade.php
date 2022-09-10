@@ -67,12 +67,12 @@
                       <ul class="menu-content">
                           <li>
                               <a href="{{ url('inventory/units') }}" data-i18n="nav.menu_levels.second_level"
-                                  class="menu-item {{ Request::is('inventory/units') ? 'active' : '' }}">Units</a>
+                                  class="menu-item {{ Request::is('inventory/units') ? 'active' : '' }}">Departments/Units</a>
                           </li>
                           <li>
                               <a href="{{ url('inventory/categories') }}" data-i18n="nav.menu_levels.second_level"
                                   class="menu-item {{ Request::is('inventory/categories') ? 'active' : '' }}">
-                                  Categories</a>
+                                 Department Categories</a>
                           </li>
                           <li
                               class="nav-item  {{ Request::is('inventory/supplier/add') || Request::is('inventory/supplier/all') ? 'open' : '' }}">

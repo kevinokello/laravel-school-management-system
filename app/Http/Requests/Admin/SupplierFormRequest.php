@@ -39,14 +39,12 @@ class SupplierFormRequest extends FormRequest
                 'string',
                 'max:200'
             ],
-            'address' => [
+            'stock_category_id' => [
                 'nullable',
                 'string',
                 'max:200'
             ],
-            // 'cohort_id' => [
-            //     'required'
-            // ],
+
         ];
         return $rules;
     }

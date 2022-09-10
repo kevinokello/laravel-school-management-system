@@ -2,24 +2,27 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\Admin\CategoryFormRequest;
-use App\Http\Controllers\Controller;
-use App\Models\StockCategory;
+use App\Models\Unit;
 use Illuminate\Http\Request;
+use App\Models\StockCategory;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\Admin\CategoryFormRequest;
 
 class StockCategoryController extends Controller
 {
     public function index()
     {
         $category = StockCategory::all();
-        return view('dashboard.inventory.category.index', compact('category'));
+        $department = Unit::where('status', '1')->get();
+        return view('dashboard.inventory.category.index', compact(['category', 'department']));
     }
     public function store(CategoryFormRequest $request)
     {
         $data = $request->validated();
         $category = new StockCategory;
         $category->name = $data['name'];
+        $category->unit_id = $data['unit_id'];
         $category->created_by = Auth::user()->id;
         $category->save();
         session()->flash('success', 'Category created succesfully');

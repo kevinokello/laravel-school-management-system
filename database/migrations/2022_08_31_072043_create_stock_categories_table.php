@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('stock_categories', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
+            $table->string('unit_id');
+            $table->string('supplier_id')->default('0');
             $table->tinyInteger('status')->default('1');
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();

@@ -11,4 +11,13 @@ class Unit extends Model
     protected $fillable = [
         'name',
     ];
+    public function categories()
+    {
+        return $this->hasMany(StockCategory::class, 'unit_id', 'id');
+    }
+    // public function suppliers()
+    // {
+    //     return $this->hasMany(Supplier::class, 'unit_id', 'id');
+    // }
+
 }

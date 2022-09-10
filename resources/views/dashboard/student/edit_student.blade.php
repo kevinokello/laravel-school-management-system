@@ -28,7 +28,7 @@
                                             @method('PUT')
                                             <div class="form-body">
                                                 <h4 class="form-section"><i class="icon-head"></i>
-                                                     Personal info</h4>
+                                                    Personal info</h4>
                                                 <div class="row">
                                                     <div class="col-md-4">
                                                         <div class="form-group">
@@ -70,6 +70,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="row">
                                                     <div class="col-md-4">
                                                         <div class="form-group">
@@ -208,7 +209,8 @@
                                                             <label for="projectinput1">Admission Number</label>
                                                             <input type="text" id="projectinput1" class="form-control"
                                                                 placeholder="Admission Number"
-                                                                value="{{ $student->admission_no }}" name="admission_no" readonly>
+                                                                value="{{ $student->admission_no }}" name="admission_no"
+                                                                readonly>
                                                         </div>
                                                     </div>
                                                 </div>

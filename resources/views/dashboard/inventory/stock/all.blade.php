@@ -36,8 +36,8 @@
                                                 <td>{{ $item->quantity }}</td>
 
                                                 <td>
-                                                    {{-- <a
-                                                        class="btn btn-info btn-sm" data-toggle="modal" data-target="#small2">Edit</a> --}}
+                                                    <a
+                                                        class="btn btn-info btn-sm" data-toggle="modal" data-target="#small2">Edit</a>
                                                     <a href="{{ url('inventory/stock/' . $item->id) }}"
                                                         class="btn btn-danger btn-sm">Delete</a>
                                                 </td>

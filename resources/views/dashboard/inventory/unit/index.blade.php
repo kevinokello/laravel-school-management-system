@@ -7,7 +7,7 @@
                     <div class="text-center">
                         <button type="button" style="background-color: #448aff;color: #fff; height:50px; width:190px; "
                             class="btn btn-outline-success block btn-lg" data-toggle="modal" data-target="#small">
-                            New unit
+                            New department
                         </button>
                     </div>
                     <br>
@@ -20,7 +20,7 @@
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
-                                    <h4 class="modal-title" id="myModalLabel19">Unit name</h4>
+                                    <h4 class="modal-title" id="myModalLabel19">Department name</h4>
                                 </div>
                                 <div class="modal-body">
 
@@ -29,7 +29,7 @@
                                         <div class="form-body">
                                             <div class="form-group">
                                                 <input type="text" id="name" class="form-control"
-                                                    placeholder="Unit Name" name="name" required>
+                                                    placeholder="Department Name" name="name" required>
                                             </div>
                                         </div>
 
@@ -49,7 +49,7 @@
 
                         <div class="card-header">
 
-                            <h4 class="card-title">Units</h4>
+                            <h4 class="card-title">Departments</h4>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -57,7 +57,7 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>unit name</th>
+                                            <th>Department name</th>
                                             <th>Status</th>
                                             <th>Action</th>
                                         </tr>

@@ -21,28 +21,33 @@
                                                         <div class="form-group">
                                                             <label for="projectinput1">Supplier Name</label>
                                                             <input type="text" id="projectinput1" class="form-control"
-                                                                placeholder="First Name" name="name">
+                                                                placeholder="Name/Company" name="name">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectinput2">Supplier Mobile</label>
                                                             <input type="text" id="projectinput2" class="form-control"
-                                                                placeholder="Last Name" name="mobile_no">
+                                                                placeholder="Phone Number" name="mobile_no">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectinput4">Supplier Email</label>
                                                             <input type="email" id="projectinput4" class="form-control"
-                                                                placeholder="Address" name="email">
+                                                                placeholder="Email Address" name="email">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="projectinput4">Supplier Address</label>
-                                                            <input type="text" id="projectinput4" class="form-control"
-                                                                placeholder="Address" name="address">
+                                                            <label for="projectinput5">Stock Category</label>
+                                                            <select required name="unit_id" class="form-control">
+                                                                <option value="">-- Select category --</option>
+                                                                @foreach ($stockcategory as $cateitem)
+                                                                    <option value="{{ $cateitem->id }} ">
+                                                                        {{ $cateitem->name }}</option>
+                                                                @endforeach
+                                                            </select>
                                                         </div>
                                                     </div>
                                                 </div>
