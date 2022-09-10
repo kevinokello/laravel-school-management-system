@@ -78,11 +78,16 @@
                                         </div>
                                     </div>
                                 </div> <!-- End Col md 3 -->
-
+<br>
                                 <div class="col-md-3">
-
-                                    <a id="search" class="btn btn-primary" name="search"> Add</a>
-
+                                    <div class="text-center">
+                                        <button type="submit"
+                                            style="background-color: #448aff;color: #fff; height:50px; width:190px; "
+                                            class="btn btn-outline-success block btn-lg" id="search" name="search"
+                                           >
+                            Add
+                                        </button>
+                                    </div>
                                 </div> <!-- End Col md 3 -->
                             </div><!--  end row -->
 
@@ -119,56 +124,58 @@
  </form>
     </script>
 
-
-
                                     </div>
-
-
-
-                                </div></div></div></div></div></div></div></div>
-
-                                </div> <!-- // End col md 12 -->
-                            </div> <!-- // END Row  -->
-
-
-
+                                </div>
+                            </div>
                         </div>
-                        <!-- /.col -->
                     </div>
-                    <!-- /.row -->
-                    </section>
-                    <!-- /.content -->
-
                 </div>
             </div>
+        </div>
+    </div>
+
+    </div> <!-- // End col md 12 -->
+    </div> <!-- // END Row  -->
+
+
+
+    </div>
+    <!-- /.col -->
+    </div>
+    <!-- /.row -->
+    </section>
+    <!-- /.content -->
+
+    </div>
+    </div>
 
 
 
 
-            <script type="text/javascript">
-                $(document).on('click', '#search', function() {
-                    var year_id = $('#year_id').val();
-                    var class_id = $('#class_id').val();
-                    var fee_category_id = $('#fee_category_id').val();
-                    var date = $('#date').val();
-                    $.ajax({
-                        url: "{{ url('accounts/student/fee/getstudent') }}",
-                        type: "get",
-                        data: {
-                            'year_id': year_id,
-                            'class_id': class_id,
-                            'fee_category_id': fee_category_id,
-                            'date': date
-                        },
-                        beforeSend: function() {},
-                        success: function(data) {
-                            var source = $("#document-template").html();
-                            var template = Handlebars.compile(source);
-                            var html = template(data);
-                            $('#DocumentResults').html(html);
-                            $('[data-toggle="tooltip"]').tooltip();
-                        }
-                    });
-                });
-            </script>
-        @endsection
+    <script type="text/javascript">
+        $(document).on('click', '#search', function() {
+            var year_id = $('#year_id').val();
+            var class_id = $('#class_id').val();
+            var fee_category_id = $('#fee_category_id').val();
+            var date = $('#date').val();
+            $.ajax({
+                url: "{{ url('accounts/student/fee/getstudent') }}",
+                type: "get",
+                data: {
+                    'year_id': year_id,
+                    'class_id': class_id,
+                    'fee_category_id': fee_category_id,
+                    'date': date
+                },
+                beforeSend: function() {},
+                success: function(data) {
+                    var source = $("#document-template").html();
+                    var template = Handlebars.compile(source);
+                    var html = template(data);
+                    $('#DocumentResults').html(html);
+                    $('[data-toggle="tooltip"]').tooltip();
+                }
+            });
+        });
+    </script>
+@endsection

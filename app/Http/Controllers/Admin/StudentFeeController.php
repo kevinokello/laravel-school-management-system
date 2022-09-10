@@ -14,7 +14,6 @@ class StudentFeeController extends Controller
 {
     public function StudentFeeView()
     {
-
         $data['allData'] = StudentFee::all();
         return view('dashboard.account.student.fee.view', $data);
     }

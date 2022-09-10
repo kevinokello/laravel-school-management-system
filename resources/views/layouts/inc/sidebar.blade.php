@@ -72,7 +72,7 @@
                           <li>
                               <a href="{{ url('inventory/categories') }}" data-i18n="nav.menu_levels.second_level"
                                   class="menu-item {{ Request::is('inventory/categories') ? 'active' : '' }}">
-                                 Department Categories</a>
+                                  Department Categories</a>
                           </li>
                           <li
                               class="nav-item  {{ Request::is('inventory/supplier/add') || Request::is('inventory/supplier/all') ? 'open' : '' }}">
@@ -187,9 +187,37 @@
                       </ul>
                   </li>
                   <li
-                      class="nav-item {{ Request::is('inventory/units') || Request::is('inventory/categories') || Request::is('inventory/stock/add') || Request::is('inventory/supplier/all') || Request::is('inventory/supplier/add') || Request::is('inventory/stock/all') || Request::is('inventory/stock/add') || Request::is('inventory/purchase/add') || Request::is('inventory/purchase/all') || Request::is('inventory/purchase/pending') || Request::is('inventory/invoice/add') || Request::is('inventory/invoice/pending') || Request::is('inventory/invoice/all') ? 'open' : '' }}">
-                      <a href="{{ url('student/add-student') }}"><i class="icon-ios-albums-outline"></i><span
-                              data-i18n="nav.menu_levels.main" class="menu-title">Manage Accounts</span></a>
+                      class="nav-item {{ Request::is('accounts/student/fee/add') || Request::is('accounts/student/fee/view') || Request::is('accounts/student/fee/getstudent') ? 'open' : '' }}">
+                      <a href="#"><i class="icon-ios-albums-outline"></i><span data-i18n="nav.cards.main"
+                              class="menu-title">Student Fees</span></a>
+                      <ul class="menu-content">
+                          <li><a href="{{ url('accounts/student/fee/add') }}"
+                                  class="menu-item {{ Request::is('accounts/student/fee/add') ? 'active' : '' }}">Add</a>
+                          </li>
+                          <li><a href="{{ url('accounts/student/fee/view') }}"
+                                  class="menu-item {{ Request::is('accounts/student/fee/view') ? 'active' : '' }}">View</a>
+                          </li>
+                          <li><a href="{{ url('accounts/student/fee/getstudent') }}"
+                                  class="menu-item {{ Request::is('accounts/student/fee/getstudent') ? 'active' : '' }}">Individual
+                                  Student</a>
+                          </li>
+                      </ul>
+
+                  </li>
+
+                  <li
+                      class="nav-item {{ Request::is('academic/academic-years') || Request::is('academic/classes') || Request::is('academic/sessions') || Request::is('academic/fee/category/view') || Request::is('academic/fee/amount/view') || Request::is('academic/fee/amount/add') || Request::is('academic/fee/category/add') ? 'open' : '' }}">
+                      <a href="#"><i class="icon-ios-albums-outline"></i><span data-i18n="nav.cards.main"
+                              class="menu-title">Study Materials</span></a>
+                      <ul class="menu-content">
+                          <li><a href="{{ url('#') }}"
+                                  class="menu-item {{ Request::is('academic/academic-years') ? 'active' : '' }}">Categories</a>
+                          </li>
+                          <li><a href="{{ url('#') }}"
+                                  class="menu-item {{ Request::is('academic/classes') ? 'active' : '' }}">Sub
+                                  Categories</a>
+                          </li>
+                      </ul>
                       <ul class="menu-content">
                           <li
                               class="nav-item  {{ Request::is('inventory/invoice/add') || Request::is('inventory/invoice/pending') || Request::is('inventory/invoice/all') ? 'open' : '' }}">
@@ -233,7 +261,7 @@
                   <li
                       class="nav-item {{ Request::is('academic/academic-years') || Request::is('academic/classes') || Request::is('academic/sessions') || Request::is('academic/fee/category/view') || Request::is('academic/fee/amount/view') || Request::is('academic/fee/amount/add') || Request::is('academic/fee/category/add') ? 'open' : '' }}">
                       <a href="#"><i class="icon-ios-albums-outline"></i><span data-i18n="nav.cards.main"
-                              class="menu-title">Staff Management</span></a>
+                              class="menu-title">Manage Staff</span></a>
                       <ul class="menu-content">
                           <li><a href="{{ url('#') }}"
                                   class="menu-item {{ Request::is('academic/academic-years') ? 'active' : '' }}">Add</a>

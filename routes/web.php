@@ -97,8 +97,10 @@ Route::prefix('/inventory')->middleware(['auth', 'role:admin'])->namespace('App\
     Route::get('/stock/edit/{id}', 'StockController@Edit');
     Route::post('/stock/update', 'StockController@Update');
     Route::get('/stock/delete/{id}', 'StockController@Delete');
+
     // Route::get('/supplier/all', 'SupplierController@index');
     // Route::get('/supplier/add-supplier', 'SupplierController@create');
+    
     Route::get('/purchase/all', 'PurchaseController@PurchaseAll');
     Route::get('/purchase/add', 'PurchaseController@PurchaseAdd');
     Route::post('/purchase/store', 'PurchaseController@PurchaseStore');

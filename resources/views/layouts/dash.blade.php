@@ -40,6 +40,7 @@
             background-color: #448aff;
             color: #448aff;
         }
+
         .button {
             border-color: #448aff;
             background-color: #448aff;
@@ -62,6 +63,10 @@
         .main-menu.menu-dark .navigation>li.open>a {
             color: #c3c3c3;
             background: #2f5d91;
+        }
+
+        span.menu-title {
+            color: rgb(255, 255, 255)
         }
     </style>
     <!-- Scripts -->
