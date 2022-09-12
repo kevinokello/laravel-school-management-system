@@ -50,11 +50,6 @@ Route::prefix('/academic')->middleware(['auth', 'role:admin'])->namespace('App\H
     Route::post('sessions', 'SessionController@store');
     Route::get('sessions/{session_id}', 'SessionController@destroy');
 
-
-
-
-
-
     Route::get('fee/category/view', 'FeeCategoryController@ViewFeeCat');
     Route::get('fee/category/add', 'FeeCategoryController@FeeCatAdd');
     Route::post('fee/category/store', 'FeeCategoryController@FeeCatStore');
@@ -100,7 +95,7 @@ Route::prefix('/inventory')->middleware(['auth', 'role:admin'])->namespace('App\
 
     // Route::get('/supplier/all', 'SupplierController@index');
     // Route::get('/supplier/add-supplier', 'SupplierController@create');
-    
+
     Route::get('/purchase/all', 'PurchaseController@PurchaseAll');
     Route::get('/purchase/add', 'PurchaseController@PurchaseAdd');
     Route::post('/purchase/store', 'PurchaseController@PurchaseStore');
@@ -135,6 +130,7 @@ Route::prefix('/accounts')->middleware(['auth', 'role:admin'])->namespace('App\H
 
     Route::get('student/fee/view', 'StudentFeeController@StudentFeeView');
     Route::get('student/fee/add', 'StudentFeeController@StudentFeeAdd');
+    Route::get('student/fee/edit', 'StudentFeeController@StudentFeeEdit');
     Route::get('student/fee/getstudent', 'StudentFeeController@StudentFeeGetStudent');
     Route::post('student/fee/store', 'StudentFeeController@StudentFeeStore');
 

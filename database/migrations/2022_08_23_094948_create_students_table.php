@@ -30,14 +30,11 @@ return new class extends Migration
             $table->date('admission_date')->nullable();
             $table->string('student_photo')->nullable();
             $table->integer('admission_no')->nullable();
-            $table->json('parent_info1')->nullable();
-            $table->json('parent_info2')->nullable();
-            $table->string('document_file_1', 200)->nullable();
-            $table->string('document_file_2', 200)->nullable();
-            $table->string('document_file_3', 200)->nullable();
+            $table->string('document_file', 200)->nullable();
             $table->string('previous_school_details', 500)->nullable();
             $table->string('aditional_notes', 500)->nullable();
             $table->string('medical_condition', 500)->nullable();
+            $table->integer('fee_balance')->default('0');
             $table->timestamps();
         });
     }

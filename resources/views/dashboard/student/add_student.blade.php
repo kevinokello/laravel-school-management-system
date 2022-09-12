@@ -165,7 +165,7 @@
 
                                                     <div class="col-md-4">
                                                         <div class="form-group">
-                                                            <label for="projectinput2">Phone Number</label>
+                                                            <label for="projectinput2">Guardian Phone Number</label>
                                                             <input type="text" id="projectinput2" class="form-control"
                                                                 placeholder="Phone" name="mobile">
                                                         </div>
@@ -202,91 +202,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <h4 class="form-section"><i class="icon-head"></i> Parents & guardian
-                                                    info
-                                                </h4>
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label for="projectinput1">1.Name</label>
-                                                            <input type="text" id="projectinput1" class="form-control"
-                                                                placeholder="Name" name="parent_info1[]">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label for="projectinput1">Relationship</label>
-                                                            <input type="text" id="projectinput1" class="form-control"
-                                                                placeholder="Occupation" name="parent_info1[]">
-                                                        </div>
-                                                    </div>
 
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label for="projectinput2">Phone Number</label>
-                                                            <input type="text" id="projectinput2" class="form-control"
-                                                                placeholder="Phone Number" name="parent_info1[]">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                {{-- <div class="row">
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label for="projectinput1">2.Name</label>
-                                                            <input type="text" id="projectinput1" class="form-control"
-                                                                placeholder="Name" name="parent_info2">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label for="projectinput1">Relationship</label>
-                                                            <input type="text" id="projectinput1" class="form-control"
-                                                                placeholder="Occupation" name="parent_info2">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label for="projectinput2">Phone Number</label>
-                                                            <input type="text" id="projectinput2" class="form-control"
-                                                                placeholder="Phone" name="parent_info2">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <h4 class="form-section"><i class="icon-clipboard4"></i> Requirements and
-                                                    documentation
-                                                </h4> --}}
-
-                                                {{-- <div class="row">
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label>Document1</label>
-                                                            <label id="projectinput7" class="file center-block">
-                                                                <input name="document_file_1" type="file" id="file">
-                                                                <span class="file-custom"></span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label>Document2</label>
-                                                            <label id="projectinput7" class="file center-block">
-                                                                <input name="document_file_2" type="file" id="file">
-                                                                <span class="file-custom"></span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label>Document3</label>
-                                                            <label id="projectinput7" class="file center-block">
-                                                                <input name="document_file_3" type="file" id="file">
-                                                                <span class="file-custom"></span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div> --}}
                                                 <div class="row">
                                                     <div class="col-md-4">
                                                         <div class="form-group">

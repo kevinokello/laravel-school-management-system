@@ -25,7 +25,7 @@
                                             <tr>
                                                 <td>{{ $key + 1 }}</td>
                                                 {{-- <td> {{ $amount['fee_cateogry']['name'] }}</td> --}}
-                                                  <td> {{ $amount->fee_category_id }}</td>
+                                                <td> {{ $amount->fee_category_id }}</td>
                                                 <td>
                                                     <a href="{{ url('academic/fee/amount/edit', $amount->fee_category_id) }}"
                                                         class="btn btn-info">Edit</a>

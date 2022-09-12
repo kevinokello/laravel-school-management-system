@@ -1,71 +1,58 @@
 @extends('layouts.dash')
 @section('content')
- <div class="content-wrapper">
-	  <div class="container-full">
-		<!-- Content Header (Page header) -->
+    <div class="app-content content container-fluid">
+        <div class="content-wrapper">
+            <div class="content-body">
+                <div class="col-xl-13 col-lg-12">
+                        <div class="box">
+                            <div class="box-header with-border">
+                                <h3 class="box-title"> Fee Amount Details</h3>
+                                <a href="{{ url('academic/fee/amount/add') }}" style="float: right;"
+                                    class="btn btn-rounded btn-success mb-5"> Add Fee Amount</a>
+                            </div>
+                            <br>  <br>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <h4><strong>Fee Category : </strong>{{ $detailsData['0']['fee_cateogry']['name'] }} </h4>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th width="5%">SL</th>
+                                                <th>Class Name</th>
+                                                <th width="25%">Amount</th>
 
-		<!-- Main content -->
-		<section class="content">
-		  <div class="row">
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach ($detailsData as $key => $detail)
+                                                <tr>
+                                                    <td>{{ $key + 1 }}</td>
+                                                    <td> {{ $detail['student_class']['name'] }}</td>
+                                                    <td> {{ $detail->amount }}</td>
 
+                                                </tr>
+                                            @endforeach
 
+                                        </tbody>
+                                        <tfoot>
 
-			<div class="col-12">
-
-			 <div class="box">
-				<div class="box-header with-border">
-				  <h3 class="box-title"> Fee Amount Details</h3>
-	<a href="{{ url('academic/fee/amount/add') }}" style="float: right;" class="btn btn-rounded btn-success mb-5"> Add Fee Amount</a>
-
-				</div>
-				<!-- /.box-header -->
-				<div class="box-body">
-
-<h4><strong>Fee Category : </strong>{{ $detailsData['0']['fee_cateogry']['name'] }} </h4>
-					<div class="table-responsive">
-					  <table class="table table-bordered table-striped">
-						<thead class="thead-light">
-			<tr>
-				<th width="5%">SL</th>
-				<th>Class Name</th>
-				<th width="25%">Amount</th>
-
-			</tr>
-		</thead>
-		<tbody>
-			@foreach($detailsData as $key => $detail )
-			<tr>
-				<td>{{ $key+1 }}</td>
-				<td> {{ $detail['student_class']['name'] }}</td>
-				<td> {{ $detail->amount }}</td>
-
-			</tr>
-			@endforeach
-
-						</tbody>
-						<tfoot>
-
-						</tfoot>
-					  </table>
-					</div>
-				</div>
-				<!-- /.box-body -->
-			  </div>
-			  <!-- /.box -->
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                        <!-- /.box -->
 
 
-			</div>
-			<!-- /.col -->
-		  </div>
-		  <!-- /.row -->
-		</section>
-		<!-- /.content -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </section>
+            <!-- /.content -->
 
-	  </div>
-  </div>
-
-
-
-
-
+        </div>
+    </div>
 @endsection

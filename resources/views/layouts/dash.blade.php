@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
-
+    <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <!-- Fonts -->
@@ -66,7 +66,13 @@
         }
 
         span.menu-title {
-            color: rgb(255, 255, 255)
+            font-weight: 600;
+            color: #fff;
+        }
+
+        a.menu-item {
+            font-weight: 600;
+            color: #fff;
         }
     </style>
     <!-- Scripts -->
@@ -99,10 +105,7 @@
     <!-- BEGIN ROBUST JS-->
     <script src="{{ url('dash/app-assets/js/core/app-menu.js') }}" type="text/javascript"></script>
     <script src="{{ url('dash/app-assets/js/core/app.js') }}" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
-        integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
     <script>
         //toastr notifications
@@ -180,6 +183,12 @@
     <!--  For Select2 -->
     <script src="{{ asset('backend/assets/libs/select2/js/select2.min.js') }}"></script>
     <script src="{{ asset('backend/assets/js/pages/form-advanced.init.js') }}"></script>
+    <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#myTable').DataTable();
+        });
+    </script>
 </body>
 
 </html>

@@ -28,7 +28,7 @@ class FeeAmountController extends Controller
     public function StoreFeeAmount(Request $request)
     {
 
-        $countClass = count($request->class_id);
+        $countClass = count([$request->cohort_id]);
         if ($countClass != NULL) {
             for ($i = 0; $i < $countClass; $i++) {
                 $fee_amount = new FeeCategoryAmount();
@@ -61,7 +61,7 @@ class FeeAmountController extends Controller
 
     public function UpdateFeeAmount(Request $request, $fee_category_id)
     {
-        if ($request->class_id == NULL) {
+        if ($request->cohort_id == NULL) {
 
             $notification = array(
                 'message' => 'Sorry You do not select any class amount',
@@ -71,7 +71,7 @@ class FeeAmountController extends Controller
             return redirect()->route('fee.amount.edit', $fee_category_id)->with($notification);
         } else {
 
-            $countClass = count($request->class_id);
+            $countClass = count($request->cohort_id);
             FeeCategoryAmount::where('fee_category_id', $fee_category_id)->delete();
             for ($i = 0; $i < $countClass; $i++) {
                 $fee_amount = new FeeCategoryAmount();
@@ -97,6 +97,7 @@ class FeeAmountController extends Controller
 
         return view('dashboard.fee.amount.details', $data);
     }
+
 
 
 }
