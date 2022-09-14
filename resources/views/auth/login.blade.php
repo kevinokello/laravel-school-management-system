@@ -34,12 +34,12 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
-        .btn-primary {
+        .btn-primary2 {
             border-color: #448aff;
             background-color: #448aff;
             color: #FFFFFF;
         }
-              .btn-primary:hover {
+              .btn-primary2:hover {
   background-color: #448aff;
 }
     </style>
@@ -87,7 +87,6 @@
                                         </fieldset>
                                         <label for="password" :value="__('Password')">Password</label>
                                         <fieldset class="form-group position-relative has-icon-left">
-
                                             <input type="password" class="form-control form-control-lg input-lg"
                                                 id="password" placeholder="Enter Password" type="password"
                                                 name="password" required autocomplete="current-password">
@@ -95,7 +94,7 @@
                                                 <i class="icon-key3"></i>
                                             </div>
                                         </fieldset>
-                                        <button type="submit" class="btn btn-primary btn-lg btn-block"><i
+                                        <button type="submit" class="btn btn-primary2 btn-lg btn-block"><i
                                                 class="icon-unlock2"></i> Login</button>
                                     </form>
                                 </div>

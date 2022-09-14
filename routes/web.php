@@ -130,7 +130,9 @@ Route::prefix('/accounts')->middleware(['auth', 'role:admin'])->namespace('App\H
 
     Route::get('student/fee/view', 'StudentFeeController@StudentFeeView');
     Route::get('student/fee/add', 'StudentFeeController@StudentFeeAdd');
-    Route::get('student/fee/edit', 'StudentFeeController@StudentFeeEdit');
+    Route::get('student/fee/keyin', 'StudentFeeController@StudentFeeKeyin');
+    Route::get('student/fee/edit/{student_id}', 'StudentFeeController@StudentFeeEdit');
+    Route::post('student/fee/update/{student_id}', 'StudentFeeController@StudentFeeUpdate');
     Route::get('student/fee/getstudent', 'StudentFeeController@StudentFeeGetStudent');
     Route::post('student/fee/store', 'StudentFeeController@StudentFeeStore');
 
