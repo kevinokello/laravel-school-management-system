@@ -10,7 +10,6 @@
                             <div class="card">
                                 <div class="card-body collapse in">
                                     <div class="card-block">
-
                                         <form method="post" action="{{ url('inventory/supplier/store') }}" id="myForm"
                                             class="form">
                                             @csrf

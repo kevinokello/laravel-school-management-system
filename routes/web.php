@@ -147,3 +147,19 @@ Route::prefix('/accounts')->middleware(['auth', 'role:admin'])->namespace('App\H
     Route::get('other/cost/edit/{id}', 'OtherCostController@OtherCostEdit');
     Route::post('other/cost/update/{id}', 'OtherCostController@OtherCostUpdate');
 });
+
+Route::prefix('/resource')->middleware(['auth', 'role:admin'])->namespace('App\Http\Controllers\Admin')->group(function () {
+
+    Route::get('category/add', 'CategoryController@Add');
+    Route::post('category/store', 'CategoryController@Store');
+    Route::get('category/edit/{category_id}', 'CategoryController@Edit');
+    Route::get('categories', 'CategoryController@View');
+    Route::post('category/update/{category_id}', 'CategoryController@Update');
+
+    Route::get('sub-category/add', 'SubCategoryController@Add');
+    Route::post('sub-category/store', 'SubCategoryController@Store');
+    Route::get('sub-category/edit/{category_id}', 'SubCategoryController@Edit');
+    Route::get('subcategories', 'SubCategoryController@View');
+    Route::post('sub-category/update/{category_id}', 'SubCategoryController@Update');
+
+});

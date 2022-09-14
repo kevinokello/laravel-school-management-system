@@ -202,40 +202,42 @@
                       </ul>
 
                   </li>
-                  <li
-                      class="nav-item {{ Request::is('academic/academic-years') || Request::is('academic/classes') || Request::is('academic/sessions') || Request::is('academic/fee/category/view') || Request::is('academic/fee/amount/view') || Request::is('academic/fee/amount/add') || Request::is('academic/fee/category/add') ? 'open' : '' }}">
-                      <a href="#"><i class="icon-ios-albums-outline"></i><span data-i18n="nav.cards.main"
-                              class="menu-title">Study Materials</span></a>
-                      <ul class="menu-content">
-                          <li><a href="{{ url('#') }}"
-                                  class="menu-item {{ Request::is('academic/academic-years') ? 'active' : '' }}">Categories</a>
-                          </li>
-                          <li><a href="{{ url('#') }}"
-                                  class="menu-item {{ Request::is('academic/classes') ? 'active' : '' }}">Sub
-                                  Categories</a>
-                          </li>
-                          <li><a href="{{ url('#') }}"
-                                  class="menu-item {{ Request::is('academic/classes') ? 'active' : '' }}">Add</a>
-                          </li>
-                                  <li><a href="{{ url('#') }}"
-                                  class="menu-item {{ Request::is('academic/classes') ? 'active' : '' }}">View</a>
-                          </li>
-                      </ul>
 
-                  </li>
-                  {{-- <li
-                      class="nav-item {{ Request::is('academic/academic-years') || Request::is('academic/classes') || Request::is('academic/sessions') || Request::is('academic/fee/category/view') || Request::is('academic/fee/amount/view') || Request::is('academic/fee/amount/add') || Request::is('academic/fee/category/add') ? 'open' : '' }}">
-                      <a href="#"><i class="icon-ios-albums-outline"></i><span data-i18n="nav.cards.main"
-                              class="menu-title">Announcement</span></a>
+       <li class="nav-item {{ Request::is('resource/categories') || Request::is('resource/subcategories') ? 'open' : '' }}">
+                      <a href="{{ url('student/add-student') }}"><i class="icon-ios-albums-outline"></i><span
+                              data-i18n="nav.menu_levels.main" class="menu-title">Resources</span></a>
                       <ul class="menu-content">
-                          <li><a href="{{ url('#') }}"
-                                  class="menu-item {{ Request::is('academic/academic-years') ? 'active' : '' }}">Message</a>
+                          <li>
+                              <a href="{{ url('resource/categories') }}" data-i18n="nav.menu_levels.second_level"
+                                  class="menu-item {{ Request::is('resource/categories') ? 'active' : '' }}">Categories</a>
                           </li>
-                          <li><a href="{{ url('#') }}"
-                                  class="menu-item {{ Request::is('academic/classes') ? 'active' : '' }}">Notice</a>
+                          <li>
+                              <a href="{{ url('resource/subcategories') }}" data-i18n="nav.menu_levels.second_level"
+                                  class="menu-item {{ Request::is('resource/subcategories') ? 'active' : '' }}">
+                                  Sub Categories</a>
                           </li>
+                          {{-- <li
+                              class="nav-item  {{ Request::is('inventory/supplier/add') || Request::is('inventory/supplier/all') ? 'open' : '' }}">
+                              <a href="#" data-i18n="nav.menu_levels.second_level_child.main"
+                                  class="menu-item">Manage resources</a>
+                              <ul class="menu-content">
+                                  <li>
+                                      <a href="{{ url('inventory/supplier/add') }}"
+                                          data-i18n="nav.menu_levels.second_level_child.third_level"
+                                          class="menu-item {{ Request::is('inventory/supplier/add') ? 'active' : '' }}">Add
+                                          </a>
+                                  </li>
+                                  <li>
+                                      <a href="{{ url('inventory/supplier/all') }}"
+                                          data-i18n="nav.menu_levels.second_level_child.third_level"
+                                          class="menu-item {{ Request::is('inventory/supplier/all') ? 'active' : '' }}">View
+                                          </a>
+                                  </li>
+                              </ul>
+                          </li> --}}
                       </ul>
-                  </li> --}}
+                  </li>
+
               </ul>
           @endif
           {{-- teacher --}}
