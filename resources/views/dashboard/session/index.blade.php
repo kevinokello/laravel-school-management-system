@@ -7,7 +7,7 @@
             <div class="content-body">
                 <div class="col-xl-13 col-lg-12">
                     <div class="text-center">
-                        <button type="button" style="background-color: #448aff;color: #fff; height:50px; width:220px; "
+                        <button type="button" style="background-color: #0073aa;color: #fff; height:50px; width:220px; "
                             class="btn btn-outline-success block btn-lg" data-toggle="modal" data-target="#small">
                             New Academic session
                         </button>

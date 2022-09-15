@@ -35,13 +35,14 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
         .btn-primary2 {
-            border-color: #448aff;
-            background-color: #448aff;
+            border-color: #0073aa;
+            background-color: #0073aa;
             color: #FFFFFF;
         }
-              .btn-primary2:hover {
-  background-color: #448aff;
-}
+
+        .btn-primary2:hover {
+            background-color: #0073aa;
+        }
     </style>
 </head>
 
@@ -66,9 +67,9 @@
                             </div>
                             <div class="card-body collapse in">
                                 <div class="card-block">
-                                        @if(session('message'))
-<h4 class="alert alert-warning">{{ session('message') }}</h4>
-    @endif
+                                    @if (session('message'))
+                                        <h4 class="alert alert-warning">{{ session('message') }}</h4>
+                                    @endif
                                     <x-auth-session-status class="mb-4" :status="session('status')" />
                                     <!-- Validation Errors -->
                                     <x-auth-validation-errors class="mb-4" :errors="$errors" />

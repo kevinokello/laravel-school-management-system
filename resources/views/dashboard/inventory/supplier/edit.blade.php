@@ -20,21 +20,24 @@
                                                         <div class="form-group">
                                                             <label for="projectinput1">Supplier Name</label>
                                                             <input type="text" id="projectinput1" class="form-control"
-                                                                placeholder="Name/Company" name="name" value="{{ $supplier->name }}">
+                                                                placeholder="Name/Company" name="name"
+                                                                value="{{ $supplier->name }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectinput2">Supplier Mobile</label>
                                                             <input type="text" id="projectinput2" class="form-control"
-                                                                placeholder="Phone Number" name="mobile_no" value="{{ $supplier->mobile_no }}">
+                                                                placeholder="Phone Number" name="mobile_no"
+                                                                value="{{ $supplier->mobile_no }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectinput4">Supplier Email</label>
                                                             <input type="email" id="projectinput4" class="form-control"
-                                                                placeholder="Email Address" name="email" value="{{ $supplier->email }}">
+                                                                placeholder="Email Address" name="email"
+                                                                value="{{ $supplier->email }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
@@ -59,8 +62,8 @@
                                             </div>
 
                                             <button
-                                                style="  border-color: #448aff;
-            background-color: #448aff;
+                                                style="  border-color: #0073aa;
+            background-color: #0073aa;
             color: #fff; height:50px; width:170px; "
                                                 type="submit" class="btn btn-primary">
                                                 Add supplier

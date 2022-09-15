@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class SubCategory extends Model
 {
     use HasFactory;
+    public function resources()
+    {
+        return $this->hasMany(Resource::class, 'subcategory_id', 'id');
+    }
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id', 'id');
+    }
 }

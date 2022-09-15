@@ -481,7 +481,7 @@ select.form-control {
     background-color: #ccc;
 }
 .btn-primary ~ .dropdown-menu .dropdown-item.active {
-    background-color: #448aff;
+    background-color: #0073aa;
 }
 .btn-success ~ .dropdown-menu .dropdown-item.active {
     background-color: #37bc9b;
@@ -1308,11 +1308,11 @@ select.form-control {
     background-color: #687077;
 }
 .tag-primary {
-    background-color: #448aff;
+    background-color: #0073aa;
 }
 .tag-primary.tag-glow {
-    -webkit-box-shadow: 0 0 10px #448aff;
-    box-shadow: 0 0 10px #448aff;
+    -webkit-box-shadow: 0 0 10px #0073aa;
+    box-shadow: 0 0 10px #0073aa;
 }
 .tag-primary[href]:focus,
 .tag-primary[href]:hover {

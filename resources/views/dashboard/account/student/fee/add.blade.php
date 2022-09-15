@@ -76,14 +76,13 @@
                                         </div>
                                     </div>
                                 </div> <!-- End Col md 3 --> --}}
-<br>
+                                <br>
                                 <div class="col-md-3">
                                     <div class="text-center">
                                         <button type="submit"
-                                            style="background-color: #448aff;color: #fff; height:50px; width:190px; "
-                                            class="btn btn-outline-success block btn-lg" id="search" name="search"
-                                           >
-                            Add
+                                            style="background-color: #0073aa;color: #fff; height:50px; width:190px; "
+                                            class="btn btn-outline-success block btn-lg" id="search" name="search">
+                                            Add
                                         </button>
                                     </div>
                                 </div> <!-- End Col md 3 -->

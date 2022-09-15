@@ -26,7 +26,7 @@
                                 <div class="card-body collapse in">
                                     <div class="card-block">
                                         <form action="{{ url('accounts/student/fee/update/' . $student->id) }}"
-                                            class="form" method="POST" >
+                                            class="form" method="POST">
                                             @csrf
                                             <div class="form-body">
                                                 <div class="row">
@@ -53,8 +53,8 @@
                                             <div class="form-actions">
                                                 <div style="text-align: center;" class="wrapper">
                                                     <button
-                                                        style="  border-color: #448aff;
-            background-color: #448aff;
+                                                        style="  border-color: #0073aa;
+            background-color: #0073aa;
             color: #fff; height:50px; width:170px; "
                                                         type="submit" class="btn btn-primary">
                                                         Update student details

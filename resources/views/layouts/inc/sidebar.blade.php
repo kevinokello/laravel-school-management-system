@@ -190,30 +190,31 @@
                       </ul>
 
                   </li>
-                    <li
-                      class="nav-item {{ Request::is('accounts/student/fee/keyin') ? 'open' : '' }}">
+                  <li class="nav-item {{ Request::is('accounts/student/fee/keyin') ? 'open' : '' }}">
                       <a href="#"><i class="icon-ios-albums-outline"></i><span data-i18n="nav.cards.main"
                               class="menu-title">Bursar</span></a>
                       <ul class="menu-content">
-                               <li><a href="{{ url('accounts/student/fee/keyin') }}"
-                                  class="menu-item {{ Request::is('accounts/student/fee/keyin') ? 'active' : '' }}">Key In</a>
+                          <li><a href="{{ url('accounts/student/fee/keyin') }}"
+                                  class="menu-item {{ Request::is('accounts/student/fee/keyin') ? 'active' : '' }}">Key
+                                  In</a>
                           </li>
 
                       </ul>
 
                   </li>
 
-       <li class="nav-item {{ Request::is('resource/categories') || Request::is('resource/subcategories') ? 'open' : '' }}">
+                  <li
+                      class="nav-item {{ Request::is('resource/sub-category/add') || Request::is('resource/subcategories') || Request::is('resource/categories') || Request::is('resource/category/add') ? 'open' : '' }}">
                       <a href="{{ url('student/add-student') }}"><i class="icon-ios-albums-outline"></i><span
                               data-i18n="nav.menu_levels.main" class="menu-title">Resources</span></a>
                       <ul class="menu-content">
                           <li>
                               <a href="{{ url('resource/categories') }}" data-i18n="nav.menu_levels.second_level"
-                                  class="menu-item {{ Request::is('resource/categories') ? 'active' : '' }}">Categories</a>
+                                  class="menu-item {{ Request::is('resource/categories') || Request::is('resource/category/add') ? 'active' : '' }}">Categories</a>
                           </li>
                           <li>
                               <a href="{{ url('resource/subcategories') }}" data-i18n="nav.menu_levels.second_level"
-                                  class="menu-item {{ Request::is('resource/subcategories') ? 'active' : '' }}">
+                                  class="menu-item {{ Request::is('resource/subcategories') || Request::is('resource/sub-category/add') ? 'active' : '' }}">
                                   Sub Categories</a>
                           </li>
                           {{-- <li

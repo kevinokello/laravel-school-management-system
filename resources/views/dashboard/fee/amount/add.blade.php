@@ -62,9 +62,11 @@
                                 </div> <!-- // End add_item -->
                                 <div class="text-xs-right">
 
-                                    <input  style="  border-color: #448aff;
-            background-color: #448aff;
-            color: #fff;" type="submit"  class="btn btn-primary mb-5" value="Submit">
+                                    <input
+                                        style="  border-color: #0073aa;
+            background-color: #0073aa;
+            color: #fff;"
+                                        type="submit" class="btn btn-primary mb-5" value="Submit">
                                 </div>
                     </form>
                 </div>

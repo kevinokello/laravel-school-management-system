@@ -2,17 +2,20 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class SubCategoryController extends Controller
 {
     public function Add()
     {
-        return view('dashboard.resource.subcategory.add');
+        $category = Category::where('status', 'enabled')->get();
+        return view('dashboard.resource.subcategory.add',compact('category'));
     }
     public function Store()
     {
+
     }
     public function Edit()
     {

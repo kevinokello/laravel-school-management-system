@@ -5,9 +5,9 @@
             <div class="content-body">
                 <div class="col-xl-13 col-lg-12">
                     <div class="text-center">
-                        <button type="button" style="background-color: #448aff;color: #fff; height:50px; width:190px; "
+                        <button type="button" style="background-color: #0073aa;color: #fff; height:50px; width:190px; "
                             class="btn btn-outline-success block btn-lg" data-toggle="modal" data-target="#small">
-                            New  Cohort/class
+                            New Cohort/class
                         </button>
                     </div>
                     <br>
@@ -26,7 +26,7 @@
 
                                     <form class="form" action="{{ url('academic/classes') }}" method="POST">
                                         @csrf
-                                         <div class="form-group">
+                                        <div class="form-group">
                                             <label for="projectinput5">Academic year</label>
                                             <select required name="academic_id" class="form-control">
                                                 <option value="">-- Select year --</option>

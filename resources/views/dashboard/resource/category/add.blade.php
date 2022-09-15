@@ -11,43 +11,29 @@
                                 <div class="card-body collapse in">
                                     <div class="card-block">
 
-                                        <form method="post" action="{{ url('inventory/supplier/store') }}" id="myForm"
-                                            class="form">
+                                        <form method="post" action="{{ url('resource/category/store') }}" id="myForm"
+                                            class="form" enctype="multipart/form-data">
                                             @csrf
                                             <div class="form-body">
-
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="projectinput1">Supplier Name</label>
-                                                            <input type="text" id="projectinput1" class="form-control"
-                                                                placeholder="Name/Company" name="name">
+                                                            <label for="projectinput1"> Name</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Category Name" name="name">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="projectinput2">Supplier Mobile</label>
-                                                            <input type="text" id="projectinput2" class="form-control"
-                                                                placeholder="Phone Number" name="mobile_no">
+                                                            <label for="projectinput4">Slug</label>
+                                                            <input type="text" class="form-control" placeholder="Slug"
+                                                                name="slug">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="projectinput4">Supplier Email</label>
-                                                            <input type="email" id="projectinput4" class="form-control"
-                                                                placeholder="Email Address" name="email">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="projectinput5">Stock Category</label>
-                                                            <select required name="unit_id" class="form-control">
-                                                                <option value="">-- Select category --</option>
-                                                                @foreach ($stockcategory as $cateitem)
-                                                                    <option value="{{ $cateitem->id }} ">
-                                                                        {{ $cateitem->name }}</option>
-                                                                @endforeach
-                                                            </select>
+                                                            <label for="projectinput4">Image</label>
+                                                            <input type="file" class="form-control" name="image">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -58,11 +44,11 @@
                                             </div>
 
                                             <button
-                                                style="  border-color: #448aff;
-            background-color: #448aff;
+                                                style="  border-color: #0073aa;
+            background-color: #0073aa;
             color: #fff; height:50px; width:170px; "
                                                 type="submit" class="btn btn-primary">
-                                                Add supplier
+                                                Add category
                                             </button>
                                         </form>
                                     </div>
