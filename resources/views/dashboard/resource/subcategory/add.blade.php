@@ -11,14 +11,15 @@
                                 <div class="card-body collapse in">
                                     <div class="card-block">
 
-                                        <form method="post" action="{{ url('resource/category/store') }}" id="myForm"
+                                        <form method="post" action="{{ url('resource/sub-category/store') }}" id="myForm"
                                             class="form" enctype="multipart/form-data">
                                             @csrf
                                             <div class="form-body">
                                                 <div class="row">
-                                                    <div class="col-md-6">                                                                                                         <div class="form-group">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
                                                             <label>Category</label>
-                                                            <select required name="academic_id" id="year"
+                                                            <select required name="category_id" id="category"
                                                                 class="form-control">
                                                                 <option value="">-- Select Category --</option>
                                                                 @foreach ($category as $cateitem)
@@ -31,24 +32,25 @@
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="projectinput4">Slug</label>
-                                                            <input type="text" class="form-control" placeholder="Slug"
-                                                                name="slug">
+                                                            <label for="projectinput4">Name</label>
+                                                            <input type="text" class="form-control" placeholder="Name"
+                                                                name="name">
                                                         </div>
                                                     </div>
-                                                   <div class="col-md-6">
+                                                    <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectinput4">Slug</label>
                                                             <input type="text" class="form-control" placeholder="Slug"
                                                                 name="slug">
                                                         </div>
                                                     </div>
-
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="projectinput4">Description</label>
+                                                            <textarea type="text" class="form-control" name="description" rows="3" placeholder="description"></textarea>
+                                                        </div>
+                                                    </div>
                                                 </div>
-
-
-
-
                                             </div>
 
                                             <button

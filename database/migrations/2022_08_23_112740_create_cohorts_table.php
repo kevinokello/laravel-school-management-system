@@ -9,8 +9,14 @@ return new class extends Migration
     /**
      * Run the migrations.
      *
+     *
      * @return void
      */
+
+
+
+
+
     public function up()
     {
         Schema::create('cohorts', function (Blueprint $table) {
@@ -18,7 +24,8 @@ return new class extends Migration
             $table->string('cohort_name');
             $table->string('academic_id');
             $table->tinyInteger('status')->default('0');
-            $table->integer('created_by');
+            $table->integer('created_by')->default('0');
+            $table->integer('fee_id');
             $table->timestamps();
         });
     }

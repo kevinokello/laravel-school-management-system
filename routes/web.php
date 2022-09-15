@@ -154,13 +154,13 @@ Route::prefix('/resource')->middleware(['auth', 'role:admin'])->namespace('App\H
     Route::post('category/store', 'CategoryController@Store');
     Route::get('category/edit/{category_id}', 'CategoryController@Edit');
     Route::get('categories', 'CategoryController@View');
-    Route::post('category/update/{category_id}', 'CategoryController@Update');
+    Route::put('category/update/{category_id}', 'CategoryController@Update');
     Route::get('category/delete/{category_id}', 'CategoryController@Delete');
 
     Route::get('sub-category/add', 'SubCategoryController@Add');
     Route::post('sub-category/store', 'SubCategoryController@Store');
     Route::get('sub-category/edit/{category_id}', 'SubCategoryController@Edit');
     Route::get('subcategories', 'SubCategoryController@View');
-    Route::post('sub-category/update/{category_id}', 'SubCategoryController@Update');
-
+    Route::put('sub-category/update/{subcategory_id}', 'SubCategoryController@Update');
+    Route::get('sub-category/delete/{subcategory_id}', 'SubCategoryController@Delete');
 });

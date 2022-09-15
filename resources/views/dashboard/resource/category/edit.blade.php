@@ -11,9 +11,10 @@
                                 <div class="card-body collapse in">
                                     <div class="card-block">
 
-                                        <form method="post" action="{{ url('resource/category/store') }}" id="myForm"
+                                        <form method="POST" action="{{ url('resource/category/edit/' . $category->id) }}" id="myForm"
                                             class="form" enctype="multipart/form-data">
                                             @csrf
+                                                  @method('PUT')
                                             <div class="form-body">
                                                 <div class="row">
                                                     <div class="col-md-6">
