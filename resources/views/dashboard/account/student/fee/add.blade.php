@@ -10,8 +10,7 @@
                         <div class="card-header">
                             <div class="card-body collapse in">
                                 <div class="card-block">
-                                    <form action="{{ url('accounts/student/fee/store') }}" class="form"
-                                        method="POST">
+                                    <form action="{{ url('accounts/student/fee/store') }}" class="form" method="POST">
                                         @csrf
                                         <div class="row">
                                             <div class="col-md-4">
@@ -50,9 +49,7 @@
                                                 </div>
                                             </div> <!-- End Col md 3 -->
 
-
                                             <div class="col-md-3">
-
                                                 <div class="form-group">
                                                     <h5>Fee Category <span class="text-danger"> </span></h5>
                                                     <div class="controls">
@@ -104,13 +101,8 @@
                                     </form>
                                 </div>
                             </div>
-
-                            <!--  ////////////////// Mark Entry table /////////////  -->
-
-
                             <div class="row">
                                 <div class="col-md-12">
-
                                     <div id="DocumentResults">
                                         <script id="document-template" type="text/x-handlebars-template">
   <form action="{{ url('student/fee/store') }}" method="post" >
@@ -139,9 +131,6 @@
                                     </div>
                                 </div> <!-- // End col md 12 -->
                             </div> <!-- // END Row  -->
-
-
-
                         </div>
                         <!-- /.col -->
                     </div>
@@ -151,7 +140,6 @@
 
                 </div>
             </div>
-
             <script type="text/javascript">
                 $(document).on('click', '#search', function() {
                     var year_id = $('#year_id').val();
@@ -178,4 +166,5 @@
                     });
                 });
             </script>
+
         @endsection

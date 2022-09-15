@@ -55,7 +55,6 @@
                                                 </div>
                                             </div>
 
-
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label for="example-text-input" class="form-label">Product Name </label>
@@ -79,15 +78,9 @@
                                                 </div>
                                             </div>
                                         </div>
-
-
-
-
                                     </div> <!-- // end row  -->
-
                                 </div> <!-- End card-body -->
                                 <!--  ---------------------------------- -->
-
                                 <div class="card-body">
                                     <form method="post" action="{{ url('inventory/purchase/store') }}">
 
@@ -146,12 +139,10 @@
 
 
     <script id="document-template" type="text/x-handlebars-template">
-
 <tr class="delete_add_more_item" id="delete_add_more_item">
         <input type="hidden" name="date[]" value="@{{ date }}">
         <input type="hidden" name="purchase_no[]" value="@{{ purchase_no }}">
         <input type="hidden" name="supplier_id[]" value="@{{ supplier_id }}">
-
     <td>
         <input type="hidden" name="category_id[]" value="@{{ category_id }}">
         @{{ category_name }}
@@ -276,9 +267,6 @@
 
         });
     </script>
-
-
-
 
     <script type="text/javascript">
         $(function() {

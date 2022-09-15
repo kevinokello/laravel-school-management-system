@@ -87,10 +87,6 @@
             </nav>
 
             <div class="header-actions">
-
-                <button class="header-action-btn" aria-label="toggle search" title="Search">
-                    <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
-                </button>
                 <button class="header-action-btn" aria-label="cart" title="Cart">
                     <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
                     <span class="btn-badge">0</span>
@@ -99,11 +95,10 @@
                     <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                         @auth
                             <a href="{{ url('/dashboard') }}"
-                                class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+                                class="navbar-link">Dashboard</a>
                         @else
                             <a href="{{ route('login') }}" class="btn has-before">
                                 <span class="span">Get Started</span>
-
                                 <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                             </a>
                             {{-- @if (Route::has('register'))
@@ -124,67 +119,40 @@
 
         </div>
     </header>
-
-
-
-
-
     <main>
-
         <article>
-
-            <!--
-        - #HERO
-      -->
             <section class="section hero has-bg-image" id="home" aria-label="home"
                 style="background-image: url('./assets/images/hero-bg.svg')">
                 <div class="container">
-
                     <div class="hero-content">
-
                         <h1 class="h1 section-title">
-                            The Best Program to Enroll for Exchange
+                           Genuine student-centered support is here
                         </h1>
-
                         <p class="hero-text">
-                            Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit.
+                          Your students matter the most.
                         </p>
-
                         <a href="#" class="btn has-before">
                             <span class="span">Find courses</span>
 
                             <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
                         </a>
-
                     </div>
-
                     <figure class="hero-banner">
-
                         <div class="img-holder one" style="--width: 270; --height: 300;">
-                            <img src="./assets/images/hero-banner-1.jpg" width="270" height="300"
+                            <img src="./assets/images/hero-banner-1.jp" width="270" height="300"
                                 alt="hero banner" class="img-cover">
                         </div>
 
-                        <div class="img-holder two" style="--width: 240; --height: 370;">
-                            <img src="./assets/images/hero-banner-2.jpg" width="240" height="370"
+                        <div class="img-holder two" style="--width: 240; --height: 300;">
+                            <img src="./assets/images/hero-banner-2.jp" width="240" height="370"
                                 alt="hero banner" class="img-cover">
                         </div>
                     </figure>
 
                 </div>
             </section>
-
-
-
-
-
-            <!--
-        - #CATEGORY
-      -->
-
             <section class="section category" aria-label="category">
                 <div class="container">
-
                     <p class="section-subtitle">Categories</p>
                     <p class="section-text">
                         Consectetur adipiscing elit sed do eiusmod tempor.

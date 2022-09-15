@@ -49,10 +49,13 @@ class StudentFeeController extends Controller
     {
         $data = $request->validated();
         $student = Student::find($student_id);
-        $student->fee_balance = $data['fee_balance'];
+        $student->fee_id = $data['fee_id'];
+        $student->paid_amount = $data['paid_amount'];
+        $difference = $student['fee_id'] - $data['paid_amount'];
+        $student->updated_fee = $difference;
         $student->update();
         session()->flash('success', 'student accounts updated succesfully');
-        return redirect('accounts/student/fee/add');
+        return redirect('accounts/student/fee/keyin');
     }
     public function StudentFeeStore(Request $request)
     {
@@ -67,5 +70,4 @@ class StudentFeeController extends Controller
         session()->flash('success', 'student fee added succesfully');
         return redirect('accounts/student/fee/view');
     } // end method
-
 }

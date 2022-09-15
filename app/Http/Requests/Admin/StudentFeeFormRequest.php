@@ -24,11 +24,17 @@ class StudentFeeFormRequest extends FormRequest
     public function rules()
     {
         $rules = [
-         'fee_balance' => [
+         'fee_id' => [
                 'required',
-                'integer',
-                'max:200'
+                'integer'
             ],
+         'paid_amount' => [
+            'required',
+            'integer'
+         ],
+            'updated_fee' => [
+                'integer',
+            ]
         ];
         return $rules;
     }

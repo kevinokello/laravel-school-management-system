@@ -35,6 +35,8 @@ return new class extends Migration
             $table->string('aditional_notes', 500)->nullable();
             $table->string('medical_condition', 500)->nullable();
             $table->integer('fee_id')->default('0');
+            $table->integer('updated_fee')->default('0');
+            $table->integer('paid_amount')->default('0');
             $table->timestamps();
         });
     }

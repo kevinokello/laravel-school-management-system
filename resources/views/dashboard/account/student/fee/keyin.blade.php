@@ -10,7 +10,6 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="box">
-                                        <!-- /.box-header -->
                                         <div class="box-body">
                                             <div class="table-responsive">
                                                 <table id="myTable" class="table table-bordered table-striped">
@@ -33,11 +32,10 @@
                                                                 <td>{{ $sitem->cohort_id }}</td>
                                                                 <td>{{ $sitem->session_id }}</td>
                                                                 <td>
-
-                                                                    <a href="{{ url('accounts/student/fee/edit/' . $sitem->id) }}"
+                                                                    <a href="#"
                                                                         class="btn btn-info">Quick View</a>
                                                                     <a href="{{ url('accounts/student/fee/edit/' . $sitem->id) }}"
-                                                                        class="btn btn-success">Update</a>
+                                                                        class="btn btn-success">Debit</a>
                                                                 </td>
                                                             </tr>
                                                         @endforeach
@@ -45,21 +43,13 @@
                                                 </table>
                                             </div>
                                         </div>
-                                        <!-- /.box-body -->
                                     </div>
-                                    <!-- /.box -->
-
-
                                 </div>
-                                <!-- /.col -->
                             </div>
-                            <!-- /.row -->
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- /.content -->
-
         </div>
     </div>
 @endsection
