@@ -20,17 +20,14 @@ class StudentFeeController extends Controller
         $data['allData'] = StudentFee::all();
         return view('dashboard.account.student.fee.view', $data);
     }
-
-
     public function StudentFeeAdd()
     {
         $years = Academic::all();
         $classes = Cohort::all();
         $students = Student::all();
         $fee_categories = FeeCategory::all();
-        return view('dashboard.account.student.fee.add', compact(['years','classes','students','fee_categories']));
+        return view('dashboard.account.student.fee.add', compact(['years', 'classes', 'students', 'fee_categories']));
     }
-
     public function StudentFeeKeyin()
     {
         $years = Academic::all();
@@ -46,7 +43,7 @@ class StudentFeeController extends Controller
         $session = Session::where('status', '0')->get();
         $academic = Academic::where('status', '0')->get();
         $cohort = Cohort::where('status', '0')->get();
-        return view('dashboard.account.student.fee.edit', compact(['student','session','academic','cohort']));
+        return view('dashboard.account.student.fee.edit', compact(['student', 'session', 'academic', 'cohort']));
     }
     public function StudentFeeUpdate(StudentFeeFormRequest $request, $student_id)
     {
@@ -57,6 +54,18 @@ class StudentFeeController extends Controller
         session()->flash('success', 'student accounts updated succesfully');
         return redirect('accounts/student/fee/add');
     }
-
+    public function StudentFeeStore(Request $request)
+    {
+        $data = new StudentFee();
+        $date = date('Y-m-d H:i:s');
+        $data->academic_id = $request->academic_id;
+        $data->cohort_id = $request->cohort_id;
+        $data->date = $date;
+        $data->fee_category_id = $request->fee_category_id;
+        $data->amount = $request->amount;
+        $data->save();
+        session()->flash('success', 'student fee added succesfully');
+        return redirect('accounts/student/fee/view');
+    } // end method
 
 }

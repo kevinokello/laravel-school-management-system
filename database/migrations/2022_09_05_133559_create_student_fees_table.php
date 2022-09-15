@@ -17,11 +17,10 @@ return new class extends Migration
             $table->id();
             $table->integer('academic_id')->nullable();
             $table->integer('cohort_id')->nullable();
-            $table->integer('student_id')->nullable();
             $table->integer('fee_category_id')->nullable();
             $table->tinyInteger('status')->default('0');
             $table->string('date')->nullable();
-            $table->double('amount')->nullable();
+            $table->double('amount')->nullable()->default('0');
             $table->timestamps();
         });
     }

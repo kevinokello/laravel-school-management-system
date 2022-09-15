@@ -184,6 +184,8 @@
     <script src="{{ asset('backend/assets/libs/select2/js/select2.min.js') }}"></script>
     <script src="{{ asset('backend/assets/js/pages/form-advanced.init.js') }}"></script>
     <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    	<script src="{{ asset('backend/js/template.js') }}"></script>
+	<script src="{{ asset('backend/js/pages/dashboard.js') }}"></script>
     <script>
         $(document).ready(function() {
             $('#myTable').DataTable();

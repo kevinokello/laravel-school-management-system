@@ -34,7 +34,7 @@ return new class extends Migration
             $table->string('previous_school_details', 500)->nullable();
             $table->string('aditional_notes', 500)->nullable();
             $table->string('medical_condition', 500)->nullable();
-            $table->integer('fee_balance')->default('0');
+            $table->integer('fee_id')->default('0');
             $table->timestamps();
         });
     }

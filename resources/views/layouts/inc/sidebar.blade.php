@@ -5,6 +5,7 @@
   </style>
   <div data-scroll-to-active="true" class="main-menu menu-fixed menu-dark menu-accordion menu-shadow">
       <div class="main-menu-content">
+
           @if (Auth::user()->hasRole('admin'))
               <ul id="main-menu-navigation" data-menu="menu-navigation" class="navigation navigation-main">
                   <li class=" navigation-header"><span data-i18n="nav.category.support">Menu</span><i data-toggle="tooltip"
@@ -198,7 +199,7 @@
                                   class="menu-item {{ Request::is('accounts/student/fee/keyin') ? 'active' : '' }}">Key
                                   In</a>
                           </li>
-
+                         
                       </ul>
 
                   </li>

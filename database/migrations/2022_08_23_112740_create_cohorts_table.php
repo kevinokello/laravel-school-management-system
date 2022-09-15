@@ -24,8 +24,8 @@ return new class extends Migration
             $table->string('cohort_name');
             $table->string('academic_id');
             $table->tinyInteger('status')->default('0');
-            $table->integer('created_by')->default('0');
-            $table->integer('fee_id');
+            $table->integer('created_by');
+            $table->integer('fee_id')->default('0');
             $table->timestamps();
         });
     }

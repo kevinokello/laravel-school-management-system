@@ -53,7 +53,7 @@
         <div class="container">
 
             <a href="#" class="logo">
-                <img src="./assets/images/logo.svg" width="162" height="50" alt="EduWeb logo">
+                {{-- <img src="./assets/images/logo.svg" width="162" height="50" alt="EduWeb logo"> --}}
             </a>
 
             <nav class="navbar" data-navbar>
@@ -101,13 +101,11 @@
                             <a href="{{ url('/dashboard') }}"
                                 class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
                         @else
-                                 <a href="{{ route('login') }}" class="btn has-before">
-                    <span class="span">Get Started</span>
+                            <a href="{{ route('login') }}" class="btn has-before">
+                                <span class="span">Get Started</span>
 
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                </a>
-
-
+                                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                            </a>
                             {{-- @if (Route::has('register'))
                                 <a href="{{ route('register') }}"
                                     class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>

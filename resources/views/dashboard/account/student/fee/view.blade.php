@@ -8,11 +8,7 @@
                     <div class="card">
                         <div class="card-header">
                 <div class="row">
-
-
-
                     <div class="col-12">
-
                         <div class="box">
                             <div class="box-header with-border">
                                 <h3 class="box-title">Student Fee List </h3>
@@ -20,7 +16,7 @@
                                     class="btn btn-rounded btn-success mb-5"> Add / Edit Student Fee</a>
 
                             </div>
-             
+
                             <!-- /.box-header -->
                             <div class="box-body">
                                 <div class="table-responsive">
@@ -28,11 +24,8 @@
                                         <thead>
                                             <tr>
                                                 <th width="5%">SL</th>
-                                                <th>ID No</th>
-                                                <th>Name </th>
-                                                <th>Year</th>
-                                                <th>Class </th>
-                                                <th>Fee Type</th>
+                                                <th>Academic Id</th>
+                                                <th>Cohort </th>
                                                 <th>Amount</th>
                                                 <th>Date</th>
 
@@ -43,11 +36,8 @@
                                             @foreach ($allData as $key => $value)
                                                 <tr>
                                                     <td>{{ $key + 1 }}</td>
-                                                    <td> {{ $value['student']['id_no'] }}</td>
-                                                    <td> {{ $value['student']['name'] }}</td>
-                                                    <td> {{ $value['student_year']['name'] }}</td>
-                                                    <td> {{ $value['student_class']['name'] }}</td>
-                                                    <td> {{ $value['fee_category']['name'] }} </td>
+                                                    <td> {{ $value->academic_id }}</td>
+            <td> {{ $value->cohort_id }}</td>
                                                     <td> {{ $value->amount }}</td>
                                                     <td> {{ date('M Y', strtotime($value->date)) }}</td>
 
