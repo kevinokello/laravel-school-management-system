@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Models;
-
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -44,12 +43,9 @@ class Student extends Model
     {
         return $this->belongsTo(Cohort::class, 'cohort_id', 'id');
     }
-    public function user()
+    public function studentfee()
     {
-        return $this->belongsTo(User::class, 'created_by', 'id');
+        return $this->belongsTo(StudentFee::class, 'fee_id', 'id');
     }
-    // public function comments()
-    // {
-    //     return $this->hasMany(Comment::class, 'article_id', 'id');
-    // }
+
 }

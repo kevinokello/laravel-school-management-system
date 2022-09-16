@@ -56,7 +56,6 @@
                                                                         {{ $acaitem->academic_year }}</option>
                                                                 @endforeach
                                                             </select>
-
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4">
@@ -127,7 +126,7 @@
                                                                 <option value="none" selected="" disabled="">
                                                                     Select gender</option>
                                                                 <option value="male">Male</option>
-                                                                <option value="female">FEmale</option>
+                                                                <option value="female">Female</option>
 
                                                             </select>
                                                         </div>
@@ -226,7 +225,6 @@
                                                                 placeholder="Medical condition"></textarea>
                                                         </div>
                                                     </div>
-
                                                 </div>
                                             </div>
                                             <div class="form-actions">

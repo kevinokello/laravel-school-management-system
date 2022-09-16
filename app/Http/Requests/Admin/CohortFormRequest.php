@@ -33,6 +33,10 @@ class CohortFormRequest extends FormRequest
                 'required',
                 'string'
             ],
+            'fee_id' => [
+                'required',
+                'integer'
+            ],
         ];
         return $rules;
     }

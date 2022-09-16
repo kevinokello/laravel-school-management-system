@@ -10,7 +10,7 @@ class StudentFee extends Model
     use HasFactory;
     public function student()
     {
-        return $this->belongsTo(Student::class, 'student_id', 'id');
+        return $this->hasMany(Student::class, 'fee_id', 'id');
     }
 
     public function cohort()
@@ -27,6 +27,5 @@ class StudentFee extends Model
     {
         return $this->belongsTo(FeeCategory::class, 'fee_category_id', 'id');
     }
-
 
 }

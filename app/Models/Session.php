@@ -21,4 +21,9 @@ class Session extends Model
     {
         return $this->belongsTo(Academic::class, 'academic_id', 'id');
     }
+    public function students()
+    {
+        return $this->hasMany(Student::class, 'student_id', 'id');
+    }
+
 }

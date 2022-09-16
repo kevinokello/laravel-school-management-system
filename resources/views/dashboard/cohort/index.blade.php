@@ -23,7 +23,6 @@
                                     <h4 class="modal-title" id="myModalLabel19">Class</h4>
                                 </div>
                                 <div class="modal-body">
-
                                     <form class="form" action="{{ url('academic/classes') }}" method="POST">
                                         @csrf
                                         <div class="form-group">
@@ -31,8 +30,18 @@
                                             <select required name="academic_id" class="form-control">
                                                 <option value="">-- Select year --</option>
                                                 @foreach ($academic as $acaitem)
-                                                    <option value="{{ $acaitem->id }} ">
+                                                    <option value="{{ $acaitem->academic_year }} ">
                                                         {{ $acaitem->academic_year }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="projectinput5">Fee Amount</label>
+                                            <select required name="fee_id" class="form-control">
+                                                <option value="">-- Select fee --</option>
+                                                @foreach ($feecategory as $feeitem)
+                                                    <option value="{{ $feeitem->amount }} ">
+                                                        {{ $feeitem->amount }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -42,7 +51,6 @@
                                                     placeholder="Cohort Name" name="cohort_name" required>
                                             </div>
                                         </div>
-
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn grey btn-outline-secondary"
@@ -68,7 +76,9 @@
                                         <tr>
                                             <th>#</th>
                                             <th>Class Name</th>
+                                                      <th>Fee Amt</th>
                                             <th>Action</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -76,6 +86,7 @@
                                             <tr>
                                                 <td>{{ $item->id }}</td>
                                                 <td>{{ $item->cohort_name }}</td>
+                                                  <td>{{ $item->fee_id }}</td>
                                                 <td>
                                                     {{-- <a
                                                         class="btn btn-info btn-sm" data-toggle="modal" data-target="#small2">Edit</a> --}}

@@ -199,9 +199,7 @@
                                   class="menu-item {{ Request::is('accounts/student/fee/keyin') ? 'active' : '' }}">Key
                                   In</a>
                           </li>
-                         
                       </ul>
-
                   </li>
 
                   <li

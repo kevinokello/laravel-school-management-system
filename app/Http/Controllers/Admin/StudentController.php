@@ -47,6 +47,7 @@ class StudentController extends Controller
         $student->mobile = $data['mobile'];
         $student->admission_date = $data['admission_date'];
         if ($request->hasfile('student_photo')) {
+            
             $file = $request->file('student_photo');
             $filename = time() . '.' . $file->getClientOriginalExtension();
             $file->move('uploads/students/', $filename);
@@ -66,6 +67,7 @@ class StudentController extends Controller
 
     public function edit($student_id)
     {
+
         $student = Student::find($student_id);
         $session = Session::where('status', '0')->get();
         $academic = Academic::where('status', '0')->get();
@@ -93,7 +95,7 @@ class StudentController extends Controller
             $destination = 'uploads/students' . $student->student_photo;
             if (File::exists($destination)) {
                 File::delete($destination);
-            }
+  }
             $file = $request->file('student_photo');
             $filename = time() . '.' . $file->getClientOriginalExtension();
             $file->move('uploads/students/', $filename);

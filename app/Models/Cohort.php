@@ -19,5 +19,13 @@ class Cohort extends Model
     {
         return $this->belongsTo(Academic::class, 'academic_id', 'id');
     }
+    public function student_fee()
+    {
+        return $this->hasMany(StudentFee::class, 'fee_id', 'id');
+    }
+    public function students()
+    {
+        return $this->hasMany(Student::class, 'student_id', 'id');
+    }
 
 }
