@@ -30,7 +30,7 @@
                                                     <div class="form-group">
                                                         <label for="projectinput1"><b>Fee Balance</b></label>
                                                         <input type="text" id="projectinput1" class="form-control"
-                                                            placeholder="Admission Number" value="{{ $student->fee_id }}"
+                                                            placeholder="Admission Number" value="{{ $student->updated_fee }}"
                                                             name="fee_id" readonly>
                                                     </div>
                                                 </div>
@@ -52,7 +52,7 @@
                                                         </label>
                                                         <i style="height:40px; width:170px;"
                                                             class="btn btn-success btn-rounded waves-effect waves-light fas fa-plus-circle addeventmore">
-                                                            Add Payment</i>
+                                                            <b>Add Payment</b></i>
                                                     </div>
                                                 </div>
                                             </div>

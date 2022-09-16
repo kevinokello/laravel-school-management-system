@@ -444,13 +444,17 @@ body {
 }
 
 .hero-banner .img-holder.one {
-  border-top-right-radius: 70px;
-  border-bottom-left-radius: 110px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .hero-banner .img-holder.two {
-  border-top-left-radius: 50px;
-  border-bottom-right-radius: 90px;
+ border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 
@@ -1106,7 +1110,7 @@ body {
 
   .hero-banner .img-holder.one { justify-self: flex-end; }
 
-  .hero-banner .img-holder.two { margin-block-start: 100px; }
+  .hero-banner .img-holder.two { margin-block-start: -90px; }
 
   .hero-shape-1 {
     display: block;
