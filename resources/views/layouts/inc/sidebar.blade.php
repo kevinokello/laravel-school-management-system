@@ -156,11 +156,6 @@
                                           class="menu-item {{ Request::is('inventory/invoice/add') ? 'active' : '' }}">Add</a>
                                   </li>
                                   <li>
-                                      <a href="{{ url('inventory/invoice/pending') }}"
-                                          data-i18n="nav.menu_levels.second_level_child.third_level"
-                                          class="menu-item {{ Request::is('inventory/invoice/pending') ? 'active' : '' }}">Approval</a>
-                                  </li>
-                                  <li>
                                       <a href="{{ url('inventory/invoice/all') }}"
                                           data-i18n="nav.menu_levels.second_level_child.third_level"
                                           class="menu-item {{ Request::is('inventory/invoice/all') ? 'active' : '' }}">Invoice
