@@ -141,13 +141,10 @@
                                           purchase
                                       </a>
                                   </li>
-                                  {{-- <li>
-                                  <a href="#" data-i18n="nav.menu_levels.second_level_child.third_level"
-                                      class="menu-item">Daily report</a>
-                              </li> --}}
+
                               </ul>
                           </li>
-                          {{-- <li
+                           <li
                               class="nav-item  {{ Request::is('inventory/invoice/add') || Request::is('inventory/invoice/pending') || Request::is('inventory/invoice/all') ? 'open' : '' }}">
                               <a href="#" data-i18n="nav.menu_levels.second_level_child.main"
                                   class="menu-item">Manage
@@ -174,7 +171,7 @@
                                           class="menu-item">Daily report</a>
                                   </li>
                               </ul>
-                          </li> --}}
+                          </li>
                       </ul>
                   </li>
                   <li

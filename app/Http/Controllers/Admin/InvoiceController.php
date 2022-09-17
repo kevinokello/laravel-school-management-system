@@ -62,7 +62,7 @@ class InvoiceController extends Controller
                 $invoice->invoice_no = $request->invoice_no;
                 $invoice->date = date('Y-m-d', strtotime($request->date));
                 $invoice->description = $request->description;
-                $invoice->status = '0';
+                $invoice->status = '1';
                 $invoice->created_by = Auth::user()->id;
 
                 DB::transaction(function () use ($request, $invoice) {
@@ -81,8 +81,6 @@ class InvoiceController extends Controller
                             $invoice_details->status = '0';
                             $invoice_details->save();
                         }
-
-
                         $payment = new Payment();
                         $payment_details = new PaymentDetail();
                         $payment->invoice_id = $invoice->id;
@@ -112,21 +110,9 @@ class InvoiceController extends Controller
                 });
             } // end else
         }
-        $notification = array(
-            'message' => 'Invoice Data Inserted Successfully',
-            'alert-type' => 'success'
-        );
-        return redirect('inventory/invoice/all')->with($notification);
+        session()->flash('success', 'invoice data inserted succesfully');
+        return redirect('inventory/invoice/all');
     } // End Method
-
-
-    public function PendingList()
-    {
-        $allData = Invoice::orderBy('date', 'desc')->orderBy('id', 'desc')->where('status', '0')->get();
-        return view('dashboard.inventory.invoice.pending', compact('allData'));
-    } // End Method
-
-
 
     public function InvoiceDelete($id)
     {
@@ -160,12 +146,8 @@ class InvoiceController extends Controller
             $invoice_details = InvoiceDetail::where('id', $key)->first();
             $product = Stock::where('id', $invoice_details->product_id)->first();
             if ($product->quantity < $request->selling_qty[$key]) {
-
-                $notification = array(
-                    'message' => 'Sorry you approve Maximum Value',
-                    'alert-type' => 'error'
-                );
-                return redirect('inventory/invoice/all')->with($notification);
+                session()->flash('danger', 'Sorry you approve Maximum Value');
+                return redirect('inventory/invoice/all');
             }
         } // End foreach
 

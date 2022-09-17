@@ -121,9 +121,9 @@ Route::prefix('/inventory')->middleware(['auth', 'role:admin'])->namespace('App\
 });
 
 Route::controller(Admin\DefaultController::class)->group(function () {
-    Route::get('/get-category', 'GetCategory');
-    Route::get('/get-product', 'GetProduct');
-    Route::get('/check-product', 'GetStock');
+    Route::get('get-category', 'GetCategory');
+    Route::get('get-product', 'GetProduct');
+    Route::get('check-product', 'GetStock');
 });
 
 Route::prefix('/accounts')->middleware(['auth', 'role:admin'])->namespace('App\Http\Controllers\Admin')->group(function () {

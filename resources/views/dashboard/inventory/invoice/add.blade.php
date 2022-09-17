@@ -342,7 +342,7 @@
             $(document).on('change', '#category_id', function() {
                 var category_id = $(this).val();
                 $.ajax({
-                    url: "{{ route('get-product') }}",
+                    url: "{{ url('get-product') }}",
                     type: "GET",
                     data: {
                         category_id: category_id
@@ -365,7 +365,7 @@
             $(document).on('change', '#product_id', function() {
                 var product_id = $(this).val();
                 $.ajax({
-                    url: "{{ route('check-product-stock') }}",
+                    url: "{{ url('check-product') }}",
                     type: "GET",
                     data: {
                         product_id: product_id
