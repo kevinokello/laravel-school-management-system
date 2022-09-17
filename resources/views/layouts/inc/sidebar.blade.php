@@ -161,10 +161,6 @@
                                           class="menu-item {{ Request::is('inventory/invoice/all') ? 'active' : '' }}">Invoice
                                           List</a>
                                   </li>
-                                  <li>
-                                      <a href="#" data-i18n="nav.menu_levels.second_level_child.third_level"
-                                          class="menu-item">Daily report</a>
-                                  </li>
                               </ul>
                           </li>
                       </ul>

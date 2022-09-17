@@ -30,7 +30,8 @@
                                             <th>Date </th>
                                             <th>Desctipion</th>
                                             <th>Amount</th>
-
+                                            <th>Action</th>
+     <th>Print</th>
                                     </thead>
 
 
@@ -48,7 +49,23 @@
                                                 <td> {{ $item->description }} </td>
 
                                                 <td> $ {{ $item['payment']['total_amount'] }} </td>
+                                                <td>
 
+
+                                                    <a href="{{ url('inventory/invoice/view', $item->id) }}"
+                                                        class="btn btn-dark sm" title="Approved Data"> <i
+                                                            class="fas fa-eye"></i> </a>
+                                                    <a href="{{ url('inventory/invoice/delete', $item->id) }}"
+                                                        class="btn btn-danger sm" title="Delete Data" id="delete"> <i
+                                                            class="fas fa-trash-alt"></i>
+                                                    </a>
+                                                <td>
+                                                    <a href="{{ url('inventory/print/invoice', $item->id) }}"
+                                                        class="btn btn-danger sm" title="Print Invoice"> <i
+                                                            class="fa fa-print"></i> </a>
+                                                </td>
+
+                                                </td>
                                             </tr>
                                         @endforeach
 

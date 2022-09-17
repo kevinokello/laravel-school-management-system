@@ -183,7 +183,7 @@ class InvoiceController extends Controller
     public function PrintInvoice($id)
     {
         $invoice = Invoice::with('invoice_details')->findOrFail($id);
-        return view('backend.pdf.invoice_pdf', compact('invoice'));
+        return view('dashboard.inventory.invoice.pdf.invoice_pdf', compact('invoice'));
     } // End Method
 
 

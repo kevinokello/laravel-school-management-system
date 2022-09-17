@@ -110,9 +110,8 @@ Route::prefix('/inventory')->middleware(['auth', 'role:admin'])->namespace('App\
     Route::get('/invoice/all', 'InvoiceController@InvoiceAll');
     Route::get('/invoice/add', 'InvoiceController@invoiceAdd');
     Route::post('/invoice/store', 'InvoiceController@InvoiceStore');
-    Route::get('/invoice/pending', 'InvoiceController@PendingList');
     Route::get('/invoice/delete/{id}', 'InvoiceController@InvoiceDelete');
-    Route::get('/invoice/approve/{id}', 'InvoiceController@InvoiceApprove');
+    Route::get('/invoice/view/{id}', 'InvoiceController@InvoiceApprove');
     Route::post('/approval/store/{id}', 'InvoiceController@ApprovalStore');
     Route::get('/print/invoice/list', 'InvoiceController@PrintInvoiceList');
     Route::get('/print/invoice/{id}', 'InvoiceController@PrintInvoice');

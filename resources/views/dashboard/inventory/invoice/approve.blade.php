@@ -18,19 +18,17 @@
                                             <h4>Invoice No: #{{ $invoice->invoice_no }} -
                                                 {{ date('d-m-Y', strtotime($invoice->date)) }}
                                             </h4>
-                                            <a href="{{ url('invoice/pending/all') }}"
-                                                class="btn btn-dark btn-rounded waves-effect waves-light"
-                                                style="float:right;"><i class="fa fa-list"> Pending Invoice List </i></a>
+
                                             <br> <br>
 
                                             <table class="table table-dark" width="100%">
                                                 <tbody>
-                                                    {{-- <tr>
+                                                     <tr>
                 <td><p> Customer Info </p></td>
-                <td><p> Name: <strong> {{ $payment['customer']['name']  }} </strong> </p></td>
-                <td><p> Mobile: <strong> {{ $payment['customer']['mobile_no']  }} </strong> </p></td>
-               <td><p> Email: <strong> {{ $payment['customer']['email']  }} </strong> </p></td>
-            </tr> --}}
+                <td><p> Name: </p></td>
+                <td><p> Mobile: <strong>  </strong> </p></td>
+               <td><p> Email: <strong> </strong> </p></td>
+            </tr>
 
                                                     <tr>
                                                         <td></td>
@@ -118,7 +116,7 @@
 
                                                 </table>
 
-                                                <button type="submit" class="btn btn-info">Invoice Approve </button>
+                                                <button type="submit" class="btn btn-primary">Back </button>
 
                                             </form>
 
