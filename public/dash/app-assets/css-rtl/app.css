@@ -177,7 +177,7 @@ footer.footer-light {
 }
 
 footer.footer-dark {
-    background: #294a70;
+    background: #222845;
     color: #ffffff;
 }
 
@@ -429,7 +429,7 @@ footer.footer-dark {
 }
 .main-menu.menu-dark {
     color: #dcdcdc;
-    background: #294a70;
+    background: #222845;
 }
 .main-menu.menu-dark .main-menu-header {
     padding: 20px;
@@ -443,7 +443,7 @@ footer.footer-dark {
     border-color: #020304;
 }
 .main-menu.menu-dark .navigation {
-    background: #294a70;
+    background: #222845;
 }
 .main-menu.menu-dark .navigation .navigation-header {
     color: #dcdcdc;
@@ -567,10 +567,10 @@ footer.footer-dark {
     background-color: transparent;
 }
 .main-menu.menu-dark .navigation > li > ul {
-    background: #294a70;
+    background: #222845;
 }
 .main-menu.menu-dark ul.menu-popout {
-    background: #294a70;
+    background: #222845;
 }
 .main-menu.menu-dark ul.menu-popout li a {
     color: #dcdcdc;

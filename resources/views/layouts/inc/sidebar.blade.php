@@ -185,7 +185,7 @@
                   </li>
 
                   <li
-                      class="nav-item {{ Request::is('resource/sub-category/add') || Request::is('resource/subcategories') || Request::is('resource/categories') || Request::is('resource/category/add') ? 'open' : '' }}">
+                      class="nav-item {{ Request::is('resource/sub-category/add') || Request::is('resource/subcategories') || Request::is('resource/categories') || Request::is('resource/category/add') || Request::is('resource/all') || Request::is('resource/add') ? 'open' : '' }}">
                       <a href="{{ url('student/add-student') }}"><i class="icon-ios-paper-outline"></i><span
                               data-i18n="nav.menu_levels.main" class="menu-title">Resources</span></a>
                       <ul class="menu-content">
@@ -199,12 +199,12 @@
                                   <i class="icon-ios-paper-outline"></i>Sub Categories</a>
                           </li>
                                  <li>
-                              <a href="{{ url('resource/categories') }}" data-i18n="nav.menu_levels.second_level"
-                                  class="menu-item {{ Request::is('resource/categories') || Request::is('resource/category/add') ? 'active' : '' }}"><i class="icon-ios-paper-outline"></i>Add Resource</a>
+                              <a href="{{ url('resource/add') }}" data-i18n="nav.menu_levels.second_level"
+                                  class="menu-item {{ Request::is('resource/add') ? 'active' : '' }}"><i class="icon-ios-paper-outline"></i>Add Resource</a>
                           </li>
                           <li>
-                              <a href="{{ url('resource/subcategories') }}" data-i18n="nav.menu_levels.second_level"
-                                  class="menu-item {{ Request::is('resource/subcategories') || Request::is('resource/sub-category/add') ? 'active' : '' }}">
+                              <a href="{{ url('resource/all') }}" data-i18n="nav.menu_levels.second_level"
+                                  class="menu-item {{ Request::is('resource/all') ? 'active' : '' }}">
                                   <i class="icon-ios-paper-outline"></i>View All</a>
                           </li>
 

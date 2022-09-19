@@ -70,7 +70,7 @@
 
                 <ul class="navbar-list">
 
-                         <li class="navbar-item">
+                    <li class="navbar-item">
                         <a href="{{ url('/') }}" class="navbar-link" data-nav-link>Home</a>
                     </li>
 
@@ -78,7 +78,7 @@
                         <a href="#about" class="navbar-link" data-nav-link>About</a>
                     </li>
 
-           
+
 
                 </ul>
 
@@ -92,8 +92,7 @@
                 @if (Route::has('login'))
                     <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                         @auth
-                            <a href="{{ url('/dashboard') }}"
-                                class="navbar-link">Dashboard</a>
+                            <a href="{{ url('/dashboard') }}" class="navbar-link">Dashboard</a>
                         @else
                             <a href="{{ route('login') }}" class="btn has-before">
                                 <span class="span">Get Started</span>
@@ -130,12 +129,12 @@
                     <ul class="grid-list">
 
                         <li>
+                            <a href="#">
                             <div class="course-card">
 
                                 <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
-                                    <img src="./assets/images/course-1.jpg" width="370" height="220"
-                                        loading="lazy" alt="Build Responsive Real- World Websites with HTML and CSS"
-                                        class="img-cover">
+                                    <img src="./assets/images/course-1.jpg" width="370" height="220" loading="lazy"
+                                        alt="Build Responsive Real- World Websites with HTML and CSS" class="img-cover">
                                 </figure>
 
                                 <div class="abs-badge">
@@ -153,19 +152,6 @@
                                             with HTML and CSS</a>
                                     </h3>
 
-                                    <div class="wrapper">
-
-                                        <div class="rating-wrapper">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-
-                                        <p class="rating-text">(5.0/7 Rating)</p>
-
-                                    </div>
 
                                     <data class="price" value="29">$29.00</data>
 
@@ -188,6 +174,7 @@
                                 </div>
 
                             </div>
+                            </a>
                         </li>
 
                         <li>
@@ -214,19 +201,6 @@
                                             Developers</a>
                                     </h3>
 
-                                    <div class="wrapper">
-
-                                        <div class="rating-wrapper">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-
-                                        <p class="rating-text">(4.5 /9 Rating)</p>
-
-                                    </div>
 
                                     <data class="price" value="49">$49.00</data>
 
@@ -274,20 +248,6 @@
                                         <a href="#" class="card-title">The Complete Camtasia Course for Content
                                             Creators</a>
                                     </h3>
-
-                                    <div class="wrapper">
-
-                                        <div class="rating-wrapper">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-
-                                        <p class="rating-text">(4.9 /7 Rating)</p>
-
-                                    </div>
 
                                     <data class="price" value="35">$35.00</data>
 

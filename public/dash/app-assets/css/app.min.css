@@ -172,7 +172,7 @@ footer.footer-light {
     background: #fff;
 }
 footer.footer-dark {
-    background: #294a70;
+    background: #222845;
     color: #fff;
 }
 .main-menu {
@@ -415,7 +415,7 @@ footer.footer-dark {
 }
 .main-menu.menu-dark {
     color: #dcdcdc;
-    background: #294a70;
+    background: #222845;
 }
 .main-menu.menu-dark .main-menu-header {
     padding: 20px;
@@ -429,7 +429,7 @@ footer.footer-dark {
     border-color: #020304;
 }
 .main-menu.menu-dark .navigation {
-    background: #294a70;
+    background: #222845;
 }
 .main-menu.menu-dark .navigation .navigation-header {
     color: #dcdcdc;
@@ -544,7 +544,7 @@ footer.footer-dark {
 }
 .main-menu.menu-dark .navigation > li > ul,
 .main-menu.menu-dark ul.menu-popout {
-    background: #294a70;
+    background: #222845;
 }
 .main-menu.menu-dark ul.menu-popout li a {
     color: #dcdcdc;

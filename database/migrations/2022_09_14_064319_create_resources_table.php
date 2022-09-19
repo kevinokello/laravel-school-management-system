@@ -18,14 +18,18 @@ return new class extends Migration
         Schema::create('resources', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->longText('description');
+            $table->longText('description')->nullable();
             $table->longText('body')->nullable();
             $table->integer('price')->default(0);
+            $table->tinyInteger('status')->default('0')->nullable();
+            $table->tinyInteger('featured')->default('0')->nullable();
+            $table->tinyInteger('recommended')->default('0')->nullable();
             $table->foreignIdFor(Category::class, 'category_id')->constrained('categories')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignIdFor(SubCategory::class, 'sub_category_id')->constrained('sub_categories')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->enum('status', ['enabled', 'disabled'])->default('enabled');
-            $table->string('slug')->unique();
+            $table->string('slug')->unique()->nullable();
             $table->string('image')->nullable();
+            $table->string('yt_iframe')->nullable();
+            $table->string('attatchment')->nullable();
             $table->timestamps();
         });
     }

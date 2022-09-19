@@ -158,7 +158,7 @@ code {
 
 .table-inverse {
     color: #eceeef;
-    background-color: #294a70;
+    background-color: #222845;
 }
 
 .table.table-column th,
@@ -265,10 +265,10 @@ form .form-control:-ms-input-placeholder {
 }
 
 form .form-section {
-    color: #294a70;
+    color: #222845;
     line-height: 3rem;
     margin-bottom: 20px;
-    border-bottom: 1px solid #294a70;
+    border-bottom: 1px solid #222845;
 }
 form .form-section i {
     font-size: 20px;
@@ -760,15 +760,15 @@ button:focus {
     color: #818a91;
 }
 .header-navbar.navbar-dark {
-    background: #294a70;
+    background: #222845;
 }
 .header-navbar.navbar-dark.navbar-horizontal {
-    background: #294a70;
+    background: #222845;
 }
 .header-navbar.navbar-dark .nav-search .form-control,
 .header-navbar.navbar-dark .nav-search .btn-secondary {
     color: #ffffff;
-    background: #294a70;
+    background: #222845;
 }
 .header-navbar.navbar-dark .navbar-nav li {
     line-height: 1;
@@ -783,7 +783,7 @@ button:focus {
     background: #ffffff;
 }
 .header-navbar.navbar-semi-dark .navbar-header {
-    background: #294a70;
+    background: #222845;
 }
 .header-navbar.navbar-semi-dark .navbar-nav li {
     line-height: 1;

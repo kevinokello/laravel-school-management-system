@@ -13,7 +13,7 @@ class ResourceFormRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,8 +23,59 @@ class ResourceFormRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            //
+        $rules =  [
+            'category_id' => [
+                'required',
+                'integer'
+            ],
+            'sub_category_id' => [
+                'required',
+                'integer'
+            ],
+            'image' => [
+                'nullable'
+            ],
+            'name' => [
+                'required',
+                'string',
+                'max:200'
+            ],
+            'price' => [
+                'required',
+                'integer'
+            ],
+            'slug' => [
+                'required',
+                'string',
+                'max:200'
+            ],
+            'status' => [
+                'nullable'
+            ],
+            'featured' => [
+                'nullable'
+            ],
+            'recommended' => [
+                'nullable'
+            ],
+            'description' => [
+                'nullable',
+                'string',
+                'max:200'
+            ],
+            'body' => [
+                'nullable',
+                'string',
+                'max:200'
+            ],
+            'attatchment' => [
+                'nullable'
+            ],
+            'yt_iframe' => [
+                'nullable'
+            ],
+
         ];
+        return $rules;
     }
 }
