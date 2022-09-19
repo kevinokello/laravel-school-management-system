@@ -49,7 +49,7 @@
                                                             <th class="text-center">Sl</th>
                                                             <th class="text-center">Category</th>
                                                             <th class="text-center">Product Name</th>
-                                                            <th class="text-center" style="background-color: #8B008B">
+                                                            <th class="text-center">
                                                                 Current Stock</th>
                                                             <th class="text-center">Quantity</th>
                                                             <th class="text-center">Unit Price </th>
@@ -77,7 +77,7 @@
                                                                 <td class="text-center">{{ $details->product_id }}</td>
                                                                 {{-- <td class="text-center">{{ $details['category']['name'] }}</td>
             <td class="text-center">{{ $details['product']['name'] }}</td> --}}
-                                                                <td class="text-center" style="background-color: #8B008B">
+                                                                <td class="text-center">
                                                                     {{-- {{ $details['product']['quantity'] }} --}}
 
                                                                     {{ $details->product_id }}</td>

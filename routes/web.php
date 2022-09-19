@@ -6,7 +6,9 @@ use App\Http\Controllers\Admin\StudentController;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('browse', function () {
+    return view('browse');
+});
 
 require __DIR__ . '/auth.php';
 
@@ -161,4 +163,11 @@ Route::prefix('/resource')->middleware(['auth', 'role:admin'])->namespace('App\H
     Route::get('subcategories', 'SubCategoryController@View');
     Route::put('sub-category/update/{subcategory_id}', 'SubCategoryController@Update');
     Route::get('sub-category/delete/{subcategory_id}', 'SubCategoryController@Delete');
+
+    Route::get('add', 'ResourceController@Create');
+    Route::get('all', 'ResourceController@View');
+    Route::post('store', 'ResourceController@Store');
+    Route::get('edit/{resource_id}', 'ResourceController@Edit');
+    Route::put('update/{resource_id}','ResourceController@Update');
+    Route::get('delete/{resource_id}','ResourceController@Destroy');
 });

@@ -200,7 +200,7 @@
                           </li>
                                  <li>
                               <a href="{{ url('resource/categories') }}" data-i18n="nav.menu_levels.second_level"
-                                  class="menu-item {{ Request::is('resource/categories') || Request::is('resource/category/add') ? 'active' : '' }}"><i class="icon-ios-paper-outline"></i>Add New</a>
+                                  class="menu-item {{ Request::is('resource/categories') || Request::is('resource/category/add') ? 'active' : '' }}"><i class="icon-ios-paper-outline"></i>Add Resource</a>
                           </li>
                           <li>
                               <a href="{{ url('resource/subcategories') }}" data-i18n="nav.menu_levels.second_level"

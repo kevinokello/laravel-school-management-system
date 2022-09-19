@@ -73,14 +73,16 @@
                     <li class="navbar-item">
                         <a href="#home" class="navbar-link" data-nav-link>Home</a>
                     </li>
-
+   <li class="navbar-item">
+                        <a href="#category" class="navbar-link" data-nav-link>Categories</a>
+                    </li>
                     <li class="navbar-item">
                         <a href="#about" class="navbar-link" data-nav-link>About</a>
                     </li>
-
-                    <li class="navbar-item">
-                        <a href="#courses" class="navbar-link" data-nav-link>Courses</a>
+ <li class="navbar-item">
+                        <a href="{{ url('browse') }}" class="navbar-link" data-nav-link>Browse</a>
                     </li>
+
 
                 </ul>
 
@@ -152,7 +154,7 @@
 
                 </div>
             </section>
-            <section class="section category" aria-label="category">
+            <section class="section category" id="category" aria-label="category">
                 <div class="container">
                     <p class="section-subtitle">Categories</p>
                     <p class="section-text">
@@ -161,70 +163,55 @@
 
                     <ul class="grid-list">
 
+
                         <li>
-                            <div class="category-card" style="--color: 170, 75%, 41%">
+                            <a href="">
+                            <div class="category-card" style="--color: 42, 94%, 55%">
 
                                 <div class="card-icon">
-                                    <img src="./assets/images/category-1.svg" width="40" height="40"
-                                        loading="lazy" alt="Online Degree Programs" class="img">
+                                    <img src="./assets/images/category-4.svg" width="40" height="40"
+                                        loading="lazy" alt="Hybrid Distance Programs" class="img">
                                 </div>
 
                                 <h3 class="h3">
-                                    <a href="#" class="card-title">Online Degree Programs</a>
+                                    <a href="#" class="card-title">Hybrid Distance Programs</a>
                                 </h3>
-
-                                <p class="card-text">
-                                    Lorem ipsum dolor consec tur elit adicing sed umod tempor.
-                                </p>
-
-                                <span class="card-badge">7 Courses</span>
-
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="category-card" style="--color: 351, 83%, 61%">
-
-                                <div class="card-icon">
-                                    <img src="./assets/images/category-2.svg" width="40" height="40"
-                                        loading="lazy" alt="Non-Degree Programs" class="img">
-                                </div>
-
-                                <h3 class="h3">
-                                    <a href="#" class="card-title">Non-Degree Programs</a>
-                                </h3>
-
-                                <p class="card-text">
-                                    Lorem ipsum dolor consec tur elit adicing sed umod tempor.
-                                </p>
-
-                                <span class="card-badge">4 Courses</span>
-
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="category-card" style="--color: 229, 75%, 58%">
-
-                                <div class="card-icon">
-                                    <img src="./assets/images/category-3.svg" width="40" height="40"
-                                        loading="lazy" alt="Off-Campus Programs" class="img">
-                                </div>
-
-                                <h3 class="h3">
-                                    <a href="#" class="card-title">Off-Campus Programs</a>
-                                </h3>
-
-                                <p class="card-text">
-                                    Lorem ipsum dolor consec tur elit adicing sed umod tempor.
-                                </p>
-
                                 <span class="card-badge">8 Courses</span>
 
-                            </div>
+                            </div></a>
                         </li>
-
                         <li>
+                            <a href="">
+                            <div class="category-card" style="--color: 42, 94%, 55%">
+                                <div class="card-icon">
+                                    <img src="./assets/images/category-4.svg" width="40" height="40"
+                                        loading="lazy" alt="Hybrid Distance Programs" class="img">
+                                </div>
+
+                                <h3 class="h3">
+                                    <a href="#" class="card-title">Hybrid Distance Programs</a>
+                                </h3>
+                                <span class="card-badge">8 Courses</span>
+
+                            </div></a>
+                        </li>
+                        <li>
+                            <a href="">
+                            <div class="category-card" style="--color: 42, 94%, 55%">
+
+                                <div class="card-icon">
+                                    <img src="./assets/images/category-4.svg" width="40" height="40"
+                                        loading="lazy" alt="Hybrid Distance Programs" class="img">
+                                </div>
+
+                                <h3 class="h3">
+                                    <a href="#" class="card-title">Hybrid Distance Programs</a>
+                                </h3>
+                                <span class="card-badge">8 Courses</span>
+                            </div></a>
+                        </li>
+                        <li>
+                            <a href="">
                             <div class="category-card" style="--color: 42, 94%, 55%">
 
                                 <div class="card-icon">
@@ -236,13 +223,11 @@
                                     <a href="#" class="card-title">Hybrid Distance Programs</a>
                                 </h3>
 
-                                <p class="card-text">
-                                    Lorem ipsum dolor consec tur elit adicing sed umod tempor.
-                                </p>
+
 
                                 <span class="card-badge">8 Courses</span>
 
-                            </div>
+                            </div></a>
                         </li>
 
                     </ul>
@@ -310,217 +295,6 @@
 
                 </div>
             </section>
-
-
-
-
-
-            <!--
-        - #COURSE
-      -->
-
-            <section class="section course" id="courses" aria-label="course">
-                <div class="container">
-
-                    <p class="section-subtitle">Popular Courses</p>
-
-                    <h2 class="h2 section-title">Pick A Course To Get Started</h2>
-
-                    <ul class="grid-list">
-
-                        <li>
-                            <div class="course-card">
-
-                                <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
-                                    <img src="./assets/images/course-1.jpg" width="370" height="220"
-                                        loading="lazy" alt="Build Responsive Real- World Websites with HTML and CSS"
-                                        class="img-cover">
-                                </figure>
-
-                                <div class="abs-badge">
-                                    <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                                    <span class="span">3 Weeks</span>
-                                </div>
-
-                                <div class="card-content">
-
-                                    <span class="badge">Beginner</span>
-
-                                    <h3 class="h3">
-                                        <a href="#" class="card-title">Build Responsive Real- World Websites
-                                            with HTML and CSS</a>
-                                    </h3>
-
-                                    <div class="wrapper">
-
-                                        <div class="rating-wrapper">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-
-                                        <p class="rating-text">(5.0/7 Rating)</p>
-
-                                    </div>
-
-                                    <data class="price" value="29">$29.00</data>
-
-                                    <ul class="card-meta-list">
-
-                                        <li class="card-meta-item">
-                                            <ion-icon name="library-outline" aria-hidden="true"></ion-icon>
-
-                                            <span class="span">8 Lessons</span>
-                                        </li>
-
-                                        <li class="card-meta-item">
-                                            <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
-
-                                            <span class="span">20 Students</span>
-                                        </li>
-
-                                    </ul>
-
-                                </div>
-
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="course-card">
-
-                                <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
-                                    <img src="./assets/images/course-2.jpg" width="370" height="220"
-                                        loading="lazy" alt="Java Programming Masterclass for Software Developers"
-                                        class="img-cover">
-                                </figure>
-
-                                <div class="abs-badge">
-                                    <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                                    <span class="span">8 Weeks</span>
-                                </div>
-
-                                <div class="card-content">
-
-                                    <span class="badge">Advanced</span>
-
-                                    <h3 class="h3">
-                                        <a href="#" class="card-title">Java Programming Masterclass for Software
-                                            Developers</a>
-                                    </h3>
-
-                                    <div class="wrapper">
-
-                                        <div class="rating-wrapper">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-
-                                        <p class="rating-text">(4.5 /9 Rating)</p>
-
-                                    </div>
-
-                                    <data class="price" value="49">$49.00</data>
-
-                                    <ul class="card-meta-list">
-
-                                        <li class="card-meta-item">
-                                            <ion-icon name="library-outline" aria-hidden="true"></ion-icon>
-
-                                            <span class="span">15 Lessons</span>
-                                        </li>
-
-                                        <li class="card-meta-item">
-                                            <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
-
-                                            <span class="span">35 Students</span>
-                                        </li>
-
-                                    </ul>
-
-                                </div>
-
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="course-card">
-
-                                <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
-                                    <img src="./assets/images/course-3.jpg" width="370" height="220"
-                                        loading="lazy" alt="The Complete Camtasia Course for Content Creators"
-                                        class="img-cover">
-                                </figure>
-
-                                <div class="abs-badge">
-                                    <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                                    <span class="span">3 Weeks</span>
-                                </div>
-
-                                <div class="card-content">
-
-                                    <span class="badge">Intermediate</span>
-
-                                    <h3 class="h3">
-                                        <a href="#" class="card-title">The Complete Camtasia Course for Content
-                                            Creators</a>
-                                    </h3>
-
-                                    <div class="wrapper">
-
-                                        <div class="rating-wrapper">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-
-                                        <p class="rating-text">(4.9 /7 Rating)</p>
-
-                                    </div>
-
-                                    <data class="price" value="35">$35.00</data>
-
-                                    <ul class="card-meta-list">
-
-                                        <li class="card-meta-item">
-                                            <ion-icon name="library-outline" aria-hidden="true"></ion-icon>
-
-                                            <span class="span">13 Lessons</span>
-                                        </li>
-
-                                        <li class="card-meta-item">
-                                            <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
-
-                                            <span class="span">18 Students</span>
-                                        </li>
-
-                                    </ul>
-
-                                </div>
-
-                            </div>
-                        </li>
-
-                    </ul>
-
-                    <a href="#" class="btn has-before">
-                        <span class="span">Browse more courses</span>
-
-                        <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                    </a>
-
-                </div>
-            </section>
         </article>
     </main>
 
@@ -532,13 +306,10 @@
     - #FOOTER
   -->
 
-    <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
-
+    <footer class="footer" >
         <div class="footer-top section">
             <div class="container grid-list">
-
                 <div class="footer-brand">
-
                     <a href="#" class="logo">
                         <img src="./assets/images/logo-light.svg" width="162" height="50" alt="EduWeb logo">
                     </a>
@@ -546,7 +317,6 @@
                     <p class="footer-brand-text">
                         Lorem ipsum dolor amet consecto adi pisicing elit sed eiusm tempor incidid unt labore dolore.
                     </p>
-
 
                 </div>
 
@@ -564,7 +334,6 @@
                 </ul>
 
                 <ul class="footer-list">
-
                     <li>
                         <p class="footer-list-title">Links</p>
                     </li>
@@ -572,8 +341,6 @@
                     <li>
                         <a href="#" class="footer-link">Contact Us</a>
                     </li>
-
-
                 </ul>
 
                 <div class="footer-list">
@@ -633,17 +400,7 @@
 
             </div>
         </div>
-
     </footer>
-
-
-
-
-
-    <!--
-    - #BACK TO TOP
-  -->
-
     <a href="#top" class="back-top-btn" aria-label="back top top" data-back-top-btn>
         <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
     </a>

@@ -34,7 +34,7 @@
                                             <th>Buying price</th> --}}
                                             <th>Product Name</th>
                                             <th>Status</th>
-                                            <th>Action</th>
+                            
 
                                     </thead>
 
