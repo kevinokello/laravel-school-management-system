@@ -83,15 +83,13 @@
                                                     <div class="col-md-12">
                                                         <div class="form-group">
                                                             <label for="projectinput4">Description</label>
-                                                            <textarea id="projectinput8" rows="5" class="form-control" name="description"
-                                                                placeholder="Medical condition"></textarea>
+                                                            <textarea id="projectinput8" rows="5" class="form-control" name="description" placeholder="Medical condition"></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-12">
                                                         <div class="form-group">
                                                             <label for="projectinput4">Body</label>
-                                                            <textarea id="projectinput8" rows="6" class="form-control" name="body"
-                                                                placeholder="Medical condition"></textarea>
+                                                            <textarea id="projectinput8" rows="6" class="form-control" name="body" placeholder="Medical condition"></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
@@ -109,7 +107,7 @@
                                                 </div>
                                             </div>
                                             <button
-                                                style="  border-color: #0073aa; background-color: #0073aa; color: #fff; height:50px; width:170px; "
+                                                style="  border-color: #222845; background-color: #222845; color: #fff; height:50px; width:170px; "
                                                 type="submit" class="btn btn-primary">
                                                 Add Resource
                                             </button>

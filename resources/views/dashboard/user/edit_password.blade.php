@@ -53,8 +53,8 @@
 
                                                     <div class="text-xs-center">
                                                         <button
-                                                            style="  border-color: #0073aa;
-            background-color: #0073aa;
+                                                            style="  border-color: #222845;
+            background-color: #222845;
             color: #fff; height:50px; width:170px; "
                                                             type="submit" class="btn btn-primary">
                                                             Change password

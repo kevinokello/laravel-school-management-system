@@ -553,7 +553,7 @@ Bootstrap Enhance */
 }
 
 .btn-primary ~ .dropdown-menu .dropdown-item.active {
-    background-color: #0073aa;
+    background-color: #222845;
 }
 
 .btn-success ~ .dropdown-menu .dropdown-item.active {
@@ -1464,10 +1464,10 @@ button:focus {
 }
 
 .tag-primary {
-    background-color: #0073aa;
+    background-color: #222845;
 }
 .tag-primary.tag-glow {
-    box-shadow: 0px 0px 10px #0073aa;
+    box-shadow: 0px 0px 10px #222845;
 }
 .tag-primary[href]:focus {
     background-color: #7652d1;

@@ -36,19 +36,19 @@
     <link rel="stylesheet" type="text/css" href="{{ url('dash/assets/css/style.css') }}">
     <style>
         .btn-primary {
-            border-color: #0073aa;
-            background-color: #0073aa;
-            color: #0073aa;
+            border-color: #222845;
+            background-color: #222845;
+            color: #222845;
         }
 
         .button {
-            border-color: #0073aa;
-            background-color: #0073aa;
-            color: #0073aa;
+            border-color: #222845;
+            background-color: #222845;
+            color: #222845;
         }
 
         .btn-primary:hover {
-            background-color: #0073aa;
+            background-color: #222845;
         }
 
         .main-menu.menu-dark .navigation>li ul .active {
@@ -62,7 +62,7 @@
 
         .main-menu.menu-dark .navigation>li.open>a {
             color: #c3c3c3;
-            background: #2f5d91;
+            background: #2f3969;
         }
 
         span.menu-title {
@@ -184,8 +184,8 @@
     <script src="{{ asset('backend/assets/libs/select2/js/select2.min.js') }}"></script>
     <script src="{{ asset('backend/assets/js/pages/form-advanced.init.js') }}"></script>
     <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-    	<script src="{{ asset('backend/js/template.js') }}"></script>
-	<script src="{{ asset('backend/js/pages/dashboard.js') }}"></script>
+    <script src="{{ asset('backend/js/template.js') }}"></script>
+    <script src="{{ asset('backend/js/pages/dashboard.js') }}"></script>
     <script>
         $(document).ready(function() {
             $('#myTable').DataTable();

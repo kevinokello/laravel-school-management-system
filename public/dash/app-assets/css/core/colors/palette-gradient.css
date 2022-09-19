@@ -50,13 +50,13 @@
 }
 
 .bg-gradient-x2-primary {
-    background-image: linear-gradient(to right, #ac92ec, #0073aa 50%, #bcaae9);
+    background-image: linear-gradient(to right, #ac92ec, #222845 50%, #bcaae9);
     background-repeat: no-repeat;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFAC92EC', endColorstr='#FFBCAAE9', GradientType=1);
 }
 
 .bg-gradient-y2-primary {
-    background-image: linear-gradient(#ac92ec, #0073aa 50%, #bcaae9);
+    background-image: linear-gradient(#ac92ec, #222845 50%, #bcaae9);
     background-repeat: no-repeat;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFAC92EC', endColorstr='#FFBCAAE9', GradientType=0);
 }

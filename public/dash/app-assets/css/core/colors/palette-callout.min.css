@@ -145,7 +145,7 @@
 .bs-callout-primary,
 .bs-callout-primary.callout-transparent {
     display: block;
-    border-color: #0073aa !important;
+    border-color: #222845 !important;
     border-radius: 0.25rem;
 }
 .climacon-primary.climacon-lighten-5 .climacon_component-stroke {
@@ -174,7 +174,7 @@
 .bs-callout-primary h5,
 .bs-callout-primary h6 {
     margin-top: 0;
-    color: #0073aa;
+    color: #222845;
 }
 .bs-callout-primary .highlight,
 .bs-callout-primary code {
@@ -191,17 +191,17 @@
 .bs-callout-primary.callout-transparent h5,
 .bs-callout-primary.callout-transparent h6 {
     margin-top: 0;
-    color: #0073aa;
+    color: #222845;
 }
 .bs-callout-primary.callout-transparent .highlight,
 .bs-callout-primary.callout-transparent code {
     background-color: #fff;
 }
 .bs-callout-primary .callout-arrow-left:before {
-    border-left-color: #0073aa;
+    border-left-color: #222845;
 }
 .bs-callout-primary .callout-arrow-right:before {
-    border-right-color: #0073aa;
+    border-right-color: #222845;
 }
 .bs-callout-success,
 .bs-callout-success.callout-transparent {
@@ -1078,7 +1078,7 @@
     fill: #82b1ff;
 }
 .climacon-blue.climacon-accent-2 .climacon_component-stroke {
-    fill: #0073aa;
+    fill: #222845;
 }
 .climacon-blue.climacon-accent-3 .climacon_component-stroke {
     fill: #2979ff;

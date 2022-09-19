@@ -30,8 +30,8 @@
                                                     <div class="form-group">
                                                         <label for="projectinput1"><b>Fee Balance</b></label>
                                                         <input type="text" id="projectinput1" class="form-control"
-                                                            placeholder="Admission Number" value="{{ $student->updated_fee }}"
-                                                            name="fee_id" readonly>
+                                                            placeholder="Admission Number"
+                                                            value="{{ $student->updated_fee }}" name="fee_id" readonly>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
@@ -86,7 +86,7 @@
                                             <div class="form-actions">
                                                 <div style="text-align: center;" class="wrapper">
                                                     <button
-                                                        style="  border-color: #0073aa; background-color: #0073aa; color: #fff; height:50px; width:170px; "
+                                                        style="  border-color: #222845; background-color: #222845; color: #fff; height:50px; width:170px; "
                                                         type="submit" class="btn btn-primary">
                                                         Update student details
                                                     </button>
@@ -95,14 +95,15 @@
                                         </form>
                                     </div>
                                 </div>
-                            </div></div>
                             </div>
                         </div>
                     </div>
-                </section>
-                <!-- // Basic form layout section end -->
             </div>
         </div>
+        </section>
+        <!-- // Basic form layout section end -->
+    </div>
+    </div>
     </div>
 
 

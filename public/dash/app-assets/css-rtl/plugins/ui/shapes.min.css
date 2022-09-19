@@ -9,7 +9,7 @@
 .oval-shape,
 .rectangle-shape,
 .square-shape {
-    background: #0073aa;
+    background: #222845;
 }
 .square-shape {
     width: 100px;
@@ -32,12 +32,12 @@
 .triangle-up-shape {
     width: 100px;
     height: 100px;
-    border-bottom: 100px solid #0073aa;
+    border-bottom: 100px solid #222845;
 }
 .triangle-down-shape {
     width: 0;
     height: 0;
-    border-top: 100px solid #0073aa;
+    border-top: 100px solid #222845;
 }
 .triangle-left-shape,
 .triangle-right-shape {
@@ -47,7 +47,7 @@
     border-bottom: 50px solid transparent;
 }
 .triangle-left-shape {
-    border-left: 100px solid #0073aa;
+    border-left: 100px solid #222845;
 }
 .star-shape,
 .triangle-bottomleft-shape,
@@ -55,11 +55,11 @@
     border-left: 100px solid transparent;
 }
 .triangle-right-shape {
-    border-right: 100px solid #0073aa;
+    border-right: 100px solid #222845;
 }
 .triangle-topleft-shape,
 .triangle-topright-shape {
-    border-top: 100px solid #0073aa;
+    border-top: 100px solid #222845;
     width: 0;
     height: 0;
 }
@@ -72,16 +72,16 @@
 .triangle-bottomright-shape {
     width: 0;
     height: 0;
-    border-bottom: 100px solid #0073aa;
+    border-bottom: 100px solid #222845;
 }
 .star-shape {
     margin: 50px 0;
     position: relative;
     display: block;
-    color: #0073aa;
+    color: #222845;
     width: 0;
     height: 0;
-    border-bottom: 70px solid #0073aa;
+    border-bottom: 70px solid #222845;
     -webkit-transform: rotate(-35deg);
     -moz-transform: rotate(-35deg);
     -ms-transform: rotate(-35deg);
@@ -97,7 +97,7 @@
     display: block;
 }
 .star-shape:before {
-    border-bottom: 80px solid #0073aa;
+    border-bottom: 80px solid #222845;
     border-right: 30px solid transparent;
     border-left: 30px solid transparent;
     top: -45px;
@@ -109,11 +109,11 @@
     transform: rotate(35deg);
 }
 .star-shape:after {
-    color: #0073aa;
+    color: #222845;
     top: 3px;
     right: -105px;
     border-left: 100px solid transparent;
-    border-bottom: 70px solid #0073aa;
+    border-bottom: 70px solid #222845;
     border-right: 100px solid transparent;
     -webkit-transform: rotate(70deg);
     -moz-transform: rotate(70deg);
@@ -126,7 +126,7 @@
     width: 54px;
     border-width: 50px 18px 0;
     border-style: solid;
-    border-color: #0073aa transparent;
+    border-color: #222845 transparent;
 }
 .pentagon-shape:before {
     content: "";
@@ -137,7 +137,7 @@
     right: -18px;
     border-width: 0 45px 35px;
     border-style: solid;
-    border-color: transparent transparent #0073aa;
+    border-color: transparent transparent #222845;
 }
 .hexagon-shape {
     width: 100px;
@@ -156,11 +156,11 @@
 }
 .hexagon-shape:before {
     top: -25px;
-    border-bottom: 25px solid #0073aa;
+    border-bottom: 25px solid #222845;
 }
 .hexagon-shape:after {
     bottom: -25px;
-    border-top: 25px solid #0073aa;
+    border-top: 25px solid #222845;
 }
 .octagon-shape {
     width: 100px;
@@ -179,11 +179,11 @@
 }
 .octagon-shape:before {
     top: 0;
-    border-bottom: 29px solid #0073aa;
+    border-bottom: 29px solid #222845;
 }
 .octagon-shape:after {
     bottom: 0;
-    border-top: 29px solid #0073aa;
+    border-top: 29px solid #222845;
 }
 .heart-shape {
     position: relative;
@@ -195,7 +195,7 @@
     position: absolute;
     top: 0;
     height: 80px;
-    background: #0073aa;
+    background: #222845;
     border-radius: 50px 50px 0 0;
     width: 50px;
     content: "";
@@ -228,7 +228,7 @@
 }
 .cut-diamond-shape {
     border-style: solid;
-    border-color: transparent transparent #0073aa;
+    border-color: transparent transparent #222845;
     border-width: 0 25px 25px;
     height: 0;
     width: 50px;
@@ -243,14 +243,14 @@
     width: 0;
     height: 0;
     border-style: solid;
-    border-color: #0073aa transparent transparent;
+    border-color: #222845 transparent transparent;
     border-width: 70px 50px 0;
 }
 .diamond-shape {
     width: 0;
     height: 0;
     border: 50px solid transparent;
-    border-bottom-color: #0073aa;
+    border-bottom-color: #222845;
     position: relative;
     top: -50px;
 }
@@ -262,13 +262,13 @@
     width: 0;
     height: 0;
     border: 50px solid transparent;
-    border-top-color: #0073aa;
+    border-top-color: #222845;
 }
 .egg-shape {
     display: block;
     width: 126px;
     height: 180px;
-    background-color: #0073aa;
+    background-color: #222845;
     border-radius: 50%/60% 60% 40% 40%;
 }
 .app-shape {

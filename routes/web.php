@@ -10,7 +10,12 @@ Route::get('/', function () {
 Route::get('browse', function () {
     return view('browse');
 });
-
+Route::get('contact', function () {
+    return view('contact');
+});
+Route::get('about', function () {
+return view ('about');
+});
 require __DIR__ . '/auth.php';
 
 Route::group(['middleware' => ['auth']], function () {

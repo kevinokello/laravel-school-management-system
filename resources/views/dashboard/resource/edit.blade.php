@@ -10,8 +10,8 @@
                             <div class="card">
                                 <div class="card-body collapse in">
                                     <div class="card-block">
-                                        <form method="post" action="{{ url('resource/update/'.$resource->id) }}" id="myForm"
-                                            class="form" enctype="multipart/form-data">
+                                        <form method="post" action="{{ url('resource/update/' . $resource->id) }}"
+                                            id="myForm" class="form" enctype="multipart/form-data">
                                             @csrf
                                             @method('PUT')
                                             <div class="form-body">
@@ -124,7 +124,7 @@
                                             </div>
                                     </div>
                                     <button
-                                        style="  border-color: #0073aa; background-color: #0073aa; color: #fff; height:50px; width:170px; "
+                                        style="  border-color: #222845; background-color: #222845; color: #fff; height:50px; width:170px; "
                                         type="submit" class="btn btn-primary">
                                         Update Resource
                                     </button>

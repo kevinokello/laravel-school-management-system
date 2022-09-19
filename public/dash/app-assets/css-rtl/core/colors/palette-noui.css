@@ -33,20 +33,20 @@
 }
 
 .slider-primary .noUi-connect {
-    background: #0073aa !important;
+    background: #222845 !important;
 }
 
 .slider-primary.noUi-connect {
-    background: #0073aa !important;
+    background: #222845 !important;
 }
 
 .slider-primary .noUi-handle {
-    border-color: #0073aa !important;
+    border-color: #222845 !important;
 }
 
 .slider-primary.circle-filled .noUi-handle,
 .slider-primary.square .noUi-handle {
-    background: #0073aa !important;
+    background: #222845 !important;
 }
 
 .slider-success .noUi-connect {

@@ -34,13 +34,13 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
         .btn-primary2 {
-            border-color: #0073aa;
-            background-color: #0073aa;
+            border-color: #222845;
+            background-color: #222845;
             color: #FFFFFF;
         }
 
         .btn-primary2:hover {
-            background-color: #0073aa;
+            background-color: #222845;
         }
     </style>
 </head>

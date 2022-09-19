@@ -5,7 +5,7 @@
             <div class="content-body">
                 <div class="col-xl-13 col-lg-12">
                     <div class="text-center">
-                        <button type="button" style="background-color: #0073aa;color: #fff; height:50px; width:190px; "
+                        <button type="button" style="background-color: #222845;color: #fff; height:50px; width:190px; "
                             class="btn btn-outline-success block btn-lg" data-toggle="modal" data-target="#small">
                             New Cohort/class
                         </button>
@@ -76,7 +76,7 @@
                                         <tr>
                                             <th>#</th>
                                             <th>Class Name</th>
-                                                      <th>Fee Amt</th>
+                                            <th>Fee Amt</th>
                                             <th>Action</th>
 
                                         </tr>
@@ -86,7 +86,7 @@
                                             <tr>
                                                 <td>{{ $item->id }}</td>
                                                 <td>{{ $item->cohort_name }}</td>
-                                                  <td>{{ $item->fee_id }}</td>
+                                                <td>{{ $item->fee_id }}</td>
                                                 <td>
                                                     {{-- <a
                                                         class="btn btn-info btn-sm" data-toggle="modal" data-target="#small2">Edit</a> --}}

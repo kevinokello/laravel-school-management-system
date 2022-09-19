@@ -1,58 +1,6 @@
 @extends('layouts.front')
 @section('content')
-
-    <div class="wm-main-banner">
-        <div class="wm-banner-one">
-          <div class="wm-banner-one-for">
-            <div class="wm-banner-one-for-layer">
-              <img src="front/extra-images/banner-view1-1.jpg" alt="" />
-            </div>
-            <div class="wm-banner-one-for-layer">
-              <img src="front/extra-images/banner-view1-2.jpg" alt="" />
-            </div>
-            <div class="wm-banner-one-for-layer">
-              <img src="front/extra-images/banner-view1-3.jpg" alt="" />
-            </div>
-            <div class="wm-banner-one-for-layer">
-              <img src="front/extra-images/banner-view1-1.jpg" alt="" />
-            </div>
-          </div>
-          <div class="wm-banner-one-nav">
-            <div class="wm-banner-one-nav-layer">
-              <h1>International Programmes</h1>
-              <p>
-                The study programmes of the Enroll Campus University are open to
-                people from all nationalities.
-              </p>
-              <a href="#" class="wm-banner-btn">learn more</a>
-            </div>
-            <div class="wm-banner-one-nav-layer">
-              <h1>UA Degree Programmes</h1>
-              <p>
-                We offer companies the opportunity to access the technology and
-                knowledge developed at the Enroll Campus University.
-              </p>
-              <a href="#" class="wm-banner-btn">know more</a>
-            </div>
-            <div class="wm-banner-one-nav-layer banner-bgcolor">
-              <h1>Research & Business</h1>
-              <p>
-                The scientific community nominates CRISPR System, based on
-                research developed at the UA.
-              </p>
-              <a href="#" class="wm-banner-btn">learn more</a>
-            </div>
-            <div class="wm-banner-one-nav-layer">
-              <h1>International Programmes</h1>
-              <p>
-                The study programmes of the Enroll Campus University are open to
-                people from all nationalities.
-              </p>
-              <a href="#" class="wm-banner-btn">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
+<br><br>
       <!--// Main Banner \\-->
 
       <!--// Main Content \\-->
@@ -63,54 +11,9 @@
             <div class="row">
               <div class="col-md-4">
                 <div class="wm-search-course">
-                  <h3 class="wm-short-title wm-color">Find Your Course</h3>
-                  <p>Fill in the form below to find your course:</p>
-                  <form>
-                    <ul>
-                      <li>
-                        <div class="wm-radio">
-                          <div class="wm-radio-partition">
-                            <input
-                              id="male"
-                              type="radio"
-                              name="gender"
-                              value="male"
-                            />
-                            <label for="male">by ID</label>
-                          </div>
-                          <div class="wm-radio-partition">
-                            <input
-                              id="female"
-                              type="radio"
-                              name="gender"
-                              value="female"
-                            />
-                            <label for="female">by name</label>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <input
-                          type="text"
-                          value="Course Name"
-                          onblur="if(this.value == '') { this.value ='Course Name'; }"
-                          onfocus="if(this.value =='Course Name') { this.value = ''; }"
-                        />
-                        <i class="wmicon-search"></i>
-                      </li>
-                      <li>
-                        <div class="wm-apply-select">
-                          <select>
-                            <option>Category</option>
-                            <option>Category</option>
-                            <option>Category</option>
-                            <option>Category</option>
-                          </select>
-                        </div>
-                      </li>
-                      <li><input type="submit" value="Search course" /></li>
-                    </ul>
-                  </form>
+            <div class="wm-banner-one-for-layer">
+              <img src="front/extra-images/banner-view1-1.jpg" alt="" />
+            </div>
                 </div>
               </div>
               <div class="col-md-8">
@@ -187,7 +90,7 @@
                         <figure>
                           <a href="#"
                             ><img
-                              src="extra-images/papular-courses-1.jpg"
+                              src="front/extra-images/papular-courses-1.jpg"
                               alt=""
                             />
                             <span class="wm-popular-hover">
@@ -196,7 +99,7 @@
                           </a>
                           <figcaption>
                             <img
-                              src="extra-images/papular-courses-thumb-1.jpg"
+                              src="front/extra-images/papular-courses-thumb-1.jpg"
                               alt=""
                             />
                             <h6><a href="#">Shelly T. Forrester</a></h6>
@@ -227,7 +130,7 @@
                         <figure>
                           <a href="#"
                             ><img
-                              src="extra-images/papular-courses-2.jpg"
+                              src="front/extra-images/papular-courses-2.jpg"
                               alt=""
                             />
                             <span class="wm-popular-hover">
@@ -236,7 +139,7 @@
                           </a>
                           <figcaption>
                             <img
-                              src="extra-images/papular-courses-thumb-2.jpg"
+                              src="front/extra-images/papular-courses-thumb-2.jpg"
                               alt=""
                             />
                             <h6><a href="#">Sam K. Harrington</a></h6>
@@ -265,7 +168,7 @@
                         <figure>
                           <a href="#"
                             ><img
-                              src="extra-images/papular-courses-3.jpg"
+                              src="front/extra-images/papular-courses-3.jpg"
                               alt=""
                             />
                             <span class="wm-popular-hover">
@@ -274,7 +177,7 @@
                           </a>
                           <figcaption>
                             <img
-                              src="extra-images/papular-courses-thumb-3.jpg"
+                              src="front/extra-images/papular-courses-thumb-3.jpg"
                               alt=""
                             />
                             <h6><a href="#">Sara A. Shirley</a></h6>
@@ -303,7 +206,7 @@
                         <figure>
                           <a href="#"
                             ><img
-                              src="extra-images/papular-courses-4.jpg"
+                              src="front/extra-images/papular-courses-4.jpg"
                               alt=""
                             />
                             <span class="wm-popular-hover">
@@ -312,7 +215,7 @@
                           </a>
                           <figcaption>
                             <img
-                              src="extra-images/papular-courses-thumb-4.jpg"
+                              src="front/extra-images/papular-courses-thumb-4.jpg"
                               alt=""
                             />
                             <h6><a href="#">Julius M. Lepage</a></h6>

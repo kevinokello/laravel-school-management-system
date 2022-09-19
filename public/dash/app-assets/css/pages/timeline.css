@@ -144,11 +144,11 @@ Horizontal Timeline
     pointer-events: none;
 }
 .cd-horizontal-timeline .events a.selected::after {
-    background-color: #0073aa;
-    border-color: #0073aa;
+    background-color: #222845;
+    border-color: #222845;
 }
 .cd-horizontal-timeline .events a.older-event::after {
-    border-color: #0073aa;
+    border-color: #222845;
 }
 .cd-horizontal-timeline .filling-line {
     position: absolute;
@@ -157,7 +157,7 @@ Horizontal Timeline
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: #0073aa;
+    background-color: #222845;
     transform: scaleX(0);
     transform-origin: left center;
     transition: transform 0.3s;
@@ -211,12 +211,12 @@ Horizontal Timeline
 }
 
 .no-touch .cd-horizontal-timeline .events a:hover::after {
-    background-color: #0073aa;
-    border-color: #0073aa;
+    background-color: #222845;
+    border-color: #222845;
 }
 
 .no-touch .cd-timeline-navigation a:hover {
-    border-color: #0073aa;
+    border-color: #222845;
 }
 
 .no-touch .cd-timeline-navigation a.inactive:hover {

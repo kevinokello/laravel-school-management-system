@@ -11,10 +11,10 @@
                                 <div class="card-body collapse in">
                                     <div class="card-block">
 
-                                        <form method="POST" action="{{ url('resource/category/edit/' . $category->id) }}" id="myForm"
-                                            class="form" enctype="multipart/form-data">
+                                        <form method="POST" action="{{ url('resource/category/edit/' . $category->id) }}"
+                                            id="myForm" class="form" enctype="multipart/form-data">
                                             @csrf
-                                                  @method('PUT')
+                                            @method('PUT')
                                             <div class="form-body">
                                                 <div class="row">
                                                     <div class="col-md-6">
@@ -43,8 +43,8 @@
                                                 </div>
                                             </div>
                                             <button
-                                                style="  border-color: #0073aa;
-            background-color: #0073aa;
+                                                style="  border-color: #222845;
+            background-color: #222845;
             color: #fff; height:50px; width:170px; "
                                                 type="submit" class="btn btn-primary">
                                                 Update Category

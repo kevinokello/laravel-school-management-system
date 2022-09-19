@@ -589,11 +589,11 @@ input:focus ~ .bg-primary {
 }
 
 .primary {
-    color: #0073aa !important;
+    color: #222845 !important;
 }
 
 .bg-primary {
-    background-color: #0073aa !important;
+    background-color: #222845 !important;
 }
 .bg-primary .card-header,
 .bg-primary .card-footer {
@@ -601,7 +601,7 @@ input:focus ~ .bg-primary {
 }
 
 .alert-primary {
-    border-color: #0073aa !important;
+    border-color: #222845 !important;
     background-color: #c3b3eb !important;
     color: #3d2281 !important;
 }
@@ -610,17 +610,17 @@ input:focus ~ .bg-primary {
 }
 
 .border-primary {
-    border-color: #0073aa;
+    border-color: #222845;
 }
 
 .bg-primary.tag-glow,
 .border-primary.tag-glow {
-    -webkit-box-shadow: 0 0 10px #0073aa;
-    box-shadow: 0 0 10px #0073aa;
+    -webkit-box-shadow: 0 0 10px #222845;
+    box-shadow: 0 0 10px #222845;
 }
 
 .overlay-primary {
-    background: #0073aa;
+    background: #222845;
     /* The Fallback */
     background: rgba(150, 122, 220, 0.8);
 }
@@ -628,7 +628,7 @@ input:focus ~ .bg-primary {
 .card-outline-primary {
     border-width: 1px;
     border-style: solid;
-    border-color: #0073aa;
+    border-color: #222845;
     background-color: transparent;
 }
 .card-outline-primary .card-header,
@@ -637,8 +637,8 @@ input:focus ~ .bg-primary {
 }
 
 .btn-primary {
-    border-color: #0073aa;
-    background-color: #0073aa;
+    border-color: #222845;
+    background-color: #222845;
     color: #ffffff;
 }
 .btn-primary:hover {
@@ -648,56 +648,56 @@ input:focus ~ .bg-primary {
 }
 
 .btn-outline-primary {
-    border-color: #0073aa;
+    border-color: #222845;
     background-color: transparent;
-    color: #0073aa;
+    color: #222845;
 }
 .btn-outline-primary:hover {
-    background-color: #0073aa;
+    background-color: #222845;
     color: #ffffff !important;
 }
 
 .progress-primary[value]::-webkit-progress-value {
-    background-color: #0073aa;
+    background-color: #222845;
 }
 
 .progress-primary[value]::-moz-progress-bar {
-    background-color: #0073aa;
+    background-color: #222845;
 }
 
 .progress-primary[value]::-ms-fill {
-    background-color: #0073aa;
+    background-color: #222845;
 }
 
 @media screen and (min-width: 0\0) {
     .progress-primary .progress-bar {
-        background-color: #0073aa;
+        background-color: #222845;
     }
 }
 
 input:focus ~ .bg-primary {
-    -webkit-box-shadow: 0 0 0 0.075rem #ffffff, 0 0 0 0.21rem #0073aa !important;
-    box-shadow: 0 0 0 0.075rem #ffffff, 0 0 0 0.21rem #0073aa !important;
+    -webkit-box-shadow: 0 0 0 0.075rem #ffffff, 0 0 0 0.21rem #222845 !important;
+    box-shadow: 0 0 0 0.075rem #ffffff, 0 0 0 0.21rem #222845 !important;
 }
 
 .border-primary {
-    border: 1px solid #0073aa !important;
+    border: 1px solid #222845 !important;
 }
 
 .border-top-primary {
-    border-top: 1px solid #0073aa;
+    border-top: 1px solid #222845;
 }
 
 .border-bottom-primary {
-    border-bottom: 1px solid #0073aa;
+    border-bottom: 1px solid #222845;
 }
 
 .border-left-primary {
-    border-right: 1px solid #0073aa;
+    border-right: 1px solid #222845;
 }
 
 .border-right-primary {
-    border-left: 1px solid #0073aa;
+    border-left: 1px solid #222845;
 }
 
 .primary.darken-1 {
@@ -11811,16 +11811,16 @@ input:focus ~ .bg-blue {
 }
 
 .blue.accent-2 {
-    color: #0073aa !important;
+    color: #222845 !important;
 }
 
 .bg-blue.bg-accent-2 {
-    background-color: #0073aa !important;
+    background-color: #222845 !important;
 }
 
 .btn-blue.btn-accent-2 {
-    border-color: #0073aa !important;
-    background-color: #0073aa !important;
+    border-color: #222845 !important;
+    background-color: #222845 !important;
 }
 .btn-blue.btn-accent-2:hover {
     border-color: #64b5f6 !important;
@@ -11828,58 +11828,58 @@ input:focus ~ .bg-blue {
 }
 
 .btn-outline-blue.btn-outline-accent-2 {
-    border-color: #0073aa !important;
-    color: #0073aa !important;
+    border-color: #222845 !important;
+    color: #222845 !important;
 }
 .btn-outline-blue.btn-outline-accent-2:hover {
-    background-color: #0073aa !important;
+    background-color: #222845 !important;
 }
 
 .progress-blue.progress-accent-2[value]::-webkit-progress-value {
-    background-color: #0073aa;
+    background-color: #222845;
 }
 
 .progress-blue.progress-accent-2[value]::-moz-progress-bar {
-    background-color: #0073aa;
+    background-color: #222845;
 }
 
 .progress-blue.progress-accent-2[value]::-ms-fill {
-    background-color: #0073aa;
+    background-color: #222845;
 }
 
 @media screen and (min-width: 0\0) {
     .progress-blue.progress-accent-2 .progress-bar {
-        background-color: #0073aa;
+        background-color: #222845;
     }
 }
 
 input:focus ~ .bg-blue {
-    -webkit-box-shadow: 0 0 0 0.075rem #ffffff, 0 0 0 0.21rem #0073aa !important;
-    box-shadow: 0 0 0 0.075rem #ffffff, 0 0 0 0.21rem #0073aa !important;
+    -webkit-box-shadow: 0 0 0 0.075rem #ffffff, 0 0 0 0.21rem #222845 !important;
+    box-shadow: 0 0 0 0.075rem #ffffff, 0 0 0 0.21rem #222845 !important;
 }
 
 .border-blue.border-accent-2 {
-    border: 1px solid #0073aa !important;
+    border: 1px solid #222845 !important;
 }
 
 .border-top-blue.border-top-accent-2 {
-    border-top: 1px solid #0073aa !important;
+    border-top: 1px solid #222845 !important;
 }
 
 .border-bottom-blue.border-bottom-accent-2 {
-    border-bottom: 1px solid #0073aa !important;
+    border-bottom: 1px solid #222845 !important;
 }
 
 .border-left-blue.border-left-accent-2 {
-    border-right: 1px solid #0073aa !important;
+    border-right: 1px solid #222845 !important;
 }
 
 .border-right-blue.border-right-accent-2 {
-    border-left: 1px solid #0073aa !important;
+    border-left: 1px solid #222845 !important;
 }
 
 .overlay-blue.overlay-accent-2 {
-    background: #0073aa;
+    background: #222845;
     /* The Fallback */
     background: rgba(68, 138, 255, 0.8);
 }

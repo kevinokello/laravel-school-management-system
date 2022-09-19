@@ -1951,7 +1951,7 @@ body.vertical-layout.vertical-menu.menu-expanded .main-menu-footer .content {
     height: 60px;
     line-height: 4.8rem;
     text-align: center;
-    border: 2px solid #0073aa;
+    border: 2px solid #222845;
     border-radius: 0.1875rem;
     margin-left: 1rem;
     margin-bottom: 1.5rem;
@@ -1960,7 +1960,7 @@ body.vertical-layout.vertical-menu.menu-expanded .main-menu-footer .content {
     font-size: 2.28rem;
 }
 .fonticon-container > .fonticon-wrap:hover {
-    background: #0073aa;
+    background: #222845;
     color: white;
 }
 .fonticon-container > .fonticon-wrap.youtube {
@@ -3108,7 +3108,7 @@ input[type="month"].form-control {
 
 .floating-label-form-group-with-focus label,
 .floating-label-form-group-with-value label {
-    color: #0073aa !important;
+    color: #222845 !important;
     text-transform: uppercase;
     font-weight: 400;
 }
