@@ -45,7 +45,6 @@
         }
     </style>
 </head>
-
 <body>
     <div class="app-content content container-fluid">
         <div class="content-wrapper">

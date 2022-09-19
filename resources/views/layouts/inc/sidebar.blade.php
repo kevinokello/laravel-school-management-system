@@ -3,7 +3,9 @@
           background: #fff;
       }
   </style>
+
   <div data-scroll-to-active="true" class="main-menu menu-fixed menu-dark menu-accordion menu-shadow">
+
       <div class="main-menu-content">
 
           @if (Auth::user()->hasRole('admin'))
@@ -15,8 +17,7 @@
                           href="{{ url('dashboard') }}"><i class="icon-home3"></i><span
                               data-i18n="nav.support_documentation.main" class="menu-title">Dashboard</span></a>
                   </li>
-                  <li
-                      class="nav-item {{ Request::is('academic/academic-years') || Request::is('academic/classes') || Request::is('academic/sessions') || Request::is('academic/fee/category/view') || Request::is('academic/fee/amount/view') || Request::is('academic/fee/amount/add') || Request::is('academic/fee/category/add') ? 'open' : '' }}">
+                  <li class="nav-item {{ Request::is('academic/academic-years') || Request::is('academic/classes') || Request::is('academic/sessions') || Request::is('academic/fee/category/view') || Request::is('academic/fee/amount/view') || Request::is('academic/fee/amount/add') || Request::is('academic/fee/category/add') ? 'open' : '' }}">
                       <a href="#"><i class="icon-ios-gear-outline"></i><span data-i18n="nav.cards.main"
                               class="menu-title">Academic setup</span></a>
                       <ul class="menu-content">
