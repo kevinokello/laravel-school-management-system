@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('academic_year');
             $table->tinyInteger('status')->default('0');
             $table->integer('created_by');
+            $table->string('school_id')->default('0');
             $table->timestamps();
         });
     }

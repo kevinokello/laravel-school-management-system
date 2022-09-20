@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('fee_category_id');
             $table->integer('cohort_id');
             $table->double('amount');
+            $table->string('school_id')->default('0');
             $table->timestamps();
         });
     }

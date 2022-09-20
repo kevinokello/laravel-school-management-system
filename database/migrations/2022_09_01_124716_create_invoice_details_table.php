@@ -22,7 +22,8 @@ return new class extends Migration
             $table->double('selling_qty')->nullable();
             $table->double('unit_price')->nullable();
             $table->double('selling_price')->nullable();
-            $table->tinyInteger('status')->default(1); 
+            $table->tinyInteger('status')->default(1);
+            $table->string('school_id')->default('0');
             $table->timestamps();
         });
     }

@@ -37,6 +37,7 @@ return new class extends Migration
             $table->integer('fee_id')->default('0');
             $table->integer('updated_fee')->default('0');
             $table->integer('paid_amount')->default('0');
+            $table->string('school_id')->default('0');
             $table->timestamps();
         });
     }

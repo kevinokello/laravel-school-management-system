@@ -27,6 +27,7 @@ return new class extends Migration
             $table->tinyInteger('status')->default('0')->comment('0=Pending, 1=Approved');
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
+            $table->string('school_id')->default('0');
             $table->timestamps();
         });
     }

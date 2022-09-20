@@ -31,6 +31,7 @@ return new class extends Migration
             $table->tinyInteger('status')->default(1)->comment('0=inactive,1=active');
             $table->rememberToken();
             $table->text('profile_photo_path')->nullable();
+            $table->string('school_id')->default('0');
             $table->timestamps();
         });
     }

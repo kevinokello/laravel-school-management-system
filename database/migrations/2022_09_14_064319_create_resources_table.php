@@ -30,6 +30,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('yt_iframe')->nullable();
             $table->string('attatchment')->nullable();
+            $table->string('school_id')->default('0');
             $table->timestamps();
         });
     }

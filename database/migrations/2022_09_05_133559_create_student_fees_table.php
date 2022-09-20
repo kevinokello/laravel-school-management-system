@@ -21,6 +21,7 @@ return new class extends Migration
             $table->tinyInteger('status')->default('0');
             $table->string('date')->nullable();
             $table->double('amount')->nullable()->default('0');
+            $table->string('school_id')->default('0');
             $table->timestamps();
         });
     }

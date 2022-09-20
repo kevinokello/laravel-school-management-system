@@ -22,6 +22,7 @@ return new class extends Migration
             $table->double('due_amount')->nullable();
             $table->double('total_amount')->nullable();
             $table->double('discount_amount')->nullable();
+            $table->string('school_id')->default('0');
             $table->timestamps();
         });
     }

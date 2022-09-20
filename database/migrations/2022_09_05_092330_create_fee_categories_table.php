@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('fee_categories', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
+            $table->string('school_id')->default('0');
             $table->timestamps();
         });
     }

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->enum('status', ['enabled', 'disabled'])->default('enabled');
             $table->string('image')->nullable();
+            $table->string('school_id')->default('0');
             $table->timestamps();
         });
     }
