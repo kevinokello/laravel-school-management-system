@@ -2,20 +2,23 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SessionController;
+use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\Admin\StudentController;
 use App\Http\Controllers\Admin\ResourceController;
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('browse', function () {
-    return view('browse');
-});
-Route::get('contact', function () {
-    return view('contact');
-});
-Route::get('about', function () {
-return view ('about');
-});
+use App\Http\Controllers\Front\FrontController;
+
+Route::prefix('/session')->namespace('App\Http\Controllers')->group(
+    function () {
+        Route::get('get', 'SessionsController@accessSessionData');
+        Route::get('set', 'SessionsController@storeSessionData');
+        Route::get('remove', 'SessionsController@deleteSessionData');
+    }
+);
+Route::get('/', 'App\Http\Controllers\Front\FrontController@welcome');
+Route::get('browse', 'App\Http\Controllers\Front\FrontController@browse');
+Route::get('contact', 'App\Http\Controllers\Front\FrontController@contact');
+Route::get('about', 'App\Http\Controllers\Front\FrontController@about');
+
 require __DIR__ . '/auth.php';
 
 Route::group(['middleware' => ['auth']], function () {
@@ -72,7 +75,6 @@ Route::prefix('/academic')->middleware(['auth', 'role:admin'])->namespace('App\H
     Route::get('fee/amount/edit/{fee_category_id}', 'FeeAmountController@EditFeeAmount');
     Route::post('fee/amount/update/{fee_category_id}', 'FeeAmountController@UpdateFeeAmount');
     Route::get('fee/amount/details/{fee_category_id}', 'FeeAmountController@DetailsFeeAmount');
-
 });
 Route::prefix('/inventory')->middleware(['auth', 'role:admin'])->namespace('App\Http\Controllers\Admin')->group(function () {
 
@@ -175,6 +177,6 @@ Route::prefix('/resource')->middleware(['auth', 'role:admin'])->namespace('App\H
     Route::get('all', 'ResourceController@View');
     Route::post('store', 'ResourceController@Store');
     Route::get('edit/{resource_id}', 'ResourceController@Edit');
-    Route::put('update/{resource_id}','ResourceController@Update');
-    Route::get('delete/{resource_id}','ResourceController@Destroy');
+    Route::put('update/{resource_id}', 'ResourceController@Update');
+    Route::get('delete/{resource_id}', 'ResourceController@Destroy');
 });

@@ -35,7 +35,7 @@
                                                 @endforeach
                                             </select>
                                         </div>
-                                        <div class="form-group">
+                                        {{-- <div class="form-group">
                                             <label for="projectinput5">Fee Amount</label>
                                             <select required name="fee_id" class="form-control">
                                                 <option value="">-- Select fee --</option>
@@ -44,7 +44,7 @@
                                                         {{ $feeitem->amount }}</option>
                                                 @endforeach
                                             </select>
-                                        </div>
+                                        </div> --}}
                                         <div class="form-body">
                                             <div class="form-group">
                                                 <input type="text" id="cohort_name" class="form-control"

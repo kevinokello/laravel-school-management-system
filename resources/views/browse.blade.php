@@ -124,8 +124,7 @@
                                     </select>
                                 </div>
                                 <div class="wm-normal-btn">
-                                    <a href="#" class="active">Free</a>
-                                    <a href="#">Paid</a>
+                           
                                 </div>
                                 <div class="wm-view-btn">
                                     <a href="#" class="wmicon-squares active"></a>

@@ -25,8 +25,8 @@
                               <div class="tab-content">
                                 <div class="tab-pane active" id="home">
                                     <div class="row">
-                                        <div class="col-md-4"> <div class="wm-map"> <div id="map"></div> </div> </div>
-                                        <div class="col-md-8">
+                                        <div class="col-md-2"> <div class="wm-map"> </div> </div>
+                                        <div class="col-md-10">
                                             <div class="wm-contact-form">
                                                 <span>Talk To Us Today</span>
                                                 <form>
@@ -92,7 +92,6 @@
                 </div>
             </div>
             <!--// Main Section \\-->
-
 		</div>
 
 @endsection

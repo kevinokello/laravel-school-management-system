@@ -52,7 +52,6 @@ class RegisteredUserController extends Controller
         $user->attachRole('admin');
         event(new Registered($user));
         Auth::login($user);
-        
         return redirect(RouteServiceProvider::HOME);
     }
 }

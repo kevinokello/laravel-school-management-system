@@ -26,7 +26,7 @@ class CohortController extends Controller
         $cohort = new Cohort;
         $cohort->cohort_name = $data['cohort_name'];
         $cohort->academic_id = $data['academic_id'];
-        $cohort->fee_id = $data['fee_id'];
+        // $cohort->fee_id = $data['fee_id'];
         $cohort->created_by = Auth::user()->id;
         $cohort->save();
         session()->flash('success', 'Academic class created succesfully');

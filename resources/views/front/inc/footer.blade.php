@@ -1,11 +1,11 @@
-	<footer id="wm-footer" class="wm-footer-one">
+	{{-- <footer id="wm-footer" class="wm-footer-one">
 
             <!--// FooterNewsLatter \\-->
             <div class="wm-footer-newslatter">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                           
+
                         </div>
                     </div>
                 </div>
@@ -53,4 +53,4 @@
             <!--// FooterWidgets \\-->
 
 
-		</footer>
+		</footer> --}}

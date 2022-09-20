@@ -43,7 +43,6 @@
                                             <label for="projectinput5">Class Name</label>
                                             <select required name="cohort_id" id="cohort" class="form-control">
                                                 <option value="">-- Select Class --</option>
-
                                             </select>
                                         </div>
 

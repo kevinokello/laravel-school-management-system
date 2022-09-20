@@ -6,16 +6,17 @@
         background-color: #2f3969;
     }
 </style>
-
-<header id="wm-header" class="wm-header-one sticky">
+<header id="wm-header" class="wm-header-three sticky">
     <!--// MainHeader \\-->
-    <div class="wm-main-header">
+    <div class="wm-main-header wm-bgcolor-three">
         <div class="container">
             <div class="row">
-                <div class="col-md-3"><a href="{{ url('/') }}" class="wm-logo"><img src="front/images/logo-1.png"
+                <div class="col-md-2"><a href="{{ url('/') }}" class="wm-logo"><img src="front/images/logo-3.png"
                             alt=""></a></div>
-                <div class="col-md-9">
-                    <!--// Navigation \\-->
+                <div class="col-md-10">
+                    <div class="wm-right-section">
+                        <!--// Navigation \\-->
+                        <!--// Navigation \\-->
                     <nav class="navbar navbar-default">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -32,54 +33,10 @@
                                 </li>
                                 <li><a href="{{ url('about') }}">About</a>
                                 </li>
-                                <li class="wm-megamenu-li"><a href="#">Resources</a>
-                                    <ul class="wm-megamenu">
-                                        <li class="row">
-                                            <div class="col-md-6">
-                                                <a href="#" class="wm-thumbnail">
-                                                    <img src="front/extra-images/megamenu-frame.jpg" alt="" />
-                                                </a>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <h4>Category</h4>
-                                                <ul class="wm-megalist">
-                                                    <li><a href="404-page.html">sub category</a></li>
-                                                    <li><a href="about-us.html">sub category</a></li>
-                                                    <li><a href="blog-grid.html">sub category</a></li>
-                                                    <li><a href="blog-list.html">sub category</a></li>
-                                                    <li><a href="blog-detail.html">sub category</a></li>
-                                                    <li><a href="faq-page.html">sub category</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <h4>Category</h4>
-                                                <ul class="wm-megalist">
-                                                    <li><a href="404-page.html">sub category</a></li>
-                                                    <li><a href="about-us.html">sub category</a></li>
-                                                    <li><a href="blog-grid.html">sub category</a></li>
-                                                    <li><a href="blog-list.html">sub category</a></li>
-                                                    <li><a href="blog-detail.html">sub category</a></li>
-                                                    <li><a href="faq-page.html">sub category</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <h4>Category</h4>
-                                                <ul class="wm-megalist">
-                                                    <li><a href="404-page.html">sub category</a></li>
-                                                    <li><a href="about-us.html">sub category</a></li>
-                                                    <li><a href="blog-grid.html">sub category</a></li>
-                                                    <li><a href="blog-list.html">sub category</a></li>
-                                                    <li><a href="blog-detail.html">sub category</a></li>
-                                                    <li><a href="faq-page.html">sub category</a></li>
-                                                </ul>
-                                            </div>
 
-                                        </li>
-                                    </ul>
+                                <li><a href="{{ url('browse') }}">Browse</a>
                                 </li>
-   <li><a href="{{ url('browse') }}">Browse</a>
-                                </li>
-   <li><a href="{{ url('contact') }}">Contact</a>
+                                <li><a href="{{ url('contact') }}">Contact</a>
                                 </li>
 
                             </ul>
@@ -87,13 +44,14 @@
                     </nav>
                     @if (Route::has('login'))
                         @auth
-                            <a class="wm-header-btn btn-primary2" href="{{ url('/dashboard') }}">Dashboard</a>
+                            <a class="wm-header-number" href="{{ url('/dashboard') }}">Dashboard</a>
                         @else
-                            <a href="{{ url('login') }}" class="wm-header-btn btn-primary2">get started</a>
+                            <a href="{{ url('login') }}" class="wm-header-number">Get started</a>
                         @endauth
                     @endif
                     <!--// Navigation \\-->
-
+                        <!--// Navigation \\-->
+                    </div>
                 </div>
             </div>
         </div>
