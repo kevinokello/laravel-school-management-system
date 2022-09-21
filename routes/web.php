@@ -191,7 +191,6 @@ Route::prefix('/school')->middleware(['auth', 'role:admin'])->namespace('App\Htt
     Route::get('delete/{school_id}', 'SchoolController@destroy');
 });
 
-
 Route::prefix('/users')->middleware(['auth', 'role:admin'])->namespace('App\Http\Controllers\Admin')->group(function () {
     Route::get('create', 'UserController@create');
     Route::post('store', 'UserController@store');

@@ -67,6 +67,7 @@
                                     <form class="form-horizontal form-simple" method="POST"
                                         action="{{ route('register') }}">
                                         @csrf
+
                                         <x-label for="name" :value="__('Name')" />
                                         <fieldset class="form-group position-relative has-icon-left mb-1">
                                             <input id="name" type="text"

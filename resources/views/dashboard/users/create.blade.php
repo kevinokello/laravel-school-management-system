@@ -1,23 +1,42 @@
 @extends('layouts.dash')
 @section('content')
+    <style>
+        .btn-primary2 {
+            border-color: #222845;
+            background-color: #222845;
+            color: #FFFFFF;
+        }
+
+        .btn-primary2:hover {
+            background-color: #222845;
+        }
+    </style>
     <div class="app-content content container-fluid">
         <div class="content-wrapper">
-            <div class="content-header row"></div>
             <div class="content-body">
                 <section class="flexbox-container">
-                    <div class="col-md-4 offset-md-4 col-xs-10 offset-xs-1 box-shadow-2 p-0">
+                    <div class="col-md-8  col-xs-10 offset-xs-1 box-shadow-2 p-2">
                         <div class="card border-grey border-lighten-3 m-0">
-                            <div class="card-header no-border">
-                            </div>
                             <div class="card-body collapse in">
                                 <div class="card-block">
                                     <x-auth-validation-errors class="mb-4" :errors="$errors" />
                                     <form class="form-horizontal form-simple" method="POST"
-                                        action="{{ route('register') }}">
+                                        action="{{ url('users/store') }}">
                                         @csrf
+                                        <div class="mt-4">
+                                            <x-label for="school_id" value="{{ __('Select school:') }}" />
+                                            <select name="school_id"
+                                                class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+                                                @foreach ($schools as $item)
+                                                    <option value="{{ $item->id }} ">
+                                                        {{ $item->name }}</option>
+                                                @endforeach
+                                            </select>
+
+                                        </div>
                                         <fieldset class="form-group position-relative has-icon-left mb-1">
                                             <div class="mt-4">
-                                                <x-label for="role_id" value="{{ __('Register as:') }}" />
+                                                <x-label for="role_id" value="{{ __('Select Role:') }}" />
                                                 <select name="role_id"
                                                     class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                                                     <option value="student">Student</option>
@@ -65,7 +84,7 @@
                                         </fieldset>
 
                                         <button type="submit" class="btn btn-primary2 btn-lg btn-block"><i
-                                                class="icon-unlock2"></i> Register</button>
+                                                class="icon-user"></i> Create User</button>
                                     </form>
                                 </div>
                             </div>

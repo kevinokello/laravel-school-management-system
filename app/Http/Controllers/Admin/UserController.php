@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\User;
+use App\Models\School;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules;
 use App\Http\Controllers\Controller;
@@ -21,7 +22,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('dashboard.users.create');
+        $schools = School::where('status', '0')->get();
+        return view('dashboard.users.create', compact('schools'));
     }
 
     /**
@@ -36,6 +38,7 @@ class UserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
+            // 'school_id' => ['required', 'string'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
@@ -44,13 +47,13 @@ class UserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'school_id' => $request->randomNumber,
         ]);
-        // $user->attachRole($request->role_id);
-        $user->attachRole('admin');
+        $user->attachRole($request->role_id);
+        $user->school_id = $request->school_id;
+        // $user->attachRole('admin');
         event(new Registered($user));
-        Auth::login($user);
-        return redirect(RouteServiceProvider::HOME);
+        session()->flash('success', 'user created succesfully');
+        return redirect('users/all');
     }
     public function view()
     {

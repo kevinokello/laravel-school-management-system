@@ -7,9 +7,6 @@
                     <div class="card">
                         <div class="card-header">
                             <div class="row">
-
-
-
                                 <div class="col-12">
 
                                     <div class="box">

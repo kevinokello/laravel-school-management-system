@@ -247,7 +247,7 @@
                           </li>
                       </ul>
                   </li>
-                   <li class="nav-item {{ Request::is('users/create') || Request::is('user/all') ? 'open' : '' }}">
+                   <li class="nav-item {{ Request::is('users/create') || Request::is('users/all') ? 'open' : '' }}">
                       <a href="{{ url('user/all') }}"><i class="icon-ios-home-outline"></i><span
                               data-i18n="nav.menu_levels.main" class="menu-title">Manage Users</span></a>
                       <ul class="menu-content">
