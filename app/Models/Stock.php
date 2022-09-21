@@ -24,5 +24,8 @@ class Stock extends Model
     {
         return $this->belongsTo(StockCategory::class, 'category_id', 'id');
     }
-
+    public function school()
+    {
+        return $this->belongsTo(School::class, 'school_id', 'id');
+    }
 }

@@ -45,7 +45,6 @@
                                                 <option value="">-- Select Class --</option>
                                             </select>
                                         </div>
-
                                         <div class="form-body">
                                             <div class="form-group">
                                                 <label for="projectinput5">Session Name</label>
@@ -53,7 +52,6 @@
                                                     placeholder="Session Name" name="session_name" required>
                                             </div>
                                         </div>
-
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn grey btn-outline-secondary"
@@ -65,11 +63,8 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="card">
-
                         <div class="card-header">
-
                             <h4 class="card-title">Academic sessions</h4>
                         </div>
                         <div class="card-body">
@@ -106,16 +101,18 @@
             </div>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $('#academic').on('change', function() {
                 var academicId = this.value;
                 $('#cohort').html('');
                 $.ajax({
-                    url: '{{ route('getCohorts') }}?academic_id=' + academicId,
+                    url: '{{ url('get-cohort') }}?academic_id=' + academicId,
                     type: 'get',
                     success: function(res) {
-                        $('#cohort').html('<option value="">Select class</option>');
+                        $('#cohort').html(
+                            '<option value="">-- Select cohort --</option>');
                         $.each(res, function(key, value) {
                             $('#cohort').append('<option value="' + value
                                 .id + '">' + value.cohort_name + '</option>');
@@ -125,4 +122,5 @@
             });
         });
     </script>
+
 @endsection

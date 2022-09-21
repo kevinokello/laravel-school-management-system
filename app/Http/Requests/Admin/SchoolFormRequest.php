@@ -4,7 +4,7 @@ namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CohortFormRequest extends FormRequest
+class SchoolFormRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,20 +24,27 @@ class CohortFormRequest extends FormRequest
     public function rules()
     {
         $rules = [
-            'cohort_name' => [
+            'name' => [
                 'required',
                 'string',
                 'max:200'
             ],
-
-            'academic_id' => [
+            'location' => [
+                'required',
+                'string',
+                'max:200'
+            ],
+            'email' => [
                 'required',
                 'string'
             ],
-            // 'fee_id' => [
-            //     'required',
-            //     'integer'
-            // ],
+            'contact' => [
+                'required',
+                'integer'
+            ],
+            'status' => [
+                'nullable'
+            ],
         ];
         return $rules;
     }

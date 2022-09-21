@@ -16,4 +16,8 @@ class Category extends Model
     {
         return $this->hasMany(Resource::class, 'category_id', 'id');
     }
+    public function school()
+    {
+        return $this->belongsTo(School::class, 'school_id', 'id');
+    }
 }

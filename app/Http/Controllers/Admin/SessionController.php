@@ -18,7 +18,6 @@ class SessionController extends Controller
         $academic = Academic::where('status', '0')->get();
         $cohort = Cohort::where('status', '0')->get();
         $session = Session::where('status', '0')->get();
-
         return view('dashboard.session.index', compact(['academic', 'cohort', 'session']));
     }
     public function getCohorts(Request $request)

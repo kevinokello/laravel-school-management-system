@@ -30,7 +30,7 @@
                                             <select required name="academic_id" class="form-control">
                                                 <option value="">-- Select year --</option>
                                                 @foreach ($academic as $acaitem)
-                                                    <option value="{{ $acaitem->academic_year }} ">
+                                                    <option value="{{ $acaitem->id }} ">
                                                         {{ $acaitem->academic_year }}</option>
                                                 @endforeach
                                             </select>

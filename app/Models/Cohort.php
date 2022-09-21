@@ -27,5 +27,9 @@ class Cohort extends Model
     {
         return $this->hasMany(Student::class, 'student_id', 'id');
     }
+    public function school()
+    {
+        return $this->belongsTo(School::class, 'school_id', 'id');
+    }
 
 }

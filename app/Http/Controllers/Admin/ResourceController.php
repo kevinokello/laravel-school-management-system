@@ -61,7 +61,7 @@ class ResourceController extends Controller
     public function Update(ResourceFormRequest $request, $resource_id)
     {
         $data = $request->validated();
-        $resource = new Resource;
+        $resource = Resource::find($resource_id);
         $resource->category_id = $data['category_id'];
         $resource->sub_category_id = $data['sub_category_id'];
         if ($request->hasfile('image')) {

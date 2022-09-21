@@ -25,4 +25,8 @@ class FrontController extends Controller
     {
         return view('about');
     }
+    public function single()
+    {
+        return view('single');
+    }
 }

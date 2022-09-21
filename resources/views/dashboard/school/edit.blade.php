@@ -1,0 +1,74 @@
+@extends('layouts.dash')
+@section('content')
+<div class="app-content content container-fluid">
+    <div class="content-wrapper">
+        <div class="content-body">
+            <section id="basic-form-layouts">
+
+                <div class="row match-height">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title" id="basic-layout-form-center">Edit School Info</h4>
+                                <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
+                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        <li><a data-action="expand"><i class="icon-expand2"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body collapse in">
+                                <div class="card-block">
+                                    <form class="form" action="{{ url('school/update/' . $school->id) }}" method="POST">
+                                        @csrf
+                                        @method('PUT')
+                                            <div class="col-md-6 offset-md-3">
+                                                <div class="form-body">
+                                                    <div class="form-group">
+                                                        <label for="eventInput1">School Name</label>
+                                                        <input type="text" id="eventInput1" class="form-control" placeholder="name" name="name" value="{{ $school->name }}">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="eventInput2">Location</label>
+                                                        <input type="text" id="eventInput2" class="form-control" placeholder="Location" name="location" value="{{ $school->location }}">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="eventInput4">Email</label>
+                                                        <input type="email" id="eventInput4" class="form-control" placeholder="Rmail" name="email" value="{{ $school->email }}">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="eventInput5">Contact Number</label>
+                                                        <input type="tel" id="eventInput5" class="form-control" name="contact" placeholder="contact" value="{{ $school->contact }}">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label for="projectinput4">Status</label>
+                                                            <input type="checkbox" class="form-control" name="status" {{ $school->status == '1' ? 'checked' : '' }}>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-actions center">
+
+                                            <button style="  border-color: #222845;
+            background-color: #222845;
+            color: #fff; height:50px; width:170px; " type="submit" class="btn btn-primary">
+                                                Update School
+                                            </button>
+
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+@endsection

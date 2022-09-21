@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\Admin;
 
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -12,7 +12,7 @@ use Illuminate\Auth\Events\Registered;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Session;
 
-class RegisteredUserController extends Controller
+class UserController extends Controller
 {
     /**
      * Display the registration view.
@@ -21,8 +21,7 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        $randomNumber = random_int(10000, 99999);
-        return view('auth.register');
+        return view('dashboard.users.create');
     }
 
     /**
@@ -52,5 +51,14 @@ class RegisteredUserController extends Controller
         event(new Registered($user));
         Auth::login($user);
         return redirect(RouteServiceProvider::HOME);
+    }
+    public function view()
+    {
+        return view('dashboard.users.all');
+    }
+    public function destroy()
+    {
+        session()->flash('success', 'user deleted succesfully');
+        return view('dashboard.users.all');
     }
 }

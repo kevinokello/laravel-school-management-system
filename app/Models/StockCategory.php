@@ -21,4 +21,8 @@ class StockCategory extends Model
     {
         return $this->hasMany(Supplier::class, 'supplier_id', 'id');
     }
+    public function school()
+    {
+        return $this->belongsTo(School::class, 'school_id', 'id');
+    }
 }

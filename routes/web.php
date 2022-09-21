@@ -18,6 +18,7 @@ Route::get('/', 'App\Http\Controllers\Front\FrontController@welcome');
 Route::get('browse', 'App\Http\Controllers\Front\FrontController@browse');
 Route::get('contact', 'App\Http\Controllers\Front\FrontController@contact');
 Route::get('about', 'App\Http\Controllers\Front\FrontController@about');
+Route::get('single', 'App\Http\Controllers\Front\FrontController@single');
 
 require __DIR__ . '/auth.php';
 
@@ -25,7 +26,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', 'App\Http\Controllers\Admin\DashboardController@index')->name('dashboard');
 });
 
-Route::get('get-cohorts', [SessionController::class, 'getCohorts'])->name('getCohorts');
+Route::get('get-cohort', [SessionController::class, 'getCohorts'])->name('getCohorts');
 Route::get('get-cohorts', [StudentController::class, 'getCohorts'])->name('getCohorts');
 Route::get('get-sessions', [StudentController::class, 'getSessions'])->name('getSessions');
 Route::get('get-subcategory', [ResourceController::class, 'getSubCategory'])->name('getSubCategory');
@@ -179,4 +180,21 @@ Route::prefix('/resource')->middleware(['auth', 'role:admin'])->namespace('App\H
     Route::get('edit/{resource_id}', 'ResourceController@Edit');
     Route::put('update/{resource_id}', 'ResourceController@Update');
     Route::get('delete/{resource_id}', 'ResourceController@Destroy');
+});
+
+Route::prefix('/school')->middleware(['auth', 'role:admin'])->namespace('App\Http\Controllers\Admin')->group(function () {
+    Route::get('add', 'SchoolController@create');
+    Route::post('store', 'SchoolController@store');
+    Route::get('edit/{school_id}', 'SchoolController@edit');
+    Route::put('update/{school_id}', 'SchoolController@update');
+    Route::get('all', 'SchoolController@view');
+    Route::get('delete/{school_id}', 'SchoolController@destroy');
+});
+
+
+Route::prefix('/users')->middleware(['auth', 'role:admin'])->namespace('App\Http\Controllers\Admin')->group(function () {
+    Route::get('create', 'UserController@create');
+    Route::post('store', 'UserController@store');
+    Route::get('all', 'UserController@view');
+    Route::get('delete/{user_id}', 'UserController@destroy');
 });

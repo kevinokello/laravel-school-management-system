@@ -5,6 +5,33 @@
         color: #FFFFFF;
         background-color: #2f3969;
     }
+    a.button6 {
+        display: inline-block;
+        padding: 0.7em 1.4em;
+        margin: 0 02em 0.3em 0;
+        margin-top: 20px;
+        border-radius: 0.15em;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: #FFFFFF;
+        background-color: #ffb400;
+        box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
+        text-align: center;
+        position: relative;
+    }
+    a.button6:active {
+        top: 0.1em;
+    }
+
+    @media all and (max-width:30em) {
+        a.button6 {
+            display: block;
+            margin: 0.4em auto;
+        }
+    }
 </style>
 <header id="wm-header" class="wm-header-three sticky">
     <!--// MainHeader \\-->
@@ -17,39 +44,40 @@
                     <div class="wm-right-section">
                         <!--// Navigation \\-->
                         <!--// Navigation \\-->
-                    <nav class="navbar navbar-default">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                                data-target="#navbar-collapse-1" aria-expanded="true">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-                        <div class="collapse navbar-collapse" id="navbar-collapse-1">
-                            <ul class="nav navbar-nav">
-                                <li class="active"><a href="{{ url('/') }}">Home</a>
-                                </li>
-                                <li><a href="{{ url('about') }}">About</a>
-                                </li>
+                        <nav class="navbar navbar-default">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                    data-target="#navbar-collapse-1" aria-expanded="true">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li class="active" ><a href="{{ url('/') }}">Home</a>
+                                    </li>
+                                    <li><a href="{{ url('about') }}">About</a>
+                                    </li>
 
-                                <li><a href="{{ url('browse') }}">Browse</a>
-                                </li>
-                                <li><a href="{{ url('contact') }}">Contact</a>
-                                </li>
+                                    <li><a href="{{ url('browse') }}">Browse</a>
+                                    </li>
+                                    <li><a href="{{ url('contact') }}">Contact</a>
+                                    </li>
 
-                            </ul>
-                        </div>
-                    </nav>
-                    @if (Route::has('login'))
-                        @auth
-                            <a class="wm-header-number" href="{{ url('/dashboard') }}">Dashboard</a>
-                        @else
-                            <a href="{{ url('login') }}" class="wm-header-number">Get started</a>
-                        @endauth
-                    @endif
-                    <!--// Navigation \\-->
+                                </ul>
+                            </div>
+                        </nav>
+                        @if (Route::has('login'))
+                            @auth
+                            <a href="{{ url('/dashboard') }}" class="button6"><b>Dashboard</b></a>
+                            @else
+                            <a href="{{ url('login') }}" class="button6" style="background-color:#668fff"><b>Get Started</b></a>
+
+                            @endauth
+                        @endif
+                        <!--// Navigation \\-->
                         <!--// Navigation \\-->
                     </div>
                 </div>

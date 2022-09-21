@@ -25,5 +25,8 @@ class Academic extends Model
     {
         return $this->hasMany(Session::class, 'academic_id', 'id');
     }
-
+    public function school()
+    {
+        return $this->belongsTo(School::class, 'school_id', 'id');
+    }
 }
