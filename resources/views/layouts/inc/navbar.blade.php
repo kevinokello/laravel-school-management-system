@@ -6,7 +6,7 @@
                             class="nav-link nav-menu-main menu-toggle hidden-xs"><i
                                 class="icon-menu5 font-large-1"></i></a></li>
                     <li class="nav-item">
-                        <a href="../" class="navbar-brand nav-link"><img alt="branding logo"
+                        <a href="{{ url('/') }}" class="navbar-brand nav-link"><img alt="branding logo"
                                 src="{{ url('front/images/logo-3.png') }}"
                                 data-expand="{{ url('front/images/logo-3.png') }}"
                                 data-collapse="front/images/logo-3.png" class="brand-logo" /></a>

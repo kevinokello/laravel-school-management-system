@@ -50,9 +50,9 @@
                                                         <label for="example-text-input" class="form-label"
                                                             style="margin-top:43px;">
                                                         </label>
-                                                        <i style="height:40px; width:170px;"
-                                                            class="btn btn-success btn-rounded waves-effect waves-light fas fa-plus-circle addeventmore">
-                                                            <b>Add Payment</b></i>
+                                                        <a href="#"
+                                                            class="btn btn-success waves-effect waves-light fas fa-plus-circle addeventmore"><b>
+                                                                Record Payment</b></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -88,7 +88,7 @@
                                                     <button
                                                         style="  border-color: #222845; background-color: #222845; color: #fff; height:50px; width:170px; "
                                                         type="submit" class="btn btn-primary">
-                                                        Update student details
+                                                        Update payment details
                                                     </button>
                                                 </div>
                                             </div>

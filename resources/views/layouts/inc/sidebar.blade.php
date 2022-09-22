@@ -95,7 +95,6 @@
                                               class="icon-ios-personadd-outline"></i>View
                                           Suppliers</a>
                                   </li>
-
                               </ul>
                           </li>
                           <li
@@ -121,7 +120,7 @@
 
                               </ul>
                           </li>
-                          <li
+                          {{-- <li
                               class="nav-item  {{ Request::is('inventory/purchase/all') || Request::is('inventory/purchase/add') || Request::is('inventory/purchase/pending') ? 'open' : '' }}">
                               <a href="#" data-i18n="nav.menu_levels.second_level_child.main" class="menu-item"><i
                                       class="icon-ios-cart-outline"></i>Manage
@@ -152,7 +151,7 @@
                                   </li>
 
                               </ul>
-                          </li>
+                          </li> --}}
                           {{-- <li
                               class="nav-item  {{ Request::is('inventory/invoice/add') || Request::is('inventory/invoice/pending') || Request::is('inventory/invoice/all') ? 'open' : '' }}">
                               <a href="#" data-i18n="nav.menu_levels.second_level_child.main"

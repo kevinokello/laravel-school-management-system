@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
+use App\Models\School;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
@@ -11,6 +12,7 @@ use Illuminate\Support\Facades\Hash;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Session;
 use App\Http\Requests\Auth\LoginRequest;
+use Symfony\Component\Console\Helper\Table;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -30,14 +32,21 @@ class AuthenticatedSessionController extends Controller
      * @param  \App\Http\Requests\Auth\LoginRequest  $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    
+
     public function store(LoginRequest $request)
     {
         $request->authenticate();
         $data = $request->input();
-        $sid = DB::table('users')->where('email', $data['email'])->first();
-        $request->session()->put('email', $data['email']);
-        return redirect()->intended(RouteServiceProvider::HOME);
+        // $sid = DB::table('users')->where('school_id', $data['school_id'])->get('18');
+        // $sid = User::where('email', $data['email'])
+        //     ->pluck('school_id')
+        //     ->all();
+        $sid = DB::table('users')->where('email', $data['email'])->first()->school_id;
+        session(['school_id' => $sid]);
+        // Session::put('variableName', $value);
+        // $request->session()->put('email', $data['email']);
+        // return redirect()->intended(RouteServiceProvider::HOME);
+        echo $sid;
     }
 
     /**

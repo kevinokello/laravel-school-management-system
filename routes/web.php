@@ -15,6 +15,7 @@ Route::prefix('/session')->namespace('App\Http\Controllers')->group(
         Route::get('remove', 'SessionsController@deleteSessionData');
     }
 );
+
 Route::get('/', 'App\Http\Controllers\Front\FrontController@welcome');
 Route::get('browse', 'App\Http\Controllers\Front\FrontController@browse');
 Route::get('contact', 'App\Http\Controllers\Front\FrontController@contact');
