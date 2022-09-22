@@ -19,13 +19,12 @@
                         <div class="card border-grey border-lighten-3 m-0">
                             <div class="card-body collapse in">
                                 <div class="card-block">
-                                    <x-auth-validation-errors class="mb-4" :errors="$errors" />
                                     <form class="form-horizontal form-simple" method="POST"
                                         action="{{ url('users/store') }}">
                                         @csrf
                                         <div class="mt-4">
                                             <x-label for="school_id" value="{{ __('Select school:') }}" />
-                                            <select name="school_id"
+                                            <select id="school_id" name="school_id"
                                                 class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                                                 @foreach ($schools as $item)
                                                     <option value="{{ $item->id }} ">

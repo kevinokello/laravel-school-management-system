@@ -26,7 +26,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', 'App\Http\Controllers\Admin\DashboardController@index')->name('dashboard');
 });
 
-Route::get('get-cohort', [SessionController::class, 'getCohorts'])->name('getCohorts');
+Route::get('get-cohort', [SessionController::class, 'getCohort'])->name('getCohort');
 Route::get('get-cohorts', [StudentController::class, 'getCohorts'])->name('getCohorts');
 Route::get('get-sessions', [StudentController::class, 'getSessions'])->name('getSessions');
 Route::get('get-subcategory', [ResourceController::class, 'getSubCategory'])->name('getSubCategory');

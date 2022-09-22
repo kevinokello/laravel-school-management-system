@@ -7,6 +7,7 @@
             color: #FFFFFF;
             background-color: #2f3969;
         }
+
         a.button62 {
             display: inline-block;
             padding: 0.7em 1.4em;
@@ -18,7 +19,7 @@
             text-transform: uppercase;
             font-weight: 400;
             color: #FFFFFF;
-            background-color: #ffb400;
+            background-color: #b99663;
             box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
             text-align: center;
             position: relative;

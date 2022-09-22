@@ -21,7 +21,6 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        $randomNumber = random_int(10000, 99999);
         return view('auth.register');
     }
 
@@ -45,8 +44,8 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'school_id' => $request->randomNumber,
         ]);
+
         // $user->attachRole($request->role_id);
         $user->attachRole('admin');
         event(new Registered($user));

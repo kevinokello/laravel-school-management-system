@@ -253,12 +253,12 @@
                       <ul class="menu-content">
                           <li>
                               <a href="{{ url('users/create') }}" data-i18n="nav.menu_levels.second_level"
-                                  class="menu-item {{ Request::is('school/add') ? 'active' : '' }}"><i
+                                  class="menu-item {{ Request::is('users/create') ? 'active' : '' }}"><i
                                       class="icon-ios-home-outline"></i>Add New</a>
                           </li>
                           <li>
                               <a href="{{ url('users/all') }}" data-i18n="nav.menu_levels.second_level"
-                                  class="menu-item {{ Request::is('school/all') ? 'active' : '' }}"><i
+                                  class="menu-item {{ Request::is('users/all') ? 'active' : '' }}"><i
                                       class="icon-ios-home-outline"></i>All</a>
                           </li>
 

@@ -19,6 +19,13 @@ class AcademicController extends Controller
     {
         $data = $request->validated();
         $academic = new Academic;
+        // $session_id = Session::get('session_id');
+        // if (!isset($session_id)) {
+        //     $session_id = str_random(40);
+        //     Session::put('session_id', $session_id);
+        // }
+        // $academic->session_id = $session_id;
+        $academic->school_id = $request->session()->get('email');
         $academic->academic_year = $data['academic_year'];
         $academic->created_by = Auth::user()->id;
         $academic->save();

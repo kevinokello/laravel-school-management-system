@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Events\Registered;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Session;
+use App\Http\Requests\Admin\UserFormRequest;
 
 class UserController extends Controller
 {
@@ -22,7 +23,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        $schools = School::where('status', '0')->get();
+        $schools = School::where('status', '1')->get();
         return view('dashboard.users.create', compact('schools'));
     }
 
@@ -34,30 +35,32 @@ class UserController extends Controller
      *
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function store(Request $request)
+    public function store(UserFormRequest $request)
     {
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            // 'school_id' => ['required', 'string'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
-        ]);
-
+        $data = $request->validated();
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'school_id' => $request->school_id,
         ]);
-        $user->attachRole($request->role_id);
-        $user->school_id = $request->school_id;
+        Session::push('user', [
+            'id' => $request['id'],
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'school_id' => $request['school_id']
+        ]);
         // $user->attachRole('admin');
-        event(new Registered($user));
+        $user->save();
         session()->flash('success', 'user created succesfully');
         return redirect('users/all');
     }
+
+
     public function view()
     {
-        return view('dashboard.users.all');
+        $users = User::where('status', '1')->get();
+        return view('dashboard.users.all', compact('users'));
     }
     public function destroy()
     {

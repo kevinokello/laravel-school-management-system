@@ -2,9 +2,11 @@
 
 namespace App\Http\Requests\Admin;
 
-use Illuminate\Foundation\Http\FormRequest;
 
-class AcademicFormRequest extends FormRequest
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rules\Password;
+
+class UserFormRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,12 +26,26 @@ class AcademicFormRequest extends FormRequest
     public function rules()
     {
         $rules = [
-            'academic_year' => [
+            'name' => [
                 'required',
                 'string',
-                'max:200'
+                'max:255'
             ],
-           
+            'school_id' => [
+                'required',
+                'string'
+            ],
+            'email' => [
+                'required',
+                'string',
+                'email',
+                'max:255',
+                'unique:users'
+            ],
+            'password' => [
+                'required',
+                'confirmed', Password::defaults()
+            ],
         ];
         return $rules;
     }

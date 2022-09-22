@@ -24,22 +24,37 @@
                                 <table class="table table-hover mb-0">
                                     <thead>
                                         <tr>
-                                            <th>Sl</th>
-                                               <th>Status</th>
-                                                  <th>Action</th>
+                                            <th>id</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
                                     </thead>
+
+
                                     <tbody>
-                                        <tr>
-                                            <td></td>
-                                            <td>
-                                                <span class="btn btn-warning">Pending</span>
-                                            </td>
-                                            <td>
-                                                <a href="{{ url('inventory/purchase/delete') }}" class="btn btn-danger sm"
-                                                    title="Delete Data" id="delete"> <i class="fas fa-trash-alt"></i>
-                                                </a>
-                                            </td>
-                                        </tr>
+
+                                        @foreach ($users as $key => $item)
+                                            <tr>
+                                                <td> {{ $key + 1 }} </td>
+                                                <td> {{ $item->name }} </td>
+                                                <td> {{ $item->email }} </td>
+                                                <td>
+                                                    @if ($item->status == '0')
+                                                        <span class="btn btn-warning">Inactive</span>
+                                                    @elseif($item->status == '1')
+                                                        <span class="btn btn-success">Active</span>
+                                                    @endif
+                                                </td>
+                                                <td>
+                                                    <a href="{{ url('inventory/purchase/delete', $item->id) }}"
+                                                        class="btn btn-danger sm" title="Delete Data" id="delete"> <i
+                                                            class="fas fa-trash-alt"></i> </a>
+                                                </td>
+
+                                            </tr>
+                                        @endforeach
+
                                     </tbody>
                                 </table>
                             </div>

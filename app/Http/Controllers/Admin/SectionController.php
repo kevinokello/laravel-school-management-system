@@ -2,22 +2,21 @@
 
 namespace App\Http\Controllers\Admin;
 
-use DB;
 use App\Models\Cohort;
-use App\Models\Session;
+use App\Models\Section;
 use App\Models\Academic;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\Admin\SessionFormRequest;
 
-class SessionController extends Controller
+class SectionController extends Controller
 {
     public function index()
     {
         $academic = Academic::where('status', '0')->get();
         $cohort = Cohort::where('status', '0')->get();
-        $session = Session::where('status', '0')->get();
+        $session = Section::where('status', '0')->get();
         return view('dashboard.session.index', compact(['academic', 'cohort', 'session']));
     }
     public function getCohort(Request $request)
@@ -36,7 +35,7 @@ class SessionController extends Controller
     public function store(SessionFormRequest $request)
     {
         $data = $request->validated();
-        $session = new Session;
+        $session = new Section;
         $session->session_name = $data['session_name'];
         $session->cohort_id = $data['cohort_id'];
         $session->academic_id = $data['academic_id'];
@@ -45,10 +44,9 @@ class SessionController extends Controller
         session()->flash('success', 'Academic session created succesfully');
         return redirect()->back();
     }
-
     public function destroy($session_id)
     {
-        $session = Session::find($session_id);
+        $session = Section::find($session_id);
         if ($session) {
             $session->delete();
             session()->flash('success', 'academic session deleted succesfully');
