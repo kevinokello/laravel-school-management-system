@@ -15,9 +15,9 @@ class SessionController extends Controller
 {
     public function index()
     {
-        $academic = Academic::where('status', '0')->get();
-        $cohort = Cohort::where('status', '0')->get();
-        $session = Session::where('status', '0')->get();
+        $academic =Academic::where('school_id', session('email'))->get();
+        $cohort = Cohort::where('school_id', session('email'))->get();
+        $session =Session::where('school_id', session('email'))->get();
         return view('dashboard.session.index', compact(['academic', 'cohort', 'session']));
     }
     public function getCohort(Request $request)
@@ -41,6 +41,7 @@ class SessionController extends Controller
         $session->cohort_id = $data['cohort_id'];
         $session->academic_id = $data['academic_id'];
         $session->created_by = Auth::user()->id;
+        $session->school_id = $request->session()->get('email');
         $session->save();
         session()->flash('success', 'Academic session created succesfully');
         return redirect()->back();

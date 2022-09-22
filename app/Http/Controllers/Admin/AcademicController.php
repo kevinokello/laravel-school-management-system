@@ -12,7 +12,7 @@ class AcademicController extends Controller
 {
     public function index()
     {
-        $academic = Academic::all();
+        $academic = Academic::where('school_id', session('email'))->get();
         return view('dashboard.academic.index',compact('academic'));
     }
     public function store(AcademicFormRequest $request)

@@ -39,7 +39,7 @@ class SupplierFormRequest extends FormRequest
                 'string',
                 'max:200'
             ],
-            'stock_category_id' => [
+            'unit_id' => [
                 'nullable',
                 'string',
                 'max:200'

@@ -13,8 +13,8 @@ class StockCategoryController extends Controller
 {
     public function index()
     {
-        $category = StockCategory::all();
-        $department = Unit::where('status', '1')->get();
+        $category = StockCategory::where('school_id', session('email'))->get();
+        $department = Unit::where('school_id', session('email'))->get();
         return view('dashboard.inventory.category.index', compact(['category', 'department']));
     }
     public function store(CategoryFormRequest $request)
@@ -24,6 +24,7 @@ class StockCategoryController extends Controller
         $category->name = $data['name'];
         $category->unit_id = $data['unit_id'];
         $category->created_by = Auth::user()->id;
+        $category->school_id = $request->session()->get('email');
         $category->save();
         session()->flash('success', 'Category created succesfully');
         return redirect()->back();

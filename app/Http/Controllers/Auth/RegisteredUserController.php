@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -49,6 +50,9 @@ class RegisteredUserController extends Controller
         // $user->attachRole($request->role_id);
         $user->attachRole('admin');
         event(new Registered($user));
+        $data = $request->input();
+        $sid = DB::table('users')->where('email', $data['email'])->first();
+        $request->session()->put('email', $data['email']);
         Auth::login($user);
         return redirect(RouteServiceProvider::HOME);
     }

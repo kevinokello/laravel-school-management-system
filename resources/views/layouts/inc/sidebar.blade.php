@@ -153,7 +153,7 @@
 
                               </ul>
                           </li>
-                          <li
+                          {{-- <li
                               class="nav-item  {{ Request::is('inventory/invoice/add') || Request::is('inventory/invoice/pending') || Request::is('inventory/invoice/all') ? 'open' : '' }}">
                               <a href="#" data-i18n="nav.menu_levels.second_level_child.main"
                                   class="menu-item"><i class="icon-ios-printer-outline"></i>Manage
@@ -173,7 +173,7 @@
                                           List</a>
                                   </li>
                               </ul>
-                          </li>
+                          </li> --}}
                       </ul>
                   </li>
                   <li
@@ -188,6 +188,10 @@
                           <li><a href="{{ url('accounts/student/fee/view') }}"
                                   class="menu-item {{ Request::is('accounts/student/fee/view') ? 'active' : '' }}"><i
                                       class="icon-ios-calculator-outline"></i>View</a>
+                          </li>
+                           <li><a href="{{ url('accounts/student/fee/getstudent') }}"
+                                  class="menu-item {{ Request::is('accounts/student/fee/getstudent') ? 'active' : '' }}"><i
+                                      class="icon-ios-calculator-outline"></i>Search student</a>
                           </li>
                       </ul>
 

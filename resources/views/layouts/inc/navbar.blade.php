@@ -5,18 +5,14 @@
                     <li class="nav-item mobile-menu hidden-md-up float-xs-left"><a
                             class="nav-link nav-menu-main menu-toggle hidden-xs"><i
                                 class="icon-menu5 font-large-1"></i></a></li>
-  {{-- <li class="nav-item">
-              <a href="../" class="navbar-brand nav-link"
-                ><img
-                  alt="branding logo"
-                  src="{{ url('assets/images/logo.svg') }}"
-                  data-expand="{{ url('assets/images/logo.svg') }}"
-                  data-collapse="../../app-assets/images/logo/robust-logo-small.png"
-                  class="brand-logo"
-              /></a>
-            </li> --}}
-                    <li class="nav-item hidden-md-up float-xs-right"><a data-toggle="collapse" data-target="#navbar-mobile"
-                            class="nav-link open-navbar-container"><i
+                    <li class="nav-item">
+                        <a href="../" class="navbar-brand nav-link"><img alt="branding logo"
+                                src="{{ url('front/images/logo-3.png') }}"
+                                data-expand="{{ url('front/images/logo-3.png') }}"
+                                data-collapse="front/images/logo-3.png" class="brand-logo" /></a>
+                    </li>
+                    <li class="nav-item hidden-md-up float-xs-right"><a data-toggle="collapse"
+                            data-target="#navbar-mobile" class="nav-link open-navbar-container"><i
                                 class="icon-ellipsis pe-2x icon-icon-rotate-right-right"></i></a></li>
                 </ul>
             </div>

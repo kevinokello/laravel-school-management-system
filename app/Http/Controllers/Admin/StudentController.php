@@ -17,15 +17,14 @@ class StudentController extends Controller
 {
     public function create()
     {
-        $session = Session::where('status', '0')->get();
-        $academic = Academic::where('status', '0')->get();
-        $cohort = Cohort::where('status', '0')->get();
-
+        $session =Session::where('school_id', session('email'))->get();
+        $academic =Academic::where('school_id', session('email'))->get();
+        $cohort = Cohort::where('school_id', session('email'))->get();
         return view('dashboard.student.add_student', compact(['academic', 'cohort', 'session']));
     }
     public function view()
     {
-        $students = Student::all();
+        $students = Student::where('school_id', session('email'))->get();
         return view('dashboard.student.view_students', compact('students'));
     }
 
@@ -47,7 +46,7 @@ class StudentController extends Controller
         $student->mobile = $data['mobile'];
         $student->admission_date = $data['admission_date'];
         if ($request->hasfile('student_photo')) {
-            
+
             $file = $request->file('student_photo');
             $filename = time() . '.' . $file->getClientOriginalExtension();
             $file->move('uploads/students/', $filename);
@@ -58,8 +57,7 @@ class StudentController extends Controller
         $student->previous_school_details = $data['previous_school_details'];
         $student->aditional_notes = $data['aditional_notes'];
         $student->medical_condition = $data['medical_condition'];
-        // $student->status = $request->status == true ? '1' : '0';
-        // $student->created_by = Auth::user()->id;
+        $student->school_id = $request->session()->get('email');
         $student->save();
         session()->flash('success', 'student added succesfully');
         return redirect('student/view-students');

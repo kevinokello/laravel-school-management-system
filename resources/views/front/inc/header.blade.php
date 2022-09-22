@@ -34,6 +34,10 @@
             margin: 0.4em auto;
         }
     }
+
+    .wm-search-btn {
+        padding-top: 20px;
+    }
 </style>
 <header id="wm-header" class="wm-header-three sticky">
     <!--// MainHeader \\-->
@@ -69,15 +73,15 @@
                         </nav>
                         @if (Route::has('login'))
                             @auth
-                                <a href="{{ url('/dashboard') }}" class="button6"><b>Dashboard</b></a>
+                                <a href="{{ url('/dashboard') }}" class="button6 wm-transparent-button"><b>Dashboard</b></a>
                             @else
-                                <a href="{{ url('login') }}" class="button6" style="background-color:#b99663"><b>Get
+                                <a href="{{ url('login') }}" class="button6 wm-transparent-button"
+                                    style="background-color:#b99663"><b>Get
                                         Started</b></a>
-
                             @endauth
                         @endif
-                        <!--// Navigation \\-->
-                        <!--// Navigation \\-->
+                        {{-- <a href="#" class="wm-search-btn" data-toggle="modal" data-target="#ModalSearch"><i
+                                class="wmicon-search"></i></a> --}}
                     </div>
                 </div>
             </div>

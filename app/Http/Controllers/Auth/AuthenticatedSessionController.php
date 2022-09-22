@@ -30,35 +30,15 @@ class AuthenticatedSessionController extends Controller
      * @param  \App\Http\Requests\Auth\LoginRequest  $request
      * @return \Illuminate\Http\RedirectResponse
      */
-
-
+    
     public function store(LoginRequest $request)
     {
-        if ($request->isMethod('post')) {
-            $data = $request->input();
-            // $adminCount = User::where(['email' => $data['email'], 'password' => Hash::make($data['password']), 'status' => 1])->count();
-            $request->authenticate();
-            if ($request) {
-                $sid = DB::table('users')->where('email', $data['email'])->first();
-                // return $sid->email;
-                Session::put('email', $data['email']);
-                return redirect('/dashboard');
-            } else {
-                //echo "failed"; die;
-                session()->flash('danger', 'invalid email or password');
-                return redirect()->back();
-            }
-        }
-        return view('auth.login');
+        $request->authenticate();
+        $data = $request->input();
+        $sid = DB::table('users')->where('email', $data['email'])->first();
+        $request->session()->put('email', $data['email']);
+        return redirect()->intended(RouteServiceProvider::HOME);
     }
-
-    // public function store(LoginRequest $request)
-    // {
-    //     $request->authenticate();
-    //     $request->session()->regenerate();
-    //     Session::put('name', 'John');
-    //     return redirect()->intended(RouteServiceProvider::HOME);
-    // }
 
     /**
      * Destroy an authenticated session.
@@ -69,11 +49,9 @@ class AuthenticatedSessionController extends Controller
     public function destroy(Request $request)
     {
         Auth::guard('web')->logout();
-
         $request->session()->invalidate();
-
+        Session::flush();
         $request->session()->regenerateToken();
-
         return redirect('/');
     }
 }

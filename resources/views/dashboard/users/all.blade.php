@@ -34,9 +34,9 @@
 
                                     <tbody>
 
-                                        @foreach ($users as $key => $item)
+                                        @foreach ($users as $item)
                                             <tr>
-                                                <td> {{ $key + 1 }} </td>
+                                                <td> {{ $item->id }} </td>
                                                 <td> {{ $item->name }} </td>
                                                 <td> {{ $item->email }} </td>
                                                 <td>
@@ -47,9 +47,11 @@
                                                     @endif
                                                 </td>
                                                 <td>
-                                                    <a href="{{ url('inventory/purchase/delete', $item->id) }}"
-                                                        class="btn btn-danger sm" title="Delete Data" id="delete"> <i
-                                                            class="fas fa-trash-alt"></i> </a>
+                                                    <a href="{{ url('users/edit/' . $item->id) }}"><i
+                                                            class="fa-solid fa-pen-to-square"></i></a>
+                                                    <a href="{{ url('users/delete', $item->id) }}" class="btn btn-danger sm"
+                                                        title="Delete Data" id="delete"> <i class="fas fa-trash-alt"></i>
+                                                    </a>
                                                 </td>
 
                                             </tr>

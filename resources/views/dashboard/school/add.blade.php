@@ -46,11 +46,11 @@
                                                                 name="contact" placeholder="contact">
                                                         </div>
                                                         <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label for="projectinput4">Status</label>
-                                                            <input type="checkbox" class="form-control" name="status">
+                                                            <div class="form-group">
+                                                                <label for="projectinput4">Status</label>
+                                                                <input type="checkbox" class="form-control" name="status">
+                                                            </div>
                                                         </div>
-                                                    </div>
                                                     </div>
                                                 </div>
                                             </div>

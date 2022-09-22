@@ -12,7 +12,7 @@ class UnitController extends Controller
 {
     public function index()
     {
-        $unit = Unit::all();
+        $unit = Unit::where('school_id', session('email'))->get();
         return view('dashboard.inventory.unit.index', compact('unit'));
     }
     public function store(UnitFormRequest $request)
@@ -21,8 +21,9 @@ class UnitController extends Controller
         $unit = new Unit;
         $unit->name = $data['name'];
         $unit->created_by = Auth::user()->id;
+        $unit->school_id = $request->session()->get('email');
         $unit->save();
-        session()->flash('success', 'Unit created succesfully');
+        session()->flash('success', 'Inventory Unit created succesfully');
         return redirect()->back();
     }
     public function destroy($unit_id)
@@ -30,10 +31,10 @@ class UnitController extends Controller
         $unit = Unit::find($unit_id);
         if ($unit) {
             $unit->delete();
-            session()->flash('success', 'unit deleted succesfully');
+            session()->flash('success', 'Inventory unit deleted succesfully');
             return redirect()->back();
         } else {
-            session()->flash('danger', 'no unit id found');
+            session()->flash('danger', 'no inventory unit id found');
             return redirect()->back();
         }
     }

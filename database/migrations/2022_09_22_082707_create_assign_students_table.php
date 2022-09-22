@@ -13,14 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('sections', function (Blueprint $table) {
+        Schema::create('assign_students', function (Blueprint $table) {
             $table->id();
-            $table->string('session_name');
-            $table->string('cohort_id');
-            $table->string('academic_id');
-            $table->tinyInteger('status')->default('0');
-            $table->integer('created_by');
-            $table->string('school_id')->default('0');
+            $table->integer('student_id')->comment('user_id=student_id');
+            $table->integer('cohort_id');
+            $table->integer('academic_id');
             $table->timestamps();
         });
     }
@@ -32,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sections');
+        Schema::dropIfExists('assign_students');
     }
 };

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SessionController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\Admin\StudentController;
+use App\Http\Controllers\Admin\StudentFeeController;
 use App\Http\Controllers\Admin\ResourceController;
 use App\Http\Controllers\Front\FrontController;
 
@@ -95,7 +96,7 @@ Route::prefix('/inventory')->middleware(['auth', 'role:admin'])->namespace('App\
     Route::get('/supplier/add', 'SupplierController@SupplierAdd');
     Route::post('/supplier/store', 'SupplierController@SupplierStore');
     Route::get('/supplier/edit/{id}', 'SupplierController@SupplierEdit');
-    Route::post('/supplier/update', 'SupplierController@SupplierUpdate');
+    Route::post('/supplier/update/{id}', 'SupplierController@SupplierUpdate');
     Route::get('/supplier/delete/{id}', 'SupplierController@SupplierDelete');
 
     Route::get('/stock/all', 'StockController@All');
@@ -141,6 +142,7 @@ Route::prefix('/accounts')->middleware(['auth', 'role:admin'])->namespace('App\H
 
     Route::get('student/fee/view', 'StudentFeeController@StudentFeeView');
     Route::get('student/fee/add', 'StudentFeeController@StudentFeeAdd');
+    Route::get('student/fee/getstudent', 'StudentFeeController@StudentFeeGet');
     Route::get('student/fee/keyin', 'StudentFeeController@StudentFeeKeyin');
     Route::get('student/fee/edit/{student_id}', 'StudentFeeController@StudentFeeEdit');
     Route::post('student/fee/update/{student_id}', 'StudentFeeController@StudentFeeUpdate');
@@ -195,5 +197,7 @@ Route::prefix('/users')->middleware(['auth', 'role:admin'])->namespace('App\Http
     Route::get('create', 'UserController@create');
     Route::post('store', 'UserController@store');
     Route::get('all', 'UserController@view');
+    Route::get('edit/{user_id}', 'UserController@edit');
     Route::get('delete/{user_id}', 'UserController@destroy');
+    Route::put('update/{user_id}', 'UserController@update');
 });

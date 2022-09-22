@@ -14,12 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('sessions', function (Blueprint $table) {
-            $table->string('id')->primary();
-            $table->foreignId('user_id')->nullable()->index();
-            $table->string('ip_address', 45)->nullable();
-            $table->text('user_agent')->nullable();
-            $table->text('payload');
-            $table->integer('last_activity')->index();
+            $table->id();
+            $table->string('session_name');
+            $table->string('cohort_id');
+            $table->string('academic_id');
+            $table->tinyInteger('status')->default('0');
+            $table->integer('created_by');
+            $table->string('school_id')->default('0');
+            $table->timestamps();
         });
     }
 

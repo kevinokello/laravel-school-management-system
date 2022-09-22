@@ -41,32 +41,84 @@
         <div class="wm-main-section">
             <div class="container">
                 <div class="row">
-
                     <div class="col-md-12">
-                        <div class="wm-filter-box">
-                            <div class="wm-apply-select">
-                                <select>
-                                    <option>Select Category</option>
-                                    <option>Category</option>
+                        <div class="wm-search-courses">
+                            <h5 class="wm-color-three">Search Course</h5>
+                            <form>
+                                <ul>
+                                    <li>
+                                        <div class="wm-apply-select">
+                                            <select>
+                                                <option>Category</option>
+                                                <option>Category</option>
+                                                <option>Category</option>
+                                                <option>Category</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="wm-apply-select">
+                                            <select>
+                                                <option>SubCategory</option>
+                                                <option>SubCategory</option>
+                                                <option>SubCategory</option>
+                                                <option>SubCategory</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label><input type="submit" value="" class="wm-bgcolor-three"> <i
+                                                class="wmicon-search"></i></label>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        <div class="wm-courses wm-courses-medium">
+                            <ul class="row">
+                                <aside class="col-md-3">
 
-                                </select>
-                            </div>
-                            <div class="wm-apply-select">
-                                <select>
-                                    <option>Select Sub category</option>
-                                    <option>Sub category</option>
-
-                                </select>
-                            </div>
-                            <div class="wm-normal-btn">
-                                <a href="{{ url('login') }}" class="button62"
-                                    style="background-color:#668fff"><b>Search</b></a>
-                            </div>
+                                    <div class="widget widget_categories">
+                                        <div class="wm-widget-title">
+                                            <h2>Categories</h2>
+                                        </div>
+                                        <ul>
+                                            <li><a href="#">Chemistry</a></li>
+                                            <li><a href="#">Classical Archaeology </a></li>
+                                            <li><a href="#">Classics & English</a></li>
+                                            <li><a href="#">Materials Science</a></li>
+                                            <li><a href="#">Mathematics</a></li>
+                                            <li><a href="#">Physics & Philosophy</a></li>
+                                            <li><a href="#">Theology & Religion</a></li>
+                                            <li><a href="#">Law</a></li>
+                                            <li><a href="#">Chemistry</a></li>
+                                            <li><a href="#">Classical Archaeology </a></li>
+                                            <li><a href="#">Classics & English</a></li>
+                                            <li><a href="#">Materials Science</a></li>
+                                            <li><a href="#">Mathematics</a></li>
+                                            <li><a href="#">Physics & Philosophy</a></li>
+                                            <li><a href="#">Theology & Religion</a></li>
+                                            <li><a href="#">Law</a></li>
+                                        </ul>
+                                    </div>
+                                </aside>
+                                <li class="col-md-9">
+                                    <div class="courses-medium-text">
+                                        <h5><a href="{{ url('single') }}" class="wm-color-three">Data Science &
+                                                Engineering</a></h5>
+                                        <p>You will be introduced to the study of human physiology, human anatomy,
+                                            pharmacology and neuroscience.</p>
+                                        <ul class="courses-options">
+                                            <li><i class="wmicon-social7"></i> <a href="#">342</a></li>
+                                            <li><i class="wmicon-social6"></i> <a href="#">10</a></li>
+                                            <li><i class="wmicon-black"></i> <a href="#">Anne J.</a></li>
+                                            <li><i class="wmicon-time2"></i> <a href="#">1 year</a></li>
+                                            <li><i class="wmicon-location"></i> <a href="#">Campus L2</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                         <div class="wm-courses-getting-started">
-                            <div class="wm-title-full">
-                                <h2>Latest resources</h2>
-                            </div>
                             <div class="wm-courses-started">
                                 <span>Course Additional Entry</span>
                                 <ul class="wm-courses-started-listing">
@@ -126,7 +178,6 @@
                             </ul>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

@@ -1035,6 +1035,7 @@ address {
 }
 .wm-banner-one {
     position: relative;
+
 }
 .wm-banner-one-nav-layer.slick-current {
     border-left: 4px solid #b99663;
@@ -1237,6 +1238,7 @@ address {
 .wm-banner-three-layer {
     float: left;
     width: 100%;
+
 }
 .wm-banner-three-layer,
 .wm-caption-three .container,
@@ -1245,6 +1247,7 @@ address {
 }
 .wm-caption-three .container {
     height: 100%;
+
 }
 .wm-caption-three {
     position: absolute;

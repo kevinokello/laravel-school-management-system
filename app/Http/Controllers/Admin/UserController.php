@@ -50,6 +50,7 @@ class UserController extends Controller
             'email' => $request['email'],
             'school_id' => $request['school_id']
         ]);
+        $user->attachRole($request->role_id);
         // $user->attachRole('admin');
         $user->save();
         session()->flash('success', 'user created succesfully');
@@ -62,8 +63,43 @@ class UserController extends Controller
         $users = User::where('status', '1')->get();
         return view('dashboard.users.all', compact('users'));
     }
-    public function destroy()
+    public function edit($user_id)
     {
+        $schools = School::where('status', '1')->get();
+        $user = User::findOrFail($user_id);
+        return view('dashboard.users.edit', compact(['user', 'schools']));
+    }
+    public function update(Request $request, $user_id)
+    {
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'school_id' => $request->school_id,
+        ]);
+        Session::push('user', [
+            'id' => $request['id'],
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'school_id' => $request['school_id']
+        ]);
+        $user->attachRole($request->role_id);
+        // $user->attachRole('admin');
+        $user->update();
+        session()->flash('success', 'user info updated succesfully');
+        return redirect('users/all');
+    }
+    public function destroy($user_id)
+    {
+        $users = User::find($user_id);
+        if ($users) {
+            $users->delete();
+            session()->flash('success', 'user deleted succesfully');
+            return redirect()->back();
+        } else {
+            session()->flash('danger', 'no user id found');
+            return redirect()->back();
+        }
         session()->flash('success', 'user deleted succesfully');
         return view('dashboard.users.all');
     }

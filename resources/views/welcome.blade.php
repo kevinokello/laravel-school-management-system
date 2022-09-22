@@ -5,7 +5,7 @@
     <div class="wm-main-banner">
         <div class="wm-banner-three">
             <div class="wm-banner-three-layer">
-                <img src="front/extra-images/banner-view3-1.jpg" alt="">
+                <img src="front/extra-images/1.jpg" alt="">
                 <div class="wm-caption-three">
                     <div class="container">
                         <div class="wm-caption-three-inner">
@@ -19,7 +19,20 @@
             </div>
 
             <div class="wm-banner-three-layer">
-                <img src="front/extra-images/banner-view3-3.jpg" alt="">
+                <img src="front/extra-images/2.jpg" alt="">
+                <div class="wm-caption-three">
+                    <div class="container">
+                        <div class="wm-caption-three-inner">
+                            <h1>Why <span>don’t</span> start the hard study?</h1>
+                            <p>Computer science is the study of computers and their uses, and the field comprises a wide
+                                range of subjects.</p>
+                            <a class="wm-discover-btn wm-bgcolor-three" href="{{ url('about') }}">discover us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="wm-banner-three-layer">
+                <img src="front/extra-images/3.jpg" alt="">
                 <div class="wm-caption-three">
                     <div class="container">
                         <div class="wm-caption-three-inner">

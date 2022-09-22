@@ -15,9 +15,9 @@
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="form-group">
-                                                    <h5>Year <span class="text-danger"> </span></h5>
+                                                    <h5>Select Year <span class="text-danger"> </span></h5>
                                                     <div class="controls">
-                                                        <select name="academic_id" id="academic_id" required=""
+                                                        <select name="academic_id" id="academic" required=""
                                                             class="form-control">
                                                             <option value="" selected="" disabled="">Select Year
                                                             </option>
@@ -33,17 +33,13 @@
                                             <div class="col-md-3">
 
                                                 <div class="form-group">
-                                                    <h5>Class <span class="text-danger"> </span></h5>
+                                                    <h5>Select Class <span class="text-danger"> </span></h5>
                                                     <div class="controls">
-                                                        <select name="cohort_id" id="cohort_id" required=""
+                                                        <select name="cohort_id" id="cohort" required=""
                                                             class="form-control">
                                                             <option value="" selected="" disabled="">Select
                                                                 Class
                                                             </option>
-                                                            @foreach ($classes as $class)
-                                                                <option value="{{ $class->id }}">
-                                                                    {{ $class->cohort_name }}</option>
-                                                            @endforeach
                                                         </select>
                                                     </div>
                                                 </div>
@@ -51,7 +47,7 @@
 
                                             <div class="col-md-3">
                                                 <div class="form-group">
-                                                    <h5>Fee Category <span class="text-danger"> </span></h5>
+                                                    <h5>Fee Type <span class="text-danger"> </span></h5>
                                                     <div class="controls">
                                                         <select name="fee_category_id" id="fee_category_id" required=""
                                                             class="form-control">
@@ -88,49 +84,17 @@
                                                 </div>
 
                                             </div> <!-- End Col md 3 -->
-
                                             <div class="col-md-3">
                                                 <button type="submit"
                                                     style="background-color: #222845;color: #fff; height:50px; width:190px; "
                                                     class="btn btn-outline-success block btn-lg" type="submit">
                                                     Add
                                                 </button>
-
                                             </div> <!-- End Col md 3 -->
                                         </div><!--  end row -->
                                     </form>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div id="DocumentResults">
-                                        <script id="document-template" type="text/x-handlebars-template">
-  <form action="{{ url('student/fee/store') }}" method="post" >
-  	@csrf
- 	<table class="table table-bordered table-striped" style="width: 100%">
- 	<thead>
- 		<tr>
-        @{{ {
-    thsource }}}
- 		</tr>
- 	 </thead>
- 	 <tbody>
- 	 	@{{ #each this }}
- 	 	<tr>
- 	 		@{{ {
-    tdsource }}}
- 	 	</tr>
- 	 	@{{ /each }}
- 	 </tbody>
- 	</table>
-
- <button type="submit" class="btn btn-primary" style="margin-top: 10px">Submit</button>
-
- </form>
-    </script>
-                                    </div>
-                                </div> <!-- // End col md 12 -->
-                            </div> <!-- // END Row  -->
                         </div>
                         <!-- /.col -->
                     </div>
@@ -140,30 +104,26 @@
 
                 </div>
             </div>
-            <script type="text/javascript">
-                $(document).on('click', '#search', function() {
-                    var year_id = $('#year_id').val();
-                    var class_id = $('#class_id').val();
-                    var fee_category_id = $('#fee_category_id').val();
-                    var date = $('#date').val();
-                    $.ajax({
-                        url: "{{ url('student/fee/getstudent') }}",
-                        type: "get",
-                        data: {
-                            'year_id': year_id,
-                            'class_id': class_id,
-                            'fee_category_id': fee_category_id,
-                            'date': date
-                        },
-                        beforeSend: function() {},
-                        success: function(data) {
-                            var source = $("#document-template").html();
-                            var template = Handlebars.compile(source);
-                            var html = template(data);
-                            $('#DocumentResults').html(html);
-                            $('[data-toggle="tooltip"]').tooltip();
-                        }
-                    });
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#academic').on('change', function() {
+                var academicId = this.value;
+                $('#cohort').html('');
+                $.ajax({
+                    url: '{{ url('get-cohort') }}?academic_id=' + academicId,
+                    type: 'get',
+                    success: function(res) {
+                        $('#cohort').html(
+                            '<option value="">-- Select cohort --</option>');
+                        $.each(res, function(key, value) {
+                            $('#cohort').append('<option value="' + value
+                                .id + '">' + value.cohort_name + '</option>');
+                        });
+                    }
                 });
-            </script>
+            });
+        });
+    </script>
+
         @endsection

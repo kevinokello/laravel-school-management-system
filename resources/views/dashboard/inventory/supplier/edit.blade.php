@@ -10,7 +10,7 @@
                             <div class="card">
                                 <div class="card-body collapse in">
                                     <div class="card-block">
-                                        <form method="post" action="{{ url('inventory/supplier/store') }}" id="myForm"
+                                        <form method="post" action="{{ url('inventory/supplier/update/' .$supplier->id) }}" id="myForm"
                                             class="form">
                                             @csrf
                                             <div class="form-body">
@@ -66,7 +66,7 @@
             background-color: #222845;
             color: #fff; height:50px; width:170px; "
                                                 type="submit" class="btn btn-primary">
-                                                Add supplier
+                                                Edit supplier
                                             </button>
                                         </form>
                                     </div>

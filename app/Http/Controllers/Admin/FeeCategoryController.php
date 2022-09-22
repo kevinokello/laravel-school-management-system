@@ -10,7 +10,7 @@ class FeeCategoryController extends Controller
 {
     public function ViewFeeCat()
     {
-        $data['allData'] = FeeCategory::all();
+        $data['allData'] = FeeCategory::where('school_id', session('email'))->get();
         return view('dashboard.fee.category.view', $data);
     }
 
@@ -21,21 +21,15 @@ class FeeCategoryController extends Controller
 
     public function FeeCatStore(Request $request)
     {
-
         $validatedData = $request->validate([
-            'name' => 'required|unique:fee_categories,name',
+            'name' => 'required',
         ]);
-
         $data = new FeeCategory();
         $data->name = $request->name;
+        $data->school_id = $request->session()->get('email');
         $data->save();
-
-        $notification = array(
-            'message' => 'Fee Category Inserted Successfully',
-            'alert-type' => 'success'
-        );
-
-        return redirect('academic/fee/category/view')->with($notification);
+        session()->flash('success', 'fee category added succesfully');
+        return redirect('academic/fee/category/view');
     }
 
 
@@ -50,37 +44,19 @@ class FeeCategoryController extends Controller
 
     public function FeeCategoryUpdate(Request $request, $id)
     {
-
         $data = FeeCategory::find($id);
-
-        $validatedData = $request->validate([
-            'name' => 'required|unique:fee_categories,name,' . $data->id
-
-        ]);
-
-
         $data->name = $request->name;
         $data->save();
-
-        $notification = array(
-            'message' => 'Fee Category Updated Successfully',
-            'alert-type' => 'success'
-        );
-
-        return redirect('academic/fee/category/view')->with($notification);
+        session()->flash('success', 'fee category updated succesfully');
+        return redirect('academic/fee/category/view');
     }
-
 
     public function FeeCategoryDelete($id)
     {
         $user = FeeCategory::find($id);
         $user->delete();
-
-        $notification = array(
-            'message' => 'Fee Category Deleted Successfully',
-            'alert-type' => 'info'
-        );
-        return redirect('dashboard/fee/category/view')->with($notification);
+        session()->flash('success', 'fee category deleted succesfully');
+        return redirect('academic/fee/category/view');
     }
 
 }
