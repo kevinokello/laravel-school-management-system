@@ -73,8 +73,7 @@
                         </nav>
                         @if (Route::has('login'))
                             @auth
-
-                                <a href="{{ url('/dashboard') }}" class="button6 wm-transparent-button"><b>Dashboard</b></a>
+                                <a href="{{ url('/dashboard') }}" class="button6 wm-transparent-button"><b>Account</b></a>
                             @else
                                 <a href="{{ url('login') }}" class="button6 wm-transparent-button"
                                     style="background-color:#b99663"><b>Login / Signup</b></a>

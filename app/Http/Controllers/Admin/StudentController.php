@@ -6,7 +6,10 @@ use App\Models\Cohort;
 use App\Models\Session;
 use App\Models\Student;
 use App\Models\Academic;
+use App\Models\StudentFee;
+use App\Models\FeeCategory;
 use Illuminate\Http\Request;
+use App\Models\FeeCategoryAmount;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -52,11 +55,11 @@ class StudentController extends Controller
             $file->move('uploads/students/', $filename);
             $student->student_photo = $filename;
         }
-        // $student->parent_info1 = $data['parent_info1'];
         $student->admission_no = $data['admission_no'];
         $student->previous_school_details = $data['previous_school_details'];
         $student->aditional_notes = $data['aditional_notes'];
         $student->medical_condition = $data['medical_condition'];
+        $student->fee_id = StudentFee::where('cohort_id', $data['cohort_id']);
         $student->school_id = $request->session()->get('school_id');
         $student->save();
         session()->flash('success', 'student added succesfully');

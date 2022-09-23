@@ -21,4 +21,8 @@ class FeeCategoryAmount extends Model
     {
         return $this->belongsTo(School::class, 'school_id', 'id');
     }
+    public function students()
+    {
+        return $this->hasMany(Student::class, 'fee_id', 'id');
+    }
 }
