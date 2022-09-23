@@ -25,7 +25,7 @@ class AuthenticatedSessionController extends Controller
     {
         return view('auth.login');
     }
-
+    
     /**
      * Handle an incoming authentication request.
      *
@@ -37,16 +37,21 @@ class AuthenticatedSessionController extends Controller
     {
         $request->authenticate();
         $data = $request->input();
-        // $sid = DB::table('users')->where('school_id', $data['school_id'])->get('18');
-        // $sid = User::where('email', $data['email'])
-        //     ->pluck('school_id')
-        //     ->all();
         $sid = DB::table('users')->where('email', $data['email'])->first()->school_id;
+        // $request->validate([
+        //     'email'    => 'required|string',
+        //     'password' => 'required|string',
+        // ]);
+        // $email = $request->email;
+        // $password = $request->password;
+        // if (Auth::attempt(['email' => $email, 'password' => $password, 'status' => 'Active'])) {
+        //     $user = Auth::User();
+        //     Session::put('name', $user->name);
+        // } else {
+        //     return redirect('login');
+        // }
         session(['school_id' => $sid]);
-        // Session::put('variableName', $value);
-        // $request->session()->put('email', $data['email']);
-        // return redirect()->intended(RouteServiceProvider::HOME);
-        echo $sid;
+        return redirect()->intended(RouteServiceProvider::HOME);
     }
 
     /**

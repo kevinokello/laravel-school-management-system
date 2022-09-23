@@ -10,7 +10,7 @@ class FeeCategoryController extends Controller
 {
     public function ViewFeeCat()
     {
-        $data['allData'] = FeeCategory::where('school_id', session('email'))->get();
+        $data['allData'] = FeeCategory::where('school_id', session('school_id'))->get();
         return view('dashboard.fee.category.view', $data);
     }
 
@@ -26,7 +26,7 @@ class FeeCategoryController extends Controller
         ]);
         $data = new FeeCategory();
         $data->name = $request->name;
-        $data->school_id = $request->session()->get('email');
+        $data->school_id = $request->session()->get('school_id');
         $data->save();
         session()->flash('success', 'fee category added succesfully');
         return redirect('academic/fee/category/view');
@@ -58,5 +58,4 @@ class FeeCategoryController extends Controller
         session()->flash('success', 'fee category deleted succesfully');
         return redirect('academic/fee/category/view');
     }
-
 }

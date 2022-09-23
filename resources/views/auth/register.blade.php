@@ -34,13 +34,13 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
         .btn-primary2 {
-            border-color: #222845;
-            background-color: #222845;
+            border-color: #054473;
+            background-color: #054473;
             color: #FFFFFF;
         }
 
         .btn-primary2:hover {
-            background-color: #222845;
+            background-color: #054473;
         }
     </style>
 </head>
@@ -55,19 +55,17 @@
                         <div class="card border-grey border-lighten-3 m-0">
                             <div class="card-header no-border">
                                 {{-- <div class="card-title text-xs-center">
-					<img src="../../app-assets/images/logo/robust-logo-dark.png" alt="branding logo">
-				</div> --}}
-                                <h6 class="card-subtitle line-on-side text-muted text-xs-center font-small-3 pt-2">
-                                    <span>Create Account</span>
+                                    <img src="front/images/bg.png" alt="branding logo">
+                                </div> --}}
+                                <h6 class="card-subtitle line-on-side text-xs-center pt-2">
+                                    <span>Sign up and start learning</span>
                                 </h6>
                             </div>
                             <div class="card-body collapse in">
                                 <div class="card-block">
-                                    <x-auth-validation-errors class="mb-4" :errors="$errors" />
                                     <form class="form-horizontal form-simple" method="POST"
                                         action="{{ route('register') }}">
                                         @csrf
-
                                         <x-label for="name" :value="__('Name')" />
                                         <fieldset class="form-group position-relative has-icon-left mb-1">
                                             <input id="name" type="text"

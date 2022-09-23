@@ -20,7 +20,7 @@ ul li:hover .wm-event-featured-text h5 a,
 .wm-partners-slider-two .slick-arrow,
 .wm-contact-main-color .wm-contact-service-two ul li h5,
 .wm-contact-main-color .contact-social-icon li i {
-    color: #222845;
+    color: #054473;
 }
 .wm-bgcolor-three,
 .wm-bgcolorhover-three:hover,
@@ -30,13 +30,13 @@ ul li:hover .wm-event-featured-text h5 a,
 .wm-readarticle-btn:hover,
 .wm-subscribe-color.wm-subscribe-form form input[type="submit"],
 .wm-contact-main-color .wm-ctservice-icon {
-    background-color: #222845;
+    background-color: #054473;
 }
 .wm-bordercolor-three,
 .wm-bordercolorhover-three:hover,
 .widget_contact_form form input[type="submit"],
 .wm-readarticle-btn {
-    border-color: #222845;
+    border-color: #054473;
 }
 
 /* ColorTwo */
@@ -76,5 +76,5 @@ ul li:hover .wm-event-featured-text h5 a,
 .wm-recent-list-slider .slick-arrow:hover,
 .wm-testimonial-navslider .slick-arrow:hover,
 .wm-partners-slider-two .slick-arrow:hover {
-    box-shadow: 0px 0px 0px 2px #222845 inset;
+    box-shadow: 0px 0px 0px 2px #054473 inset;
 }

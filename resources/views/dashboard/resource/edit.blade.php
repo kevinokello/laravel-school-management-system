@@ -124,7 +124,7 @@
                                             </div>
                                     </div>
                                     <button
-                                        style="  border-color: #222845; background-color: #222845; color: #fff; height:50px; width:170px; "
+                                        style="  border-color: #054473; background-color: #054473; color: #fff; height:50px; width:170px; "
                                         type="submit" class="btn btn-primary">
                                         Update Resource
                                     </button>

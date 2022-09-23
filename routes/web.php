@@ -1,12 +1,15 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\SessionController;
 use App\Http\Controllers\SessionsController;
-use App\Http\Controllers\Admin\StudentController;
-use App\Http\Controllers\Admin\StudentFeeController;
-use App\Http\Controllers\Admin\ResourceController;
 use App\Http\Controllers\Front\FrontController;
+use App\Http\Controllers\Admin\SessionController;
+use App\Http\Controllers\Admin\StudentController;
+use App\Http\Controllers\Admin\ResourceController;
+use App\Http\Controllers\Admin\StudentFeeController;
+
+require __DIR__ . '/auth.php';
 
 Route::prefix('/session')->namespace('App\Http\Controllers')->group(
     function () {
@@ -16,14 +19,19 @@ Route::prefix('/session')->namespace('App\Http\Controllers')->group(
     }
 );
 
+//Frontend routes
 Route::get('/', 'App\Http\Controllers\Front\FrontController@welcome');
 Route::get('browse', 'App\Http\Controllers\Front\FrontController@browse');
 Route::get('contact', 'App\Http\Controllers\Front\FrontController@contact');
 Route::get('about', 'App\Http\Controllers\Front\FrontController@about');
 Route::get('single', 'App\Http\Controllers\Front\FrontController@single');
+Route::get('category/{category_slug}', 'App\Http\Controllers\Front\FrontController@category');
+Route::get('subcategory/{category_slug}/{subcategory_slug}', 'App\Http\Controllers\Front\FrontController@subcategory');
+Route::get('resource/{category_slug}/{subcategory_slug}/{article_slug}', 'App\Http\Controllers\Front\FrontController@resource');
 
-require __DIR__ . '/auth.php';
 
+
+//Backend Routes
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', 'App\Http\Controllers\Admin\DashboardController@index')->name('dashboard');
 });
@@ -107,19 +115,14 @@ Route::prefix('/inventory')->middleware(['auth', 'role:admin'])->namespace('App\
     Route::post('/stock/update', 'StockController@Update');
     Route::get('/stock/delete/{id}', 'StockController@Delete');
 
-    // Route::get('/supplier/all', 'SupplierController@index');
-    // Route::get('/supplier/add-supplier', 'SupplierController@create');
-
     Route::get('/purchase/all', 'PurchaseController@PurchaseAll');
     Route::get('/purchase/add', 'PurchaseController@PurchaseAdd');
     Route::post('/purchase/store', 'PurchaseController@PurchaseStore');
     Route::get('/purchase/delete/{id}', 'PurchaseController@PurchaseDelete');
     Route::get('/purchase/pending', 'PurchaseController@PurchasePending');
     Route::get('/purchase/approve/{id}', 'PurchaseController@PurchaseApprove');
-
-    Route::get('/daily/purchase/report', 'PurchaseController@DailyPurchaseReport');
-    Route::get('/daily/purchase/pdf', 'PurchaseController@DailyPurchasePdf');
-
+    // Route::get('/daily/purchase/report', 'PurchaseController@DailyPurchaseReport');
+    // Route::get('/daily/purchase/pdf', 'PurchaseController@DailyPurchasePdf');
 
     Route::get('/invoice/all', 'InvoiceController@InvoiceAll');
     Route::get('/invoice/add', 'InvoiceController@invoiceAdd');

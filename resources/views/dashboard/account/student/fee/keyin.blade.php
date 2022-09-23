@@ -1,4 +1,3 @@
-
 @extends('layouts.dash')
 @section('content')
     <div class="app-content content container-fluid">
@@ -20,6 +19,7 @@
                                                             <th>Name </th>
                                                             <th>Class</th>
                                                             <th>Session</th>
+                                                            <th>Fee Balance</th>
                                                             <th>Action</th>
                                                         </tr>
                                                     </thead>
@@ -31,9 +31,8 @@
                                                                 <td>{{ $sitem->last_name }}</td>
                                                                 <td>{{ $sitem->cohort_id }}</td>
                                                                 <td>{{ $sitem->session_id }}</td>
+                                                                <td> {{ $sitem->fee_id }}</td>
                                                                 <td>
-                                                                    <a href="#"
-                                                                        class="btn btn-info">Quick View</a>
                                                                     <a href="{{ url('accounts/student/fee/edit/' . $sitem->id) }}"
                                                                         class="btn btn-success">Debit</a>
                                                                 </td>

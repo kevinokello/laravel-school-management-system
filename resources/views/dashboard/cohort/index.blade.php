@@ -5,7 +5,7 @@
             <div class="content-body">
                 <div class="col-xl-13 col-lg-12">
                     <div class="text-center">
-                        <button type="button" style="background-color: #222845;color: #fff; height:50px; width:190px; "
+                        <button type="button" style="background-color: #054473;color: #fff; height:50px; width:190px; "
                             class="btn btn-outline-success block btn-lg" data-toggle="modal" data-target="#small">
                             New Cohort/class
                         </button>

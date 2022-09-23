@@ -882,7 +882,7 @@ address {
     opacity: 0;
 }
 .wm-header-three .navbar-nav > li:hover > a:before {
-    opacity: 1;
+visibility: hidden;
     bottom: 0px;
 }
 .wm-header-number {
@@ -1035,7 +1035,6 @@ address {
 }
 .wm-banner-one {
     position: relative;
-
 }
 .wm-banner-one-nav-layer.slick-current {
     border-left: 4px solid #b99663;
@@ -1238,7 +1237,6 @@ address {
 .wm-banner-three-layer {
     float: left;
     width: 100%;
-
 }
 .wm-banner-three-layer,
 .wm-caption-three .container,
@@ -1247,7 +1245,6 @@ address {
 }
 .wm-caption-three .container {
     height: 100%;
-
 }
 .wm-caption-three {
     position: absolute;
@@ -1646,7 +1643,7 @@ span.wm-blue-transparent {
     font-size: 45px;
 }
 .wm-plain-service h5 a {
-    color: #222845;
+    color: #054473;
 }
 .wm-plain-service h5 {
     margin-bottom: 20px;
@@ -2547,7 +2544,7 @@ ul li:hover .wm-coursemodren-btn {
 }
 .wm-event-latest-slider .slick-arrow {
     font-size: 16px;
-    color: #222845;
+    color: #054473;
     top: auto;
     bottom: 0px;
 }
@@ -5331,13 +5328,13 @@ ul li:hover .wm-ctservice-icon {
     margin-bottom: 30px;
 }
 .wm-editore-text p {
-    color: #222845;
+    color: #054473;
     margin-bottom: 20px;
     font-size: 16px;
 }
 .wm-editore-text ul li {
     list-style: none;
-    color: #222845;
+    color: #054473;
     font-size: 16px;
     margin-bottom: 2px;
 }
@@ -5419,7 +5416,7 @@ ul li:hover .wm-ctservice-icon {
 .wm-detail-editore h3 {
     font-size: 30px;
     border-bottom: 2px solid #f2f2f2;
-    color: #222845;
+    color: #054473;
     padding-bottom: 12px;
     margin-bottom: 22px;
 }
@@ -5630,7 +5627,7 @@ ul li:hover .wm-ctservice-icon {
     float: left;
     margin-bottom: 0px;
     font-weight: 400;
-    color: #222845;
+    color: #054473;
 }
 .wm-register-title span {
     float: right;
@@ -5652,7 +5649,7 @@ ul li:hover .wm-ctservice-icon {
     float: left;
     list-style: none;
     width: 20%;
-    color: #222845;
+    color: #054473;
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
@@ -5734,7 +5731,7 @@ ul li:hover .wm-ctservice-icon {
 .wm-event-options ul li span {
     font-weight: 700;
     text-transform: uppercase;
-    color: #222845;
+    color: #054473;
     font-size: 14px;
 }
 .wm-event-options ul i {
@@ -5746,7 +5743,7 @@ ul li:hover .wm-ctservice-icon {
 }
 .wm-event-options ul li p {
     margin-bottom: 0px;
-    color: #222845;
+    color: #054473;
 }
 .wm-buyticket-section,
 .wm-buyticket-section ul li,
@@ -7573,12 +7570,12 @@ aside .widget {
 }
 .wm-all-events:hover {
     color: #ffffff;
-    background-color: #222845;
+    background-color: #054473;
 }
 .wm-all-events {
-    border: 2px solid #222845;
+    border: 2px solid #054473;
     border-radius: 25px;
-    color: #222845;
+    color: #054473;
     float: left;
     font-size: 12px;
     font-weight: 600;
@@ -8435,7 +8432,7 @@ input[type="checkbox"] {
 .wm-futurecourse h4 {
     float: left;
     font-size: 16px;
-    color: #222845;
+    color: #054473;
     display: block;
     margin: 0px;
     padding-bottom: 4px;
@@ -8460,7 +8457,7 @@ input[type="checkbox"] {
     margin-right: 14px;
 }
 .wm-futurecourse li a {
-    color: #222845;
+    color: #054473;
     font-size: 15px;
     margin-left: 24px;
     position: relative;
@@ -10819,7 +10816,7 @@ input[type="checkbox"] {
     width: 100%;
 }
 .wm-footer-newslatter {
-    background-color: #222845;
+    background-color: #054473;
     padding: 17px 0px;
 }
 .wm-footer-newslatter form i {
@@ -11001,7 +10998,7 @@ input[type="checkbox"] {
     padding: 35px 0px 32px 0px;
 }
 .wm-copyright span {
-    color: #222845;
+    color: #054473;
     font-size: 15px;
 }
 .wm-copyright span i {

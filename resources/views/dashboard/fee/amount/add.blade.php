@@ -63,8 +63,8 @@
                                 <div class="text-xs-right">
 
                                     <input
-                                        style="  border-color: #222845;
-            background-color: #222845;
+                                        style="  border-color: #054473;
+            background-color: #054473;
             color: #fff;"
                                         type="submit" class="btn btn-primary mb-5" value="Submit">
                                 </div>

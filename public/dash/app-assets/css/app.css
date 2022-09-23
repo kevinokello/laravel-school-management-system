@@ -47,7 +47,7 @@ html body.bg-full-screen-image {
     background-size: cover;
 }
 html body .pace .pace-progress {
-    background: #222845;
+    background: #054473;
 }
 
 /*
@@ -156,7 +156,7 @@ footer.footer-light {
 }
 
 footer.footer-dark {
-    background: #222845;
+    background: #054473;
     color: #fff;
 }
 
@@ -408,7 +408,7 @@ footer.footer-dark {
 }
 .main-menu.menu-dark {
     color: #dcdcdc;
-    background: #222845;
+    background: #054473;
 }
 .main-menu.menu-dark .main-menu-header {
     padding: 20px;
@@ -422,7 +422,7 @@ footer.footer-dark {
     border-color: #020304;
 }
 .main-menu.menu-dark .navigation {
-    background: #222845;
+    background: #054473;
 }
 .main-menu.menu-dark .navigation .navigation-header {
     color: #dcdcdc;
@@ -453,14 +453,14 @@ footer.footer-dark {
     top: 3px;
 }
 .main-menu.menu-dark .navigation > li.open > ul {
-    background: #222845;
+    background: #054473;
 }
 .main-menu.menu-dark .navigation > li.open > a {
     color: #c3c3c3;
-    background: #222845;
+    background: #054473;
 }
 .main-menu.menu-dark .navigation > li.open .hover > a {
-    background: #222845;
+    background: #054473;
 }
 .main-menu.menu-dark .navigation > li:not(.open) > ul {
     display: none;
@@ -469,7 +469,7 @@ footer.footer-dark {
 .main-menu.menu-dark .navigation > li:hover > a,
 .main-menu.menu-dark .navigation > li.active > a {
     color: #c3c3c3;
-    background-color: #222845;
+    background-color: #054473;
 }
 .main-menu.menu-dark .navigation > li.hover > a.mm-next,
 .main-menu.menu-dark .navigation > li:hover > a.mm-next,
@@ -477,17 +477,17 @@ footer.footer-dark {
     background-color: inherit;
 }
 .main-menu.menu-dark .navigation > li.active > a {
-    background-color: #222845;
+    background-color: #054473;
 }
 .main-menu.menu-dark .navigation > li .active {
-    background: #222845;
+    background: #054473;
 }
 .main-menu.menu-dark .navigation > li .active > a {
     color: #ffffff;
-    background: #222845;
+    background: #054473;
 }
 .main-menu.menu-dark .navigation > li .active .hover > a {
-    background: #222845;
+    background: #054473;
 }
 .main-menu.menu-dark .navigation > li ul {
     padding: 0;
@@ -505,51 +505,51 @@ footer.footer-dark {
     display: none;
 }
 .main-menu.menu-dark .navigation > li ul .open {
-    background: #222845;
+    background: #054473;
 }
 .main-menu.menu-dark .navigation > li ul .open > a {
     color: #dcdcdc;
 }
 .main-menu.menu-dark .navigation > li ul .open > ul {
     display: block;
-    background: #222845;
+    background: #054473;
 }
 .main-menu.menu-dark .navigation > li ul .open > ul li > a {
     padding: 8px 20px 8px 60px;
 }
 .main-menu.menu-dark .navigation > li ul .open > ul .open {
-    background: #222845;
+    background: #054473;
 }
 .main-menu.menu-dark .navigation > li ul .open > ul .open > ul {
     display: block;
-    background: #222845;
+    background: #054473;
 }
 .main-menu.menu-dark .navigation > li ul .open > ul .open > ul li > a {
     padding: 8px 20px 8px 70px;
 }
 .main-menu.menu-dark .navigation > li ul .open .hover > a {
-    background: #222845;
+    background: #054473;
 }
 .main-menu.menu-dark .navigation > li ul .hover > a,
 .main-menu.menu-dark .navigation > li ul:hover > a {
     color: #e6e6e6;
-    background-color: #222845;
+    background-color: #054473;
 }
 .main-menu.menu-dark .navigation > li ul .active {
     background: rgba(0, 0, 0, 0.06);
 }
 .main-menu.menu-dark .navigation > li ul .active > a {
     color: #c3c3c3;
-    background-color: #222845;
+    background-color: #054473;
 }
 .main-menu.menu-dark .navigation > li ul .active .hover > a {
     background-color: transparent;
 }
 .main-menu.menu-dark .navigation > li > ul {
-    background: #222845;
+    background: #054473;
 }
 .main-menu.menu-dark ul.menu-popout {
-    background: #222845;
+    background: #054473;
 }
 .main-menu.menu-dark ul.menu-popout li a {
     color: #dcdcdc;
@@ -1778,7 +1778,7 @@ body.vertical-layout.vertical-menu.menu-expanded .main-menu-footer .content {
     height: 60px;
     line-height: 4.8rem;
     text-align: center;
-    border: 2px solid #222845;
+    border: 2px solid #054473;
     border-radius: 0.1875rem;
     margin-right: 1rem;
     margin-bottom: 1.5rem;
@@ -1787,7 +1787,7 @@ body.vertical-layout.vertical-menu.menu-expanded .main-menu-footer .content {
     font-size: 2.28rem;
 }
 .fonticon-container > .fonticon-wrap:hover {
-    background: #222845;
+    background: #054473;
     color: white;
 }
 .fonticon-container > .fonticon-wrap.youtube {
@@ -2875,7 +2875,7 @@ input[type="month"].form-control {
 
 .floating-label-form-group-with-focus label,
 .floating-label-form-group-with-value label {
-    color: #222845 !important;
+    color: #054473 !important;
     text-transform: uppercase;
     font-weight: 400;
 }

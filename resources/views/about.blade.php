@@ -2,7 +2,6 @@
 @section('content')
     <div class="wm-main-content">
 
-
         <div class="wm-main-section whowe-are-full">
             <div class="container">
                 <div class="row">
@@ -21,32 +20,87 @@
                             <li><i class="wmicon-mark"></i> Excellent basis for a wide range of careers</li>
                         </ul>
                     </div>
-
+                      <div class="wm-title-full">
+                                <h2>FAQ’s</h2>
+                            </div>
+                            <div class="wm-faq">
+                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingOne">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls=" collapseOne">
+                                                When are Mid-Year Reports due?
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="panel-body">
+                                                Please have your school submit the Mid-Year Report as soon as first quarter or first trimester grades are available if you are an Early Decision candidate; for Regular Decision candidates.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingTwo">
+                                            <h4 class="panel-title">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                How do I track the status of my application?
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                            <div class="panel-body">
+                                                Please have your school submit the Mid-Year Report as soon as first quarter or first trimester grades are available if you are an Early Decision candidate; for Regular Decision candidates.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingThree">
+                                            <h4 class="panel-title">
+                                               <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                               Does Enroll work with third-party agents?
+                                               </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                            <div class="panel-body">
+                                                Please have your school submit the Mid-Year Report as soon as first quarter or first trimester grades are available if you are an Early Decision candidate; for Regular Decision candidates.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingFour">
+                                            <h4 class="panel-title">
+                                               <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                               Are Halal dining options available for students?
+                                               </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                                            <div class="panel-body">
+                                                Please have your school submit the Mid-Year Report as soon as first quarter or first trimester grades are available if you are an Early Decision candidate; for Regular Decision candidates.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingFive">
+                                            <h4 class="panel-title">
+                                               <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                               Where do transfer students live?
+                                               </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                                            <div class="panel-body">
+                                                Please have your school submit the Mid-Year Report as soon as first quarter or first trimester grades are available if you are an Early Decision candidate; for Regular Decision candidates.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                 </div>
             </div>
         </div>
-  <div class="wm-main-section wm-parallextwo-full">
-                <span class="wm-light-transparent wm-more-light-black"></span>
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-md-12">
-                            <div class="wm-parallex">
-                                <h2>University Faculty Professors</h2>
-                                <span>Meet our professional teachers who love to teach you things!</span>
-                                <a class="wm-transparent-button" href="#"><span>see all</span></a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!--// Main Section \\-->
-
-            <!--// Main Section \\-->
-
-        <!--// Main Section \\-->
-
+    
 
 
     </div>

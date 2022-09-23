@@ -12,8 +12,8 @@ class AcademicController extends Controller
 {
     public function index()
     {
-        $academic = Academic::where('school_id', session('email'))->get();
-        return view('dashboard.academic.index',compact('academic'));
+        $academic = Academic::where('school_id', session('school_id'))->get();
+        return view('dashboard.academic.index', compact('academic'));
     }
     public function store(AcademicFormRequest $request)
     {
@@ -25,7 +25,7 @@ class AcademicController extends Controller
         //     Session::put('session_id', $session_id);
         // }
         // $academic->session_id = $session_id;
-        $academic->school_id = $request->session()->get('email');
+        $academic->school_id = $request->session()->get('school_id');
         $academic->academic_year = $data['academic_year'];
         $academic->created_by = Auth::user()->id;
         $academic->save();

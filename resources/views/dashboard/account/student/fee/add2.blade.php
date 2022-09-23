@@ -80,7 +80,7 @@
                                 <div class="col-md-3">
                                     <div class="text-center">
                                         <button type="submit"
-                                            style="background-color: #222845;color: #fff; height:50px; width:190px; "
+                                            style="background-color: #054473;color: #fff; height:50px; width:190px; "
                                             class="btn btn-outline-success block btn-lg" type="submit">
                                             Add
                                         </button>

@@ -826,7 +826,7 @@ jQuery(document).ready(function ($) {
         railpadding: { top: 0, right: 0, left: 0, bottom: 0 },
     });
     jQuery(".wm_widget_navlist ul").niceScroll("", {
-        cursorcolor: "#222845",
+        cursorcolor: "#054473",
         cursoropacitymax: 1,
         boxzoom: true,
         autohidemode: false,

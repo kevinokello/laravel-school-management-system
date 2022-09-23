@@ -15,14 +15,14 @@ class StockController extends Controller
 {
     public function All()
     {
-        $stock = Stock::where('school_id', session('email'))->get();
+        $stock = Stock::where('school_id', session('school_id'))->get();
         return view('dashboard.inventory.stock.all', compact('stock'));
     }
     public function Add()
     {
-        $supplier = Supplier::where('school_id', session('email'))->get();
-        $category = StockCategory::where('school_id', session('email'))->get();
-        $unit = Unit::where('school_id', session('email'))->get();
+        $supplier = Supplier::where('school_id', session('school_id'))->get();
+        $category = StockCategory::where('school_id', session('school_id'))->get();
+        $unit = Unit::where('school_id', session('school_id'))->get();
         return view('dashboard.inventory.stock.add', compact('supplier', 'category', 'unit'));
     }
     public function Store(Request $request)
@@ -34,7 +34,7 @@ class StockController extends Controller
         $stock->category_id = $request->category_id;
         $stock->quantity = '0';
         $stock->created_by = Auth::user()->id;
-        $stock->school_id = $request->session()->get('email');
+        $stock->school_id = $request->session()->get('school_id');
         $stock->save();
         session()->flash('success', 'stock added succesfully');
         return redirect('inventory/stock/all');
@@ -42,9 +42,9 @@ class StockController extends Controller
 
     public function Edit($id)
     {
-        $supplier = Supplier::where('school_id', session('email'))->get();
-        $category = StockCategory::where('school_id', session('email'))->get();
-        $unit = Unit::where('school_id', session('email'))->get();
+        $supplier = Supplier::where('school_id', session('school_id'))->get();
+        $category = StockCategory::where('school_id', session('school_id'))->get();
+        $unit = Unit::where('school_id', session('school_id'))->get();
         $stock = Stock::findOrFail($id);
         return view('dashboard.inventory.stock.edit', compact('stock', 'supplier', 'category', 'unit'));
     } // End Method

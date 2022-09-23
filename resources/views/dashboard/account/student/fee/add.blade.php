@@ -86,7 +86,7 @@
                                             </div> <!-- End Col md 3 -->
                                             <div class="col-md-3">
                                                 <button type="submit"
-                                                    style="background-color: #222845;color: #fff; height:50px; width:190px; "
+                                                    style="background-color: #054473;color: #fff; height:50px; width:190px; "
                                                     class="btn btn-outline-success block btn-lg" type="submit">
                                                     Add
                                                 </button>
@@ -104,26 +104,25 @@
 
                 </div>
             </div>
-           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#academic').on('change', function() {
-                var academicId = this.value;
-                $('#cohort').html('');
-                $.ajax({
-                    url: '{{ url('get-cohort') }}?academic_id=' + academicId,
-                    type: 'get',
-                    success: function(res) {
-                        $('#cohort').html(
-                            '<option value="">-- Select cohort --</option>');
-                        $.each(res, function(key, value) {
-                            $('#cohort').append('<option value="' + value
-                                .id + '">' + value.cohort_name + '</option>');
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $('#academic').on('change', function() {
+                        var academicId = this.value;
+                        $('#cohort').html('');
+                        $.ajax({
+                            url: '{{ url('get-cohort') }}?academic_id=' + academicId,
+                            type: 'get',
+                            success: function(res) {
+                                $('#cohort').html(
+                                    '<option value="">-- Select cohort --</option>');
+                                $.each(res, function(key, value) {
+                                    $('#cohort').append('<option value="' + value
+                                        .id + '">' + value.cohort_name + '</option>');
+                                });
+                            }
                         });
-                    }
+                    });
                 });
-            });
-        });
-    </script>
-
+            </script>
         @endsection

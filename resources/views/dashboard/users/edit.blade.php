@@ -2,13 +2,13 @@
 @section('content')
     <style>
         .btn-primary2 {
-            border-color: #222845;
-            background-color: #222845;
+            border-color: #054473;
+            background-color: #054473;
             color: #FFFFFF;
         }
 
         .btn-primary2:hover {
-            background-color: #222845;
+            background-color: #054473;
         }
     </style>
     <div class="app-content content container-fluid">

@@ -81,7 +81,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <h2>Recently added</h2>
+                            <h2>Recwntly added</h2>
                             <div class="wm-courses-getting-started">
                                 <div class="wm-courses-started">
                                     <ul class="wm-courses-started-listing">

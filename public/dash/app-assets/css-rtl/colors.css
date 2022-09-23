@@ -589,11 +589,11 @@ input:focus ~ .bg-primary {
 }
 
 .primary {
-    color: #222845 !important;
+    color: #054473 !important;
 }
 
 .bg-primary {
-    background-color: #222845 !important;
+    background-color: #054473 !important;
 }
 .bg-primary .card-header,
 .bg-primary .card-footer {
@@ -601,7 +601,7 @@ input:focus ~ .bg-primary {
 }
 
 .alert-primary {
-    border-color: #222845 !important;
+    border-color: #054473 !important;
     background-color: #c3b3eb !important;
     color: #3d2281 !important;
 }
@@ -610,17 +610,17 @@ input:focus ~ .bg-primary {
 }
 
 .border-primary {
-    border-color: #222845;
+    border-color: #054473;
 }
 
 .bg-primary.tag-glow,
 .border-primary.tag-glow {
-    -webkit-box-shadow: 0 0 10px #222845;
-    box-shadow: 0 0 10px #222845;
+    -webkit-box-shadow: 0 0 10px #054473;
+    box-shadow: 0 0 10px #054473;
 }
 
 .overlay-primary {
-    background: #222845;
+    background: #054473;
     /* The Fallback */
     background: rgba(150, 122, 220, 0.8);
 }
@@ -628,7 +628,7 @@ input:focus ~ .bg-primary {
 .card-outline-primary {
     border-width: 1px;
     border-style: solid;
-    border-color: #222845;
+    border-color: #054473;
     background-color: transparent;
 }
 .card-outline-primary .card-header,
@@ -637,8 +637,8 @@ input:focus ~ .bg-primary {
 }
 
 .btn-primary {
-    border-color: #222845;
-    background-color: #222845;
+    border-color: #054473;
+    background-color: #054473;
     color: #ffffff;
 }
 .btn-primary:hover {
@@ -648,56 +648,56 @@ input:focus ~ .bg-primary {
 }
 
 .btn-outline-primary {
-    border-color: #222845;
+    border-color: #054473;
     background-color: transparent;
-    color: #222845;
+    color: #054473;
 }
 .btn-outline-primary:hover {
-    background-color: #222845;
+    background-color: #054473;
     color: #ffffff !important;
 }
 
 .progress-primary[value]::-webkit-progress-value {
-    background-color: #222845;
+    background-color: #054473;
 }
 
 .progress-primary[value]::-moz-progress-bar {
-    background-color: #222845;
+    background-color: #054473;
 }
 
 .progress-primary[value]::-ms-fill {
-    background-color: #222845;
+    background-color: #054473;
 }
 
 @media screen and (min-width: 0\0) {
     .progress-primary .progress-bar {
-        background-color: #222845;
+        background-color: #054473;
     }
 }
 
 input:focus ~ .bg-primary {
-    -webkit-box-shadow: 0 0 0 0.075rem #ffffff, 0 0 0 0.21rem #222845 !important;
-    box-shadow: 0 0 0 0.075rem #ffffff, 0 0 0 0.21rem #222845 !important;
+    -webkit-box-shadow: 0 0 0 0.075rem #ffffff, 0 0 0 0.21rem #054473 !important;
+    box-shadow: 0 0 0 0.075rem #ffffff, 0 0 0 0.21rem #054473 !important;
 }
 
 .border-primary {
-    border: 1px solid #222845 !important;
+    border: 1px solid #054473 !important;
 }
 
 .border-top-primary {
-    border-top: 1px solid #222845;
+    border-top: 1px solid #054473;
 }
 
 .border-bottom-primary {
-    border-bottom: 1px solid #222845;
+    border-bottom: 1px solid #054473;
 }
 
 .border-left-primary {
-    border-right: 1px solid #222845;
+    border-right: 1px solid #054473;
 }
 
 .border-right-primary {
-    border-left: 1px solid #222845;
+    border-left: 1px solid #054473;
 }
 
 .primary.darken-1 {
@@ -11811,16 +11811,16 @@ input:focus ~ .bg-blue {
 }
 
 .blue.accent-2 {
-    color: #222845 !important;
+    color: #054473 !important;
 }
 
 .bg-blue.bg-accent-2 {
-    background-color: #222845 !important;
+    background-color: #054473 !important;
 }
 
 .btn-blue.btn-accent-2 {
-    border-color: #222845 !important;
-    background-color: #222845 !important;
+    border-color: #054473 !important;
+    background-color: #054473 !important;
 }
 .btn-blue.btn-accent-2:hover {
     border-color: #64b5f6 !important;
@@ -11828,58 +11828,58 @@ input:focus ~ .bg-blue {
 }
 
 .btn-outline-blue.btn-outline-accent-2 {
-    border-color: #222845 !important;
-    color: #222845 !important;
+    border-color: #054473 !important;
+    color: #054473 !important;
 }
 .btn-outline-blue.btn-outline-accent-2:hover {
-    background-color: #222845 !important;
+    background-color: #054473 !important;
 }
 
 .progress-blue.progress-accent-2[value]::-webkit-progress-value {
-    background-color: #222845;
+    background-color: #054473;
 }
 
 .progress-blue.progress-accent-2[value]::-moz-progress-bar {
-    background-color: #222845;
+    background-color: #054473;
 }
 
 .progress-blue.progress-accent-2[value]::-ms-fill {
-    background-color: #222845;
+    background-color: #054473;
 }
 
 @media screen and (min-width: 0\0) {
     .progress-blue.progress-accent-2 .progress-bar {
-        background-color: #222845;
+        background-color: #054473;
     }
 }
 
 input:focus ~ .bg-blue {
-    -webkit-box-shadow: 0 0 0 0.075rem #ffffff, 0 0 0 0.21rem #222845 !important;
-    box-shadow: 0 0 0 0.075rem #ffffff, 0 0 0 0.21rem #222845 !important;
+    -webkit-box-shadow: 0 0 0 0.075rem #ffffff, 0 0 0 0.21rem #054473 !important;
+    box-shadow: 0 0 0 0.075rem #ffffff, 0 0 0 0.21rem #054473 !important;
 }
 
 .border-blue.border-accent-2 {
-    border: 1px solid #222845 !important;
+    border: 1px solid #054473 !important;
 }
 
 .border-top-blue.border-top-accent-2 {
-    border-top: 1px solid #222845 !important;
+    border-top: 1px solid #054473 !important;
 }
 
 .border-bottom-blue.border-bottom-accent-2 {
-    border-bottom: 1px solid #222845 !important;
+    border-bottom: 1px solid #054473 !important;
 }
 
 .border-left-blue.border-left-accent-2 {
-    border-right: 1px solid #222845 !important;
+    border-right: 1px solid #054473 !important;
 }
 
 .border-right-blue.border-right-accent-2 {
-    border-left: 1px solid #222845 !important;
+    border-left: 1px solid #054473 !important;
 }
 
 .overlay-blue.overlay-accent-2 {
-    background: #222845;
+    background: #054473;
     /* The Fallback */
     background: rgba(68, 138, 255, 0.8);
 }

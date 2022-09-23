@@ -159,26 +159,26 @@
     background-color: #000 !important;
 }
 .loader-primary div {
-    background-color: #222845 !important;
+    background-color: #054473 !important;
 }
 .loader-primary.ball-clip-rotate div {
-    border-color: #222845 #222845 transparent !important;
+    border-color: #054473 #054473 transparent !important;
     background-color: transparent !important;
 }
 .loader-primary.ball-clip-rotate-pulse div:first-child {
-    background: #222845 !important;
+    background: #054473 !important;
 }
 .loader-primary.ball-clip-rotate-pulse div:last-child {
     background: 0 0 !important;
-    border-color: #222845 transparent !important;
+    border-color: #054473 transparent !important;
 }
 .loader-primary.ball-clip-rotate-multiple div {
     background-color: transparent !important;
-    border-color: transparent #222845 !important;
+    border-color: transparent #054473 !important;
 }
 .loader-primary.ball-rotate div:after,
 .loader-primary.ball-rotate div:before {
-    background-color: #222845 !important;
+    background-color: #054473 !important;
 }
 .loader-primary.fading-circle div,
 .loader-primary.semi-circle-spin div,
@@ -189,10 +189,10 @@
 .loader-primary.ball-scale-ripple-multiple div,
 .loader-primary.ball-triangle-path div {
     background-color: transparent !important;
-    border-color: #222845 !important;
+    border-color: #054473 !important;
 }
 .loader-primary.triangle-skew-spin div {
-    border-bottom-color: #222845 !important;
+    border-bottom-color: #054473 !important;
 }
 .loader-primary.semi-circle-spin div {
     background-image: -webkit-gradient(
@@ -201,42 +201,42 @@
         left bottom,
         from(transparent),
         color-stop(70%, transparent),
-        color-stop(30%, #222845),
-        to(#222845)
+        color-stop(30%, #054473),
+        to(#054473)
     );
     background-image: -webkit-linear-gradient(
         transparent 0,
         transparent 70%,
-        #222845 30%,
-        #222845 100%
+        #054473 30%,
+        #054473 100%
     );
     background-image: -moz-linear-gradient(
         transparent 0,
         transparent 70%,
-        #222845 30%,
-        #222845 100%
+        #054473 30%,
+        #054473 100%
     );
     background-image: -o-linear-gradient(
         transparent 0,
         transparent 70%,
-        #222845 30%,
-        #222845 100%
+        #054473 30%,
+        #054473 100%
     );
     background-image: linear-gradient(
         transparent 0,
         transparent 70%,
-        #222845 30%,
-        #222845 100%
+        #054473 30%,
+        #054473 100%
     );
 }
 .loader-primary.fading-circle div:before {
-    background-color: #222845 !important;
+    background-color: #054473 !important;
 }
 .loader-primary.folding-cube div {
     background-color: transparent !important;
 }
 .loader-primary.folding-cube div:before {
-    background-color: #222845 !important;
+    background-color: #054473 !important;
 }
 .loader-success div {
     background-color: #37bc9b !important;

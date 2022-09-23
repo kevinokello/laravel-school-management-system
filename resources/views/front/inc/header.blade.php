@@ -1,10 +1,10 @@
 <style>
-    .btn-primary2 {
-        border-color: #222845;
-        background-color: #222845;
+    /* .btn-primary2 {
+        border-color: #054473;
+        background-color: #054473;
         color: #FFFFFF;
-        background-color: #2f3969;
-    }
+        background-color: #144888;
+    } */
 
     a.button6 {
         display: inline-block;
@@ -62,7 +62,7 @@
                                 <ul class="nav navbar-nav">
                                     <li class="active"><a href="{{ url('/') }}">Home</a>
                                     </li>
-                                    <li><a href="{{ url('about') }}">About</a>
+                                    <li class="active"><a href="{{ url('about') }}">About</a>
                                     </li>
                                     <li><a href="{{ url('browse') }}">Browse</a>
                                     </li>
@@ -73,11 +73,11 @@
                         </nav>
                         @if (Route::has('login'))
                             @auth
+
                                 <a href="{{ url('/dashboard') }}" class="button6 wm-transparent-button"><b>Dashboard</b></a>
                             @else
                                 <a href="{{ url('login') }}" class="button6 wm-transparent-button"
-                                    style="background-color:#b99663"><b>Get
-                                        Started</b></a>
+                                    style="background-color:#b99663"><b>Login / Signup</b></a>
                             @endauth
                         @endif
                         {{-- <a href="#" class="wm-search-btn" data-toggle="modal" data-target="#ModalSearch"><i

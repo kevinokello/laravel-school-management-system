@@ -35,17 +35,17 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
         .btn-primary2 {
-            border-color: #222845;
-            background-color: #222845;
+            border-color: #054473;
+            background-color: #054473;
             color: #FFFFFF;
         }
 
         .btn-primary2:hover {
-            background-color: #222845;
+            background-color: #054473;
         }
-        
     </style>
 </head>
+
 <body>
     <div class="app-content content container-fluid">
         <div class="content-wrapper">
@@ -55,14 +55,8 @@
                     <div class="col-md-4 offset-md-4 col-xs-10 offset-xs-1 box-shadow-2 p-0">
                         <div class="card border-grey border-lighten-3 m-0">
                             <div class="card-header no-border">
-                                {{-- <div class="card-title text-xs-center">
-                                    <div class="p-1">
-                                        <img src="{{ asset('dash/app-assets/images/logo/robust-logo-dark.png') }}"
-                                            alt="branding logo" />
-                                    </div>
-                                </div> --}}
-                                <h6 class="card-subtitle line-on-side text-muted text-xs-center font-small-3 pt-2">
-                                    <span>Login to sms</span>
+                            <h6 class="card-subtitle line-on-side text-xs-center pt-2">
+                                    <span>Login to your sms account</span>
                                 </h6>
                             </div>
                             <div class="card-body collapse in">

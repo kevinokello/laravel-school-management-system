@@ -1,13 +1,6 @@
 @extends('layouts.front')
 @section('content')
     <style>
-        .btn-primary2 {
-            border-color: #222845;
-            background-color: #222845;
-            color: #FFFFFF;
-            background-color: #2f3969;
-        }
-
         a.button62 {
             display: inline-block;
             padding: 0.7em 1.4em;
@@ -36,7 +29,6 @@
             }
         }
     </style>
-    <br><br>
     <div class="wm-main-content">
         <div class="wm-main-section">
             <div class="container">
@@ -76,10 +68,9 @@
                         <div class="wm-courses wm-courses-medium">
                             <ul class="row">
                                 <aside class="col-md-3">
-
                                     <div class="widget widget_categories">
                                         <div class="wm-widget-title">
-                                            <h2>Categories</h2>
+                                            <h2>Filter by category</h2>
                                         </div>
                                         <ul>
                                             <li><a href="#">Chemistry</a></li>
@@ -115,57 +106,7 @@
                                             <li><i class="wmicon-location"></i> <a href="#">Campus L2</a></li>
                                         </ul>
                                     </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="wm-courses-getting-started">
-                            <div class="wm-courses-started">
-                                <span>Course Additional Entry</span>
-                                <ul class="wm-courses-started-listing">
-                                    <li>
-                                        <a href="#" class="wmicon-pen"></a>
-                                        <div class="wm-courses-started-text">
-                                            <h6><a href="{{ url('single') }}">Archaeology and Anthropology</a></h6>
-                                            <span><a href="#" class="wmicon-time2"></a><time
-                                                    datetime="2017-02-14">16/05/2016 - 17/06/2016</time></span>
-                                            <span><a href="#" class=" wmicon-clock2"></a><time
-                                                    datetime="2017-02-14">Duration: 1hr30mins</time></span>
-                                        </div>
-                                        <div class="wm-courses-preview">
-                                            <a href="{{ url('single') }}">Preview</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="wmicon-pen"></a>
-                                        <div class="wm-courses-started-text">
-                                            <h6><a href="{{ url('single') }}">Archaeology and Anthropology</a></h6>
-                                            <span><a href="#" class="wmicon-time2"></a><time
-                                                    datetime="2017-02-14">16/05/2016 - 17/06/2016</time></span>
-                                            <span><a href="#" class=" wmicon-clock2"></a><time
-                                                    datetime="2017-02-14">Duration: 1hr30mins</time></span>
-                                        </div>
-                                        <div class="wm-courses-preview">
-                                            <a href="{{ url('single') }}">Preview</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="wmicon-pen"></a>
-                                        <div class="wm-courses-started-text">
-                                            <h6><a href="{{ url('single') }}">Archaeology and Anthropology</a></h6>
-                                            <span><a href="#" class="wmicon-time2"></a><time
-                                                    datetime="2017-02-14">16/05/2016 - 17/06/2016</time></span>
-                                            <span><a href="#" class=" wmicon-clock2"></a><time
-                                                    datetime="2017-02-14">Duration: 1hr30mins</time></span>
-                                        </div>
-                                        <div class="wm-courses-preview">
-                                            <a href="{{ url('single') }}">Preview</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-                        <div class="wm-pagination">
+                                                            <div class="wm-pagination">
                             <ul>
                                 <li><a href="#" aria-label="Previous"> <i class="wmicon-arrows4"></i> Previous</a>
                                 </li>
@@ -177,6 +118,11 @@
                                 <li><a href="#" aria-label="Next"> <i class="wmicon-arrows4"></i> Next</a></li>
                             </ul>
                         </div>
+                                </li>
+                            </ul>
+                        </div>
+                 
+
                     </div>
                 </div>
             </div>

@@ -36,19 +36,19 @@
     <link rel="stylesheet" type="text/css" href="{{ url('dash/assets/css/style.css') }}">
     <style>
         .btn-primary {
-            border-color: #222845;
-            background-color: #222845;
-            color: #222845;
+            border-color: #054473;
+            background-color: #054473;
+            color: #054473;
         }
 
         .button {
-            border-color: #222845;
-            background-color: #222845;
-            color: #222845;
+            border-color: #054473;
+            background-color: #054473;
+            color: #054473;
         }
 
         .btn-primary:hover {
-            background-color: #222845;
+            background-color: #054473;
         }
 
         .main-menu.menu-dark .navigation>li ul .active {
@@ -62,7 +62,7 @@
 
         .main-menu.menu-dark .navigation>li.open>a {
             color: #c3c3c3;
-            background: #2f3969;
+            background: #144888;
         }
 
         span.menu-title {

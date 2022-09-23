@@ -12,7 +12,7 @@ class UnitController extends Controller
 {
     public function index()
     {
-        $unit = Unit::where('school_id', session('email'))->get();
+        $unit = Unit::where('school_id', session('school_id'))->get();
         return view('dashboard.inventory.unit.index', compact('unit'));
     }
     public function store(UnitFormRequest $request)
@@ -21,7 +21,7 @@ class UnitController extends Controller
         $unit = new Unit;
         $unit->name = $data['name'];
         $unit->created_by = Auth::user()->id;
-        $unit->school_id = $request->session()->get('email');
+        $unit->school_id = $request->session()->get('school_id');
         $unit->save();
         session()->flash('success', 'Inventory Unit created succesfully');
         return redirect()->back();

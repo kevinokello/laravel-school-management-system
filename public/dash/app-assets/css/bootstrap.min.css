@@ -406,7 +406,7 @@ figure {
     margin: 0 0 1rem;
 }
 a {
-    color: #222845;
+    color: #054473;
     text-decoration: none;
 }
 a:focus,
@@ -2392,8 +2392,8 @@ fieldset[disabled] a.btn {
 }
 .btn-primary {
     color: #fff;
-    background-color: #222845;
-    border-color: #222845;
+    background-color: #054473;
+    border-color: #054473;
 }
 .btn-primary.focus,
 .btn-primary:focus,
@@ -2429,8 +2429,8 @@ fieldset[disabled] a.btn {
 .btn-primary:disabled.focus,
 .btn-primary:disabled:focus,
 .btn-primary:disabled:hover {
-    background-color: #222845;
-    border-color: #222845;
+    background-color: #054473;
+    border-color: #054473;
 }
 .btn-secondary {
     color: #373a3c;
@@ -2643,10 +2643,10 @@ fieldset[disabled] a.btn {
     border-color: #da4453;
 }
 .btn-outline-primary {
-    color: #222845;
+    color: #054473;
     background-image: none;
     background-color: transparent;
-    border-color: #222845;
+    border-color: #054473;
 }
 .btn-outline-primary.active,
 .btn-outline-primary.focus,
@@ -2655,8 +2655,8 @@ fieldset[disabled] a.btn {
 .btn-outline-primary:hover,
 .open > .btn-outline-primary.dropdown-toggle {
     color: #fff;
-    background-color: #222845;
-    border-color: #222845;
+    background-color: #054473;
+    border-color: #054473;
 }
 .btn-outline-primary.active.focus,
 .btn-outline-primary.active:focus,
@@ -2865,7 +2865,7 @@ fieldset[disabled] a.btn {
     border-color: #eb99a1;
 }
 .btn-link {
-    color: #222845;
+    color: #054473;
     border-radius: 0;
 }
 .btn-link,
@@ -3019,7 +3019,7 @@ tbody.collapse.in {
 .dropdown-item.active:hover {
     color: #fff;
     text-decoration: none;
-    background-color: #222845;
+    background-color: #054473;
     outline: 0;
 }
 .dropdown-item.disabled,
@@ -3601,7 +3601,7 @@ tbody.collapse.in {
 .nav-pills .nav-link.active:hover {
     color: #fff;
     cursor: default;
-    background-color: #222845;
+    background-color: #054473;
 }
 .nav-stacked .nav-item {
     display: block;
@@ -4016,8 +4016,8 @@ tbody.collapse.in {
     border-bottom: 0;
 }
 .card-primary {
-    background-color: #222845;
-    border-color: #222845;
+    background-color: #054473;
+    border-color: #054473;
 }
 .card-primary .card-footer,
 .card-primary .card-header {
@@ -4062,7 +4062,7 @@ tbody.collapse.in {
     background-color: transparent;
 }
 .card-outline-primary {
-    border-color: #222845;
+    border-color: #054473;
 }
 .card-outline-secondary {
     border-color: #818a91;
@@ -4231,8 +4231,8 @@ tbody.collapse.in {
     z-index: 2;
     color: #fff;
     cursor: default;
-    background-color: #222845;
-    border-color: #222845;
+    background-color: #054473;
+    border-color: #054473;
 }
 .page-item.disabled .page-link,
 .page-item.disabled .page-link:focus,
@@ -4247,7 +4247,7 @@ tbody.collapse.in {
     position: relative;
     padding: 0.5rem 0.75rem;
     margin-left: -1px;
-    color: #222845;
+    color: #054473;
     text-decoration: none;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -4323,7 +4323,7 @@ a.tag:hover {
     background-color: #687077;
 }
 .tag-primary {
-    background-color: #222845;
+    background-color: #054473;
 }
 .tag-primary[href]:focus,
 .tag-primary[href]:hover {
@@ -4790,8 +4790,8 @@ base::-moz-progress-bar {
     z-index: 2;
     color: #fff;
     text-decoration: none;
-    background-color: #222845;
-    border-color: #222845;
+    background-color: #054473;
+    border-color: #054473;
 }
 .list-group-item.active .list-group-item-heading,
 .list-group-item.active .list-group-item-heading > .small,
@@ -4809,8 +4809,8 @@ base::-moz-progress-bar {
     z-index: 2;
     color: #fff;
     text-decoration: none;
-    background-color: #222845;
-    border-color: #222845;
+    background-color: #054473;
+    border-color: #054473;
 }
 .list-group-item.active:hover .list-group-item-heading,
 .list-group-item.active:hover .list-group-item-heading > .small,
@@ -5657,7 +5657,7 @@ button.close {
     background-color: #f7f7f9;
 }
 .bg-primary {
-    background-color: #222845 !important;
+    background-color: #054473 !important;
 }
 a.bg-primary:focus,
 a.bg-primary:hover {
@@ -6043,7 +6043,7 @@ a.text-muted:hover {
     color: #687077 !important;
 }
 .text-primary {
-    color: #222845 !important;
+    color: #054473 !important;
 }
 a.text-primary:focus,
 a.text-primary:hover {

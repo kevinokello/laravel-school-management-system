@@ -17,14 +17,14 @@ class StudentController extends Controller
 {
     public function create()
     {
-        $session =Session::where('school_id', session('email'))->get();
-        $academic =Academic::where('school_id', session('email'))->get();
-        $cohort = Cohort::where('school_id', session('email'))->get();
+        $session = Session::where('school_id', session('school_id'))->get();
+        $academic = Academic::where('school_id', session('school_id'))->get();
+        $cohort = Cohort::where('school_id', session('school_id'))->get();
         return view('dashboard.student.add_student', compact(['academic', 'cohort', 'session']));
     }
     public function view()
     {
-        $students = Student::where('school_id', session('email'))->get();
+        $students = Student::where('school_id', session('school_id'))->get();
         return view('dashboard.student.view_students', compact('students'));
     }
 
@@ -57,7 +57,7 @@ class StudentController extends Controller
         $student->previous_school_details = $data['previous_school_details'];
         $student->aditional_notes = $data['aditional_notes'];
         $student->medical_condition = $data['medical_condition'];
-        $student->school_id = $request->session()->get('email');
+        $student->school_id = $request->session()->get('school_id');
         $student->save();
         session()->flash('success', 'student added succesfully');
         return redirect('student/view-students');
@@ -93,7 +93,7 @@ class StudentController extends Controller
             $destination = 'uploads/students' . $student->student_photo;
             if (File::exists($destination)) {
                 File::delete($destination);
-  }
+            }
             $file = $request->file('student_photo');
             $filename = time() . '.' . $file->getClientOriginalExtension();
             $file->move('uploads/students/', $filename);
@@ -136,6 +136,4 @@ class StudentController extends Controller
             return response()->json($sessions);
         }
     }
-
-
 }

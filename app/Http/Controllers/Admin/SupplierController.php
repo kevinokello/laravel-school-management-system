@@ -14,12 +14,12 @@ class SupplierController extends Controller
 {
     public function SupplierAll()
     {
-        $suppliers = Supplier::where('school_id', session('email'))->latest()->get();
+        $suppliers = Supplier::where('school_id', session('school_id'))->latest()->get();
         return view('dashboard.inventory.supplier.all', compact('suppliers'));
     }
     public function SupplierAdd()
     {
-        $stockcategory = StockCategory::where('school_id', session('email'))->get();
+        $stockcategory = StockCategory::where('school_id', session('school_id'))->get();
         return view('dashboard.inventory.supplier.add', compact('stockcategory'));
     } // End Method
 
@@ -32,7 +32,7 @@ class SupplierController extends Controller
         $supplier->email = $data['email'];
         $supplier->unit_id = $data['unit_id'];
         $supplier->created_by = Auth::user()->id;
-        $supplier->school_id = $request->session()->get('email');
+        $supplier->school_id = $request->session()->get('school_id');
         $supplier->save();
         session()->flash('success', 'supplier added succesfully');
         return redirect('inventory/supplier/all');
@@ -40,7 +40,7 @@ class SupplierController extends Controller
 
     public function SupplierEdit($id)
     {
-        $stockcategory = StockCategory::where('school_id', session('email'))->get();
+        $stockcategory = StockCategory::where('school_id', session('school_id'))->get();
         $supplier = Supplier::findOrFail($id);
         return view('dashboard.inventory.supplier.edit', compact(['supplier', 'stockcategory']));
     } // End Method

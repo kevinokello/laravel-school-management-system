@@ -188,10 +188,10 @@
                                   class="menu-item {{ Request::is('accounts/student/fee/view') ? 'active' : '' }}"><i
                                       class="icon-ios-calculator-outline"></i>View</a>
                           </li>
-                           <li><a href="{{ url('accounts/student/fee/getstudent') }}"
+                          {{-- <li><a href="{{ url('accounts/student/fee/getstudent') }}"
                                   class="menu-item {{ Request::is('accounts/student/fee/getstudent') ? 'active' : '' }}"><i
                                       class="icon-ios-calculator-outline"></i>Search student</a>
-                          </li>
+                          </li> --}}
                       </ul>
 
                   </li>
@@ -250,7 +250,7 @@
                           </li>
                       </ul>
                   </li>
-                   <li class="nav-item {{ Request::is('users/create') || Request::is('users/all') ? 'open' : '' }}">
+                  <li class="nav-item {{ Request::is('users/create') || Request::is('users/all') ? 'open' : '' }}">
                       <a href="{{ url('user/all') }}"><i class="icon-ios-home-outline"></i><span
                               data-i18n="nav.menu_levels.main" class="menu-title">Manage Users</span></a>
                       <ul class="menu-content">
@@ -291,7 +291,13 @@
                   </li>
                   <li class="nav-item {{ Request::is('dashboard') ? 'active' : '' }}"><a
                           href="{{ url('dashboard') }}"><i class="icon-home3"></i><span
-                              data-i18n="nav.support_documentation.main" class="menu-title">SDashboard</span></a>
+                              data-i18n="nav.support_documentation.main" class="menu-title">Dashboard</span></a>
+                  </li>
+                  <li class="nav-item"><a href="{{ url('dashboard') }}"><i class="icon-book"></i><span
+                              data-i18n="nav.support_documentation.main" class="menu-title">My Courses</span></a>
+                  </li>
+                  <li class="nav-item"><a href="{{ url('dashboard') }}"><i class="icon-file-text"></i><span
+                              data-i18n="nav.support_documentation.main" class="menu-title">Purchased Resources</span></a>
                   </li>
               </ul>
           @endif

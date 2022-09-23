@@ -40,19 +40,17 @@ class RegisteredUserController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
-
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-
         // $user->attachRole($request->role_id);
-        $user->attachRole('admin');
+        $user->attachRole('student');
         event(new Registered($user));
         $data = $request->input();
-        $sid = DB::table('users')->where('email', $data['email'])->first();
-        $request->session()->put('email', $data['email']);
+        $sid = DB::table('users')->where('email', $data['email'])->first()->school_id;
+        session(['school_id' => $sid]);
         Auth::login($user);
         return redirect(RouteServiceProvider::HOME);
     }

@@ -2,15 +2,16 @@
 @section('content')
     <style>
         .btn-primary2 {
-            border-color: #222845;
-            background-color: #222845;
+            border-color: #054473;
+            background-color: #054473;
             color: #FFFFFF;
         }
 
         .btn-primary2:hover {
-            background-color: #222845;
+            background-color: #054473;
         }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <div class="app-content content container-fluid">
         <div class="content-wrapper">
             <div class="content-body">
@@ -25,21 +26,20 @@
                                         <div class="mt-4">
                                             <x-label for="school_id" value="{{ __('Select school:') }}" />
                                             <select id="school_id" name="school_id"
-                                                class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+                                                class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm js-example-basic-single">
                                                 @foreach ($schools as $item)
                                                     <option value="{{ $item->id }} ">
                                                         {{ $item->name }}</option>
                                                 @endforeach
                                             </select>
-
                                         </div>
                                         <fieldset class="form-group position-relative has-icon-left mb-1">
                                             <div class="mt-4">
                                                 <x-label for="role_id" value="{{ __('Select Role:') }}" />
                                                 <select name="role_id"
                                                     class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
-                                                    <option value="student">Student</option>
-                                                    <option value="teacher">Teacher</option>
+                                                    {{-- <option value="student">Student</option>
+                                                    <option value="teacher">Teacher</option> --}}
                                                     <option value="admin">Admin</option>
                                                 </select>
                                             </div>
@@ -94,4 +94,9 @@
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function() {
+            $('.js-example-basic-single').select2();
+        });
+    </script>
 @endsection
