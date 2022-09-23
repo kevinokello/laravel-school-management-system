@@ -1,52 +1,35 @@
 @extends('layouts.front')
 @section('content')
-    <br>
+    <br><br><br><br>
     <!--// Main Banner \\-->
-    <div class="wm-main-banner">
-        <div class="wm-banner-three">
-            <div class="wm-banner-three-layer">
-                <img src="front/extra-images/1.jpg" alt="">
-                <div class="wm-caption-three">
-                    <div class="container">
-                        <div class="wm-caption-three-inner">
-                            <h1>Students <span>don’t</span> just attend our university.</h1>
-                            <p>They discover diverse opportunities to develop talents, & become leaders, to have an impact
-                                on our campus.</p>
-                            <a class="wm-discover-btn wm-bgcolor-three" href="{{ url('about') }}">discover us</a>
-                        </div>
+		<div class="wm-main-banner">
+            
+            <div class="wm-banner-one">
+                <div class="wm-banner-one-for">
+                    <div class="wm-banner-one-for-layer"> <img src="front/extra-images/1.jpg" alt=""> </div>
+                    <div class="wm-banner-one-for-layer"> <img src="front/extra-images/2.jpg" alt=""> </div>
+                    <div class="wm-banner-one-for-layer"> <img src="front/extra-images/3.jpg" alt=""> </div>
+                </div>
+                <div class="wm-banner-one-nav">
+                    <div class="wm-banner-one-nav-layer">
+                        <h1>International Programmes</h1>
+                        <p>The study programmes of the Enroll Campus University are open to people from all nationalities.</p>
+                        <a href="#" class="wm-banner-btn">learn more</a>
+                    </div>
+                    <div class="wm-banner-one-nav-layer">
+                        <h1>UA Degree Programmes</h1>
+                        <p>We offer companies the opportunity to access the technology and knowledge developed at the  Enroll Campus University.</p>
+                        <a href="#" class="wm-banner-btn">know more</a>
+                    </div>
+                    <div class="wm-banner-one-nav-layer banner-bgcolor">
+                        <h1>Research & Business</h1>
+                        <p>The scientific community nominates CRISPR System, based on research developed at the UA.</p>
+                        <a href="#" class="wm-banner-btn">learn more</a>
                     </div>
                 </div>
             </div>
 
-            <div class="wm-banner-three-layer">
-                <img src="front/extra-images/2.jpg" alt="">
-                <div class="wm-caption-three">
-                    <div class="container">
-                        <div class="wm-caption-three-inner">
-                            <h1>Why <span>don’t</span> start the hard study?</h1>
-                            <p>Computer science is the study of computers and their uses, and the field comprises a wide
-                                range of subjects.</p>
-                            <a class="wm-discover-btn wm-bgcolor-three" href="{{ url('about') }}">discover us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="wm-banner-three-layer">
-                <img src="front/extra-images/3.jpg" alt="">
-                <div class="wm-caption-three">
-                    <div class="container">
-                        <div class="wm-caption-three-inner">
-                            <h1>Why <span>don’t</span> start the hard study?</h1>
-                            <p>Computer science is the study of computers and their uses, and the field comprises a wide
-                                range of subjects.</p>
-                            <a class="wm-discover-btn wm-bgcolor-three" href="{{ url('about') }}">discover us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
+		</div>
     <!--// Main Content \\-->
     <div class="wm-main-content">
         <!--// Main Section \\-->
@@ -60,18 +43,16 @@
                         <div class="wm-service wm-box-service">
                             <ul>
                                 @foreach ($category as $item)
-                                    <a href="{{ url('category/' . $item->slug) }}">
+                                    <a href="{{ url('category/' . $item->id) }}">
                                         <li>
                                             <div class="wm-box-service-wrap wm-bgcolor">
-                                                <i class="wmicon-suitcase"></i>
-                                                <h6><a href="{{ url('category/' . $item->slug) }}">{{ $item->name }}</a>
+                                                <i class="wmicon-computer"></i>
+                                                <h6><a href="{{ url('subcategory/' . $item->id) }}">{{ $item->name }}</a>
                                                 </h6>
                                             </div>
-
                                         </li>
                                     </a>
                                 @endforeach
-
                             </ul>
                         </div>
                     </div>

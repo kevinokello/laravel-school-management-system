@@ -25,11 +25,14 @@ Route::get('browse', 'App\Http\Controllers\Front\FrontController@browse');
 Route::get('contact', 'App\Http\Controllers\Front\FrontController@contact');
 Route::get('about', 'App\Http\Controllers\Front\FrontController@about');
 Route::get('single', 'App\Http\Controllers\Front\FrontController@single');
-Route::get('category/{category_slug}', 'App\Http\Controllers\Front\FrontController@category');
-Route::get('subcategory/{category_slug}/{subcategory_slug}', 'App\Http\Controllers\Front\FrontController@subcategory');
-Route::get('resource/{category_slug}/{subcategory_slug}/{article_slug}', 'App\Http\Controllers\Front\FrontController@resource');
+Route::get('/category/{id}', 'App\Http\Controllers\Front\FrontController@category');
+Route::get('/subcategory/{slug}', 'App\Http\Controllers\Front\FrontController@subcategory');
 
-
+// Route::get('category/{category_slug}', 'App\Http\Controllers\Front\FrontController@category');
+// Route::get('subcategory/{category_slug}/{subcategory_slug}', 'App\Http\Controllers\Front\FrontController@subcategory');
+// Route::get('resource/{category_slug}/{subcategory_slug}/{article_slug}', 'App\Http\Controllers\Front\FrontController@resource');
+//single resource view
+// Route::get('resource/{resource_slug}', 'App\Http\Controllers\Front\FrontController@singleResource');
 
 //Backend Routes
 Route::group(['middleware' => ['auth']], function () {
