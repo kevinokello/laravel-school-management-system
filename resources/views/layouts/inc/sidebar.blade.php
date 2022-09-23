@@ -43,6 +43,26 @@
                           </li>
                       </ul>
                   </li>
+                           <li
+                      class="nav-item {{ Request::is('accounts/student/fee/add') || Request::is('accounts/student/fee/view') || Request::is('accounts/student/fee/getstudent') ? 'open' : '' }}">
+                      <a href="#"><i class="icon-ios-calculator-outline"></i><span data-i18n="nav.cards.main"
+                              class="menu-title">Student Fees</span></a>
+                      <ul class="menu-content">
+                          <li><a href="{{ url('accounts/student/fee/add') }}"
+                                  class="menu-item {{ Request::is('accounts/student/fee/add') ? 'active' : '' }}"><i
+                                      class="icon-ios-calculator-outline"></i>Add</a>
+                          </li>
+                          <li><a href="{{ url('accounts/student/fee/view') }}"
+                                  class="menu-item {{ Request::is('accounts/student/fee/view') ? 'active' : '' }}"><i
+                                      class="icon-ios-calculator-outline"></i>View</a>
+                          </li>
+                          {{-- <li><a href="{{ url('accounts/student/fee/getstudent') }}"
+                                  class="menu-item {{ Request::is('accounts/student/fee/getstudent') ? 'active' : '' }}"><i
+                                      class="icon-ios-calculator-outline"></i>Search student</a>
+                          </li> --}}
+                      </ul>
+
+                  </li>
                   <li
                       class="nav-item {{ Request::is('student/add-student') || Request::is('student/view-students') ? 'open' : '' }}">
                       <a href="#"><i class="icon-ios-personadd-outline"></i><span data-i18n="nav.cards.main"
@@ -175,26 +195,7 @@
                           </li> --}}
                       </ul>
                   </li>
-                  <li
-                      class="nav-item {{ Request::is('accounts/student/fee/add') || Request::is('accounts/student/fee/view') || Request::is('accounts/student/fee/getstudent') ? 'open' : '' }}">
-                      <a href="#"><i class="icon-ios-calculator-outline"></i><span data-i18n="nav.cards.main"
-                              class="menu-title">Student Fees</span></a>
-                      <ul class="menu-content">
-                          <li><a href="{{ url('accounts/student/fee/add') }}"
-                                  class="menu-item {{ Request::is('accounts/student/fee/add') ? 'active' : '' }}"><i
-                                      class="icon-ios-calculator-outline"></i>Add</a>
-                          </li>
-                          <li><a href="{{ url('accounts/student/fee/view') }}"
-                                  class="menu-item {{ Request::is('accounts/student/fee/view') ? 'active' : '' }}"><i
-                                      class="icon-ios-calculator-outline"></i>View</a>
-                          </li>
-                          {{-- <li><a href="{{ url('accounts/student/fee/getstudent') }}"
-                                  class="menu-item {{ Request::is('accounts/student/fee/getstudent') ? 'active' : '' }}"><i
-                                      class="icon-ios-calculator-outline"></i>Search student</a>
-                          </li> --}}
-                      </ul>
-
-                  </li>
+         
                   <li class="nav-item {{ Request::is('accounts/student/fee/keyin') ? 'open' : '' }}">
                       <a href="#"><i class="icon-ios-calculator-outline"></i><span data-i18n="nav.cards.main"
                               class="menu-title">Bursar</span></a>

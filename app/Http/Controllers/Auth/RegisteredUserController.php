@@ -46,7 +46,7 @@ class RegisteredUserController extends Controller
             'password' => Hash::make($request->password),
         ]);
         // $user->attachRole($request->role_id);
-        $user->attachRole('student');
+        $user->attachRole('admin');
         event(new Registered($user));
         $data = $request->input();
         $sid = DB::table('users')->where('email', $data['email'])->first()->school_id;

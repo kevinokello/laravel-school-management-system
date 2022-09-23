@@ -59,7 +59,8 @@ class StudentController extends Controller
         $student->previous_school_details = $data['previous_school_details'];
         $student->aditional_notes = $data['aditional_notes'];
         $student->medical_condition = $data['medical_condition'];
-        $student->fee_id = StudentFee::where('cohort_id', $data['cohort_id']);
+        $studentfee = StudentFee::where('cohort_id', $data['cohort_id'])->first();
+        $student->fee_id = $studentfee;
         $student->school_id = $request->session()->get('school_id');
         $student->save();
         session()->flash('success', 'student added succesfully');

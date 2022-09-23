@@ -100,6 +100,7 @@ class StudentFormRequest extends FormRequest
                 'string',
                 'max:200'
             ],
+
         ];
         return $rules;
     }
